@@ -1,0 +1,222 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.Enums.NodeType
+  commentId: T:CodeAnalysisService.Enums.NodeType
+  id: NodeType
+  parent: CodeAnalysisService.Enums
+  children:
+  - CodeAnalysisService.Enums.NodeType.Class
+  - CodeAnalysisService.Enums.NodeType.Constructor
+  - CodeAnalysisService.Enums.NodeType.Event
+  - CodeAnalysisService.Enums.NodeType.Field
+  - CodeAnalysisService.Enums.NodeType.Interface
+  - CodeAnalysisService.Enums.NodeType.Method
+  - CodeAnalysisService.Enums.NodeType.Property
+  langs:
+  - csharp
+  - vb
+  name: NodeType
+  nameWithType: NodeType
+  fullName: CodeAnalysisService.Enums.NodeType
+  type: Enum
+  source:
+    id: NodeType
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\NodeType.cs
+    startLine: 7
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  summary: >-
+    Defines the types of nodes in the code analysis graph, representing
+
+    language constructs such as classes, interfaces, methods, constructors,
+
+    properties, and fields.
+  example: []
+  syntax:
+    content: public enum NodeType
+    content.vb: Public Enum NodeType
+- uid: CodeAnalysisService.Enums.NodeType.Interface
+  commentId: F:CodeAnalysisService.Enums.NodeType.Interface
+  id: Interface
+  parent: CodeAnalysisService.Enums.NodeType
+  langs:
+  - csharp
+  - vb
+  name: Interface
+  nameWithType: NodeType.Interface
+  fullName: CodeAnalysisService.Enums.NodeType.Interface
+  type: Field
+  source:
+    id: Interface
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\NodeType.cs
+    startLine: 9
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Interface = 0
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums.NodeType.Class
+  commentId: F:CodeAnalysisService.Enums.NodeType.Class
+  id: Class
+  parent: CodeAnalysisService.Enums.NodeType
+  langs:
+  - csharp
+  - vb
+  name: Class
+  nameWithType: NodeType.Class
+  fullName: CodeAnalysisService.Enums.NodeType.Class
+  type: Field
+  source:
+    id: Class
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\NodeType.cs
+    startLine: 10
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Class = 1
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums.NodeType.Constructor
+  commentId: F:CodeAnalysisService.Enums.NodeType.Constructor
+  id: Constructor
+  parent: CodeAnalysisService.Enums.NodeType
+  langs:
+  - csharp
+  - vb
+  name: Constructor
+  nameWithType: NodeType.Constructor
+  fullName: CodeAnalysisService.Enums.NodeType.Constructor
+  type: Field
+  source:
+    id: Constructor
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\NodeType.cs
+    startLine: 11
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Constructor = 2
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums.NodeType.Method
+  commentId: F:CodeAnalysisService.Enums.NodeType.Method
+  id: Method
+  parent: CodeAnalysisService.Enums.NodeType
+  langs:
+  - csharp
+  - vb
+  name: Method
+  nameWithType: NodeType.Method
+  fullName: CodeAnalysisService.Enums.NodeType.Method
+  type: Field
+  source:
+    id: Method
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\NodeType.cs
+    startLine: 12
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Method = 3
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums.NodeType.Property
+  commentId: F:CodeAnalysisService.Enums.NodeType.Property
+  id: Property
+  parent: CodeAnalysisService.Enums.NodeType
+  langs:
+  - csharp
+  - vb
+  name: Property
+  nameWithType: NodeType.Property
+  fullName: CodeAnalysisService.Enums.NodeType.Property
+  type: Field
+  source:
+    id: Property
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\NodeType.cs
+    startLine: 13
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Property = 4
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums.NodeType.Field
+  commentId: F:CodeAnalysisService.Enums.NodeType.Field
+  id: Field
+  parent: CodeAnalysisService.Enums.NodeType
+  langs:
+  - csharp
+  - vb
+  name: Field
+  nameWithType: NodeType.Field
+  fullName: CodeAnalysisService.Enums.NodeType.Field
+  type: Field
+  source:
+    id: Field
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\NodeType.cs
+    startLine: 14
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Field = 5
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums.NodeType.Event
+  commentId: F:CodeAnalysisService.Enums.NodeType.Event
+  id: Event
+  parent: CodeAnalysisService.Enums.NodeType
+  langs:
+  - csharp
+  - vb
+  name: Event
+  nameWithType: NodeType.Event
+  fullName: CodeAnalysisService.Enums.NodeType.Event
+  type: Field
+  source:
+    id: Event
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\NodeType.cs
+    startLine: 15
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Event = 6
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+references:
+- uid: CodeAnalysisService.Enums
+  commentId: N:CodeAnalysisService.Enums
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.Enums
+  nameWithType: CodeAnalysisService.Enums
+  fullName: CodeAnalysisService.Enums
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+- uid: CodeAnalysisService.Enums.NodeType
+  commentId: T:CodeAnalysisService.Enums.NodeType
+  parent: CodeAnalysisService.Enums
+  href: CodeAnalysisService.Enums.NodeType.html
+  name: NodeType
+  nameWithType: NodeType
+  fullName: CodeAnalysisService.Enums.NodeType

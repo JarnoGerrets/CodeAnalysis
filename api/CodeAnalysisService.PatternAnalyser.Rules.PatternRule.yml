@@ -1,0 +1,626 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  commentId: T:CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  id: PatternRule
+  parent: CodeAnalysisService.PatternAnalyser.Rules
+  children:
+  - CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Name
+  - CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Run(CodeAnalysisService.GraphService.Nodes.IAnalyzerNode)
+  - CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Steps
+  - CodeAnalysisService.PatternAnalyser.Rules.PatternRule.expectedTotalScore
+  langs:
+  - csharp
+  - vb
+  name: PatternRule
+  nameWithType: PatternRule
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  type: Class
+  source:
+    id: PatternRule
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Rules\PatternRule.cs
+    startLine: 8
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Rules
+  syntax:
+    content: public class PatternRule
+    content.vb: Public Class PatternRule
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Name
+  commentId: P:CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Name
+  id: Name
+  parent: CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: PatternRule.Name
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Name
+  type: Property
+  source:
+    id: Name
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Rules\PatternRule.cs
+    startLine: 10
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Rules
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Name*
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Steps
+  commentId: P:CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Steps
+  id: Steps
+  parent: CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  langs:
+  - csharp
+  - vb
+  name: Steps
+  nameWithType: PatternRule.Steps
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Steps
+  type: Property
+  source:
+    id: Steps
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Rules\PatternRule.cs
+    startLine: 11
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Rules
+  syntax:
+    content: public List<RuleStep> Steps { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep}
+    content.vb: Public Property Steps As List(Of RuleStep)
+  overload: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Steps*
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.expectedTotalScore
+  commentId: P:CodeAnalysisService.PatternAnalyser.Rules.PatternRule.expectedTotalScore
+  id: expectedTotalScore
+  parent: CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  langs:
+  - csharp
+  - vb
+  name: expectedTotalScore
+  nameWithType: PatternRule.expectedTotalScore
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.expectedTotalScore
+  type: Property
+  source:
+    id: expectedTotalScore
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Rules\PatternRule.cs
+    startLine: 12
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Rules
+  syntax:
+    content: public int expectedTotalScore { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property expectedTotalScore As Integer
+  overload: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.expectedTotalScore*
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Run(CodeAnalysisService.GraphService.Nodes.IAnalyzerNode)
+  commentId: M:CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Run(CodeAnalysisService.GraphService.Nodes.IAnalyzerNode)
+  id: Run(CodeAnalysisService.GraphService.Nodes.IAnalyzerNode)
+  parent: CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  langs:
+  - csharp
+  - vb
+  name: Run(IAnalyzerNode)
+  nameWithType: PatternRule.Run(IAnalyzerNode)
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Run(CodeAnalysisService.GraphService.Nodes.IAnalyzerNode)
+  type: Method
+  source:
+    id: Run
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Rules\PatternRule.cs
+    startLine: 14
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Rules
+  syntax:
+    content: public PatternResult Run(IAnalyzerNode node)
+    parameters:
+    - id: node
+      type: CodeAnalysisService.GraphService.Nodes.IAnalyzerNode
+    return:
+      type: CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult
+    content.vb: Public Function Run(node As IAnalyzerNode) As PatternResult
+  overload: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Run*
+references:
+- uid: CodeAnalysisService.PatternAnalyser.Rules
+  commentId: N:CodeAnalysisService.PatternAnalyser.Rules
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.PatternAnalyser.Rules
+  nameWithType: CodeAnalysisService.PatternAnalyser.Rules
+  fullName: CodeAnalysisService.PatternAnalyser.Rules
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.Rules
+    name: Rules
+    href: CodeAnalysisService.PatternAnalyser.Rules.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.Rules
+    name: Rules
+    href: CodeAnalysisService.PatternAnalyser.Rules.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Name*
+  commentId: Overload:CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Name
+  href: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.html#CodeAnalysisService_PatternAnalyser_Rules_PatternRule_Name
+  name: Name
+  nameWithType: PatternRule.Name
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Steps*
+  commentId: Overload:CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Steps
+  href: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.html#CodeAnalysisService_PatternAnalyser_Rules_PatternRule_Steps
+  name: Steps
+  nameWithType: PatternRule.Steps
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Steps
+- uid: System.Collections.Generic.List{CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep}
+  commentId: T:System.Collections.Generic.List{CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<RuleStep>
+  nameWithType: List<RuleStep>
+  fullName: System.Collections.Generic.List<CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep>
+  nameWithType.vb: List(Of RuleStep)
+  fullName.vb: System.Collections.Generic.List(Of CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep)
+  name.vb: List(Of RuleStep)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+    name: RuleStep
+    href: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+    name: RuleStep
+    href: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.expectedTotalScore*
+  commentId: Overload:CodeAnalysisService.PatternAnalyser.Rules.PatternRule.expectedTotalScore
+  href: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.html#CodeAnalysisService_PatternAnalyser_Rules_PatternRule_expectedTotalScore
+  name: expectedTotalScore
+  nameWithType: PatternRule.expectedTotalScore
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.expectedTotalScore
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Run*
+  commentId: Overload:CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Run
+  href: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.html#CodeAnalysisService_PatternAnalyser_Rules_PatternRule_Run_CodeAnalysisService_GraphService_Nodes_IAnalyzerNode_
+  name: Run
+  nameWithType: PatternRule.Run
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.Run
+- uid: CodeAnalysisService.GraphService.Nodes.IAnalyzerNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.IAnalyzerNode
+  parent: CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.GraphService.Nodes.IAnalyzerNode.html
+  name: IAnalyzerNode
+  nameWithType: IAnalyzerNode
+  fullName: CodeAnalysisService.GraphService.Nodes.IAnalyzerNode
+- uid: CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult
+  commentId: T:CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult
+  parent: CodeAnalysisService.PatternAnalyser.RuleResult
+  href: CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult.html
+  name: PatternResult
+  nameWithType: PatternResult
+  fullName: CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult
+- uid: CodeAnalysisService.GraphService.Nodes
+  commentId: N:CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.Nodes
+  nameWithType: CodeAnalysisService.GraphService.Nodes
+  fullName: CodeAnalysisService.GraphService.Nodes
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html
+- uid: CodeAnalysisService.PatternAnalyser.RuleResult
+  commentId: N:CodeAnalysisService.PatternAnalyser.RuleResult
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.PatternAnalyser.RuleResult
+  nameWithType: CodeAnalysisService.PatternAnalyser.RuleResult
+  fullName: CodeAnalysisService.PatternAnalyser.RuleResult
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.RuleResult
+    name: RuleResult
+    href: CodeAnalysisService.PatternAnalyser.RuleResult.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.RuleResult
+    name: RuleResult
+    href: CodeAnalysisService.PatternAnalyser.RuleResult.html

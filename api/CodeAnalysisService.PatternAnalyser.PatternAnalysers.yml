@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  commentId: N:CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  id: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  children:
+  - CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser
+  - CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser
+  - CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser
+  - CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser
+  - CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser
+  - CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  nameWithType: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  fullName: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser
+  commentId: T:CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser
+  href: CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser.html
+  name: AdapterAnalyser
+  nameWithType: AdapterAnalyser
+  fullName: CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser
+- uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser
+  commentId: T:CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser
+  href: CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser.html
+  name: FactoryMethodAnalyser
+  nameWithType: FactoryMethodAnalyser
+  fullName: CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser
+- uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser
+  commentId: T:CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser
+  parent: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  href: CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser.html
+  name: IAnalyser
+  nameWithType: IAnalyser
+  fullName: CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser
+- uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser
+  commentId: T:CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser
+  href: CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser.html
+  name: ObserverAnalyser
+  nameWithType: ObserverAnalyser
+  fullName: CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser
+- uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser
+  commentId: T:CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser
+  href: CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser.html
+  name: SingletonAnalyser
+  nameWithType: SingletonAnalyser
+  fullName: CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser
+- uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser
+  commentId: T:CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser
+  href: CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser.html
+  name: StrategyAnalyser
+  nameWithType: StrategyAnalyser
+  fullName: CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser
+- uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  commentId: N:CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  nameWithType: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  fullName: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+    name: PatternAnalysers
+    href: CodeAnalysisService.PatternAnalyser.PatternAnalysers.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+    name: PatternAnalysers
+    href: CodeAnalysisService.PatternAnalyser.PatternAnalysers.html

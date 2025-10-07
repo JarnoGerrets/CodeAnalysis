@@ -1,0 +1,58 @@
+using Microsoft.CodeAnalysis;
+using System.Linq;
+
+namespace CodeAnalysisService.GraphService.Helpers
+{
+    public static class TypeHelper
+    {
+        /// <summary>
+        /// Try to unwrap to an element type. 
+        /// Returns null if the type is not a known collection/wrapper.
+        /// </summary>
+        public static ITypeSymbol? GetElementType(ITypeSymbol type)
+        {
+            if (type is IArrayTypeSymbol arrayType) return arrayType.ElementType;
+
+            if (type is INamedTypeSymbol namedType)
+            {
+                switch (true)
+                {
+                    case true when namedType.MetadataName == "Dictionary`2" && namedType.TypeArguments.Length == 2:
+                        return namedType.TypeArguments[1];
+
+                    case true when namedType.MetadataName == "ValueCollection" && namedType.ContainingType?.ConstructedFrom?.MetadataName == "Dictionary`2":
+                        return namedType.ContainingType.TypeArguments[1];
+
+                    case true when namedType.MetadataName == "WeakReference`1" && namedType.TypeArguments.Length == 1:
+                        return namedType.TypeArguments[0];
+
+                    case true when namedType.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IEnumerable_T && namedType.TypeArguments.Length == 1:
+                        return namedType.TypeArguments[0];
+
+                    case true when namedType.TypeArguments.Length == 1 &&
+                        namedType.AllInterfaces.Any(i => i.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IEnumerable_T):
+                        return namedType.TypeArguments[0];
+                }
+
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Fully unwraps nested collection/wrapper types until no more found.
+        /// Always returns a type (falls back to the original).
+        /// </summary>
+        public static ITypeSymbol GetInnermostElementType(ITypeSymbol type)
+        {
+            var current = type;
+            ITypeSymbol? next;
+            while ((next = GetElementType(current)) != null)
+            {
+                current = next;
+            }
+            return current;
+        }
+    }
+}
+

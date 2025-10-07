@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.PatternAnalyser.RuleResult
+  commentId: N:CodeAnalysisService.PatternAnalyser.RuleResult
+  id: CodeAnalysisService.PatternAnalyser.RuleResult
+  children:
+  - CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.PatternAnalyser.RuleResult
+  nameWithType: CodeAnalysisService.PatternAnalyser.RuleResult
+  fullName: CodeAnalysisService.PatternAnalyser.RuleResult
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult
+  commentId: T:CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult
+  parent: CodeAnalysisService.PatternAnalyser.RuleResult
+  href: CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult.html
+  name: PatternResult
+  nameWithType: PatternResult
+  fullName: CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult
+- uid: CodeAnalysisService.PatternAnalyser.RuleResult
+  commentId: N:CodeAnalysisService.PatternAnalyser.RuleResult
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.PatternAnalyser.RuleResult
+  nameWithType: CodeAnalysisService.PatternAnalyser.RuleResult
+  fullName: CodeAnalysisService.PatternAnalyser.RuleResult
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.RuleResult
+    name: RuleResult
+    href: CodeAnalysisService.PatternAnalyser.RuleResult.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.RuleResult
+    name: RuleResult
+    href: CodeAnalysisService.PatternAnalyser.RuleResult.html

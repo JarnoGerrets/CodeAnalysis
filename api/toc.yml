@@ -1,0 +1,293 @@
+### YamlMime:TableOfContent
+items:
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation
+  name: CodeAnalysis.TestCases.Observer.WeatherStation
+  type: Namespace
+  items:
+  - uid: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver
+    name: IObserver
+    type: Interface
+  - uid: CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay
+    name: PhoneDisplay
+    type: Class
+  - uid: CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation
+    name: WeatherStation
+    type: Class
+  - uid: CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay
+    name: WindowDisplay
+    type: Class
+- uid: CodeAnalysisService
+  name: CodeAnalysisService
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.CodeAnalysisServiceRunner
+    name: CodeAnalysisServiceRunner
+    type: Class
+- uid: CodeAnalysisService.Enums
+  name: CodeAnalysisService.Enums
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.Enums.EdgeType
+    name: EdgeType
+    type: Enum
+  - uid: CodeAnalysisService.Enums.NodeType
+    name: NodeType
+    type: Enum
+- uid: CodeAnalysisService.GraphService
+  name: CodeAnalysisService.GraphService
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.GraphService.GraphBuilder
+    name: GraphBuilder
+    type: Class
+- uid: CodeAnalysisService.GraphService.Context
+  name: CodeAnalysisService.GraphService.Context
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.GraphService.Context.GraphContext
+    name: GraphContext
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Context.NodeRegistry
+    name: NodeRegistry
+    type: Class
+- uid: CodeAnalysisService.GraphService.EdgeBuilder
+  name: CodeAnalysisService.GraphService.EdgeBuilder
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder
+    name: ClassEdgeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder
+    name: ConstructorEdgeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder
+    name: EventEdgeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder
+    name: FieldEdgeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+    name: IEdgeBuilder
+    type: Interface
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder
+    name: InterfaceEdgeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder
+    name: MethodEdgeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder
+    name: PropertyEdgeBuilder
+    type: Class
+- uid: CodeAnalysisService.GraphService.Export
+  name: CodeAnalysisService.GraphService.Export
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.GraphService.Export.GraphJsonExporter
+    name: GraphJsonExporter
+    type: Class
+- uid: CodeAnalysisService.GraphService.Helpers
+  name: CodeAnalysisService.GraphService.Helpers
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.GraphService.Helpers.CallResolver
+    name: CallResolver
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Helpers.EdgeComparer
+    name: EdgeComparer
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Helpers.TypeHelper
+    name: TypeHelper
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder
+    name: UniqueEdgeAdder
+    type: Class
+- uid: CodeAnalysisService.GraphService.NodeBuilder
+  name: CodeAnalysisService.GraphService.NodeBuilder
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder
+    name: ClassNodeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder
+    name: ConstructorNodeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder
+    name: EventNodeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder
+    name: FieldNodeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder
+    name: INodeBuilder
+    type: Interface
+  - uid: CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder
+    name: InterfaceNodeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder
+    name: MethodNodeBuilder
+    type: Class
+  - uid: CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder
+    name: PropertyNodeBuilder
+    type: Class
+- uid: CodeAnalysisService.GraphService.Nodes
+  name: CodeAnalysisService.GraphService.Nodes
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.GraphService.Nodes.ClassNode
+    name: ClassNode
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Nodes.ConstructorNode
+    name: ConstructorNode
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Nodes.EdgeNode
+    name: EdgeNode
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Nodes.EventNode
+    name: EventNode
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Nodes.FieldNode
+    name: FieldNode
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Nodes.IAnalyzerNode
+    name: IAnalyzerNode
+    type: Interface
+  - uid: CodeAnalysisService.GraphService.Nodes.INode
+    name: INode
+    type: Interface
+  - uid: CodeAnalysisService.GraphService.Nodes.InterfaceNode
+    name: InterfaceNode
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Nodes.MethodNode
+    name: MethodNode
+    type: Class
+  - uid: CodeAnalysisService.GraphService.Nodes.PropertyNode
+    name: PropertyNode
+    type: Class
+- uid: CodeAnalysisService.GraphService.Printer
+  name: CodeAnalysisService.GraphService.Printer
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.GraphService.Printer.GraphPrinter
+    name: GraphPrinter
+    type: Class
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers
+  name: CodeAnalysisService.GraphService.SyntaxWrappers
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+    name: EventSyntaxWrapper
+    type: Struct
+- uid: CodeAnalysisService.PatternAnalyser.Checks
+  name: CodeAnalysisService.PatternAnalyser.Checks
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks
+    name: AdapterChecks
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks
+    name: CollectionChecks
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks
+    name: FactoryMethodChecks
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks
+    name: MethodCallChecks
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks
+    name: ObserverChecks
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks
+    name: SingletonChecks
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+    name: StrategyChecks
+    type: Class
+- uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  name: CodeAnalysisService.PatternAnalyser.PatternAnalysers
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser
+    name: AdapterAnalyser
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser
+    name: FactoryMethodAnalyser
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser
+    name: IAnalyser
+    type: Interface
+  - uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser
+    name: ObserverAnalyser
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser
+    name: SingletonAnalyser
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser
+    name: StrategyAnalyser
+    type: Class
+- uid: CodeAnalysisService.PatternAnalyser.PatternRoles
+  name: CodeAnalysisService.PatternAnalyser.PatternRoles
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole
+    name: PatternRole
+    type: Class
+- uid: CodeAnalysisService.PatternAnalyser.Printing
+  name: CodeAnalysisService.PatternAnalyser.Printing
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter
+    name: AdapterPatternPrinter
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter
+    name: FactoryMethodPatternPrinter
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter
+    name: IPatternPrinter
+    type: Interface
+  - uid: CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter
+    name: ObserverPatternPrinter
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter
+    name: SingletonPatternPrinter
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter
+    name: StrategyPatternPrinter
+    type: Class
+- uid: CodeAnalysisService.PatternAnalyser.RuleResult
+  name: CodeAnalysisService.PatternAnalyser.RuleResult
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult
+    name: PatternResult
+    type: Class
+- uid: CodeAnalysisService.PatternAnalyser.RuleSteps
+  name: CodeAnalysisService.PatternAnalyser.RuleSteps
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+    name: RuleStep
+    type: Class
+  - uid: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult
+    name: RuleStepResult
+    type: Struct
+- uid: CodeAnalysisService.PatternAnalyser.Rules
+  name: CodeAnalysisService.PatternAnalyser.Rules
+  type: Namespace
+  items:
+  - uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+    name: PatternRule
+    type: Class
+- uid: Demo
+  name: Demo
+  type: Namespace
+  items:
+  - uid: Demo.Program1
+    name: Program1
+    type: Class
+  - uid: Demo.Publisher
+    name: Publisher
+    type: Class
+  - uid: Demo.Subscriber
+    name: Subscriber
+    type: Class
+memberLayout: SamePage

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.Export
+  commentId: N:CodeAnalysisService.GraphService.Export
+  id: CodeAnalysisService.GraphService.Export
+  children:
+  - CodeAnalysisService.GraphService.Export.GraphJsonExporter
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.GraphService.Export
+  nameWithType: CodeAnalysisService.GraphService.Export
+  fullName: CodeAnalysisService.GraphService.Export
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.GraphService.Export.GraphJsonExporter
+  commentId: T:CodeAnalysisService.GraphService.Export.GraphJsonExporter
+  href: CodeAnalysisService.GraphService.Export.GraphJsonExporter.html
+  name: GraphJsonExporter
+  nameWithType: GraphJsonExporter
+  fullName: CodeAnalysisService.GraphService.Export.GraphJsonExporter

@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService
+  commentId: N:CodeAnalysisService.GraphService
+  id: CodeAnalysisService.GraphService
+  children:
+  - CodeAnalysisService.GraphService.GraphBuilder
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.GraphService
+  nameWithType: CodeAnalysisService.GraphService
+  fullName: CodeAnalysisService.GraphService
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.GraphService.GraphBuilder
+  commentId: T:CodeAnalysisService.GraphService.GraphBuilder
+  parent: CodeAnalysisService.GraphService
+  href: CodeAnalysisService.GraphService.GraphBuilder.html
+  name: GraphBuilder
+  nameWithType: GraphBuilder
+  fullName: CodeAnalysisService.GraphService.GraphBuilder
+- uid: CodeAnalysisService.GraphService
+  commentId: N:CodeAnalysisService.GraphService
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService
+  nameWithType: CodeAnalysisService.GraphService
+  fullName: CodeAnalysisService.GraphService
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html

@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.Context
+  commentId: N:CodeAnalysisService.GraphService.Context
+  id: CodeAnalysisService.GraphService.Context
+  children:
+  - CodeAnalysisService.GraphService.Context.GraphContext
+  - CodeAnalysisService.GraphService.Context.NodeRegistry
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.GraphService.Context
+  nameWithType: CodeAnalysisService.GraphService.Context
+  fullName: CodeAnalysisService.GraphService.Context
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.GraphService.Context.GraphContext
+  commentId: T:CodeAnalysisService.GraphService.Context.GraphContext
+  parent: CodeAnalysisService.GraphService.Context
+  href: CodeAnalysisService.GraphService.Context.GraphContext.html
+  name: GraphContext
+  nameWithType: GraphContext
+  fullName: CodeAnalysisService.GraphService.Context.GraphContext
+- uid: CodeAnalysisService.GraphService.Context.NodeRegistry
+  commentId: T:CodeAnalysisService.GraphService.Context.NodeRegistry
+  parent: CodeAnalysisService.GraphService.Context
+  href: CodeAnalysisService.GraphService.Context.NodeRegistry.html
+  name: NodeRegistry
+  nameWithType: NodeRegistry
+  fullName: CodeAnalysisService.GraphService.Context.NodeRegistry
+- uid: CodeAnalysisService.GraphService.Context
+  commentId: N:CodeAnalysisService.GraphService.Context
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.Context
+  nameWithType: CodeAnalysisService.GraphService.Context
+  fullName: CodeAnalysisService.GraphService.Context
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Context
+    name: Context
+    href: CodeAnalysisService.GraphService.Context.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Context
+    name: Context
+    href: CodeAnalysisService.GraphService.Context.html

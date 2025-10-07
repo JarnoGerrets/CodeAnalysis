@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.NodeBuilder
+  commentId: N:CodeAnalysisService.GraphService.NodeBuilder
+  id: CodeAnalysisService.GraphService.NodeBuilder
+  children:
+  - CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder
+  - CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder
+  - CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder
+  - CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder
+  - CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder
+  - CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder
+  - CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder
+  - CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.GraphService.NodeBuilder
+  nameWithType: CodeAnalysisService.GraphService.NodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder
+  commentId: T:CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder
+  href: CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder.html
+  name: ClassNodeBuilder
+  nameWithType: ClassNodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder
+- uid: CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder
+  commentId: T:CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder
+  href: CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder.html
+  name: ConstructorNodeBuilder
+  nameWithType: ConstructorNodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder
+- uid: CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder
+  commentId: T:CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder
+  href: CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder.html
+  name: EventNodeBuilder
+  nameWithType: EventNodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder
+- uid: CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder
+  commentId: T:CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder
+  href: CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder.html
+  name: FieldNodeBuilder
+  nameWithType: FieldNodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder
+- uid: CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder
+  commentId: T:CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder
+  parent: CodeAnalysisService.GraphService.NodeBuilder
+  href: CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder.html
+  name: INodeBuilder
+  nameWithType: INodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder
+- uid: CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder
+  commentId: T:CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder
+  href: CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder.html
+  name: InterfaceNodeBuilder
+  nameWithType: InterfaceNodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder
+- uid: CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder
+  commentId: T:CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder
+  href: CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder.html
+  name: MethodNodeBuilder
+  nameWithType: MethodNodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder
+- uid: CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder
+  commentId: T:CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder
+  href: CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder.html
+  name: PropertyNodeBuilder
+  nameWithType: PropertyNodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder
+- uid: CodeAnalysisService.GraphService.NodeBuilder
+  commentId: N:CodeAnalysisService.GraphService.NodeBuilder
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.NodeBuilder
+  nameWithType: CodeAnalysisService.GraphService.NodeBuilder
+  fullName: CodeAnalysisService.GraphService.NodeBuilder
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.NodeBuilder
+    name: NodeBuilder
+    href: CodeAnalysisService.GraphService.NodeBuilder.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.NodeBuilder
+    name: NodeBuilder
+    href: CodeAnalysisService.GraphService.NodeBuilder.html

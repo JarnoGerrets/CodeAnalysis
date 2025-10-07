@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.PatternAnalyser.PatternRoles
+  commentId: N:CodeAnalysisService.PatternAnalyser.PatternRoles
+  id: CodeAnalysisService.PatternAnalyser.PatternRoles
+  children:
+  - CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.PatternAnalyser.PatternRoles
+  nameWithType: CodeAnalysisService.PatternAnalyser.PatternRoles
+  fullName: CodeAnalysisService.PatternAnalyser.PatternRoles
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole
+  commentId: T:CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole
+  href: CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole.html
+  name: PatternRole
+  nameWithType: PatternRole
+  fullName: CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole

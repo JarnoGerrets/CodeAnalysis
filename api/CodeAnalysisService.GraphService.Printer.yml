@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.Printer
+  commentId: N:CodeAnalysisService.GraphService.Printer
+  id: CodeAnalysisService.GraphService.Printer
+  children:
+  - CodeAnalysisService.GraphService.Printer.GraphPrinter
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.GraphService.Printer
+  nameWithType: CodeAnalysisService.GraphService.Printer
+  fullName: CodeAnalysisService.GraphService.Printer
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.GraphService.Printer.GraphPrinter
+  commentId: T:CodeAnalysisService.GraphService.Printer.GraphPrinter
+  href: CodeAnalysisService.GraphService.Printer.GraphPrinter.html
+  name: GraphPrinter
+  nameWithType: GraphPrinter
+  fullName: CodeAnalysisService.GraphService.Printer.GraphPrinter

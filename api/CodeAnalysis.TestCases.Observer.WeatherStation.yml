@@ -1,0 +1,83 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation
+  commentId: N:CodeAnalysis.TestCases.Observer.WeatherStation
+  id: CodeAnalysis.TestCases.Observer.WeatherStation
+  children:
+  - CodeAnalysis.TestCases.Observer.WeatherStation.IObserver
+  - CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay
+  - CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation
+  - CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysis.TestCases.Observer.WeatherStation
+  nameWithType: CodeAnalysis.TestCases.Observer.WeatherStation
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver
+  commentId: T:CodeAnalysis.TestCases.Observer.WeatherStation.IObserver
+  parent: CodeAnalysis.TestCases.Observer.WeatherStation
+  href: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.html
+  name: IObserver
+  nameWithType: IObserver
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay
+  commentId: T:CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay
+  href: CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay.html
+  name: PhoneDisplay
+  nameWithType: PhoneDisplay
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation
+  commentId: T:CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation
+  href: CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation.html
+  name: WeatherStation
+  nameWithType: WeatherStation
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay
+  commentId: T:CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay
+  href: CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay.html
+  name: WindowDisplay
+  nameWithType: WindowDisplay
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation
+  commentId: N:CodeAnalysis.TestCases.Observer.WeatherStation
+  href: CodeAnalysis.html
+  name: CodeAnalysis.TestCases.Observer.WeatherStation
+  nameWithType: CodeAnalysis.TestCases.Observer.WeatherStation
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation
+  spec.csharp:
+  - uid: CodeAnalysis
+    name: CodeAnalysis
+    href: CodeAnalysis.html
+  - name: .
+  - uid: CodeAnalysis.TestCases
+    name: TestCases
+    href: CodeAnalysis.TestCases.html
+  - name: .
+  - uid: CodeAnalysis.TestCases.Observer
+    name: Observer
+    href: CodeAnalysis.TestCases.Observer.html
+  - name: .
+  - uid: CodeAnalysis.TestCases.Observer.WeatherStation
+    name: WeatherStation
+    href: CodeAnalysis.TestCases.Observer.WeatherStation.html
+  spec.vb:
+  - uid: CodeAnalysis
+    name: CodeAnalysis
+    href: CodeAnalysis.html
+  - name: .
+  - uid: CodeAnalysis.TestCases
+    name: TestCases
+    href: CodeAnalysis.TestCases.html
+  - name: .
+  - uid: CodeAnalysis.TestCases.Observer
+    name: Observer
+    href: CodeAnalysis.TestCases.Observer.html
+  - name: .
+  - uid: CodeAnalysis.TestCases.Observer.WeatherStation
+    name: WeatherStation
+    href: CodeAnalysis.TestCases.Observer.WeatherStation.html

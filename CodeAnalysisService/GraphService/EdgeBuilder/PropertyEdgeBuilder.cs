@@ -1,0 +1,67 @@
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using CodeAnalysisService.Enums;
+using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphService.Helpers;
+using CodeAnalysisService.GraphService.Context;
+using System.Collections.Generic;
+
+namespace CodeAnalysisService.GraphService.EdgeBuilder
+{
+    /// <summary>
+    /// Builds edges for <see cref="PropertyNode"/>s, including references to fields,
+    /// usage of class types, and element-type relationships (e.g., arrays, generics).
+    /// Produces <see cref="EdgeType.ReferencesField"/>, <see cref="EdgeType.Uses"/>, 
+    /// and <see cref="EdgeType.HasPropertyElement"/> edges.
+    /// </summary>
+
+    public class PropertyEdgeBuilder : IEdgeBuilder
+    {
+        public NodeType NodeType => NodeType.Property;
+
+        public IEnumerable<EdgeNode> BuildEdges( INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
+        {
+            if (node is not PropertyNode propertyNode) return Enumerable.Empty<EdgeNode>();
+
+            var edges = new List<EdgeNode>();
+
+            foreach (var symbol in propertyNode.ReferencedSymbols)
+            {
+                switch (symbol)
+                {
+                    case IFieldSymbol fieldSymbol
+                        when registry.GetNode<FieldNode>(fieldSymbol) is { } fieldNode:
+                        edges.Add(new EdgeNode
+                        {
+                            Target = fieldNode,
+                            Type = EdgeType.ReferencesField
+                        });
+                        break;
+
+                    case INamedTypeSymbol classSymbol:
+                        if (registry.GetNode<ClassNode>(classSymbol) is { } classNode)
+                        {
+                            edges.Add(new EdgeNode
+                            {
+                                Target = classNode,
+                                Type = EdgeType.Uses
+                            });
+                        }
+
+                        if (TypeHelper.GetElementType(classSymbol) is INamedTypeSymbol named && registry.GetNode<ClassNode>(named) is { } elemNode)
+                        {
+                            edges.Add(new EdgeNode
+                            {
+                                Target = elemNode,
+                                Type = EdgeType.HasPropertyElement
+                            });
+                        }
+                        break;
+                }
+            }
+
+            return edges;
+        }
+    }
+}

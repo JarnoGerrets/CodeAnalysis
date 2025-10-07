@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.PatternAnalyser.Printing
+  commentId: N:CodeAnalysisService.PatternAnalyser.Printing
+  id: CodeAnalysisService.PatternAnalyser.Printing
+  children:
+  - CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter
+  - CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter
+  - CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter
+  - CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter
+  - CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter
+  - CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.PatternAnalyser.Printing
+  nameWithType: CodeAnalysisService.PatternAnalyser.Printing
+  fullName: CodeAnalysisService.PatternAnalyser.Printing
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter
+  commentId: T:CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter
+  parent: CodeAnalysisService.PatternAnalyser.Printing
+  href: CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter.html
+  name: IPatternPrinter
+  nameWithType: IPatternPrinter
+  fullName: CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter
+- uid: CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter
+  commentId: T:CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter
+  href: CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter.html
+  name: ObserverPatternPrinter
+  nameWithType: ObserverPatternPrinter
+  fullName: CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter
+- uid: CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter
+  commentId: T:CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter
+  href: CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter.html
+  name: SingletonPatternPrinter
+  nameWithType: SingletonPatternPrinter
+  fullName: CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter
+- uid: CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter
+  commentId: T:CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter
+  href: CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter.html
+  name: FactoryMethodPatternPrinter
+  nameWithType: FactoryMethodPatternPrinter
+  fullName: CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter
+- uid: CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter
+  commentId: T:CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter
+  href: CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter.html
+  name: StrategyPatternPrinter
+  nameWithType: StrategyPatternPrinter
+  fullName: CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter
+- uid: CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter
+  commentId: T:CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter
+  href: CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter.html
+  name: AdapterPatternPrinter
+  nameWithType: AdapterPatternPrinter
+  fullName: CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter
+- uid: CodeAnalysisService.PatternAnalyser.Printing
+  commentId: N:CodeAnalysisService.PatternAnalyser.Printing
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.PatternAnalyser.Printing
+  nameWithType: CodeAnalysisService.PatternAnalyser.Printing
+  fullName: CodeAnalysisService.PatternAnalyser.Printing
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.Printing
+    name: Printing
+    href: CodeAnalysisService.PatternAnalyser.Printing.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.Printing
+    name: Printing
+    href: CodeAnalysisService.PatternAnalyser.Printing.html

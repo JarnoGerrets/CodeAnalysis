@@ -1,0 +1,61 @@
+Core responsibilities of the service layer
+
+At a minimum, your CodeAnalysisService should provide general-purpose, reusable Roslyn queries, such as:
+
+Syntax tree queries
+
+- GetClasses()
+
+- GetStructs()
+
+- GetInterfaces()
+
+- GetEnums()
+
+- GetMethods(ClassDeclarationSyntax cls)
+
+- GetProperties(ClassDeclarationSyntax cls)
+
+- GetFields(ClassDeclarationSyntax cls)
+
+- GetConstructors(ClassDeclarationSyntax cls)
+
+- GetEvents(ClassDeclarationSyntax cls)
+
+Semantic queries
+
+- GetClassSymbol(ClassDeclarationSyntax cls)
+
+- GetMethodSymbol(MethodDeclarationSyntax method)
+
+- GetFieldSymbol(FieldDeclarationSyntax field)
+
+- GetPropertySymbol(PropertyDeclarationSyntax prop)
+
+Modifiers / accessibility helpers
+
+Check if a member is static, private, public, protected, etc.
+
+Check if a class is abstract or sealed.
+
+Expression / reference helpers
+
+GetFieldReferences(SyntaxNode root, IFieldSymbol field)
+
+GetMethodCalls(SyntaxNode root, IMethodSymbol method)
+
+GetObjectCreations(SyntaxNode root, INamedTypeSymbol type)
+
+Traversal helpers
+
+GetDescendantsOfType<T>() for any node type
+
+GetAncestorOfType<T>()
+
+Utility
+
+GetNamespace(ClassDeclarationSyntax cls)
+
+GetBaseTypes(ClassDeclarationSyntax cls)
+
+GetImplementedInterfaces(ClassDeclarationSyntax cls)

@@ -1,0 +1,119 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.Nodes
+  commentId: N:CodeAnalysisService.GraphService.Nodes
+  id: CodeAnalysisService.GraphService.Nodes
+  children:
+  - CodeAnalysisService.GraphService.Nodes.ClassNode
+  - CodeAnalysisService.GraphService.Nodes.ConstructorNode
+  - CodeAnalysisService.GraphService.Nodes.EdgeNode
+  - CodeAnalysisService.GraphService.Nodes.EventNode
+  - CodeAnalysisService.GraphService.Nodes.FieldNode
+  - CodeAnalysisService.GraphService.Nodes.IAnalyzerNode
+  - CodeAnalysisService.GraphService.Nodes.INode
+  - CodeAnalysisService.GraphService.Nodes.InterfaceNode
+  - CodeAnalysisService.GraphService.Nodes.MethodNode
+  - CodeAnalysisService.GraphService.Nodes.PropertyNode
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.GraphService.Nodes
+  nameWithType: CodeAnalysisService.GraphService.Nodes
+  fullName: CodeAnalysisService.GraphService.Nodes
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.GraphService.Nodes.ClassNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.ClassNode
+  href: CodeAnalysisService.GraphService.Nodes.ClassNode.html
+  name: ClassNode
+  nameWithType: ClassNode
+  fullName: CodeAnalysisService.GraphService.Nodes.ClassNode
+- uid: CodeAnalysisService.GraphService.Nodes.ConstructorNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.ConstructorNode
+  href: CodeAnalysisService.GraphService.Nodes.ConstructorNode.html
+  name: ConstructorNode
+  nameWithType: ConstructorNode
+  fullName: CodeAnalysisService.GraphService.Nodes.ConstructorNode
+- uid: CodeAnalysisService.GraphService.Nodes.EdgeNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.EdgeNode
+  parent: CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.GraphService.Nodes.EdgeNode.html
+  name: EdgeNode
+  nameWithType: EdgeNode
+  fullName: CodeAnalysisService.GraphService.Nodes.EdgeNode
+- uid: CodeAnalysisService.GraphService.Nodes.EventNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.EventNode
+  href: CodeAnalysisService.GraphService.Nodes.EventNode.html
+  name: EventNode
+  nameWithType: EventNode
+  fullName: CodeAnalysisService.GraphService.Nodes.EventNode
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.FieldNode
+  href: CodeAnalysisService.GraphService.Nodes.FieldNode.html
+  name: FieldNode
+  nameWithType: FieldNode
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode
+- uid: CodeAnalysisService.GraphService.Nodes.IAnalyzerNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.IAnalyzerNode
+  parent: CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.GraphService.Nodes.IAnalyzerNode.html
+  name: IAnalyzerNode
+  nameWithType: IAnalyzerNode
+  fullName: CodeAnalysisService.GraphService.Nodes.IAnalyzerNode
+- uid: CodeAnalysisService.GraphService.Nodes.INode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.INode
+  parent: CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.GraphService.Nodes.INode.html
+  name: INode
+  nameWithType: INode
+  fullName: CodeAnalysisService.GraphService.Nodes.INode
+- uid: CodeAnalysisService.GraphService.Nodes.InterfaceNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.InterfaceNode
+  href: CodeAnalysisService.GraphService.Nodes.InterfaceNode.html
+  name: InterfaceNode
+  nameWithType: InterfaceNode
+  fullName: CodeAnalysisService.GraphService.Nodes.InterfaceNode
+- uid: CodeAnalysisService.GraphService.Nodes.MethodNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.MethodNode
+  href: CodeAnalysisService.GraphService.Nodes.MethodNode.html
+  name: MethodNode
+  nameWithType: MethodNode
+  fullName: CodeAnalysisService.GraphService.Nodes.MethodNode
+- uid: CodeAnalysisService.GraphService.Nodes.PropertyNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.PropertyNode
+  href: CodeAnalysisService.GraphService.Nodes.PropertyNode.html
+  name: PropertyNode
+  nameWithType: PropertyNode
+  fullName: CodeAnalysisService.GraphService.Nodes.PropertyNode
+- uid: CodeAnalysisService.GraphService.Nodes
+  commentId: N:CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.Nodes
+  nameWithType: CodeAnalysisService.GraphService.Nodes
+  fullName: CodeAnalysisService.GraphService.Nodes
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html

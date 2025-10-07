@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace CodeAnalysisService.GraphService.Nodes | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace CodeAnalysisService.GraphService.Nodes | mysite ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CodeAnalysisService.GraphService.Nodes">
+
+  <h1 id="CodeAnalysisService_GraphService_Nodes" data-uid="CodeAnalysisService.GraphService.Nodes" class="text-break">Namespace CodeAnalysisService.GraphService.Nodes</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.ClassNode.html">ClassNode</a></dt>
+      <dd><p>Represents a class in the code graph.
+Stores its Roslyn syntax, symbol, whether it is abstract,
+and its outgoing edges to related nodes (e.g. inheritance,
+implemented interfaces, members, etc.).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.ConstructorNode.html">ConstructorNode</a></dt>
+      <dd><p>Represents a constructor in the code graph.
+Holds its Roslyn syntax, symbol, and outgoing edges to related nodes
+(e.g. created types, calls, or usage relationships).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.EdgeNode.html">EdgeNode</a></dt>
+      <dd><p>Represents a directed edge in the code graph.
+Connects a source node to a target node with a specific relationship type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.EventNode.html">EventNode</a></dt>
+      <dd><p>Represents an event in the code graph.
+Stores its Roslyn syntax wrapper, symbol, and outgoing edges
+to related nodes (e.g. handlers or containing types).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.FieldNode.html">FieldNode</a></dt>
+      <dd><p>Represents a field in the code graph.
+Captures its Roslyn declaration and variable syntax, symbol,
+and outgoing edges to related nodes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.InterfaceNode.html">InterfaceNode</a></dt>
+      <dd><p>Represents an interface in the code graph.
+Stores its Roslyn syntax, symbol, and outgoing edges
+to related nodes (e.g. implemented classes).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.MethodNode.html">MethodNode</a></dt>
+      <dd><p>Represents a method in the code graph.
+Stores its Roslyn syntax, symbol, return type,
+abstractness, and outgoing edges to related nodes
+(e.g. calls, usage, or return types).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.PropertyNode.html">PropertyNode</a></dt>
+      <dd><p>Represents a property in the code graph.
+Captures its Roslyn syntax, symbol, referenced symbols
+(e.g. backing fields or accessed members), and outgoing edges.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.IAnalyzerNode.html">IAnalyzerNode</a></dt>
+      <dd><p>Base interface for analyzer nodes that represent types
+(classes, interfaces, etc.) in the code graph.
+Provides access to the Roslyn type symbol, abstractness,
+and outgoing edges. This interface bunches the Class and Interface nodes together to handle them.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeAnalysisService.GraphService.Nodes.INode.html">INode</a></dt>
+      <dd><p>Base interface for all nodes in the code graph.
+Defines common properties for node type, Roslyn symbol,
+and outgoing edges to related nodes.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

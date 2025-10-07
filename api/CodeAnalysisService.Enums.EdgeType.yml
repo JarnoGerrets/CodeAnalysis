@@ -1,0 +1,705 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.Enums.EdgeType
+  commentId: T:CodeAnalysisService.Enums.EdgeType
+  id: EdgeType
+  parent: CodeAnalysisService.Enums
+  children:
+  - CodeAnalysisService.Enums.EdgeType.Aggregates
+  - CodeAnalysisService.Enums.EdgeType.Calls
+  - CodeAnalysisService.Enums.EdgeType.Composes
+  - CodeAnalysisService.Enums.EdgeType.ConfirmsContract
+  - CodeAnalysisService.Enums.EdgeType.Creates
+  - CodeAnalysisService.Enums.EdgeType.DelegatesTo
+  - CodeAnalysisService.Enums.EdgeType.DependsOn
+  - CodeAnalysisService.Enums.EdgeType.HandlesEvent
+  - CodeAnalysisService.Enums.EdgeType.HasConstructor
+  - CodeAnalysisService.Enums.EdgeType.HasEvent
+  - CodeAnalysisService.Enums.EdgeType.HasField
+  - CodeAnalysisService.Enums.EdgeType.HasFieldElement
+  - CodeAnalysisService.Enums.EdgeType.HasMethod
+  - CodeAnalysisService.Enums.EdgeType.HasProperty
+  - CodeAnalysisService.Enums.EdgeType.HasPropertyElement
+  - CodeAnalysisService.Enums.EdgeType.ImplementedBy
+  - CodeAnalysisService.Enums.EdgeType.Implements
+  - CodeAnalysisService.Enums.EdgeType.Inherits
+  - CodeAnalysisService.Enums.EdgeType.Notifies
+  - CodeAnalysisService.Enums.EdgeType.Observes
+  - CodeAnalysisService.Enums.EdgeType.Overrides
+  - CodeAnalysisService.Enums.EdgeType.RaisesEvent
+  - CodeAnalysisService.Enums.EdgeType.ReferencesField
+  - CodeAnalysisService.Enums.EdgeType.ReferencesProperty
+  - CodeAnalysisService.Enums.EdgeType.Returns
+  - CodeAnalysisService.Enums.EdgeType.SubscribesTo
+  - CodeAnalysisService.Enums.EdgeType.Uses
+  - CodeAnalysisService.Enums.EdgeType.Wraps
+  langs:
+  - csharp
+  - vb
+  name: EdgeType
+  nameWithType: EdgeType
+  fullName: CodeAnalysisService.Enums.EdgeType
+  type: Enum
+  source:
+    id: EdgeType
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 7
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  summary: >-
+    Defines the types of edges in the code analysis graph, representing
+
+    relationships and interactions between nodes such as classes, methods,
+
+    fields, and properties.
+  example: []
+  syntax:
+    content: public enum EdgeType
+    content.vb: Public Enum EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Inherits
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Inherits
+  id: Inherits
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Inherits
+  nameWithType: EdgeType.Inherits
+  fullName: CodeAnalysisService.Enums.EdgeType.Inherits
+  type: Field
+  source:
+    id: Inherits
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 10
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Inherits = 0
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Implements
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Implements
+  id: Implements
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Implements
+  nameWithType: EdgeType.Implements
+  fullName: CodeAnalysisService.Enums.EdgeType.Implements
+  type: Field
+  source:
+    id: Implements
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 11
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Implements = 1
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Aggregates
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Aggregates
+  id: Aggregates
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Aggregates
+  nameWithType: EdgeType.Aggregates
+  fullName: CodeAnalysisService.Enums.EdgeType.Aggregates
+  type: Field
+  source:
+    id: Aggregates
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 12
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Aggregates = 2
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Uses
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Uses
+  id: Uses
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Uses
+  nameWithType: EdgeType.Uses
+  fullName: CodeAnalysisService.Enums.EdgeType.Uses
+  type: Field
+  source:
+    id: Uses
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 13
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Uses = 3
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Composes
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Composes
+  id: Composes
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Composes
+  nameWithType: EdgeType.Composes
+  fullName: CodeAnalysisService.Enums.EdgeType.Composes
+  type: Field
+  source:
+    id: Composes
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 14
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Composes = 4
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Wraps
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Wraps
+  id: Wraps
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Wraps
+  nameWithType: EdgeType.Wraps
+  fullName: CodeAnalysisService.Enums.EdgeType.Wraps
+  type: Field
+  source:
+    id: Wraps
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 15
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Wraps = 5
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Notifies
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Notifies
+  id: Notifies
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Notifies
+  nameWithType: EdgeType.Notifies
+  fullName: CodeAnalysisService.Enums.EdgeType.Notifies
+  type: Field
+  source:
+    id: Notifies
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 16
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Notifies = 6
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.DependsOn
+  commentId: F:CodeAnalysisService.Enums.EdgeType.DependsOn
+  id: DependsOn
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: DependsOn
+  nameWithType: EdgeType.DependsOn
+  fullName: CodeAnalysisService.Enums.EdgeType.DependsOn
+  type: Field
+  source:
+    id: DependsOn
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 17
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: DependsOn = 7
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.HasConstructor
+  commentId: F:CodeAnalysisService.Enums.EdgeType.HasConstructor
+  id: HasConstructor
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: HasConstructor
+  nameWithType: EdgeType.HasConstructor
+  fullName: CodeAnalysisService.Enums.EdgeType.HasConstructor
+  type: Field
+  source:
+    id: HasConstructor
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 18
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: HasConstructor = 8
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.HasMethod
+  commentId: F:CodeAnalysisService.Enums.EdgeType.HasMethod
+  id: HasMethod
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: HasMethod
+  nameWithType: EdgeType.HasMethod
+  fullName: CodeAnalysisService.Enums.EdgeType.HasMethod
+  type: Field
+  source:
+    id: HasMethod
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 19
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: HasMethod = 9
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.HasFieldElement
+  commentId: F:CodeAnalysisService.Enums.EdgeType.HasFieldElement
+  id: HasFieldElement
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: HasFieldElement
+  nameWithType: EdgeType.HasFieldElement
+  fullName: CodeAnalysisService.Enums.EdgeType.HasFieldElement
+  type: Field
+  source:
+    id: HasFieldElement
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 20
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: HasFieldElement = 10
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.HasPropertyElement
+  commentId: F:CodeAnalysisService.Enums.EdgeType.HasPropertyElement
+  id: HasPropertyElement
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: HasPropertyElement
+  nameWithType: EdgeType.HasPropertyElement
+  fullName: CodeAnalysisService.Enums.EdgeType.HasPropertyElement
+  type: Field
+  source:
+    id: HasPropertyElement
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 21
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: HasPropertyElement = 11
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.HasEvent
+  commentId: F:CodeAnalysisService.Enums.EdgeType.HasEvent
+  id: HasEvent
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: HasEvent
+  nameWithType: EdgeType.HasEvent
+  fullName: CodeAnalysisService.Enums.EdgeType.HasEvent
+  type: Field
+  source:
+    id: HasEvent
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 22
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: HasEvent = 12
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Calls
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Calls
+  id: Calls
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Calls
+  nameWithType: EdgeType.Calls
+  fullName: CodeAnalysisService.Enums.EdgeType.Calls
+  type: Field
+  source:
+    id: Calls
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 25
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Calls = 13
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Overrides
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Overrides
+  id: Overrides
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Overrides
+  nameWithType: EdgeType.Overrides
+  fullName: CodeAnalysisService.Enums.EdgeType.Overrides
+  type: Field
+  source:
+    id: Overrides
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 26
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Overrides = 14
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Returns
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Returns
+  id: Returns
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Returns
+  nameWithType: EdgeType.Returns
+  fullName: CodeAnalysisService.Enums.EdgeType.Returns
+  type: Field
+  source:
+    id: Returns
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 27
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Returns = 15
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Creates
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Creates
+  id: Creates
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Creates
+  nameWithType: EdgeType.Creates
+  fullName: CodeAnalysisService.Enums.EdgeType.Creates
+  type: Field
+  source:
+    id: Creates
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 28
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Creates = 16
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.SubscribesTo
+  commentId: F:CodeAnalysisService.Enums.EdgeType.SubscribesTo
+  id: SubscribesTo
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: SubscribesTo
+  nameWithType: EdgeType.SubscribesTo
+  fullName: CodeAnalysisService.Enums.EdgeType.SubscribesTo
+  type: Field
+  source:
+    id: SubscribesTo
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 29
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: SubscribesTo = 17
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.HandlesEvent
+  commentId: F:CodeAnalysisService.Enums.EdgeType.HandlesEvent
+  id: HandlesEvent
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: HandlesEvent
+  nameWithType: EdgeType.HandlesEvent
+  fullName: CodeAnalysisService.Enums.EdgeType.HandlesEvent
+  type: Field
+  source:
+    id: HandlesEvent
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 30
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: HandlesEvent = 18
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.DelegatesTo
+  commentId: F:CodeAnalysisService.Enums.EdgeType.DelegatesTo
+  id: DelegatesTo
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: DelegatesTo
+  nameWithType: EdgeType.DelegatesTo
+  fullName: CodeAnalysisService.Enums.EdgeType.DelegatesTo
+  type: Field
+  source:
+    id: DelegatesTo
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 31
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: DelegatesTo = 19
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.ConfirmsContract
+  commentId: F:CodeAnalysisService.Enums.EdgeType.ConfirmsContract
+  id: ConfirmsContract
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: ConfirmsContract
+  nameWithType: EdgeType.ConfirmsContract
+  fullName: CodeAnalysisService.Enums.EdgeType.ConfirmsContract
+  type: Field
+  source:
+    id: ConfirmsContract
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 32
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: ConfirmsContract = 20
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.ImplementedBy
+  commentId: F:CodeAnalysisService.Enums.EdgeType.ImplementedBy
+  id: ImplementedBy
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: ImplementedBy
+  nameWithType: EdgeType.ImplementedBy
+  fullName: CodeAnalysisService.Enums.EdgeType.ImplementedBy
+  type: Field
+  source:
+    id: ImplementedBy
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 33
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: ImplementedBy = 21
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.HasField
+  commentId: F:CodeAnalysisService.Enums.EdgeType.HasField
+  id: HasField
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: HasField
+  nameWithType: EdgeType.HasField
+  fullName: CodeAnalysisService.Enums.EdgeType.HasField
+  type: Field
+  source:
+    id: HasField
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 36
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: HasField = 22
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.HasProperty
+  commentId: F:CodeAnalysisService.Enums.EdgeType.HasProperty
+  id: HasProperty
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: HasProperty
+  nameWithType: EdgeType.HasProperty
+  fullName: CodeAnalysisService.Enums.EdgeType.HasProperty
+  type: Field
+  source:
+    id: HasProperty
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 37
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: HasProperty = 23
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.ReferencesField
+  commentId: F:CodeAnalysisService.Enums.EdgeType.ReferencesField
+  id: ReferencesField
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: ReferencesField
+  nameWithType: EdgeType.ReferencesField
+  fullName: CodeAnalysisService.Enums.EdgeType.ReferencesField
+  type: Field
+  source:
+    id: ReferencesField
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 38
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: ReferencesField = 24
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.ReferencesProperty
+  commentId: F:CodeAnalysisService.Enums.EdgeType.ReferencesProperty
+  id: ReferencesProperty
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: ReferencesProperty
+  nameWithType: EdgeType.ReferencesProperty
+  fullName: CodeAnalysisService.Enums.EdgeType.ReferencesProperty
+  type: Field
+  source:
+    id: ReferencesProperty
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 39
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: ReferencesProperty = 25
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.Observes
+  commentId: F:CodeAnalysisService.Enums.EdgeType.Observes
+  id: Observes
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: Observes
+  nameWithType: EdgeType.Observes
+  fullName: CodeAnalysisService.Enums.EdgeType.Observes
+  type: Field
+  source:
+    id: Observes
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 42
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: Observes = 26
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.EdgeType.RaisesEvent
+  commentId: F:CodeAnalysisService.Enums.EdgeType.RaisesEvent
+  id: RaisesEvent
+  parent: CodeAnalysisService.Enums.EdgeType
+  langs:
+  - csharp
+  - vb
+  name: RaisesEvent
+  nameWithType: EdgeType.RaisesEvent
+  fullName: CodeAnalysisService.Enums.EdgeType.RaisesEvent
+  type: Field
+  source:
+    id: RaisesEvent
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\Enums\EdgeType.cs
+    startLine: 43
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.Enums
+  syntax:
+    content: RaisesEvent = 27
+    return:
+      type: CodeAnalysisService.Enums.EdgeType
+references:
+- uid: CodeAnalysisService.Enums
+  commentId: N:CodeAnalysisService.Enums
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.Enums
+  nameWithType: CodeAnalysisService.Enums
+  fullName: CodeAnalysisService.Enums
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+- uid: CodeAnalysisService.Enums.EdgeType
+  commentId: T:CodeAnalysisService.Enums.EdgeType
+  parent: CodeAnalysisService.Enums
+  href: CodeAnalysisService.Enums.EdgeType.html
+  name: EdgeType
+  nameWithType: EdgeType
+  fullName: CodeAnalysisService.Enums.EdgeType

@@ -1,0 +1,475 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  id: IEdgeBuilder
+  parent: CodeAnalysisService.GraphService.EdgeBuilder
+  children:
+  - CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.BuildEdges(CodeAnalysisService.GraphService.Nodes.INode,CodeAnalysisService.GraphService.Context.NodeRegistry,Microsoft.CodeAnalysis.Compilation,System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.SemanticModel})
+  - CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType
+  langs:
+  - csharp
+  - vb
+  name: IEdgeBuilder
+  nameWithType: IEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  type: Interface
+  source:
+    id: IEdgeBuilder
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\EdgeBuilder\IEdgeBuilder.cs
+    startLine: 15
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.EdgeBuilder
+  summary: >-
+    Defines a contract for building edges in the graph for a specific <xref href="CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType" data-throw-if-not-resolved="false"></xref>.
+
+    Each implementation inspects a given <xref href="CodeAnalysisService.GraphService.Nodes.INode" data-throw-if-not-resolved="false"></xref> and produces
+
+    outgoing <xref href="CodeAnalysisService.GraphService.Nodes.EdgeNode" data-throw-if-not-resolved="false"></xref> connections based on Roslyn symbols and syntax.
+  example: []
+  syntax:
+    content: public interface IEdgeBuilder
+    content.vb: Public Interface IEdgeBuilder
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType
+  commentId: P:CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType
+  id: NodeType
+  parent: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  langs:
+  - csharp
+  - vb
+  name: NodeType
+  nameWithType: IEdgeBuilder.NodeType
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType
+  type: Property
+  source:
+    id: NodeType
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\EdgeBuilder\IEdgeBuilder.cs
+    startLine: 17
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.EdgeBuilder
+  syntax:
+    content: NodeType NodeType { get; }
+    parameters: []
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+    content.vb: ReadOnly Property NodeType As NodeType
+  overload: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType*
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.BuildEdges(CodeAnalysisService.GraphService.Nodes.INode,CodeAnalysisService.GraphService.Context.NodeRegistry,Microsoft.CodeAnalysis.Compilation,System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.SemanticModel})
+  commentId: M:CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.BuildEdges(CodeAnalysisService.GraphService.Nodes.INode,CodeAnalysisService.GraphService.Context.NodeRegistry,Microsoft.CodeAnalysis.Compilation,System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.SemanticModel})
+  id: BuildEdges(CodeAnalysisService.GraphService.Nodes.INode,CodeAnalysisService.GraphService.Context.NodeRegistry,Microsoft.CodeAnalysis.Compilation,System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.SemanticModel})
+  parent: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  langs:
+  - csharp
+  - vb
+  name: BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>)
+  nameWithType: IEdgeBuilder.BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>)
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.BuildEdges(CodeAnalysisService.GraphService.Nodes.INode, CodeAnalysisService.GraphService.Context.NodeRegistry, Microsoft.CodeAnalysis.Compilation, System.Collections.Generic.Dictionary<Microsoft.CodeAnalysis.SyntaxTree, Microsoft.CodeAnalysis.SemanticModel>)
+  type: Method
+  source:
+    id: BuildEdges
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\EdgeBuilder\IEdgeBuilder.cs
+    startLine: 19
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.EdgeBuilder
+  syntax:
+    content: IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
+    parameters:
+    - id: node
+      type: CodeAnalysisService.GraphService.Nodes.INode
+    - id: registry
+      type: CodeAnalysisService.GraphService.Context.NodeRegistry
+    - id: compilation
+      type: Microsoft.CodeAnalysis.Compilation
+    - id: semanticModels
+      type: System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.SemanticModel}
+    return:
+      type: System.Collections.Generic.IEnumerable{CodeAnalysisService.GraphService.Nodes.EdgeNode}
+    content.vb: Function BuildEdges(node As INode, registry As NodeRegistry, compilation As Compilation, semanticModels As Dictionary(Of SyntaxTree, SemanticModel)) As IEnumerable(Of EdgeNode)
+  overload: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.BuildEdges*
+  nameWithType.vb: IEdgeBuilder.BuildEdges(INode, NodeRegistry, Compilation, Dictionary(Of SyntaxTree, SemanticModel))
+  fullName.vb: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.BuildEdges(CodeAnalysisService.GraphService.Nodes.INode, CodeAnalysisService.GraphService.Context.NodeRegistry, Microsoft.CodeAnalysis.Compilation, System.Collections.Generic.Dictionary(Of Microsoft.CodeAnalysis.SyntaxTree, Microsoft.CodeAnalysis.SemanticModel))
+  name.vb: BuildEdges(INode, NodeRegistry, Compilation, Dictionary(Of SyntaxTree, SemanticModel))
+references:
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType
+  commentId: P:CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType
+  parent: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.html#CodeAnalysisService_GraphService_EdgeBuilder_IEdgeBuilder_NodeType
+  name: NodeType
+  nameWithType: IEdgeBuilder.NodeType
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType
+- uid: CodeAnalysisService.GraphService.Nodes.INode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.INode
+  parent: CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.GraphService.Nodes.INode.html
+  name: INode
+  nameWithType: INode
+  fullName: CodeAnalysisService.GraphService.Nodes.INode
+- uid: CodeAnalysisService.GraphService.Nodes.EdgeNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.EdgeNode
+  parent: CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.GraphService.Nodes.EdgeNode.html
+  name: EdgeNode
+  nameWithType: EdgeNode
+  fullName: CodeAnalysisService.GraphService.Nodes.EdgeNode
+- uid: CodeAnalysisService.GraphService.EdgeBuilder
+  commentId: N:CodeAnalysisService.GraphService.EdgeBuilder
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.EdgeBuilder
+  nameWithType: CodeAnalysisService.GraphService.EdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder
+    name: EdgeBuilder
+    href: CodeAnalysisService.GraphService.EdgeBuilder.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder
+    name: EdgeBuilder
+    href: CodeAnalysisService.GraphService.EdgeBuilder.html
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  parent: CodeAnalysisService.GraphService.EdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.html
+  name: IEdgeBuilder
+  nameWithType: IEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+- uid: CodeAnalysisService.GraphService.Nodes
+  commentId: N:CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.Nodes
+  nameWithType: CodeAnalysisService.GraphService.Nodes
+  fullName: CodeAnalysisService.GraphService.Nodes
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType*
+  commentId: Overload:CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType
+  href: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.html#CodeAnalysisService_GraphService_EdgeBuilder_IEdgeBuilder_NodeType
+  name: NodeType
+  nameWithType: IEdgeBuilder.NodeType
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType
+- uid: CodeAnalysisService.Enums.NodeType
+  commentId: T:CodeAnalysisService.Enums.NodeType
+  parent: CodeAnalysisService.Enums
+  href: CodeAnalysisService.Enums.NodeType.html
+  name: NodeType
+  nameWithType: NodeType
+  fullName: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums
+  commentId: N:CodeAnalysisService.Enums
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.Enums
+  nameWithType: CodeAnalysisService.Enums
+  fullName: CodeAnalysisService.Enums
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.BuildEdges*
+  commentId: Overload:CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.BuildEdges
+  href: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.html#CodeAnalysisService_GraphService_EdgeBuilder_IEdgeBuilder_BuildEdges_CodeAnalysisService_GraphService_Nodes_INode_CodeAnalysisService_GraphService_Context_NodeRegistry_Microsoft_CodeAnalysis_Compilation_System_Collections_Generic_Dictionary_Microsoft_CodeAnalysis_SyntaxTree_Microsoft_CodeAnalysis_SemanticModel__
+  name: BuildEdges
+  nameWithType: IEdgeBuilder.BuildEdges
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.BuildEdges
+- uid: CodeAnalysisService.GraphService.Context.NodeRegistry
+  commentId: T:CodeAnalysisService.GraphService.Context.NodeRegistry
+  parent: CodeAnalysisService.GraphService.Context
+  href: CodeAnalysisService.GraphService.Context.NodeRegistry.html
+  name: NodeRegistry
+  nameWithType: NodeRegistry
+  fullName: CodeAnalysisService.GraphService.Context.NodeRegistry
+- uid: Microsoft.CodeAnalysis.Compilation
+  commentId: T:Microsoft.CodeAnalysis.Compilation
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.compilation
+  name: Compilation
+  nameWithType: Compilation
+  fullName: Microsoft.CodeAnalysis.Compilation
+- uid: System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.SemanticModel}
+  commentId: T:System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.SemanticModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<SyntaxTree, SemanticModel>
+  nameWithType: Dictionary<SyntaxTree, SemanticModel>
+  fullName: System.Collections.Generic.Dictionary<Microsoft.CodeAnalysis.SyntaxTree, Microsoft.CodeAnalysis.SemanticModel>
+  nameWithType.vb: Dictionary(Of SyntaxTree, SemanticModel)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Microsoft.CodeAnalysis.SyntaxTree, Microsoft.CodeAnalysis.SemanticModel)
+  name.vb: Dictionary(Of SyntaxTree, SemanticModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.SyntaxTree
+    name: SyntaxTree
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtree
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SemanticModel
+    name: SemanticModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.semanticmodel
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxTree
+    name: SyntaxTree
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtree
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SemanticModel
+    name: SemanticModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.semanticmodel
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{CodeAnalysisService.GraphService.Nodes.EdgeNode}
+  commentId: T:System.Collections.Generic.IEnumerable{CodeAnalysisService.GraphService.Nodes.EdgeNode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<EdgeNode>
+  nameWithType: IEnumerable<EdgeNode>
+  fullName: System.Collections.Generic.IEnumerable<CodeAnalysisService.GraphService.Nodes.EdgeNode>
+  nameWithType.vb: IEnumerable(Of EdgeNode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of CodeAnalysisService.GraphService.Nodes.EdgeNode)
+  name.vb: IEnumerable(Of EdgeNode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: CodeAnalysisService.GraphService.Nodes.EdgeNode
+    name: EdgeNode
+    href: CodeAnalysisService.GraphService.Nodes.EdgeNode.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CodeAnalysisService.GraphService.Nodes.EdgeNode
+    name: EdgeNode
+    href: CodeAnalysisService.GraphService.Nodes.EdgeNode.html
+  - name: )
+- uid: CodeAnalysisService.GraphService.Context
+  commentId: N:CodeAnalysisService.GraphService.Context
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.Context
+  nameWithType: CodeAnalysisService.GraphService.Context
+  fullName: CodeAnalysisService.GraphService.Context
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Context
+    name: Context
+    href: CodeAnalysisService.GraphService.Context.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Context
+    name: Context
+    href: CodeAnalysisService.GraphService.Context.html
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

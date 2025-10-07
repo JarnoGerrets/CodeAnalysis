@@ -1,0 +1,1348 @@
+{
+  "source_base_path": "C:/Users/jarno/OneDrive/Documenten/POC CodeAnalysis/CodeAnalysis",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysis.TestCases.Observer.WeatherStation.IObserver",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysis.TestCases.Observer.WeatherStation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysis.TestCases.Observer.WeatherStation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.CodeAnalysisServiceRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.CodeAnalysisServiceRunner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.CodeAnalysisServiceRunner",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.CodeAnalysisServiceRunner.yml\" sourcestartlinenumber=\"1\">Runs Roslyn analysis on a project directory.\nLoads C# files, builds a compilation and semantic models,\nand creates a symbol graph via <xref href=\"CodeAnalysisService.GraphService.GraphBuilder\" data-throw-if-not-resolved=\"false\"></xref>.\nTracks files that failed to load in <xref href=\"CodeAnalysisService.CodeAnalysisServiceRunner.FailedFiles\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.Enums.EdgeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.Enums.EdgeType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.Enums.EdgeType",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.Enums.EdgeType.yml\" sourcestartlinenumber=\"1\">Defines the types of edges in the code analysis graph, representing\nrelationships and interactions between nodes such as classes, methods,\nfields, and properties.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.Enums.NodeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.Enums.NodeType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.Enums.NodeType",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.Enums.NodeType.yml\" sourcestartlinenumber=\"1\">Defines the types of nodes in the code analysis graph, representing\nlanguage constructs such as classes, interfaces, methods, constructors,\nproperties, and fields.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.Enums.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.Enums",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Context.GraphContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Context.GraphContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Context.GraphContext",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Context.GraphContext.yml\" sourcestartlinenumber=\"1\">Provides controlled access to Roslyn models and the node registry\nfor node/edge builders.\nCaches syntax roots and hides raw compilation internals.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Context.NodeRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Context.NodeRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Context.NodeRegistry",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Context.NodeRegistry.yml\" sourcestartlinenumber=\"1\">Central registry that maps Roslyn <xref href=\"Microsoft.CodeAnalysis.ISymbol\" data-throw-if-not-resolved=\"false\"></xref>s to graph <xref href=\"CodeAnalysisService.GraphService.Nodes.INode\" data-throw-if-not-resolved=\"false\"></xref>s.\nProvides lookup by symbol or by node type, and maintains reverse mappings\nso builders and analyzers can efficiently query the graph.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Context.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Context",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder.yml\" sourcestartlinenumber=\"1\">Builds edges for <xref href=\"CodeAnalysisService.GraphService.Nodes.ClassNode\" data-throw-if-not-resolved=\"false\"></xref>s, including inheritance,\nimplemented interfaces, fields, properties, methods, and constructors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder.yml\" sourcestartlinenumber=\"1\">Builds edges for <xref href=\"CodeAnalysisService.GraphService.Nodes.ConstructorNode\" data-throw-if-not-resolved=\"false\"></xref>s:</p>\n<ul sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder.yml\" sourcestartlinenumber=\"2\">\n<li sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder.yml\" sourcestartlinenumber=\"2\">Structural: adds a <code>HasConstructor</code> edge from the declaring class to the constructor.</li>\n<li sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder.yml\" sourcestartlinenumber=\"3\">Behavioral: analyzes object creation expressions inside the constructor body and\nadds <code>Creates</code> edges to the constructed <xref href=\"CodeAnalysisService.GraphService.Nodes.ClassNode\" data-throw-if-not-resolved=\"false\"></xref>s.</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder.yml\" sourcestartlinenumber=\"1\">Builds edges for <xref href=\"CodeAnalysisService.GraphService.Nodes.EventNode\" data-throw-if-not-resolved=\"false\"></xref>s, linking them to their\ndeclaring class and to any delegate type they reference.\nProduces <xref href=\"CodeAnalysisService.Enums.EdgeType.HasEvent\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"CodeAnalysisService.Enums.EdgeType.RaisesEvent\" data-throw-if-not-resolved=\"false\"></xref>,\nand <xref href=\"CodeAnalysisService.Enums.EdgeType.Uses\" data-throw-if-not-resolved=\"false\"></xref> edges where applicable.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder.yml\" sourcestartlinenumber=\"1\">Builds edges for <xref href=\"CodeAnalysisService.GraphService.Nodes.FieldNode\" data-throw-if-not-resolved=\"false\"></xref>s, linking their declared type\nand any element type (e.g., array or generic element) to the corresponding <xref href=\"CodeAnalysisService.GraphService.Nodes.ClassNode\" data-throw-if-not-resolved=\"false\"></xref>.\nProduces <xref href=\"CodeAnalysisService.Enums.EdgeType.Uses\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"CodeAnalysisService.Enums.EdgeType.HasFieldElement\" data-throw-if-not-resolved=\"false\"></xref> edges.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.yml\" sourcestartlinenumber=\"1\">Defines a contract for building edges in the graph for a specific <xref href=\"CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.NodeType\" data-throw-if-not-resolved=\"false\"></xref>.\nEach implementation inspects a given <xref href=\"CodeAnalysisService.GraphService.Nodes.INode\" data-throw-if-not-resolved=\"false\"></xref> and produces\noutgoing <xref href=\"CodeAnalysisService.GraphService.Nodes.EdgeNode\" data-throw-if-not-resolved=\"false\"></xref> connections based on Roslyn symbols and syntax.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder.yml\" sourcestartlinenumber=\"1\">Builds edges for <xref href=\"CodeAnalysisService.GraphService.Nodes.InterfaceNode\" data-throw-if-not-resolved=\"false\"></xref>s, capturing inheritance relationships\nbetween interfaces (i.e., when an interface extends one or more base interfaces).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder.yml\" sourcestartlinenumber=\"1\">Builds edges for <xref href=\"CodeAnalysisService.GraphService.Nodes.MethodNode\" data-throw-if-not-resolved=\"false\"></xref>s, including return type,\nparameter usage, calls, overrides, object creation, field/property\nreferences, and interface implementations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder.yml\" sourcestartlinenumber=\"1\">Builds edges for <xref href=\"CodeAnalysisService.GraphService.Nodes.PropertyNode\" data-throw-if-not-resolved=\"false\"></xref>s, including references to fields,\nusage of class types, and element-type relationships (e.g., arrays, generics).\nProduces <xref href=\"CodeAnalysisService.Enums.EdgeType.ReferencesField\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"CodeAnalysisService.Enums.EdgeType.Uses\" data-throw-if-not-resolved=\"false\"></xref>,\nand <xref href=\"CodeAnalysisService.Enums.EdgeType.HasPropertyElement\" data-throw-if-not-resolved=\"false\"></xref> edges.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.EdgeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.EdgeBuilder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Export.GraphJsonExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Export.GraphJsonExporter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Export.GraphJsonExporter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Export.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Export.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Export",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.GraphBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.GraphBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.GraphBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.GraphBuilder.yml\" sourcestartlinenumber=\"1\">Builds a graph from Roslyn models.\nUses node builders to create class/interface/method/etc. nodes\nand edge builders to connect them (HasMethod, Calls, Uses, etc.).\nStores results in <xref href=\"CodeAnalysisService.GraphService.Context.NodeRegistry\" data-throw-if-not-resolved=\"false\"></xref> for later analysis.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Helpers.CallResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Helpers.CallResolver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Helpers.CallResolver",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Helpers.EdgeComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Helpers.EdgeComparer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Helpers.EdgeComparer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Helpers.TypeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Helpers.TypeHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Helpers.TypeHelper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Helpers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Helpers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder.yml\" sourcestartlinenumber=\"1\">Builds <xref href=\"CodeAnalysisService.GraphService.Nodes.ClassNode\" data-throw-if-not-resolved=\"false\"></xref> instances for class declarations\nin a syntax tree using Roslyn symbols.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder.yml\" sourcestartlinenumber=\"1\">Builds <xref href=\"CodeAnalysisService.GraphService.Nodes.ConstructorNode\" data-throw-if-not-resolved=\"false\"></xref> instances for constructor declarations\nin a syntax tree using Roslyn symbols.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder.yml\" sourcestartlinenumber=\"1\">Builds <xref href=\"CodeAnalysisService.GraphService.Nodes.FieldNode\" data-throw-if-not-resolved=\"false\"></xref> instances for field declarations\nin classes using Roslyn symbols.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder.yml\" sourcestartlinenumber=\"1\">Defines a builder that creates graph nodes for a specific <xref href=\"CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder.NodeType\" data-throw-if-not-resolved=\"false\"></xref>\nfrom Roslyn symbols and syntax.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder.yml\" sourcestartlinenumber=\"1\">Builds <xref href=\"CodeAnalysisService.GraphService.Nodes.InterfaceNode\" data-throw-if-not-resolved=\"false\"></xref> instances for interface declarations\nin a syntax tree using Roslyn symbols.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder.yml\" sourcestartlinenumber=\"1\">Builds <xref href=\"CodeAnalysisService.GraphService.Nodes.MethodNode\" data-throw-if-not-resolved=\"false\"></xref> instances for method declarations\nin classes using Roslyn symbols.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder.yml\" sourcestartlinenumber=\"1\">Builds <xref href=\"CodeAnalysisService.GraphService.Nodes.PropertyNode\" data-throw-if-not-resolved=\"false\"></xref> instances for property declarations\nusing Roslyn symbols and captures referenced symbols inside property bodies.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.NodeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.NodeBuilder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.ClassNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.ClassNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.ClassNode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.ClassNode.yml\" sourcestartlinenumber=\"1\">Represents a class in the code graph.\nStores its Roslyn syntax, symbol, whether it is abstract,\nand its outgoing edges to related nodes (e.g. inheritance,\nimplemented interfaces, members, etc.).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.ConstructorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.ConstructorNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.ConstructorNode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.ConstructorNode.yml\" sourcestartlinenumber=\"1\">Represents a constructor in the code graph.\nHolds its Roslyn syntax, symbol, and outgoing edges to related nodes\n(e.g. created types, calls, or usage relationships).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.EdgeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.EdgeNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.EdgeNode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.EdgeNode.yml\" sourcestartlinenumber=\"1\">Represents a directed edge in the code graph.\nConnects a source node to a target node with a specific relationship type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.EventNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.EventNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.EventNode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.EventNode.yml\" sourcestartlinenumber=\"1\">Represents an event in the code graph.\nStores its Roslyn syntax wrapper, symbol, and outgoing edges\nto related nodes (e.g. handlers or containing types).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.FieldNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.FieldNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.FieldNode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.FieldNode.yml\" sourcestartlinenumber=\"1\">Represents a field in the code graph.\nCaptures its Roslyn declaration and variable syntax, symbol,\nand outgoing edges to related nodes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.IAnalyzerNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.IAnalyzerNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.IAnalyzerNode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.IAnalyzerNode.yml\" sourcestartlinenumber=\"1\">Base interface for analyzer nodes that represent types\n(classes, interfaces, etc.) in the code graph.\nProvides access to the Roslyn type symbol, abstractness,\nand outgoing edges. This interface bunches the Class and Interface nodes together to handle them.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.INode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.INode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.INode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.INode.yml\" sourcestartlinenumber=\"1\">Base interface for all nodes in the code graph.\nDefines common properties for node type, Roslyn symbol,\nand outgoing edges to related nodes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.InterfaceNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.InterfaceNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.InterfaceNode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.InterfaceNode.yml\" sourcestartlinenumber=\"1\">Represents an interface in the code graph.\nStores its Roslyn syntax, symbol, and outgoing edges\nto related nodes (e.g. implemented classes).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.MethodNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.MethodNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.MethodNode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.MethodNode.yml\" sourcestartlinenumber=\"1\">Represents a method in the code graph.\nStores its Roslyn syntax, symbol, return type,\nabstractness, and outgoing edges to related nodes\n(e.g. calls, usage, or return types).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.PropertyNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.PropertyNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes.PropertyNode",
+      "Summary": "<p sourcefile=\"api/CodeAnalysisService.GraphService.Nodes.PropertyNode.yml\" sourcestartlinenumber=\"1\">Represents a property in the code graph.\nCaptures its Roslyn syntax, symbol, referenced symbols\n(e.g. backing fields or accessed members), and outgoing edges.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Nodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Nodes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Nodes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Printer.GraphPrinter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Printer.GraphPrinter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Printer.GraphPrinter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.Printer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.Printer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.Printer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.SyntaxWrappers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.SyntaxWrappers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService.SyntaxWrappers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.GraphService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.GraphService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.GraphService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Checks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Checks",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.PatternAnalysers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternRoles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.PatternRoles.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.PatternRoles",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Printing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Printing",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.RuleResult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleSteps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.RuleSteps.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.RuleSteps",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Rules.PatternRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Rules.PatternRule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Rules.PatternRule",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.PatternAnalyser.Rules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.PatternAnalyser.Rules.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService.PatternAnalyser.Rules",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeAnalysisService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeAnalysisService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeAnalysisService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Demo.Program1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Demo.Program1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Demo.Program1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Demo.Publisher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Demo.Publisher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Demo.Publisher",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Demo.Subscriber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Demo.Subscriber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Demo.Subscriber",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Demo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Demo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Demo",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

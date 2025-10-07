@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService
+  commentId: N:CodeAnalysisService
+  id: CodeAnalysisService
+  children:
+  - CodeAnalysisService.CodeAnalysisServiceRunner
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService
+  nameWithType: CodeAnalysisService
+  fullName: CodeAnalysisService
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.CodeAnalysisServiceRunner
+  commentId: T:CodeAnalysisService.CodeAnalysisServiceRunner
+  href: CodeAnalysisService.CodeAnalysisServiceRunner.html
+  name: CodeAnalysisServiceRunner
+  nameWithType: CodeAnalysisServiceRunner
+  fullName: CodeAnalysisService.CodeAnalysisServiceRunner

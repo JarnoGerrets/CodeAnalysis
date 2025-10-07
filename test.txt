@@ -1,0 +1,244 @@
+Class: Program
+  --[HasMethod]--> Method: Main
+    Method: Main
+      --[Calls]--> Method: BuildGraph
+        Method: BuildGraph
+          --[Calls]--> Method: BuildGraph
+            Method: BuildGraph
+              --[Calls]--> Method: BuildNodes
+                Method: BuildNodes
+                  --[Creates]--> Class: ClassNode
+                    Class: ClassNode
+                      --[HasProperty]--> Property: ClassSyntax
+                        Property: ClassSyntax
+                      --[HasProperty]--> Property: NodeType
+                        Property: NodeType
+                      --[HasProperty]--> Property: Symbol
+                        Property: Symbol
+                      --[HasProperty]--> Property: OutgoingEdges
+                        Property: OutgoingEdges
+                          --[Uses]--> Class: EdgeNode
+                            Class: EdgeNode
+                              --[HasProperty]--> Property: Target
+                                Property: Target
+                              --[HasProperty]--> Property: NodeType
+                                Property: NodeType
+                              --[HasProperty]--> Property: Type
+                                Property: Type
+                              --[HasProperty]--> Property: Target
+                              --[HasProperty]--> Property: NodeType
+                              --[HasProperty]--> Property: Type
+                      --[HasProperty]--> Property: ClassSyntax
+                      --[HasProperty]--> Property: NodeType
+                      --[HasProperty]--> Property: Symbol
+                      --[HasProperty]--> Property: OutgoingEdges
+                  --[Creates]--> Class: MethodNode
+                    Class: MethodNode
+                      --[HasProperty]--> Property: MethodSyntax
+                        Property: MethodSyntax
+                      --[HasProperty]--> Property: NodeType
+                        Property: NodeType
+                      --[HasProperty]--> Property: Symbol
+                        Property: Symbol
+                      --[HasProperty]--> Property: OutgoingEdges
+                        Property: OutgoingEdges
+                          --[Uses]--> Class: EdgeNode
+                      --[HasProperty]--> Property: MethodSyntax
+                      --[HasProperty]--> Property: NodeType
+                      --[HasProperty]--> Property: Symbol
+                      --[HasProperty]--> Property: OutgoingEdges
+                  --[Creates]--> Class: EdgeNode
+                  --[Creates]--> Class: PropertyNode
+                    Class: PropertyNode
+                      --[HasProperty]--> Property: PropertySyntax
+                        Property: PropertySyntax
+                      --[HasProperty]--> Property: NodeType
+                        Property: NodeType
+                      --[HasProperty]--> Property: Symbol
+                        Property: Symbol
+                      --[HasProperty]--> Property: ReferencedSymbols
+                        Property: ReferencedSymbols
+                      --[HasProperty]--> Property: OutgoingEdges
+                        Property: OutgoingEdges
+                          --[Uses]--> Class: EdgeNode
+                      --[HasProperty]--> Property: PropertySyntax
+                      --[HasProperty]--> Property: NodeType
+                      --[HasProperty]--> Property: Symbol
+                      --[HasProperty]--> Property: ReferencedSymbols
+                      --[HasProperty]--> Property: OutgoingEdges
+                  --[Creates]--> Class: EdgeNode
+                  --[Creates]--> Class: FieldNode
+                    Class: FieldNode
+                      --[HasProperty]--> Property: FieldSyntax
+                        Property: FieldSyntax
+                      --[HasProperty]--> Property: NodeType
+                        Property: NodeType
+                      --[HasProperty]--> Property: Symbol
+                        Property: Symbol
+                      --[HasProperty]--> Property: OutgoingEdges
+                        Property: OutgoingEdges
+                          --[Uses]--> Class: EdgeNode
+                      --[HasProperty]--> Property: FieldSyntax
+                      --[HasProperty]--> Property: NodeType
+                      --[HasProperty]--> Property: Symbol
+                      --[HasProperty]--> Property: OutgoingEdges
+                  --[Creates]--> Class: EdgeNode
+                  --[Creates]--> Class: EdgeFinder
+                    Class: EdgeFinder
+                      --[HasMethod]--> Method: FindClassEdges
+                        Method: FindClassEdges
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[RaisesEvent]--> Field: _classNodes
+                            Field: _classNodes
+                          --[RaisesEvent]--> Field: _classNodes
+                          --[RaisesEvent]--> Field: _fieldNodes
+                            Field: _fieldNodes
+                          --[RaisesEvent]--> Field: _propertyNodes
+                            Field: _propertyNodes
+                          --[RaisesEvent]--> Field: _classNodes
+                      --[HasMethod]--> Method: FindMethodEdges
+                        Method: FindMethodEdges
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[RaisesEvent]--> Field: _methodNodes
+                            Field: _methodNodes
+                          --[RaisesEvent]--> Field: _methodNodes
+                          --[RaisesEvent]--> Field: _classNodes
+                          --[RaisesEvent]--> Field: _classNodes
+                          --[RaisesEvent]--> Field: _fieldNodes
+                          --[RaisesEvent]--> Field: _methodNodes
+                          --[RaisesEvent]--> Field: _fieldNodes
+                      --[HasMethod]--> Method: FindPropertyEdges
+                        Method: FindPropertyEdges
+                          --[Creates]--> Class: EdgeComparer
+                            Class: EdgeComparer
+                              --[HasMethod]--> Method: Equals
+                                Method: Equals
+                              --[HasMethod]--> Method: GetHashCode
+                                Method: GetHashCode
+                          --[Creates]--> Class: EdgeNode
+                          --[Creates]--> Class: EdgeNode
+                          --[RaisesEvent]--> Field: _fieldNodes
+                          --[RaisesEvent]--> Field: _classNodes
+                      --[HasField]--> Field: _compilation
+                        Field: _compilation
+                      --[HasField]--> Field: _semanticModels
+                        Field: _semanticModels
+                      --[HasField]--> Field: _classNodes
+                      --[HasField]--> Field: _methodNodes
+                      --[HasField]--> Field: _propertyNodes
+                      --[HasField]--> Field: _fieldNodes
+                      --[HasField]--> Field: _compilation
+                      --[HasField]--> Field: _semanticModels
+                      --[HasField]--> Field: _classNodes
+                      --[HasField]--> Field: _methodNodes
+                      --[HasField]--> Field: _propertyNodes
+                      --[HasField]--> Field: _fieldNodes
+              --[Calls]--> Method: BuildEdges
+                Method: BuildEdges
+                  --[Calls]--> Method: FindClassEdges
+                  --[Calls]--> Method: FindMethodEdges
+                  --[Calls]--> Method: FindPropertyEdges
+                  --[HandlesEvent]--> Method: FindClassEdges
+                  --[HandlesEvent]--> Method: FindMethodEdges
+                  --[HandlesEvent]--> Method: FindPropertyEdges
+                  --[RaisesEvent]--> Field: _edgeFinder
+                    Field: _edgeFinder
+                  --[RaisesEvent]--> Field: _edgeFinder
+                  --[RaisesEvent]--> Field: _edgeFinder
+              --[HandlesEvent]--> Method: BuildNodes
+              --[HandlesEvent]--> Method: BuildEdges
+          --[Calls]--> Method: PrintGraph
+            Method: PrintGraph
+              --[Calls]--> Method: PrintNode
+                Method: PrintNode
+                  --[Calls]--> Method: PrintEdge
+                    Method: PrintEdge
+                      --[Calls]--> Method: PrintNode
+                      --[HandlesEvent]--> Method: PrintNode
+                  --[Calls]--> Method: PrintEdge
+                  --[Calls]--> Method: PrintEdge
+                  --[Calls]--> Method: PrintEdge
+                  --[HandlesEvent]--> Method: PrintEdge
+                  --[HandlesEvent]--> Method: PrintEdge
+                  --[HandlesEvent]--> Method: PrintEdge
+                  --[HandlesEvent]--> Method: PrintEdge
+              --[HandlesEvent]--> Method: PrintNode
+          --[Creates]--> Class: GraphBuilder
+            Class: GraphBuilder
+              --[HasMethod]--> Method: BuildGraph
+              --[HasMethod]--> Method: BuildNodes
+              --[HasMethod]--> Method: BuildEdges
+              --[HasMethod]--> Method: PrintGraph
+              --[HasMethod]--> Method: PrintNode
+              --[HasMethod]--> Method: PrintEdge
+              --[HasProperty]--> Property: Classes
+                Property: Classes
+                  --[Uses]--> Class: ClassNode
+              --[HasProperty]--> Property: Methods
+                Property: Methods
+                  --[Uses]--> Class: MethodNode
+              --[HasProperty]--> Property: Properties
+                Property: Properties
+                  --[Uses]--> Class: PropertyNode
+              --[HasProperty]--> Property: Fields
+                Property: Fields
+                  --[Uses]--> Class: FieldNode
+              --[HasField]--> Field: _compilation
+                Field: _compilation
+              --[HasField]--> Field: _semanticModels
+                Field: _semanticModels
+              --[HasField]--> Field: _edgeFinder
+              --[HasField]--> Field: _classNodes
+                Field: _classNodes
+              --[HasField]--> Field: _methodNodes
+                Field: _methodNodes
+              --[HasField]--> Field: _propertyNodes
+                Field: _propertyNodes
+              --[HasField]--> Field: _fieldNodes
+                Field: _fieldNodes
+              --[HasField]--> Field: _compilation
+              --[HasField]--> Field: _semanticModels
+              --[HasField]--> Field: _edgeFinder
+              --[HasProperty]--> Property: Classes
+              --[HasProperty]--> Property: Methods
+              --[HasProperty]--> Property: Properties
+              --[HasProperty]--> Property: Fields
+              --[HasField]--> Field: _classNodes
+              --[HasField]--> Field: _methodNodes
+              --[HasField]--> Field: _propertyNodes
+              --[HasField]--> Field: _fieldNodes
+              --[Observes]--> Class: EdgeFinder
+          --[HandlesEvent]--> Method: BuildGraph
+          --[HandlesEvent]--> Method: PrintGraph
+      --[Creates]--> Class: CodeAnalysisServiceRunner
+        Class: CodeAnalysisServiceRunner
+          --[HasMethod]--> Method: GetSemanticModel
+            Method: GetSemanticModel
+              --[RaisesEvent]--> Field: _semanticModels
+                Field: _semanticModels
+          --[HasMethod]--> Method: BuildGraph
+          --[HasProperty]--> Property: Graph
+            Property: Graph
+              --[Uses]--> Class: GraphBuilder
+          --[HasField]--> Field: _syntaxTrees
+            Field: _syntaxTrees
+          --[HasField]--> Field: _compilation
+            Field: _compilation
+          --[HasField]--> Field: _semanticModels
+          --[HasField]--> Field: _syntaxTrees
+          --[HasField]--> Field: _compilation
+          --[HasField]--> Field: _semanticModels
+          --[HasProperty]--> Property: Graph
+      --[HandlesEvent]--> Method: BuildGraph
+Execution time: 1001 ms

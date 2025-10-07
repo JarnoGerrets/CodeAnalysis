@@ -1,0 +1,75 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.Helpers
+  commentId: N:CodeAnalysisService.GraphService.Helpers
+  id: CodeAnalysisService.GraphService.Helpers
+  children:
+  - CodeAnalysisService.GraphService.Helpers.CallResolver
+  - CodeAnalysisService.GraphService.Helpers.EdgeComparer
+  - CodeAnalysisService.GraphService.Helpers.TypeHelper
+  - CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.GraphService.Helpers
+  nameWithType: CodeAnalysisService.GraphService.Helpers
+  fullName: CodeAnalysisService.GraphService.Helpers
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.GraphService.Helpers.CallResolver
+  commentId: T:CodeAnalysisService.GraphService.Helpers.CallResolver
+  parent: CodeAnalysisService.GraphService.Helpers
+  href: CodeAnalysisService.GraphService.Helpers.CallResolver.html
+  name: CallResolver
+  nameWithType: CallResolver
+  fullName: CodeAnalysisService.GraphService.Helpers.CallResolver
+- uid: CodeAnalysisService.GraphService.Helpers.EdgeComparer
+  commentId: T:CodeAnalysisService.GraphService.Helpers.EdgeComparer
+  href: CodeAnalysisService.GraphService.Helpers.EdgeComparer.html
+  name: EdgeComparer
+  nameWithType: EdgeComparer
+  fullName: CodeAnalysisService.GraphService.Helpers.EdgeComparer
+- uid: CodeAnalysisService.GraphService.Helpers.TypeHelper
+  commentId: T:CodeAnalysisService.GraphService.Helpers.TypeHelper
+  href: CodeAnalysisService.GraphService.Helpers.TypeHelper.html
+  name: TypeHelper
+  nameWithType: TypeHelper
+  fullName: CodeAnalysisService.GraphService.Helpers.TypeHelper
+- uid: CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder
+  commentId: T:CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder
+  href: CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder.html
+  name: UniqueEdgeAdder
+  nameWithType: UniqueEdgeAdder
+  fullName: CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder
+- uid: CodeAnalysisService.GraphService.Helpers
+  commentId: N:CodeAnalysisService.GraphService.Helpers
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.Helpers
+  nameWithType: CodeAnalysisService.GraphService.Helpers
+  fullName: CodeAnalysisService.GraphService.Helpers
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Helpers
+    name: Helpers
+    href: CodeAnalysisService.GraphService.Helpers.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Helpers
+    name: Helpers
+    href: CodeAnalysisService.GraphService.Helpers.html

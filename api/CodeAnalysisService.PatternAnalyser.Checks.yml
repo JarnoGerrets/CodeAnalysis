@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.PatternAnalyser.Checks
+  commentId: N:CodeAnalysisService.PatternAnalyser.Checks
+  id: CodeAnalysisService.PatternAnalyser.Checks
+  children:
+  - CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks
+  - CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks
+  - CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks
+  - CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks
+  - CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks
+  - CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks
+  - CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.PatternAnalyser.Checks
+  nameWithType: CodeAnalysisService.PatternAnalyser.Checks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks
+  commentId: T:CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks
+  href: CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks.html
+  name: AdapterChecks
+  nameWithType: AdapterChecks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks
+- uid: CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks
+  commentId: T:CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks
+  href: CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks.html
+  name: CollectionChecks
+  nameWithType: CollectionChecks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks
+- uid: CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks
+  commentId: T:CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks
+  href: CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks.html
+  name: FactoryMethodChecks
+  nameWithType: FactoryMethodChecks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks
+- uid: CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks
+  commentId: T:CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks
+  href: CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks.html
+  name: MethodCallChecks
+  nameWithType: MethodCallChecks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks
+- uid: CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks
+  commentId: T:CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks
+  href: CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks.html
+  name: ObserverChecks
+  nameWithType: ObserverChecks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks
+- uid: CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks
+  commentId: T:CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks
+  href: CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks.html
+  name: SingletonChecks
+  nameWithType: SingletonChecks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  commentId: T:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  href: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.html
+  name: StrategyChecks
+  nameWithType: StrategyChecks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks

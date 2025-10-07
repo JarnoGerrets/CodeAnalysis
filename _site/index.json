@@ -1,0 +1,467 @@
+{
+  "api/CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.html": {
+    "href": "api/CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.html",
+    "title": "Interface IObserver | mysite",
+    "summary": "Interface IObserver Namespace CodeAnalysis.TestCases.Observer.WeatherStation Assembly CodeAnalysis.dll public interface IObserver Methods Update(string) void Update(string data) Parameters data string"
+  },
+  "api/CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay.html": {
+    "href": "api/CodeAnalysis.TestCases.Observer.WeatherStation.PhoneDisplay.html",
+    "title": "Class PhoneDisplay | mysite",
+    "summary": "Class PhoneDisplay Namespace CodeAnalysis.TestCases.Observer.WeatherStation Assembly CodeAnalysis.dll public class PhoneDisplay : IObserver Inheritance object PhoneDisplay Implements IObserver Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Update(string) public void Update(string data) Parameters data string"
+  },
+  "api/CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation.html": {
+    "href": "api/CodeAnalysis.TestCases.Observer.WeatherStation.WeatherStation.html",
+    "title": "Class WeatherStation | mysite",
+    "summary": "Class WeatherStation Namespace CodeAnalysis.TestCases.Observer.WeatherStation Assembly CodeAnalysis.dll public class WeatherStation Inheritance object WeatherStation Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods AddObserver(IObserver) public void AddObserver(IObserver observer) Parameters observer IObserver NotifyObservers(string) public void NotifyObservers(string data) Parameters data string RemoveObserver(IObserver) public void RemoveObserver(IObserver observer) Parameters observer IObserver"
+  },
+  "api/CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay.html": {
+    "href": "api/CodeAnalysis.TestCases.Observer.WeatherStation.WindowDisplay.html",
+    "title": "Class WindowDisplay | mysite",
+    "summary": "Class WindowDisplay Namespace CodeAnalysis.TestCases.Observer.WeatherStation Assembly CodeAnalysis.dll public class WindowDisplay : IObserver Inheritance object WindowDisplay Implements IObserver Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Update(string) public void Update(string data) Parameters data string"
+  },
+  "api/CodeAnalysis.TestCases.Observer.WeatherStation.html": {
+    "href": "api/CodeAnalysis.TestCases.Observer.WeatherStation.html",
+    "title": "Namespace CodeAnalysis.TestCases.Observer.WeatherStation | mysite",
+    "summary": "Namespace CodeAnalysis.TestCases.Observer.WeatherStation Classes PhoneDisplay WeatherStation WindowDisplay Interfaces IObserver"
+  },
+  "api/CodeAnalysisService.CodeAnalysisServiceRunner.html": {
+    "href": "api/CodeAnalysisService.CodeAnalysisServiceRunner.html",
+    "title": "Class CodeAnalysisServiceRunner | mysite",
+    "summary": "Class CodeAnalysisServiceRunner Namespace CodeAnalysisService Assembly CodeAnalysis.dll Runs Roslyn analysis on a project directory. Loads C# files, builds a compilation and semantic models, and creates a symbol graph via GraphBuilder. Tracks files that failed to load in FailedFiles. public class CodeAnalysisServiceRunner Inheritance object CodeAnalysisServiceRunner Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors CodeAnalysisServiceRunner(string) public CodeAnalysisServiceRunner(string sourceDirectory) Parameters sourceDirectory string Properties FailedFiles public List<(string FilePath, string Reason)> FailedFiles { get; } Property Value List<(string FilePath, string Reason)> Graph public GraphBuilder Graph { get; } Property Value GraphBuilder Methods BuildGraph() public void BuildGraph() CreateGraphView() public void CreateGraphView() GetSemanticModel(SyntaxTree) public SemanticModel? GetSemanticModel(SyntaxTree tree) Parameters tree SyntaxTree Returns SemanticModel PrintGraph() public void PrintGraph()"
+  },
+  "api/CodeAnalysisService.Enums.EdgeType.html": {
+    "href": "api/CodeAnalysisService.Enums.EdgeType.html",
+    "title": "Enum EdgeType | mysite",
+    "summary": "Enum EdgeType Namespace CodeAnalysisService.Enums Assembly CodeAnalysis.dll Defines the types of edges in the code analysis graph, representing relationships and interactions between nodes such as classes, methods, fields, and properties. public enum EdgeType Fields Aggregates = 2 Calls = 13 Composes = 4 ConfirmsContract = 20 Creates = 16 DelegatesTo = 19 DependsOn = 7 HandlesEvent = 18 HasConstructor = 8 HasEvent = 12 HasField = 22 HasFieldElement = 10 HasMethod = 9 HasProperty = 23 HasPropertyElement = 11 ImplementedBy = 21 Implements = 1 Inherits = 0 Notifies = 6 Observes = 26 Overrides = 14 RaisesEvent = 27 ReferencesField = 24 ReferencesProperty = 25 Returns = 15 SubscribesTo = 17 Uses = 3 Wraps = 5"
+  },
+  "api/CodeAnalysisService.Enums.NodeType.html": {
+    "href": "api/CodeAnalysisService.Enums.NodeType.html",
+    "title": "Enum NodeType | mysite",
+    "summary": "Enum NodeType Namespace CodeAnalysisService.Enums Assembly CodeAnalysis.dll Defines the types of nodes in the code analysis graph, representing language constructs such as classes, interfaces, methods, constructors, properties, and fields. public enum NodeType Fields Class = 1 Constructor = 2 Event = 6 Field = 5 Interface = 0 Method = 3 Property = 4"
+  },
+  "api/CodeAnalysisService.Enums.html": {
+    "href": "api/CodeAnalysisService.Enums.html",
+    "title": "Namespace CodeAnalysisService.Enums | mysite",
+    "summary": "Namespace CodeAnalysisService.Enums Enums EdgeType Defines the types of edges in the code analysis graph, representing relationships and interactions between nodes such as classes, methods, fields, and properties. NodeType Defines the types of nodes in the code analysis graph, representing language constructs such as classes, interfaces, methods, constructors, properties, and fields."
+  },
+  "api/CodeAnalysisService.GraphService.Context.GraphContext.html": {
+    "href": "api/CodeAnalysisService.GraphService.Context.GraphContext.html",
+    "title": "Class GraphContext | mysite",
+    "summary": "Class GraphContext Namespace CodeAnalysisService.GraphService.Context Assembly CodeAnalysis.dll Provides controlled access to Roslyn models and the node registry for node/edge builders. Caches syntax roots and hides raw compilation internals. public class GraphContext Inheritance object GraphContext Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors GraphContext(Dictionary<SyntaxTree, SemanticModel>, NodeRegistry) public GraphContext(Dictionary<SyntaxTree, SemanticModel> semanticModels, NodeRegistry registry) Parameters semanticModels Dictionary<SyntaxTree, SemanticModel> registry NodeRegistry Properties AllNodes public IEnumerable<INode> AllNodes { get; } Property Value IEnumerable<INode> Methods GetAll<T>() public IEnumerable<T> GetAll<T>() where T : class, INode Returns IEnumerable<T> Type Parameters T GetModel(SyntaxTree) public SemanticModel GetModel(SyntaxTree tree) Parameters tree SyntaxTree Returns SemanticModel GetNode<T>(ISymbol) public T? GetNode<T>(ISymbol symbol) where T : class, INode Parameters symbol ISymbol Returns T Type Parameters T GetRoot(SyntaxTree) public SyntaxNode GetRoot(SyntaxTree tree) Parameters tree SyntaxTree Returns SyntaxNode RegisterNode(ISymbol, INode) public void RegisterNode(ISymbol symbol, INode node) Parameters symbol ISymbol node INode"
+  },
+  "api/CodeAnalysisService.GraphService.Context.NodeRegistry.html": {
+    "href": "api/CodeAnalysisService.GraphService.Context.NodeRegistry.html",
+    "title": "Class NodeRegistry | mysite",
+    "summary": "Class NodeRegistry Namespace CodeAnalysisService.GraphService.Context Assembly CodeAnalysis.dll Central registry that maps Roslyn ISymbols to graph INodes. Provides lookup by symbol or by node type, and maintains reverse mappings so builders and analyzers can efficiently query the graph. public class NodeRegistry Inheritance object NodeRegistry Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods AddNode(ISymbol, INode) public void AddNode(ISymbol symbol, INode node) Parameters symbol ISymbol node INode GetAll<T>() public IEnumerable<T> GetAll<T>() where T : class, INode Returns IEnumerable<T> Type Parameters T GetNode<T>(ISymbol) public T? GetNode<T>(ISymbol symbol) where T : class, INode Parameters symbol ISymbol Returns T Type Parameters T"
+  },
+  "api/CodeAnalysisService.GraphService.Context.html": {
+    "href": "api/CodeAnalysisService.GraphService.Context.html",
+    "title": "Namespace CodeAnalysisService.GraphService.Context | mysite",
+    "summary": "Namespace CodeAnalysisService.GraphService.Context Classes GraphContext Provides controlled access to Roslyn models and the node registry for node/edge builders. Caches syntax roots and hides raw compilation internals. NodeRegistry Central registry that maps Roslyn ISymbols to graph INodes. Provides lookup by symbol or by node type, and maintains reverse mappings so builders and analyzers can efficiently query the graph."
+  },
+  "api/CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder.html",
+    "title": "Class ClassEdgeBuilder | mysite",
+    "summary": "Class ClassEdgeBuilder Namespace CodeAnalysisService.GraphService.EdgeBuilder Assembly CodeAnalysis.dll Builds edges for ClassNodes, including inheritance, implemented interfaces, fields, properties, methods, and constructors. public class ClassEdgeBuilder : IEdgeBuilder Inheritance object ClassEdgeBuilder Implements IEdgeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>) public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels) Parameters node INode registry NodeRegistry compilation Compilation semanticModels Dictionary<SyntaxTree, SemanticModel> Returns IEnumerable<EdgeNode>"
+  },
+  "api/CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder.html",
+    "title": "Class ConstructorEdgeBuilder | mysite",
+    "summary": "Class ConstructorEdgeBuilder Namespace CodeAnalysisService.GraphService.EdgeBuilder Assembly CodeAnalysis.dll Builds edges for ConstructorNodes: Structural: adds a HasConstructor edge from the declaring class to the constructor. Behavioral: analyzes object creation expressions inside the constructor body and adds Creates edges to the constructed ClassNodes. public class ConstructorEdgeBuilder : IEdgeBuilder Inheritance object ConstructorEdgeBuilder Implements IEdgeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>) public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels) Parameters node INode registry NodeRegistry compilation Compilation semanticModels Dictionary<SyntaxTree, SemanticModel> Returns IEnumerable<EdgeNode>"
+  },
+  "api/CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder.html",
+    "title": "Class EventEdgeBuilder | mysite",
+    "summary": "Class EventEdgeBuilder Namespace CodeAnalysisService.GraphService.EdgeBuilder Assembly CodeAnalysis.dll Builds edges for EventNodes, linking them to their declaring class and to any delegate type they reference. Produces HasEvent, RaisesEvent, and Uses edges where applicable. public class EventEdgeBuilder : IEdgeBuilder Inheritance object EventEdgeBuilder Implements IEdgeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>) public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels) Parameters node INode registry NodeRegistry compilation Compilation semanticModels Dictionary<SyntaxTree, SemanticModel> Returns IEnumerable<EdgeNode>"
+  },
+  "api/CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder.html",
+    "title": "Class FieldEdgeBuilder | mysite",
+    "summary": "Class FieldEdgeBuilder Namespace CodeAnalysisService.GraphService.EdgeBuilder Assembly CodeAnalysis.dll Builds edges for FieldNodes, linking their declared type and any element type (e.g., array or generic element) to the corresponding ClassNode. Produces Uses and HasFieldElement edges. public class FieldEdgeBuilder : IEdgeBuilder Inheritance object FieldEdgeBuilder Implements IEdgeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>) public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels) Parameters node INode registry NodeRegistry compilation Compilation semanticModels Dictionary<SyntaxTree, SemanticModel> Returns IEnumerable<EdgeNode>"
+  },
+  "api/CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.html",
+    "title": "Interface IEdgeBuilder | mysite",
+    "summary": "Interface IEdgeBuilder Namespace CodeAnalysisService.GraphService.EdgeBuilder Assembly CodeAnalysis.dll Defines a contract for building edges in the graph for a specific NodeType. Each implementation inspects a given INode and produces outgoing EdgeNode connections based on Roslyn symbols and syntax. public interface IEdgeBuilder Properties NodeType NodeType NodeType { get; } Property Value NodeType Methods BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>) IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels) Parameters node INode registry NodeRegistry compilation Compilation semanticModels Dictionary<SyntaxTree, SemanticModel> Returns IEnumerable<EdgeNode>"
+  },
+  "api/CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder.html",
+    "title": "Class InterfaceEdgeBuilder | mysite",
+    "summary": "Class InterfaceEdgeBuilder Namespace CodeAnalysisService.GraphService.EdgeBuilder Assembly CodeAnalysis.dll Builds edges for InterfaceNodes, capturing inheritance relationships between interfaces (i.e., when an interface extends one or more base interfaces). public class InterfaceEdgeBuilder : IEdgeBuilder Inheritance object InterfaceEdgeBuilder Implements IEdgeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>) public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels) Parameters node INode registry NodeRegistry compilation Compilation semanticModels Dictionary<SyntaxTree, SemanticModel> Returns IEnumerable<EdgeNode>"
+  },
+  "api/CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder.html",
+    "title": "Class MethodEdgeBuilder | mysite",
+    "summary": "Class MethodEdgeBuilder Namespace CodeAnalysisService.GraphService.EdgeBuilder Assembly CodeAnalysis.dll Builds edges for MethodNodes, including return type, parameter usage, calls, overrides, object creation, field/property references, and interface implementations. public class MethodEdgeBuilder : IEdgeBuilder Inheritance object MethodEdgeBuilder Implements IEdgeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>) public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels) Parameters node INode registry NodeRegistry compilation Compilation semanticModels Dictionary<SyntaxTree, SemanticModel> Returns IEnumerable<EdgeNode> SetCallResolver(CallResolver) public void SetCallResolver(CallResolver resolver) Parameters resolver CallResolver"
+  },
+  "api/CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder.html",
+    "title": "Class PropertyEdgeBuilder | mysite",
+    "summary": "Class PropertyEdgeBuilder Namespace CodeAnalysisService.GraphService.EdgeBuilder Assembly CodeAnalysis.dll Builds edges for PropertyNodes, including references to fields, usage of class types, and element-type relationships (e.g., arrays, generics). Produces ReferencesField, Uses, and HasPropertyElement edges. public class PropertyEdgeBuilder : IEdgeBuilder Inheritance object PropertyEdgeBuilder Implements IEdgeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildEdges(INode, NodeRegistry, Compilation, Dictionary<SyntaxTree, SemanticModel>) public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels) Parameters node INode registry NodeRegistry compilation Compilation semanticModels Dictionary<SyntaxTree, SemanticModel> Returns IEnumerable<EdgeNode>"
+  },
+  "api/CodeAnalysisService.GraphService.EdgeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.EdgeBuilder.html",
+    "title": "Namespace CodeAnalysisService.GraphService.EdgeBuilder | mysite",
+    "summary": "Namespace CodeAnalysisService.GraphService.EdgeBuilder Classes ClassEdgeBuilder Builds edges for ClassNodes, including inheritance, implemented interfaces, fields, properties, methods, and constructors. ConstructorEdgeBuilder Builds edges for ConstructorNodes: Structural: adds a HasConstructor edge from the declaring class to the constructor. Behavioral: analyzes object creation expressions inside the constructor body and adds Creates edges to the constructed ClassNodes. EventEdgeBuilder Builds edges for EventNodes, linking them to their declaring class and to any delegate type they reference. Produces HasEvent, RaisesEvent, and Uses edges where applicable. FieldEdgeBuilder Builds edges for FieldNodes, linking their declared type and any element type (e.g., array or generic element) to the corresponding ClassNode. Produces Uses and HasFieldElement edges. InterfaceEdgeBuilder Builds edges for InterfaceNodes, capturing inheritance relationships between interfaces (i.e., when an interface extends one or more base interfaces). MethodEdgeBuilder Builds edges for MethodNodes, including return type, parameter usage, calls, overrides, object creation, field/property references, and interface implementations. PropertyEdgeBuilder Builds edges for PropertyNodes, including references to fields, usage of class types, and element-type relationships (e.g., arrays, generics). Produces ReferencesField, Uses, and HasPropertyElement edges. Interfaces IEdgeBuilder Defines a contract for building edges in the graph for a specific NodeType. Each implementation inspects a given INode and produces outgoing EdgeNode connections based on Roslyn symbols and syntax."
+  },
+  "api/CodeAnalysisService.GraphService.Export.GraphJsonExporter.html": {
+    "href": "api/CodeAnalysisService.GraphService.Export.GraphJsonExporter.html",
+    "title": "Class GraphJsonExporter | mysite",
+    "summary": "Class GraphJsonExporter Namespace CodeAnalysisService.GraphService.Export Assembly CodeAnalysis.dll public static class GraphJsonExporter Inheritance object GraphJsonExporter Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Export(NodeRegistry, string) public static void Export(NodeRegistry registry, string path) Parameters registry NodeRegistry path string"
+  },
+  "api/CodeAnalysisService.GraphService.Export.html": {
+    "href": "api/CodeAnalysisService.GraphService.Export.html",
+    "title": "Namespace CodeAnalysisService.GraphService.Export | mysite",
+    "summary": "Namespace CodeAnalysisService.GraphService.Export Classes GraphJsonExporter"
+  },
+  "api/CodeAnalysisService.GraphService.GraphBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.GraphBuilder.html",
+    "title": "Class GraphBuilder | mysite",
+    "summary": "Class GraphBuilder Namespace CodeAnalysisService.GraphService Assembly CodeAnalysis.dll Builds a graph from Roslyn models. Uses node builders to create class/interface/method/etc. nodes and edge builders to connect them (HasMethod, Calls, Uses, etc.). Stores results in NodeRegistry for later analysis. public class GraphBuilder Inheritance object GraphBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors GraphBuilder(Compilation, Dictionary<SyntaxTree, SemanticModel>) public GraphBuilder(Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels) Parameters compilation Compilation semanticModels Dictionary<SyntaxTree, SemanticModel> Properties Registry public NodeRegistry Registry { get; } Property Value NodeRegistry Methods BuildGraph() public void BuildGraph()"
+  },
+  "api/CodeAnalysisService.GraphService.Helpers.CallResolver.html": {
+    "href": "api/CodeAnalysisService.GraphService.Helpers.CallResolver.html",
+    "title": "Class CallResolver | mysite",
+    "summary": "Class CallResolver Namespace CodeAnalysisService.GraphService.Helpers Assembly CodeAnalysis.dll public class CallResolver Inheritance object CallResolver Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors CallResolver(IEnumerable<ClassNode>, IEnumerable<MethodNode>) public CallResolver(IEnumerable<ClassNode> classNodes, IEnumerable<MethodNode> methodNodes) Parameters classNodes IEnumerable<ClassNode> methodNodes IEnumerable<MethodNode> Methods GetImplementations(IMethodSymbol) public IEnumerable<MethodNode> GetImplementations(IMethodSymbol ifaceMethod) Parameters ifaceMethod IMethodSymbol Returns IEnumerable<MethodNode>"
+  },
+  "api/CodeAnalysisService.GraphService.Helpers.EdgeComparer.html": {
+    "href": "api/CodeAnalysisService.GraphService.Helpers.EdgeComparer.html",
+    "title": "Class EdgeComparer | mysite",
+    "summary": "Class EdgeComparer Namespace CodeAnalysisService.GraphService.Helpers Assembly CodeAnalysis.dll public class EdgeComparer : IEqualityComparer<EdgeNode> Inheritance object EdgeComparer Implements IEqualityComparer<EdgeNode> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Equals(EdgeNode, EdgeNode) Determines whether the specified objects are equal. public bool Equals(EdgeNode x, EdgeNode y) Parameters x EdgeNode The first object of type T to compare. y EdgeNode The second object of type T to compare. Returns bool true if the specified objects are equal; otherwise, false. GetHashCode(EdgeNode) Returns a hash code for the specified object. public int GetHashCode(EdgeNode obj) Parameters obj EdgeNode The object for which a hash code is to be returned. Returns int A hash code for the specified object. Exceptions ArgumentNullException The type of obj is a reference type and obj is null."
+  },
+  "api/CodeAnalysisService.GraphService.Helpers.TypeHelper.html": {
+    "href": "api/CodeAnalysisService.GraphService.Helpers.TypeHelper.html",
+    "title": "Class TypeHelper | mysite",
+    "summary": "Class TypeHelper Namespace CodeAnalysisService.GraphService.Helpers Assembly CodeAnalysis.dll public static class TypeHelper Inheritance object TypeHelper Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetElementType(ITypeSymbol) Try to unwrap to an element type. Returns null if the type is not a known collection/wrapper. public static ITypeSymbol? GetElementType(ITypeSymbol type) Parameters type ITypeSymbol Returns ITypeSymbol GetInnermostElementType(ITypeSymbol) Fully unwraps nested collection/wrapper types until no more found. Always returns a type (falls back to the original). public static ITypeSymbol GetInnermostElementType(ITypeSymbol type) Parameters type ITypeSymbol Returns ITypeSymbol"
+  },
+  "api/CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder.html": {
+    "href": "api/CodeAnalysisService.GraphService.Helpers.UniqueEdgeAdder.html",
+    "title": "Class UniqueEdgeAdder | mysite",
+    "summary": "Class UniqueEdgeAdder Namespace CodeAnalysisService.GraphService.Helpers Assembly CodeAnalysis.dll public static class UniqueEdgeAdder Inheritance object UniqueEdgeAdder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods AddUniqueEdge(INode, EdgeNode) public static void AddUniqueEdge(INode source, EdgeNode edge) Parameters source INode edge EdgeNode"
+  },
+  "api/CodeAnalysisService.GraphService.Helpers.html": {
+    "href": "api/CodeAnalysisService.GraphService.Helpers.html",
+    "title": "Namespace CodeAnalysisService.GraphService.Helpers | mysite",
+    "summary": "Namespace CodeAnalysisService.GraphService.Helpers Classes CallResolver EdgeComparer TypeHelper UniqueEdgeAdder"
+  },
+  "api/CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.NodeBuilder.ClassNodeBuilder.html",
+    "title": "Class ClassNodeBuilder | mysite",
+    "summary": "Class ClassNodeBuilder Namespace CodeAnalysisService.GraphService.NodeBuilder Assembly CodeAnalysis.dll Builds ClassNode instances for class declarations in a syntax tree using Roslyn symbols. public class ClassNodeBuilder : INodeBuilder Inheritance object ClassNodeBuilder Implements INodeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildNodes(GraphContext, SyntaxTree, SemanticModel) public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model) Parameters context GraphContext tree SyntaxTree model SemanticModel Returns IEnumerable<(ISymbol Symbol, INode Node)>"
+  },
+  "api/CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.NodeBuilder.ConstructorNodeBuilder.html",
+    "title": "Class ConstructorNodeBuilder | mysite",
+    "summary": "Class ConstructorNodeBuilder Namespace CodeAnalysisService.GraphService.NodeBuilder Assembly CodeAnalysis.dll Builds ConstructorNode instances for constructor declarations in a syntax tree using Roslyn symbols. public class ConstructorNodeBuilder : INodeBuilder Inheritance object ConstructorNodeBuilder Implements INodeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildNodes(GraphContext, SyntaxTree, SemanticModel) public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model) Parameters context GraphContext tree SyntaxTree model SemanticModel Returns IEnumerable<(ISymbol Symbol, INode Node)>"
+  },
+  "api/CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.NodeBuilder.EventNodeBuilder.html",
+    "title": "Class EventNodeBuilder | mysite",
+    "summary": "Class EventNodeBuilder Namespace CodeAnalysisService.GraphService.NodeBuilder Assembly CodeAnalysis.dll public class EventNodeBuilder : INodeBuilder Inheritance object EventNodeBuilder Implements INodeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildNodes(GraphContext, SyntaxTree, SemanticModel) public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model) Parameters context GraphContext tree SyntaxTree model SemanticModel Returns IEnumerable<(ISymbol Symbol, INode Node)>"
+  },
+  "api/CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.NodeBuilder.FieldNodeBuilder.html",
+    "title": "Class FieldNodeBuilder | mysite",
+    "summary": "Class FieldNodeBuilder Namespace CodeAnalysisService.GraphService.NodeBuilder Assembly CodeAnalysis.dll Builds FieldNode instances for field declarations in classes using Roslyn symbols. public class FieldNodeBuilder : INodeBuilder Inheritance object FieldNodeBuilder Implements INodeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildNodes(GraphContext, SyntaxTree, SemanticModel) public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model) Parameters context GraphContext tree SyntaxTree model SemanticModel Returns IEnumerable<(ISymbol Symbol, INode Node)>"
+  },
+  "api/CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.NodeBuilder.INodeBuilder.html",
+    "title": "Interface INodeBuilder | mysite",
+    "summary": "Interface INodeBuilder Namespace CodeAnalysisService.GraphService.NodeBuilder Assembly CodeAnalysis.dll Defines a builder that creates graph nodes for a specific NodeType from Roslyn symbols and syntax. public interface INodeBuilder Properties NodeType NodeType NodeType { get; } Property Value NodeType Methods BuildNodes(GraphContext, SyntaxTree, SemanticModel) IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model) Parameters context GraphContext tree SyntaxTree model SemanticModel Returns IEnumerable<(ISymbol Symbol, INode Node)>"
+  },
+  "api/CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.NodeBuilder.InterfaceNodeBuilder.html",
+    "title": "Class InterfaceNodeBuilder | mysite",
+    "summary": "Class InterfaceNodeBuilder Namespace CodeAnalysisService.GraphService.NodeBuilder Assembly CodeAnalysis.dll Builds InterfaceNode instances for interface declarations in a syntax tree using Roslyn symbols. public class InterfaceNodeBuilder : INodeBuilder Inheritance object InterfaceNodeBuilder Implements INodeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildNodes(GraphContext, SyntaxTree, SemanticModel) public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model) Parameters context GraphContext tree SyntaxTree model SemanticModel Returns IEnumerable<(ISymbol Symbol, INode Node)>"
+  },
+  "api/CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.NodeBuilder.MethodNodeBuilder.html",
+    "title": "Class MethodNodeBuilder | mysite",
+    "summary": "Class MethodNodeBuilder Namespace CodeAnalysisService.GraphService.NodeBuilder Assembly CodeAnalysis.dll Builds MethodNode instances for method declarations in classes using Roslyn symbols. public class MethodNodeBuilder : INodeBuilder Inheritance object MethodNodeBuilder Implements INodeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildNodes(GraphContext, SyntaxTree, SemanticModel) public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model) Parameters context GraphContext tree SyntaxTree model SemanticModel Returns IEnumerable<(ISymbol Symbol, INode Node)>"
+  },
+  "api/CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.NodeBuilder.PropertyNodeBuilder.html",
+    "title": "Class PropertyNodeBuilder | mysite",
+    "summary": "Class PropertyNodeBuilder Namespace CodeAnalysisService.GraphService.NodeBuilder Assembly CodeAnalysis.dll Builds PropertyNode instances for property declarations using Roslyn symbols and captures referenced symbols inside property bodies. public class PropertyNodeBuilder : INodeBuilder Inheritance object PropertyNodeBuilder Implements INodeBuilder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Methods BuildNodes(GraphContext, SyntaxTree, SemanticModel) public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model) Parameters context GraphContext tree SyntaxTree model SemanticModel Returns IEnumerable<(ISymbol Symbol, INode Node)>"
+  },
+  "api/CodeAnalysisService.GraphService.NodeBuilder.html": {
+    "href": "api/CodeAnalysisService.GraphService.NodeBuilder.html",
+    "title": "Namespace CodeAnalysisService.GraphService.NodeBuilder | mysite",
+    "summary": "Namespace CodeAnalysisService.GraphService.NodeBuilder Classes ClassNodeBuilder Builds ClassNode instances for class declarations in a syntax tree using Roslyn symbols. ConstructorNodeBuilder Builds ConstructorNode instances for constructor declarations in a syntax tree using Roslyn symbols. EventNodeBuilder FieldNodeBuilder Builds FieldNode instances for field declarations in classes using Roslyn symbols. InterfaceNodeBuilder Builds InterfaceNode instances for interface declarations in a syntax tree using Roslyn symbols. MethodNodeBuilder Builds MethodNode instances for method declarations in classes using Roslyn symbols. PropertyNodeBuilder Builds PropertyNode instances for property declarations using Roslyn symbols and captures referenced symbols inside property bodies. Interfaces INodeBuilder Defines a builder that creates graph nodes for a specific NodeType from Roslyn symbols and syntax."
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.ClassNode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.ClassNode.html",
+    "title": "Class ClassNode | mysite",
+    "summary": "Class ClassNode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Represents a class in the code graph. Stores its Roslyn syntax, symbol, whether it is abstract, and its outgoing edges to related nodes (e.g. inheritance, implemented interfaces, members, etc.). public class ClassNode : IAnalyzerNode, INode Inheritance object ClassNode Implements IAnalyzerNode INode Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties ClassSyntax public ClassDeclarationSyntax ClassSyntax { get; set; } Property Value ClassDeclarationSyntax IsAbstract public bool IsAbstract { get; set; } Property Value bool NodeType public NodeType NodeType { get; } Property Value NodeType OutgoingEdges public List<EdgeNode> OutgoingEdges { get; set; } Property Value List<EdgeNode> Symbol public INamedTypeSymbol Symbol { get; set; } Property Value INamedTypeSymbol"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.ConstructorNode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.ConstructorNode.html",
+    "title": "Class ConstructorNode | mysite",
+    "summary": "Class ConstructorNode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Represents a constructor in the code graph. Holds its Roslyn syntax, symbol, and outgoing edges to related nodes (e.g. created types, calls, or usage relationships). public class ConstructorNode : INode Inheritance object ConstructorNode Implements INode Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties ConstructorSyntax public ConstructorDeclarationSyntax ConstructorSyntax { get; set; } Property Value ConstructorDeclarationSyntax NodeType public NodeType NodeType { get; } Property Value NodeType OutgoingEdges public List<EdgeNode> OutgoingEdges { get; set; } Property Value List<EdgeNode> Symbol public IMethodSymbol Symbol { get; set; } Property Value IMethodSymbol"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.EdgeNode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.EdgeNode.html",
+    "title": "Class EdgeNode | mysite",
+    "summary": "Class EdgeNode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Represents a directed edge in the code graph. Connects a source node to a target node with a specific relationship type. public class EdgeNode Inheritance object EdgeNode Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType Target public INode Target { get; set; } Property Value INode Type public EdgeType Type { get; set; } Property Value EdgeType"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.EventNode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.EventNode.html",
+    "title": "Class EventNode | mysite",
+    "summary": "Class EventNode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Represents an event in the code graph. Stores its Roslyn syntax wrapper, symbol, and outgoing edges to related nodes (e.g. handlers or containing types). public class EventNode : INode Inheritance object EventNode Implements INode Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties EventSyntax public EventSyntaxWrapper EventSyntax { get; set; } Property Value EventSyntaxWrapper NodeType public NodeType NodeType { get; } Property Value NodeType OutgoingEdges public List<EdgeNode> OutgoingEdges { get; set; } Property Value List<EdgeNode> Symbol public IEventSymbol Symbol { get; set; } Property Value IEventSymbol"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.FieldNode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.FieldNode.html",
+    "title": "Class FieldNode | mysite",
+    "summary": "Class FieldNode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Represents a field in the code graph. Captures its Roslyn declaration and variable syntax, symbol, and outgoing edges to related nodes. public class FieldNode : INode Inheritance object FieldNode Implements INode Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties DeclarationSyntax public FieldDeclarationSyntax DeclarationSyntax { get; set; } Property Value FieldDeclarationSyntax NodeType public NodeType NodeType { get; } Property Value NodeType OutgoingEdges public List<EdgeNode> OutgoingEdges { get; set; } Property Value List<EdgeNode> Symbol public IFieldSymbol Symbol { get; set; } Property Value IFieldSymbol VariableSyntax public VariableDeclaratorSyntax VariableSyntax { get; set; } Property Value VariableDeclaratorSyntax"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.IAnalyzerNode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.IAnalyzerNode.html",
+    "title": "Interface IAnalyzerNode | mysite",
+    "summary": "Interface IAnalyzerNode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Base interface for analyzer nodes that represent types (classes, interfaces, etc.) in the code graph. Provides access to the Roslyn type symbol, abstractness, and outgoing edges. This interface bunches the Class and Interface nodes together to handle them. public interface IAnalyzerNode : INode Inherited Members INode.NodeType Properties IsAbstract bool IsAbstract { get; } Property Value bool OutgoingEdges List<EdgeNode> OutgoingEdges { get; } Property Value List<EdgeNode> Symbol INamedTypeSymbol Symbol { get; } Property Value INamedTypeSymbol"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.INode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.INode.html",
+    "title": "Interface INode | mysite",
+    "summary": "Interface INode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Base interface for all nodes in the code graph. Defines common properties for node type, Roslyn symbol, and outgoing edges to related nodes. public interface INode Properties NodeType NodeType NodeType { get; } Property Value NodeType OutgoingEdges List<EdgeNode> OutgoingEdges { get; set; } Property Value List<EdgeNode> Symbol ISymbol Symbol { get; } Property Value ISymbol"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.InterfaceNode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.InterfaceNode.html",
+    "title": "Class InterfaceNode | mysite",
+    "summary": "Class InterfaceNode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Represents an interface in the code graph. Stores its Roslyn syntax, symbol, and outgoing edges to related nodes (e.g. implemented classes). public class InterfaceNode : IAnalyzerNode, INode Inheritance object InterfaceNode Implements IAnalyzerNode INode Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties InterfaceSyntax public InterfaceDeclarationSyntax InterfaceSyntax { get; set; } Property Value InterfaceDeclarationSyntax IsAbstract public bool IsAbstract { get; } Property Value bool NodeType public NodeType NodeType { get; } Property Value NodeType OutgoingEdges public List<EdgeNode> OutgoingEdges { get; set; } Property Value List<EdgeNode> Symbol public INamedTypeSymbol Symbol { get; set; } Property Value INamedTypeSymbol"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.MethodNode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.MethodNode.html",
+    "title": "Class MethodNode | mysite",
+    "summary": "Class MethodNode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Represents a method in the code graph. Stores its Roslyn syntax, symbol, return type, abstractness, and outgoing edges to related nodes (e.g. calls, usage, or return types). public class MethodNode : INode Inheritance object MethodNode Implements INode Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties IsAbstract public bool IsAbstract { get; set; } Property Value bool MethodSyntax public MethodDeclarationSyntax MethodSyntax { get; set; } Property Value MethodDeclarationSyntax NodeType public NodeType NodeType { get; } Property Value NodeType OutgoingEdges public List<EdgeNode> OutgoingEdges { get; set; } Property Value List<EdgeNode> ReturnType public ITypeSymbol ReturnType { get; } Property Value ITypeSymbol Symbol public IMethodSymbol Symbol { get; set; } Property Value IMethodSymbol"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.PropertyNode.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.PropertyNode.html",
+    "title": "Class PropertyNode | mysite",
+    "summary": "Class PropertyNode Namespace CodeAnalysisService.GraphService.Nodes Assembly CodeAnalysis.dll Represents a property in the code graph. Captures its Roslyn syntax, symbol, referenced symbols (e.g. backing fields or accessed members), and outgoing edges. public class PropertyNode : INode Inheritance object PropertyNode Implements INode Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties NodeType public NodeType NodeType { get; } Property Value NodeType OutgoingEdges public List<EdgeNode> OutgoingEdges { get; set; } Property Value List<EdgeNode> PropertySyntax public PropertyDeclarationSyntax PropertySyntax { get; set; } Property Value PropertyDeclarationSyntax ReferencedSymbols public List<ISymbol> ReferencedSymbols { get; set; } Property Value List<ISymbol> Symbol public IPropertySymbol Symbol { get; set; } Property Value IPropertySymbol"
+  },
+  "api/CodeAnalysisService.GraphService.Nodes.html": {
+    "href": "api/CodeAnalysisService.GraphService.Nodes.html",
+    "title": "Namespace CodeAnalysisService.GraphService.Nodes | mysite",
+    "summary": "Namespace CodeAnalysisService.GraphService.Nodes Classes ClassNode Represents a class in the code graph. Stores its Roslyn syntax, symbol, whether it is abstract, and its outgoing edges to related nodes (e.g. inheritance, implemented interfaces, members, etc.). ConstructorNode Represents a constructor in the code graph. Holds its Roslyn syntax, symbol, and outgoing edges to related nodes (e.g. created types, calls, or usage relationships). EdgeNode Represents a directed edge in the code graph. Connects a source node to a target node with a specific relationship type. EventNode Represents an event in the code graph. Stores its Roslyn syntax wrapper, symbol, and outgoing edges to related nodes (e.g. handlers or containing types). FieldNode Represents a field in the code graph. Captures its Roslyn declaration and variable syntax, symbol, and outgoing edges to related nodes. InterfaceNode Represents an interface in the code graph. Stores its Roslyn syntax, symbol, and outgoing edges to related nodes (e.g. implemented classes). MethodNode Represents a method in the code graph. Stores its Roslyn syntax, symbol, return type, abstractness, and outgoing edges to related nodes (e.g. calls, usage, or return types). PropertyNode Represents a property in the code graph. Captures its Roslyn syntax, symbol, referenced symbols (e.g. backing fields or accessed members), and outgoing edges. Interfaces IAnalyzerNode Base interface for analyzer nodes that represent types (classes, interfaces, etc.) in the code graph. Provides access to the Roslyn type symbol, abstractness, and outgoing edges. This interface bunches the Class and Interface nodes together to handle them. INode Base interface for all nodes in the code graph. Defines common properties for node type, Roslyn symbol, and outgoing edges to related nodes."
+  },
+  "api/CodeAnalysisService.GraphService.Printer.GraphPrinter.html": {
+    "href": "api/CodeAnalysisService.GraphService.Printer.GraphPrinter.html",
+    "title": "Class GraphPrinter | mysite",
+    "summary": "Class GraphPrinter Namespace CodeAnalysisService.GraphService.Printer Assembly CodeAnalysis.dll public class GraphPrinter Inheritance object GraphPrinter Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors GraphPrinter(string, string) public GraphPrinter(string outputDirectory, string fileName = \"graph-output.txt\") Parameters outputDirectory string fileName string Methods PrintGraph(NodeRegistry) public void PrintGraph(NodeRegistry registry) Parameters registry NodeRegistry"
+  },
+  "api/CodeAnalysisService.GraphService.Printer.html": {
+    "href": "api/CodeAnalysisService.GraphService.Printer.html",
+    "title": "Namespace CodeAnalysisService.GraphService.Printer | mysite",
+    "summary": "Namespace CodeAnalysisService.GraphService.Printer Classes GraphPrinter"
+  },
+  "api/CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html": {
+    "href": "api/CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html",
+    "title": "Struct EventSyntaxWrapper | mysite",
+    "summary": "Struct EventSyntaxWrapper Namespace CodeAnalysisService.GraphService.SyntaxWrappers Assembly CodeAnalysis.dll public readonly struct EventSyntaxWrapper Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors EventSyntaxWrapper(EventDeclarationSyntax) public EventSyntaxWrapper(EventDeclarationSyntax decl) Parameters decl EventDeclarationSyntax EventSyntaxWrapper(EventFieldDeclarationSyntax) public EventSyntaxWrapper(EventFieldDeclarationSyntax decl) Parameters decl EventFieldDeclarationSyntax Properties EventDecl public EventDeclarationSyntax? EventDecl { get; } Property Value EventDeclarationSyntax EventFieldDecl public EventFieldDeclarationSyntax? EventFieldDecl { get; } Property Value EventFieldDeclarationSyntax IsDeclarationStyle public bool IsDeclarationStyle { get; } Property Value bool IsFieldStyle public bool IsFieldStyle { get; } Property Value bool Syntax public SyntaxNode Syntax { get; } Property Value SyntaxNode"
+  },
+  "api/CodeAnalysisService.GraphService.SyntaxWrappers.html": {
+    "href": "api/CodeAnalysisService.GraphService.SyntaxWrappers.html",
+    "title": "Namespace CodeAnalysisService.GraphService.SyntaxWrappers | mysite",
+    "summary": "Namespace CodeAnalysisService.GraphService.SyntaxWrappers Structs EventSyntaxWrapper"
+  },
+  "api/CodeAnalysisService.GraphService.html": {
+    "href": "api/CodeAnalysisService.GraphService.html",
+    "title": "Namespace CodeAnalysisService.GraphService | mysite",
+    "summary": "Namespace CodeAnalysisService.GraphService Classes GraphBuilder Builds a graph from Roslyn models. Uses node builders to create class/interface/method/etc. nodes and edge builders to connect them (HasMethod, Calls, Uses, etc.). Stores results in NodeRegistry for later analysis."
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Checks.AdapterChecks.html",
+    "title": "Class AdapterChecks | mysite",
+    "summary": "Class AdapterChecks Namespace CodeAnalysisService.PatternAnalyser.Checks Assembly CodeAnalysis.dll public static class AdapterChecks Inheritance object AdapterChecks Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods AdapterDelegatesToAdaptee(GraphBuilder) public static RuleStep AdapterDelegatesToAdaptee(GraphBuilder graph) Parameters graph GraphBuilder Returns RuleStep HasAdapterCandidates(GraphBuilder) public static RuleStep HasAdapterCandidates(GraphBuilder graph) Parameters graph GraphBuilder Returns RuleStep HasTarget() public static RuleStep HasTarget() Returns RuleStep"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Checks.CollectionChecks.html",
+    "title": "Class CollectionChecks | mysite",
+    "summary": "Class CollectionChecks Namespace CodeAnalysisService.PatternAnalyser.Checks Assembly CodeAnalysis.dll public static class CollectionChecks Inheritance object CollectionChecks Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HasObserverCollection() public static RuleStep HasObserverCollection() Returns RuleStep"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Checks.FactoryMethodChecks.html",
+    "title": "Class FactoryMethodChecks | mysite",
+    "summary": "Class FactoryMethodChecks Namespace CodeAnalysisService.PatternAnalyser.Checks Assembly CodeAnalysis.dll public static class FactoryMethodChecks Inheritance object FactoryMethodChecks Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods CreatedProductImplementsReturnType(GraphBuilder) public static RuleStep CreatedProductImplementsReturnType(GraphBuilder graph) Parameters graph GraphBuilder Returns RuleStep HasAbstractFactoryMethod() public static RuleStep HasAbstractFactoryMethod() Returns RuleStep SubclassesOverrideFactoryMethod(GraphBuilder) public static RuleStep SubclassesOverrideFactoryMethod(GraphBuilder graph) Parameters graph GraphBuilder Returns RuleStep"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Checks.MethodCallChecks.html",
+    "title": "Class MethodCallChecks | mysite",
+    "summary": "Class MethodCallChecks Namespace CodeAnalysisService.PatternAnalyser.Checks Assembly CodeAnalysis.dll public static class MethodCallChecks Inheritance object MethodCallChecks Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods CallsObserverElements(GraphBuilder) public static RuleStep CallsObserverElements(GraphBuilder graph) Parameters graph GraphBuilder Returns RuleStep GetObserverCollectionTypes(IAnalyzerNode) public static List<ITypeSymbol> GetObserverCollectionTypes(IAnalyzerNode node) Parameters node IAnalyzerNode Returns List<ITypeSymbol> IsObserverType(ITypeSymbol, List<ITypeSymbol>) public static bool IsObserverType(ITypeSymbol calledType, List<ITypeSymbol> observerTypes) Parameters calledType ITypeSymbol observerTypes List<ITypeSymbol> Returns bool"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Checks.ObserverChecks.html",
+    "title": "Class ObserverChecks | mysite",
+    "summary": "Class ObserverChecks Namespace CodeAnalysisService.PatternAnalyser.Checks Assembly CodeAnalysis.dll public static class ObserverChecks Inheritance object ObserverChecks Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HasAttachDetachMethods() public static RuleStep HasAttachDetachMethods() Returns RuleStep HasNotifyMethod(GraphBuilder) public static RuleStep HasNotifyMethod(GraphBuilder graph) Parameters graph GraphBuilder Returns RuleStep HasObserverCollection() public static RuleStep HasObserverCollection() Returns RuleStep"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Checks.SingletonChecks.html",
+    "title": "Class SingletonChecks | mysite",
+    "summary": "Class SingletonChecks Namespace CodeAnalysisService.PatternAnalyser.Checks Assembly CodeAnalysis.dll public static class SingletonChecks Inheritance object SingletonChecks Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HasPrivateConstructor() public static RuleStep HasPrivateConstructor() Returns RuleStep HasStaticAccessor() public static RuleStep HasStaticAccessor() Returns RuleStep HasStaticInstanceField() public static RuleStep HasStaticInstanceField() Returns RuleStep"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.html",
+    "title": "Class StrategyChecks | mysite",
+    "summary": "Class StrategyChecks Namespace CodeAnalysisService.PatternAnalyser.Checks Assembly CodeAnalysis.dll public static class StrategyChecks Inheritance object StrategyChecks Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods ContextDelegatesToStrategy(GraphBuilder) public static RuleStep ContextDelegatesToStrategy(GraphBuilder graph) Parameters graph GraphBuilder Returns RuleStep ContextHasStrategyReference(GraphBuilder) public static RuleStep ContextHasStrategyReference(GraphBuilder graph) Parameters graph GraphBuilder Returns RuleStep HasConcreteStrategies(GraphBuilder) public static RuleStep HasConcreteStrategies(GraphBuilder graph) Parameters graph GraphBuilder Returns RuleStep HasStrategyInterface() public static RuleStep HasStrategyInterface() Returns RuleStep"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Checks.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Checks.html",
+    "title": "Namespace CodeAnalysisService.PatternAnalyser.Checks | mysite",
+    "summary": "Namespace CodeAnalysisService.PatternAnalyser.Checks Classes AdapterChecks CollectionChecks FactoryMethodChecks MethodCallChecks ObserverChecks SingletonChecks StrategyChecks"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.AdapterAnalyser.html",
+    "title": "Class AdapterAnalyser | mysite",
+    "summary": "Class AdapterAnalyser Namespace CodeAnalysisService.PatternAnalyser.PatternAnalysers Assembly CodeAnalysis.dll public class AdapterAnalyser : IAnalyser Inheritance object AdapterAnalyser Implements IAnalyser Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors AdapterAnalyser(IAnalyzerNode, GraphBuilder) public AdapterAnalyser(IAnalyzerNode node, GraphBuilder graph) Parameters node IAnalyzerNode graph GraphBuilder Methods Analyse() public PatternResult Analyse() Returns PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.FactoryMethodAnalyser.html",
+    "title": "Class FactoryMethodAnalyser | mysite",
+    "summary": "Class FactoryMethodAnalyser Namespace CodeAnalysisService.PatternAnalyser.PatternAnalysers Assembly CodeAnalysis.dll public class FactoryMethodAnalyser : IAnalyser Inheritance object FactoryMethodAnalyser Implements IAnalyser Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors FactoryMethodAnalyser(IAnalyzerNode, GraphBuilder) public FactoryMethodAnalyser(IAnalyzerNode node, GraphBuilder graph) Parameters node IAnalyzerNode graph GraphBuilder Methods Analyse() public PatternResult Analyse() Returns PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.IAnalyser.html",
+    "title": "Interface IAnalyser | mysite",
+    "summary": "Interface IAnalyser Namespace CodeAnalysisService.PatternAnalyser.PatternAnalysers Assembly CodeAnalysis.dll public interface IAnalyser Methods Analyse() PatternResult Analyse() Returns PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.ObserverAnalyser.html",
+    "title": "Class ObserverAnalyser | mysite",
+    "summary": "Class ObserverAnalyser Namespace CodeAnalysisService.PatternAnalyser.PatternAnalysers Assembly CodeAnalysis.dll public class ObserverAnalyser : IAnalyser Inheritance object ObserverAnalyser Implements IAnalyser Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ObserverAnalyser(IAnalyzerNode, GraphBuilder) public ObserverAnalyser(IAnalyzerNode node, GraphBuilder graph) Parameters node IAnalyzerNode graph GraphBuilder Methods Analyse() public PatternResult Analyse() Returns PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.SingletonAnalyser.html",
+    "title": "Class SingletonAnalyser | mysite",
+    "summary": "Class SingletonAnalyser Namespace CodeAnalysisService.PatternAnalyser.PatternAnalysers Assembly CodeAnalysis.dll public class SingletonAnalyser : IAnalyser Inheritance object SingletonAnalyser Implements IAnalyser Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors SingletonAnalyser(IAnalyzerNode) public SingletonAnalyser(IAnalyzerNode node) Parameters node IAnalyzerNode Methods Analyse() public PatternResult Analyse() Returns PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.StrategyAnalyser.html",
+    "title": "Class StrategyAnalyser | mysite",
+    "summary": "Class StrategyAnalyser Namespace CodeAnalysisService.PatternAnalyser.PatternAnalysers Assembly CodeAnalysis.dll public class StrategyAnalyser : IAnalyser Inheritance object StrategyAnalyser Implements IAnalyser Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors StrategyAnalyser(IAnalyzerNode, GraphBuilder) public StrategyAnalyser(IAnalyzerNode node, GraphBuilder graph) Parameters node IAnalyzerNode graph GraphBuilder Methods Analyse() public PatternResult Analyse() Returns PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.PatternAnalysers.html",
+    "title": "Namespace CodeAnalysisService.PatternAnalyser.PatternAnalysers | mysite",
+    "summary": "Namespace CodeAnalysisService.PatternAnalyser.PatternAnalysers Classes AdapterAnalyser FactoryMethodAnalyser ObserverAnalyser SingletonAnalyser StrategyAnalyser Interfaces IAnalyser"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.PatternRoles.PatternRole.html",
+    "title": "Class PatternRole | mysite",
+    "summary": "Class PatternRole Namespace CodeAnalysisService.PatternAnalyser.PatternRoles Assembly CodeAnalysis.dll public class PatternRole Inheritance object PatternRole Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Class public IAnalyzerNode Class { get; set; } Property Value IAnalyzerNode Role public string Role { get; set; } Property Value string"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.PatternRoles.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.PatternRoles.html",
+    "title": "Namespace CodeAnalysisService.PatternAnalyser.PatternRoles | mysite",
+    "summary": "Namespace CodeAnalysisService.PatternAnalyser.PatternRoles Classes PatternRole"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Printing.AdapterPatternPrinter.html",
+    "title": "Class AdapterPatternPrinter | mysite",
+    "summary": "Class AdapterPatternPrinter Namespace CodeAnalysisService.PatternAnalyser.Printing Assembly CodeAnalysis.dll public class AdapterPatternPrinter : IPatternPrinter Inheritance object AdapterPatternPrinter Implements IPatternPrinter Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Print(PatternResult) public void Print(PatternResult result) Parameters result PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Printing.FactoryMethodPatternPrinter.html",
+    "title": "Class FactoryMethodPatternPrinter | mysite",
+    "summary": "Class FactoryMethodPatternPrinter Namespace CodeAnalysisService.PatternAnalyser.Printing Assembly CodeAnalysis.dll public class FactoryMethodPatternPrinter : IPatternPrinter Inheritance object FactoryMethodPatternPrinter Implements IPatternPrinter Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Print(PatternResult) public void Print(PatternResult result) Parameters result PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Printing.IPatternPrinter.html",
+    "title": "Interface IPatternPrinter | mysite",
+    "summary": "Interface IPatternPrinter Namespace CodeAnalysisService.PatternAnalyser.Printing Assembly CodeAnalysis.dll public interface IPatternPrinter Methods Print(PatternResult) void Print(PatternResult result) Parameters result PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Printing.ObserverPatternPrinter.html",
+    "title": "Class ObserverPatternPrinter | mysite",
+    "summary": "Class ObserverPatternPrinter Namespace CodeAnalysisService.PatternAnalyser.Printing Assembly CodeAnalysis.dll public class ObserverPatternPrinter : IPatternPrinter Inheritance object ObserverPatternPrinter Implements IPatternPrinter Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Print(PatternResult) public void Print(PatternResult result) Parameters result PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Printing.SingletonPatternPrinter.html",
+    "title": "Class SingletonPatternPrinter | mysite",
+    "summary": "Class SingletonPatternPrinter Namespace CodeAnalysisService.PatternAnalyser.Printing Assembly CodeAnalysis.dll public class SingletonPatternPrinter : IPatternPrinter Inheritance object SingletonPatternPrinter Implements IPatternPrinter Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Print(PatternResult) public void Print(PatternResult result) Parameters result PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Printing.StrategyPatternPrinter.html",
+    "title": "Class StrategyPatternPrinter | mysite",
+    "summary": "Class StrategyPatternPrinter Namespace CodeAnalysisService.PatternAnalyser.Printing Assembly CodeAnalysis.dll public class StrategyPatternPrinter : IPatternPrinter Inheritance object StrategyPatternPrinter Implements IPatternPrinter Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Print(PatternResult) public void Print(PatternResult result) Parameters result PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Printing.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Printing.html",
+    "title": "Namespace CodeAnalysisService.PatternAnalyser.Printing | mysite",
+    "summary": "Namespace CodeAnalysisService.PatternAnalyser.Printing Classes AdapterPatternPrinter FactoryMethodPatternPrinter ObserverPatternPrinter SingletonPatternPrinter StrategyPatternPrinter Interfaces IPatternPrinter"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.RuleResult.PatternResult.html",
+    "title": "Class PatternResult | mysite",
+    "summary": "Class PatternResult Namespace CodeAnalysisService.PatternAnalyser.RuleResult Assembly CodeAnalysis.dll public class PatternResult Inheritance object PatternResult Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties InvolvedClasses public List<PatternRole> InvolvedClasses { get; set; } Property Value List<PatternRole> MatchesPattern public bool MatchesPattern { get; } Property Value bool PassedMustPass public bool PassedMustPass { get; set; } Property Value bool Rule public PatternRule Rule { get; set; } Property Value PatternRule Score public int Score { get; set; } Property Value int Subject public IAnalyzerNode Subject { get; set; } Property Value IAnalyzerNode"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.RuleResult.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.RuleResult.html",
+    "title": "Namespace CodeAnalysisService.PatternAnalyser.RuleResult | mysite",
+    "summary": "Namespace CodeAnalysisService.PatternAnalyser.RuleResult Classes PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep.html",
+    "title": "Class RuleStep | mysite",
+    "summary": "Class RuleStep Namespace CodeAnalysisService.PatternAnalyser.RuleSteps Assembly CodeAnalysis.dll public class RuleStep Inheritance object RuleStep Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Check public Func<IAnalyzerNode, RuleStepResult> Check { get; set; } Property Value Func<IAnalyzerNode, RuleStepResult> Description public string Description { get; set; } Property Value string MustPass public bool MustPass { get; set; } Property Value bool"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult.html",
+    "title": "Struct RuleStepResult | mysite",
+    "summary": "Struct RuleStepResult Namespace CodeAnalysisService.PatternAnalyser.RuleSteps Assembly CodeAnalysis.dll public struct RuleStepResult Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties PassedMustPass public bool PassedMustPass { readonly get; set; } Property Value bool RelatedRoles public List<PatternRole> RelatedRoles { readonly get; set; } Property Value List<PatternRole> Score public int Score { readonly get; set; } Property Value int"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.RuleSteps.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.RuleSteps.html",
+    "title": "Namespace CodeAnalysisService.PatternAnalyser.RuleSteps | mysite",
+    "summary": "Namespace CodeAnalysisService.PatternAnalyser.RuleSteps Classes RuleStep Structs RuleStepResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Rules.PatternRule.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Rules.PatternRule.html",
+    "title": "Class PatternRule | mysite",
+    "summary": "Class PatternRule Namespace CodeAnalysisService.PatternAnalyser.Rules Assembly CodeAnalysis.dll public class PatternRule Inheritance object PatternRule Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Name public string Name { get; set; } Property Value string Steps public List<RuleStep> Steps { get; set; } Property Value List<RuleStep> expectedTotalScore public int expectedTotalScore { get; set; } Property Value int Methods Run(IAnalyzerNode) public PatternResult Run(IAnalyzerNode node) Parameters node IAnalyzerNode Returns PatternResult"
+  },
+  "api/CodeAnalysisService.PatternAnalyser.Rules.html": {
+    "href": "api/CodeAnalysisService.PatternAnalyser.Rules.html",
+    "title": "Namespace CodeAnalysisService.PatternAnalyser.Rules | mysite",
+    "summary": "Namespace CodeAnalysisService.PatternAnalyser.Rules Classes PatternRule"
+  },
+  "api/CodeAnalysisService.html": {
+    "href": "api/CodeAnalysisService.html",
+    "title": "Namespace CodeAnalysisService | mysite",
+    "summary": "Namespace CodeAnalysisService Classes CodeAnalysisServiceRunner Runs Roslyn analysis on a project directory. Loads C# files, builds a compilation and semantic models, and creates a symbol graph via GraphBuilder. Tracks files that failed to load in FailedFiles."
+  },
+  "api/Demo.Program1.html": {
+    "href": "api/Demo.Program1.html",
+    "title": "Class Program1 | mysite",
+    "summary": "Class Program1 Namespace Demo Assembly CodeAnalysis.dll public static class Program1 Inheritance object Program1 Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Main1() public static void Main1()"
+  },
+  "api/Demo.Publisher.html": {
+    "href": "api/Demo.Publisher.html",
+    "title": "Class Publisher | mysite",
+    "summary": "Class Publisher Namespace Demo Assembly CodeAnalysis.dll public class Publisher Inheritance object Publisher Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Trigger() public void Trigger() Events SomethingHappened public event EventHandler SomethingHappened Event Type EventHandler"
+  },
+  "api/Demo.Subscriber.html": {
+    "href": "api/Demo.Subscriber.html",
+    "title": "Class Subscriber | mysite",
+    "summary": "Class Subscriber Namespace Demo Assembly CodeAnalysis.dll public class Subscriber Inheritance object Subscriber Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods OnSomething(object, EventArgs) public void OnSomething(object sender, EventArgs e) Parameters sender object e EventArgs"
+  },
+  "api/Demo.html": {
+    "href": "api/Demo.html",
+    "title": "Namespace Demo | mysite",
+    "summary": "Namespace Demo Classes Program1 Publisher Subscriber"
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | mysite",
+    "summary": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | mysite",
+    "summary": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | mysite",
+    "summary": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}

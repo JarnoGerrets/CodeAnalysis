@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.Enums
+  commentId: N:CodeAnalysisService.Enums
+  id: CodeAnalysisService.Enums
+  children:
+  - CodeAnalysisService.Enums.EdgeType
+  - CodeAnalysisService.Enums.NodeType
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.Enums
+  nameWithType: CodeAnalysisService.Enums
+  fullName: CodeAnalysisService.Enums
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.Enums.EdgeType
+  commentId: T:CodeAnalysisService.Enums.EdgeType
+  parent: CodeAnalysisService.Enums
+  href: CodeAnalysisService.Enums.EdgeType.html
+  name: EdgeType
+  nameWithType: EdgeType
+  fullName: CodeAnalysisService.Enums.EdgeType
+- uid: CodeAnalysisService.Enums.NodeType
+  commentId: T:CodeAnalysisService.Enums.NodeType
+  parent: CodeAnalysisService.Enums
+  href: CodeAnalysisService.Enums.NodeType.html
+  name: NodeType
+  nameWithType: NodeType
+  fullName: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums
+  commentId: N:CodeAnalysisService.Enums
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.Enums
+  nameWithType: CodeAnalysisService.Enums
+  fullName: CodeAnalysisService.Enums
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html

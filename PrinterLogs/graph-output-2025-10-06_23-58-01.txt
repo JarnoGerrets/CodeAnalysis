@@ -1,0 +1,2210 @@
+--------------------------------------------------
+Graph Debug Output
+--------------------------------------------------
+Class: WkObsrvrDisplay (Abstract=False)
+  Class: WkObsrvrDisplay --[Implements]--> Interface: IObserver4
+    Interface: IObserver4
+  Class: WkObsrvrDisplay --[HasMethod]--> Method: Update
+    Method: Update (Returns Void, Abstract=False)
+Class: WeakObserverPublisher (Abstract=False)
+  Class: WeakObserverPublisher --[HasField]--> Field: _observers
+    Field: WeakObserverPublisher._observers (private readonly List)
+  Class: WeakObserverPublisher --[HasMethod]--> Method: AddObserver
+    Method: AddObserver (Returns Void, Abstract=False)
+      Method: AddObserver --[ReferencesField]--> Field: _observers
+  Class: WeakObserverPublisher --[HasMethod]--> Method: Notify
+    Method: Notify (Returns Void, Abstract=False)
+      Method: Notify --[ReferencesField]--> Field: _observers
+      Method: Notify --[Calls]--> Method: Update
+        Method: Update (Returns Void, Abstract=True)
+          Method: Update --[ImplementedBy]--> Method: Update
+Class: CarDisplay (Abstract=False)
+  Class: CarDisplay --[Implements]--> Interface: IObserver1
+    Interface: IObserver1
+  Class: CarDisplay --[HasMethod]--> Method: Update
+    Method: Update (Returns Void, Abstract=False)
+Class: TrafficLight (Abstract=False)
+  Class: TrafficLight --[HasField]--> Field: _observers
+    Field: TrafficLight._observers (private List)
+  Class: TrafficLight --[HasProperty]--> Property: Observers
+    Property: Observers
+      Property: Observers --[ReferencesField]--> Field: _observers
+  Class: TrafficLight --[HasMethod]--> Method: Attach
+    Method: Attach (Returns Void, Abstract=False)
+      Method: Attach --[ReferencesField]--> Field: _observers
+  Class: TrafficLight --[HasMethod]--> Method: NotifyChange
+    Method: NotifyChange (Returns Void, Abstract=False)
+      Method: NotifyChange --[Uses]--> Property: Observers
+      Method: NotifyChange --[Calls]--> Method: Update
+        Method: Update (Returns Void, Abstract=True)
+          Method: Update --[ImplementedBy]--> Method: Update
+Class: TraderDisplay (Abstract=False)
+  Class: TraderDisplay --[Implements]--> Interface: IObserver2
+    Interface: IObserver2
+  Class: TraderDisplay --[HasMethod]--> Method: Update
+    Method: Update (Returns Void, Abstract=False)
+Class: StockMarket (Abstract=False)
+  Class: StockMarket --[HasProperty]--> Property: Observers
+    Property: Observers
+  Class: StockMarket --[HasMethod]--> Method: AddObserver
+    Method: AddObserver (Returns Void, Abstract=False)
+      Method: AddObserver --[Uses]--> Property: Observers
+  Class: StockMarket --[HasMethod]--> Method: NotifyObservers
+    Method: NotifyObservers (Returns Void, Abstract=False)
+      Method: NotifyObservers --[Uses]--> Property: Observers
+      Method: NotifyObservers --[Calls]--> Method: Update
+        Method: Update (Returns Void, Abstract=True)
+          Method: Update --[ImplementedBy]--> Method: Update
+Class: AppDisplay (Abstract=False)
+  Class: AppDisplay --[Implements]--> Interface: IObserver3
+    Interface: IObserver3
+  Class: AppDisplay --[HasMethod]--> Method: Update
+    Method: Update (Returns Void, Abstract=False)
+Class: NewsPublisher (Abstract=False)
+  Class: NewsPublisher --[HasProperty]--> Property: Observers
+    Property: Observers
+  Class: NewsPublisher --[HasMethod]--> Method: Subscribe
+    Method: Subscribe (Returns Void, Abstract=False)
+      Method: Subscribe --[Uses]--> Property: Observers
+  Class: NewsPublisher --[HasMethod]--> Method: NotifyAll
+    Method: NotifyAll (Returns Void, Abstract=False)
+      Method: NotifyAll --[Uses]--> Property: Observers
+      Method: NotifyAll --[Calls]--> Method: Update
+        Method: Update (Returns Void, Abstract=True)
+          Method: Update --[ImplementedBy]--> Method: Update
+Class: SqlConnectionFactory (Abstract=False)
+  Class: SqlConnectionFactory --[Inherits]--> Class: ConnectionFactory
+    Class: ConnectionFactory (Abstract=True)
+      Class: ConnectionFactory --[HasMethod]--> Method: GetName
+        Method: GetName (Returns String, Abstract=True)
+  Class: SqlConnectionFactory --[HasMethod]--> Method: GetName
+    Method: GetName (Returns String, Abstract=False)
+      Method: GetName --[Overrides]--> Method: GetName
+Class: Dog1 (Abstract=False)
+  Class: Dog1 --[Inherits]--> Class: Animal1
+    Class: Animal1 (Abstract=True)
+      Class: Animal1 --[HasMethod]--> Method: Speak
+        Method: Speak (Returns Void, Abstract=True)
+  Class: Dog1 --[HasMethod]--> Method: Speak
+    Method: Speak (Returns Void, Abstract=False)
+      Method: Speak --[Overrides]--> Method: Speak
+Class: FileLogger (Abstract=False)
+  Class: FileLogger --[Implements]--> Interface: ILogger
+    Interface: ILogger
+Class: CachedLoggerFactory (Abstract=False)
+  Class: CachedLoggerFactory --[Inherits]--> Class: LoggerFactory
+    Class: LoggerFactory (Abstract=True)
+      Class: LoggerFactory --[HasMethod]--> Method: CreateLogger
+        Method: CreateLogger (Returns ILogger, Abstract=True)
+  Class: CachedLoggerFactory --[HasField]--> Field: _logger
+    Field: CachedLoggerFactory._logger (private static readonly ILogger)
+  Class: CachedLoggerFactory --[HasMethod]--> Method: CreateLogger
+    Method: CreateLogger (Returns ILogger, Abstract=False)
+      Method: CreateLogger --[ReferencesField]--> Field: _logger
+      Method: CreateLogger --[Overrides]--> Method: CreateLogger
+Class: ProductFactory (Abstract=False)
+  Class: ProductFactory --[HasMethod]--> Method: CreateProductA
+    Method: CreateProductA (Returns IProduct, Abstract=False)
+      Method: CreateProductA --[Creates]--> Class: ConcreteProductA
+        Class: ConcreteProductA (Abstract=False)
+          Class: ConcreteProductA --[Implements]--> Interface: IProduct
+            Interface: IProduct
+          Class: ConcreteProductA --[HasMethod]--> Method: GetName
+            Method: GetName (Returns String, Abstract=False)
+  Class: ProductFactory --[HasMethod]--> Method: CreateProductB
+    Method: CreateProductB (Returns IProduct, Abstract=False)
+      Method: CreateProductB --[Creates]--> Class: ConcreteProductB
+        Class: ConcreteProductB (Abstract=False)
+          Class: ConcreteProductB --[Implements]--> Interface: IProduct
+          Class: ConcreteProductB --[HasMethod]--> Method: GetName
+            Method: GetName (Returns String, Abstract=False)
+Class: Roles (Abstract=False)
+  Class: Roles --[HasField]--> Field: StateInterface
+    Field: Roles.StateInterface (public const String)
+  Class: Roles --[HasField]--> Field: ConcreteState
+    Field: Roles.ConcreteState (public const String)
+  Class: Roles --[HasField]--> Field: StateContextCandidate
+    Field: Roles.StateContextCandidate (public const String)
+  Class: Roles --[HasField]--> Field: StateContext
+    Field: Roles.StateContext (public const String)
+  Class: Roles --[HasField]--> Field: StateNameHint
+    Field: Roles.StateNameHint (public const String)
+Class: StateChecks (Abstract=False)
+  Class: StateChecks --[HasMethod]--> Method: HasStateInterface
+    Method: HasStateInterface (Returns RuleStep, Abstract=False)
+      Method: HasStateInterface --[Returns]--> Class: RuleStep
+        Class: RuleStep (Abstract=False)
+          Class: RuleStep --[HasProperty]--> Property: Description
+            Property: Description
+          Class: RuleStep --[HasProperty]--> Property: Check
+            Property: Check
+          Class: RuleStep --[HasProperty]--> Property: MustPass
+            Property: MustPass
+      Method: HasStateInterface --[Creates]--> Class: RuleStep
+      Method: HasStateInterface --[Uses]--> Property: Description
+      Method: HasStateInterface --[Uses]--> Property: MustPass
+      Method: HasStateInterface --[Uses]--> Property: Check
+      Method: HasStateInterface --[Calls]--> Method: IsStateContract
+        Method: IsStateContract (Returns Boolean, Abstract=False)
+          Method: IsStateContract --[Uses]--> Property: Symbol
+            Property: Symbol
+          Method: IsStateContract --[Uses]--> Property: IsAbstract
+            Property: IsAbstract
+      Method: HasStateInterface --[ReferencesField]--> Field: StateInterface
+  Class: StateChecks --[HasMethod]--> Method: HasConcreteStates
+    Method: HasConcreteStates (Returns RuleStep, Abstract=False)
+      Method: HasConcreteStates --[Returns]--> Class: RuleStep
+      Method: HasConcreteStates --[Uses]--> Class: GraphBuilder
+        Class: GraphBuilder (Abstract=False)
+          Class: GraphBuilder --[HasField]--> Field: _compilation
+            Field: GraphBuilder._compilation (private readonly Compilation)
+          Class: GraphBuilder --[HasField]--> Field: _semanticModels
+            Field: GraphBuilder._semanticModels (private readonly Dictionary)
+          Class: GraphBuilder --[HasField]--> Field: _callResolver
+            Field: GraphBuilder._callResolver (private CallResolver)
+              Field: _callResolver --[Uses]--> Class: CallResolver
+                Class: CallResolver (Abstract=False)
+                  Class: CallResolver --[HasField]--> Field: _interfaceToImplementations
+                    Field: CallResolver._interfaceToImplementations (private readonly Dictionary)
+                  Class: CallResolver --[HasField]--> Field: _lookupCache
+                    Field: CallResolver._lookupCache (private readonly ConcurrentDictionary)
+                  Class: CallResolver --[HasConstructor]--> Constructor: CallResolver..ctor
+                    Constructor: CallResolver..ctor
+                      Constructor: CallResolver..ctor --[HasConstructor]--> Constructor: CallResolver..ctor
+                  Class: CallResolver --[HasMethod]--> Method: BuildInterfaceImplementationMap
+                    Method: BuildInterfaceImplementationMap (Returns Void, Abstract=False)
+                      Method: BuildInterfaceImplementationMap --[Uses]--> Property: Symbol
+                        Property: Symbol
+                      Method: BuildInterfaceImplementationMap --[Uses]--> Property: Symbol
+                        Property: Symbol
+                      Method: BuildInterfaceImplementationMap --[ReferencesField]--> Field: _interfaceToImplementations
+                  Class: CallResolver --[HasMethod]--> Method: GetImplementations
+                    Method: GetImplementations (Returns IEnumerable, Abstract=False)
+                      Method: GetImplementations --[ReferencesField]--> Field: _lookupCache
+                      Method: GetImplementations --[ReferencesField]--> Field: _interfaceToImplementations
+          Class: GraphBuilder --[HasField]--> Field: _nodeBuilders
+            Field: GraphBuilder._nodeBuilders (private readonly List)
+          Class: GraphBuilder --[HasField]--> Field: _edgeBuilders
+            Field: GraphBuilder._edgeBuilders (private readonly List)
+          Class: GraphBuilder --[HasProperty]--> Property: Registry
+            Property: Registry
+              Property: Registry --[Uses]--> Class: NodeRegistry
+                Class: NodeRegistry (Abstract=False)
+                  Class: NodeRegistry --[HasField]--> Field: _nodes
+                    Field: NodeRegistry._nodes (private readonly Dictionary)
+                  Class: NodeRegistry --[HasField]--> Field: _byType
+                    Field: NodeRegistry._byType (private readonly Dictionary)
+                  Class: NodeRegistry --[HasMethod]--> Method: AddNode
+                    Method: AddNode (Returns Void, Abstract=False)
+                      Method: AddNode --[ReferencesField]--> Field: _nodes
+                      Method: AddNode --[Calls]--> Method: GetBaseTypes
+                        Method: GetBaseTypes (Returns IEnumerable, Abstract=False)
+                      Method: AddNode --[ReferencesField]--> Field: _byType
+                  Class: NodeRegistry --[HasMethod]--> Method: GetBaseTypes
+                  Class: NodeRegistry --[HasMethod]--> Method: GetNode
+                    Method: GetNode (Returns T, Abstract=False)
+                      Method: GetNode --[ReferencesField]--> Field: _nodes
+                  Class: NodeRegistry --[HasMethod]--> Method: GetAll
+                    Method: GetAll (Returns IEnumerable, Abstract=False)
+                      Method: GetAll --[ReferencesField]--> Field: _byType
+          Class: GraphBuilder --[HasConstructor]--> Constructor: GraphBuilder..ctor
+            Constructor: GraphBuilder..ctor
+              Constructor: GraphBuilder..ctor --[HasConstructor]--> Constructor: GraphBuilder..ctor
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: ClassNodeBuilder
+                Class: ClassNodeBuilder (Abstract=False)
+                  Class: ClassNodeBuilder --[Implements]--> Interface: INodeBuilder
+                    Interface: INodeBuilder
+                  Class: ClassNodeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: ClassNodeBuilder --[HasMethod]--> Method: BuildNodes
+                    Method: BuildNodes (Returns IEnumerable, Abstract=False)
+                      Method: BuildNodes --[Uses]--> Class: GraphContext
+                        Class: GraphContext (Abstract=False)
+                          Class: GraphContext --[HasField]--> Field: _registry
+                            Field: GraphContext._registry (private readonly NodeRegistry)
+                              Field: _registry --[Uses]--> Class: NodeRegistry
+                          Class: GraphContext --[HasField]--> Field: _semanticModels
+                            Field: GraphContext._semanticModels (private readonly Dictionary)
+                          Class: GraphContext --[HasField]--> Field: _roots
+                            Field: GraphContext._roots (private readonly Dictionary)
+                          Class: GraphContext --[HasConstructor]--> Constructor: GraphContext..ctor
+                            Constructor: GraphContext..ctor
+                              Constructor: GraphContext..ctor --[HasConstructor]--> Constructor: GraphContext..ctor
+                          Class: GraphContext --[HasMethod]--> Method: GetRoot
+                            Method: GetRoot (Returns SyntaxNode, Abstract=False)
+                              Method: GetRoot --[ReferencesField]--> Field: _roots
+                      Method: BuildNodes --[Calls]--> Method: GetRoot
+                      Method: BuildNodes --[Creates]--> Class: ClassNode
+                        Class: ClassNode (Abstract=False)
+                          Class: ClassNode --[Implements]--> Interface: IAnalyzerNode
+                            Interface: IAnalyzerNode
+                              Interface: IAnalyzerNode --[Inherits]--> Interface: INode
+                                Interface: INode
+                          Class: ClassNode --[HasProperty]--> Property: ClassSyntax
+                            Property: ClassSyntax
+                          Class: ClassNode --[HasProperty]--> Property: NodeType
+                            Property: NodeType
+                          Class: ClassNode --[HasProperty]--> Property: Symbol
+                          Class: ClassNode --[HasProperty]--> Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                            Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                          Class: ClassNode --[HasProperty]--> Property: IsAbstract
+                            Property: IsAbstract
+                          Class: ClassNode --[HasProperty]--> Property: OutgoingEdges
+                            Property: OutgoingEdges
+                              Property: OutgoingEdges --[Uses]--> Class: EdgeNode
+                                Class: EdgeNode (Abstract=False)
+                                  Class: EdgeNode --[HasProperty]--> Property: Target
+                                    Property: Target
+                                  Class: EdgeNode --[HasProperty]--> Property: NodeType
+                                    Property: NodeType
+                                  Class: EdgeNode --[HasProperty]--> Property: Type
+                                    Property: Type
+                          Class: ClassNode --[HasPropertyElement]--> Class: EdgeNode
+                      Method: BuildNodes --[Uses]--> Property: ClassSyntax
+                      Method: BuildNodes --[Uses]--> Property: Symbol
+                      Method: BuildNodes --[Uses]--> Property: IsAbstract
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: InterfaceNodeBuilder
+                Class: InterfaceNodeBuilder (Abstract=False)
+                  Class: InterfaceNodeBuilder --[Implements]--> Interface: INodeBuilder
+                  Class: InterfaceNodeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: InterfaceNodeBuilder --[HasMethod]--> Method: BuildNodes
+                    Method: BuildNodes (Returns IEnumerable, Abstract=False)
+                      Method: BuildNodes --[Uses]--> Class: GraphContext
+                      Method: BuildNodes --[Calls]--> Method: GetRoot
+                      Method: BuildNodes --[Creates]--> Class: InterfaceNode
+                        Class: InterfaceNode (Abstract=False)
+                          Class: InterfaceNode --[Implements]--> Interface: IAnalyzerNode
+                          Class: InterfaceNode --[HasProperty]--> Property: InterfaceSyntax
+                            Property: InterfaceSyntax
+                          Class: InterfaceNode --[HasProperty]--> Property: NodeType
+                            Property: NodeType
+                          Class: InterfaceNode --[HasProperty]--> Property: Symbol
+                            Property: Symbol
+                          Class: InterfaceNode --[HasProperty]--> Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                            Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                          Class: InterfaceNode --[HasProperty]--> Property: IsAbstract
+                            Property: IsAbstract
+                          Class: InterfaceNode --[HasProperty]--> Property: OutgoingEdges
+                            Property: OutgoingEdges
+                              Property: OutgoingEdges --[Uses]--> Class: EdgeNode
+                          Class: InterfaceNode --[HasPropertyElement]--> Class: EdgeNode
+                      Method: BuildNodes --[Uses]--> Property: InterfaceSyntax
+                      Method: BuildNodes --[Uses]--> Property: Symbol
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: ConstructorNodeBuilder
+                Class: ConstructorNodeBuilder (Abstract=False)
+                  Class: ConstructorNodeBuilder --[Implements]--> Interface: INodeBuilder
+                  Class: ConstructorNodeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: ConstructorNodeBuilder --[HasMethod]--> Method: BuildNodes
+                    Method: BuildNodes (Returns IEnumerable, Abstract=False)
+                      Method: BuildNodes --[Uses]--> Class: GraphContext
+                      Method: BuildNodes --[Calls]--> Method: GetRoot
+                      Method: BuildNodes --[Creates]--> Class: ConstructorNode
+                        Class: ConstructorNode (Abstract=False)
+                          Class: ConstructorNode --[Implements]--> Interface: INode
+                          Class: ConstructorNode --[HasProperty]--> Property: ConstructorSyntax
+                            Property: ConstructorSyntax
+                          Class: ConstructorNode --[HasProperty]--> Property: NodeType
+                            Property: NodeType
+                          Class: ConstructorNode --[HasProperty]--> Property: Symbol
+                            Property: Symbol
+                          Class: ConstructorNode --[HasProperty]--> Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                            Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                          Class: ConstructorNode --[HasProperty]--> Property: OutgoingEdges
+                            Property: OutgoingEdges
+                              Property: OutgoingEdges --[Uses]--> Class: EdgeNode
+                          Class: ConstructorNode --[HasPropertyElement]--> Class: EdgeNode
+                      Method: BuildNodes --[Uses]--> Property: ConstructorSyntax
+                      Method: BuildNodes --[Uses]--> Property: Symbol
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: EventNodeBuilder
+                Class: EventNodeBuilder (Abstract=False)
+                  Class: EventNodeBuilder --[Implements]--> Interface: INodeBuilder
+                  Class: EventNodeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: EventNodeBuilder --[HasMethod]--> Method: BuildNodes
+                    Method: BuildNodes (Returns IEnumerable, Abstract=False)
+                      Method: BuildNodes --[Uses]--> Class: GraphContext
+                      Method: BuildNodes --[Calls]--> Method: GetRoot
+                      Method: BuildNodes --[Creates]--> Class: EventNode
+                        Class: EventNode (Abstract=False)
+                          Class: EventNode --[Implements]--> Interface: INode
+                          Class: EventNode --[HasProperty]--> Property: EventSyntax
+                            Property: EventSyntax
+                          Class: EventNode --[HasProperty]--> Property: NodeType
+                            Property: NodeType
+                          Class: EventNode --[HasProperty]--> Property: Symbol
+                            Property: Symbol
+                          Class: EventNode --[HasProperty]--> Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                            Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                          Class: EventNode --[HasProperty]--> Property: OutgoingEdges
+                            Property: OutgoingEdges
+                              Property: OutgoingEdges --[Uses]--> Class: EdgeNode
+                          Class: EventNode --[HasPropertyElement]--> Class: EdgeNode
+                      Method: BuildNodes --[Uses]--> Property: EventSyntax
+                      Method: BuildNodes --[Uses]--> Property: Symbol
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: MethodNodeBuilder
+                Class: MethodNodeBuilder (Abstract=False)
+                  Class: MethodNodeBuilder --[Implements]--> Interface: INodeBuilder
+                  Class: MethodNodeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: MethodNodeBuilder --[HasMethod]--> Method: BuildNodes
+                    Method: BuildNodes (Returns IEnumerable, Abstract=False)
+                      Method: BuildNodes --[Uses]--> Class: GraphContext
+                      Method: BuildNodes --[Calls]--> Method: GetRoot
+                      Method: BuildNodes --[Creates]--> Class: MethodNode
+                        Class: MethodNode (Abstract=False)
+                          Class: MethodNode --[Implements]--> Interface: INode
+                          Class: MethodNode --[HasProperty]--> Property: MethodSyntax
+                            Property: MethodSyntax
+                          Class: MethodNode --[HasProperty]--> Property: NodeType
+                            Property: NodeType
+                          Class: MethodNode --[HasProperty]--> Property: Symbol
+                          Class: MethodNode --[HasProperty]--> Property: ReturnType
+                            Property: ReturnType
+                          Class: MethodNode --[HasProperty]--> Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                            Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                          Class: MethodNode --[HasProperty]--> Property: IsAbstract
+                            Property: IsAbstract
+                          Class: MethodNode --[HasProperty]--> Property: OutgoingEdges
+                            Property: OutgoingEdges
+                              Property: OutgoingEdges --[Uses]--> Class: EdgeNode
+                          Class: MethodNode --[HasPropertyElement]--> Class: EdgeNode
+                      Method: BuildNodes --[Uses]--> Property: MethodSyntax
+                      Method: BuildNodes --[Uses]--> Property: Symbol
+                      Method: BuildNodes --[Uses]--> Property: IsAbstract
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: PropertyNodeBuilder
+                Class: PropertyNodeBuilder (Abstract=False)
+                  Class: PropertyNodeBuilder --[Implements]--> Interface: INodeBuilder
+                  Class: PropertyNodeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: PropertyNodeBuilder --[HasMethod]--> Method: BuildNodes
+                    Method: BuildNodes (Returns IEnumerable, Abstract=False)
+                      Method: BuildNodes --[Uses]--> Class: GraphContext
+                      Method: BuildNodes --[Creates]--> Class: PropertyNode
+                        Class: PropertyNode (Abstract=False)
+                          Class: PropertyNode --[Implements]--> Interface: INode
+                          Class: PropertyNode --[HasProperty]--> Property: PropertySyntax
+                            Property: PropertySyntax
+                          Class: PropertyNode --[HasProperty]--> Property: NodeType
+                            Property: NodeType
+                          Class: PropertyNode --[HasProperty]--> Property: Symbol
+                            Property: Symbol
+                          Class: PropertyNode --[HasProperty]--> Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                            Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                          Class: PropertyNode --[HasProperty]--> Property: ReferencedSymbols
+                            Property: ReferencedSymbols
+                          Class: PropertyNode --[HasProperty]--> Property: OutgoingEdges
+                            Property: OutgoingEdges
+                              Property: OutgoingEdges --[Uses]--> Class: EdgeNode
+                          Class: PropertyNode --[HasPropertyElement]--> Class: EdgeNode
+                      Method: BuildNodes --[Uses]--> Property: PropertySyntax
+                      Method: BuildNodes --[Uses]--> Property: Symbol
+                      Method: BuildNodes --[Uses]--> Property: ReferencedSymbols
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: FieldNodeBuilder
+                Class: FieldNodeBuilder (Abstract=False)
+                  Class: FieldNodeBuilder --[Implements]--> Interface: INodeBuilder
+                  Class: FieldNodeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: FieldNodeBuilder --[HasMethod]--> Method: BuildNodes
+                    Method: BuildNodes (Returns IEnumerable, Abstract=False)
+                      Method: BuildNodes --[Uses]--> Class: GraphContext
+                      Method: BuildNodes --[Calls]--> Method: GetRoot
+                      Method: BuildNodes --[Creates]--> Class: FieldNode
+                        Class: FieldNode (Abstract=False)
+                          Class: FieldNode --[Implements]--> Interface: INode
+                          Class: FieldNode --[HasProperty]--> Property: DeclarationSyntax
+                            Property: DeclarationSyntax
+                          Class: FieldNode --[HasProperty]--> Property: VariableSyntax
+                            Property: VariableSyntax
+                          Class: FieldNode --[HasProperty]--> Property: NodeType
+                            Property: NodeType
+                          Class: FieldNode --[HasProperty]--> Property: Symbol
+                            Property: Symbol
+                          Class: FieldNode --[HasProperty]--> Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                            Property: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+                          Class: FieldNode --[HasProperty]--> Property: OutgoingEdges
+                            Property: OutgoingEdges
+                              Property: OutgoingEdges --[Uses]--> Class: EdgeNode
+                          Class: FieldNode --[HasPropertyElement]--> Class: EdgeNode
+                      Method: BuildNodes --[Uses]--> Property: DeclarationSyntax
+                      Method: BuildNodes --[Uses]--> Property: VariableSyntax
+                      Method: BuildNodes --[Uses]--> Property: Symbol
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: ClassEdgeBuilder
+                Class: ClassEdgeBuilder (Abstract=False)
+                  Class: ClassEdgeBuilder --[Implements]--> Interface: IEdgeBuilder
+                    Interface: IEdgeBuilder
+                  Class: ClassEdgeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: ClassEdgeBuilder --[HasMethod]--> Method: BuildEdges
+                    Method: BuildEdges (Returns IEnumerable, Abstract=False)
+                      Method: BuildEdges --[Uses]--> Class: NodeRegistry
+                      Method: BuildEdges --[Uses]--> Property: ClassSyntax
+                      Method: BuildEdges --[Uses]--> Property: Symbol
+                      Method: BuildEdges --[Creates]--> Class: EdgeNode
+                      Method: BuildEdges --[Uses]--> Property: Target
+                      Method: BuildEdges --[Uses]--> Property: Type
+                      Method: BuildEdges --[Calls]--> Method: GetElementType
+                        Method: GetElementType (Returns ITypeSymbol, Abstract=False)
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: InterfaceEdgeBuilder
+                Class: InterfaceEdgeBuilder (Abstract=False)
+                  Class: InterfaceEdgeBuilder --[Implements]--> Interface: IEdgeBuilder
+                  Class: InterfaceEdgeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: InterfaceEdgeBuilder --[HasMethod]--> Method: BuildEdges
+                    Method: BuildEdges (Returns IEnumerable, Abstract=False)
+                      Method: BuildEdges --[Uses]--> Class: NodeRegistry
+                      Method: BuildEdges --[Uses]--> Property: Symbol
+                      Method: BuildEdges --[Creates]--> Class: EdgeNode
+                      Method: BuildEdges --[Uses]--> Property: Target
+                      Method: BuildEdges --[Uses]--> Property: Type
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: ConstructorEdgeBuilder
+                Class: ConstructorEdgeBuilder (Abstract=False)
+                  Class: ConstructorEdgeBuilder --[Implements]--> Interface: IEdgeBuilder
+                  Class: ConstructorEdgeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: ConstructorEdgeBuilder --[HasMethod]--> Method: BuildEdges
+                    Method: BuildEdges (Returns IEnumerable, Abstract=False)
+                      Method: BuildEdges --[Uses]--> Class: NodeRegistry
+                      Method: BuildEdges --[Uses]--> Property: Symbol
+                      Method: BuildEdges --[Creates]--> Class: EdgeNode
+                      Method: BuildEdges --[Uses]--> Property: Target
+                      Method: BuildEdges --[Uses]--> Property: Type
+                      Method: BuildEdges --[Uses]--> Property: ConstructorSyntax
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: EventEdgeBuilder
+                Class: EventEdgeBuilder (Abstract=False)
+                  Class: EventEdgeBuilder --[Implements]--> Interface: IEdgeBuilder
+                  Class: EventEdgeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: EventEdgeBuilder --[HasMethod]--> Method: BuildEdges
+                    Method: BuildEdges (Returns IEnumerable, Abstract=False)
+                      Method: BuildEdges --[Uses]--> Class: NodeRegistry
+                      Method: BuildEdges --[Uses]--> Property: Symbol
+                      Method: BuildEdges --[Creates]--> Class: EdgeNode
+                      Method: BuildEdges --[Uses]--> Property: Target
+                      Method: BuildEdges --[Uses]--> Property: Type
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: MethodEdgeBuilder
+                Class: MethodEdgeBuilder (Abstract=False)
+                  Class: MethodEdgeBuilder --[Implements]--> Interface: IEdgeBuilder
+                  Class: MethodEdgeBuilder --[HasField]--> Field: _callResolver
+                    Field: MethodEdgeBuilder._callResolver (private CallResolver)
+                      Field: _callResolver --[Uses]--> Class: CallResolver
+                  Class: MethodEdgeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: MethodEdgeBuilder --[HasMethod]--> Method: SetCallResolver
+                    Method: SetCallResolver (Returns Void, Abstract=False)
+                      Method: SetCallResolver --[Uses]--> Class: CallResolver
+                      Method: SetCallResolver --[ReferencesField]--> Field: _callResolver
+                  Class: MethodEdgeBuilder --[HasMethod]--> Method: BuildEdges
+                    Method: BuildEdges (Returns IEnumerable, Abstract=False)
+                      Method: BuildEdges --[Uses]--> Class: NodeRegistry
+                      Method: BuildEdges --[Uses]--> Property: MethodSyntax
+                      Method: BuildEdges --[Uses]--> Property: Symbol
+                      Method: BuildEdges --[Creates]--> Class: EdgeNode
+                      Method: BuildEdges --[Uses]--> Property: Target
+                      Method: BuildEdges --[Uses]--> Property: Type
+                      Method: BuildEdges --[Calls]--> Method: GetElementType
+                      Method: BuildEdges --[Calls]--> Method: HandleInvocation
+                        Method: HandleInvocation (Returns Void, Abstract=False)
+                          Method: HandleInvocation --[Uses]--> Class: NodeRegistry
+                          Method: HandleInvocation --[Creates]--> Class: EdgeNode
+                          Method: HandleInvocation --[Uses]--> Property: Target
+                          Method: HandleInvocation --[Uses]--> Property: Type
+                          Method: HandleInvocation --[ReferencesField]--> Field: _callResolver
+                          Method: HandleInvocation --[Calls]--> Method: GetImplementations
+                      Method: BuildEdges --[ReferencesField]--> Field: _callResolver
+                      Method: BuildEdges --[Calls]--> Method: GetImplementations
+                  Class: MethodEdgeBuilder --[HasMethod]--> Method: HandleInvocation
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: PropertyEdgeBuilder
+                Class: PropertyEdgeBuilder (Abstract=False)
+                  Class: PropertyEdgeBuilder --[Implements]--> Interface: IEdgeBuilder
+                  Class: PropertyEdgeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: PropertyEdgeBuilder --[HasMethod]--> Method: BuildEdges
+                    Method: BuildEdges (Returns IEnumerable, Abstract=False)
+                      Method: BuildEdges --[Uses]--> Class: NodeRegistry
+                      Method: BuildEdges --[Uses]--> Property: ReferencedSymbols
+                      Method: BuildEdges --[Creates]--> Class: EdgeNode
+                      Method: BuildEdges --[Uses]--> Property: Target
+                      Method: BuildEdges --[Uses]--> Property: Type
+                      Method: BuildEdges --[Calls]--> Method: GetElementType
+              Constructor: GraphBuilder..ctor --[Creates]--> Class: FieldEdgeBuilder
+                Class: FieldEdgeBuilder (Abstract=False)
+                  Class: FieldEdgeBuilder --[Implements]--> Interface: IEdgeBuilder
+                  Class: FieldEdgeBuilder --[HasProperty]--> Property: NodeType
+                    Property: NodeType
+                  Class: FieldEdgeBuilder --[HasMethod]--> Method: BuildEdges
+                    Method: BuildEdges (Returns IEnumerable, Abstract=False)
+                      Method: BuildEdges --[Uses]--> Class: NodeRegistry
+                      Method: BuildEdges --[Uses]--> Property: Symbol
+                      Method: BuildEdges --[Creates]--> Class: EdgeNode
+                      Method: BuildEdges --[Uses]--> Property: Target
+                      Method: BuildEdges --[Uses]--> Property: Type
+                      Method: BuildEdges --[Calls]--> Method: GetElementType
+          Class: GraphBuilder --[HasMethod]--> Method: BuildGraph
+            Method: BuildGraph (Returns Void, Abstract=False)
+              Method: BuildGraph --[Calls]--> Method: BuildNodes
+                Method: BuildNodes (Returns Void, Abstract=False)
+                  Method: BuildNodes --[Creates]--> Class: GraphContext
+                  Method: BuildNodes --[ReferencesField]--> Field: _semanticModels
+                  Method: BuildNodes --[Uses]--> Property: Registry
+                  Method: BuildNodes --[ReferencesField]--> Field: _nodeBuilders
+                  Method: BuildNodes --[Calls]--> Method: BuildNodes
+                    Method: BuildNodes (Returns IEnumerable, Abstract=True)
+                      Method: BuildNodes --[Uses]--> Class: GraphContext
+                      Method: BuildNodes --[ImplementedBy]--> Method: BuildNodes
+                      Method: BuildNodes --[ImplementedBy]--> Method: BuildNodes
+                      Method: BuildNodes --[ImplementedBy]--> Method: BuildNodes
+                      Method: BuildNodes --[ImplementedBy]--> Method: BuildNodes
+                      Method: BuildNodes --[ImplementedBy]--> Method: BuildNodes
+                      Method: BuildNodes --[ImplementedBy]--> Method: BuildNodes
+                      Method: BuildNodes --[ImplementedBy]--> Method: BuildNodes
+                  Method: BuildNodes --[Calls]--> Method: AddNodesSafe
+                    Method: AddNodesSafe (Returns Void, Abstract=False)
+                      Method: AddNodesSafe --[Calls]--> Method: AddNode
+                      Method: AddNodesSafe --[Uses]--> Property: Registry
+              Method: BuildGraph --[Calls]--> Method: BuildEdges
+                Method: BuildEdges (Returns Void, Abstract=False)
+                  Method: BuildEdges --[ReferencesField]--> Field: _callResolver
+                  Method: BuildEdges --[Creates]--> Class: CallResolver
+                  Method: BuildEdges --[Uses]--> Property: Registry
+                  Method: BuildEdges --[ReferencesField]--> Field: _edgeBuilders
+                  Method: BuildEdges --[Uses]--> Property: NodeType
+                    Property: NodeType
+                  Method: BuildEdges --[Calls]--> Method: SetCallResolver
+                  Method: BuildEdges --[ReferencesField]--> Field: _compilation
+                  Method: BuildEdges --[ReferencesField]--> Field: _semanticModels
+                  Method: BuildEdges --[Creates]--> Class: EdgeComparer
+                    Class: EdgeComparer (Abstract=False)
+                      Class: EdgeComparer --[HasMethod]--> Method: Equals
+                        Method: Equals (Returns Boolean, Abstract=False)
+                          Method: Equals --[Uses]--> Class: EdgeNode
+                          Method: Equals --[Uses]--> Property: Type
+                          Method: Equals --[Uses]--> Property: Target
+                      Class: EdgeComparer --[HasMethod]--> Method: GetHashCode
+                        Method: GetHashCode (Returns Int32, Abstract=False)
+                          Method: GetHashCode --[Uses]--> Class: EdgeNode
+                          Method: GetHashCode --[Uses]--> Property: Type
+                          Method: GetHashCode --[Uses]--> Property: Target
+          Class: GraphBuilder --[HasMethod]--> Method: BuildNodes
+          Class: GraphBuilder --[HasMethod]--> Method: BuildEdges
+          Class: GraphBuilder --[HasMethod]--> Method: AddNodesSafe
+          Class: GraphBuilder --[HasMethod]--> Method: AddEdgesSafe
+            Method: AddEdgesSafe (Returns Void, Abstract=False)
+              Method: AddEdgesSafe --[Uses]--> Property: OutgoingEdges
+                Property: OutgoingEdges
+                  Property: OutgoingEdges --[Uses]--> Class: EdgeNode
+              Method: AddEdgesSafe --[Uses]--> Property: Registry
+              Method: AddEdgesSafe --[Creates]--> Class: EdgeComparer
+      Method: HasConcreteStates --[Creates]--> Class: RuleStep
+      Method: HasConcreteStates --[Uses]--> Property: Description
+      Method: HasConcreteStates --[Uses]--> Property: MustPass
+      Method: HasConcreteStates --[Uses]--> Property: Check
+      Method: HasConcreteStates --[Calls]--> Method: IsStateContract
+      Method: HasConcreteStates --[ReferencesField]--> Field: StateInterface
+      Method: HasConcreteStates --[Uses]--> Property: Registry
+      Method: HasConcreteStates --[Uses]--> Property: Symbol
+      Method: HasConcreteStates --[ReferencesField]--> Field: ConcreteState
+  Class: StateChecks --[HasMethod]--> Method: ContextHasStateReference
+    Method: ContextHasStateReference (Returns RuleStep, Abstract=False)
+      Method: ContextHasStateReference --[Returns]--> Class: RuleStep
+      Method: ContextHasStateReference --[Uses]--> Class: GraphBuilder
+      Method: ContextHasStateReference --[Creates]--> Class: RuleStep
+      Method: ContextHasStateReference --[Uses]--> Property: Description
+      Method: ContextHasStateReference --[Uses]--> Property: MustPass
+      Method: ContextHasStateReference --[Uses]--> Property: Check
+      Method: ContextHasStateReference --[Calls]--> Method: IsStateContract
+      Method: ContextHasStateReference --[ReferencesField]--> Field: StateInterface
+      Method: ContextHasStateReference --[Uses]--> Property: Registry
+      Method: ContextHasStateReference --[Uses]--> Property: OutgoingEdges
+      Method: ContextHasStateReference --[Uses]--> Property: Type
+      Method: ContextHasStateReference --[Uses]--> Property: Target
+      Method: ContextHasStateReference --[Uses]--> Property: Symbol
+      Method: ContextHasStateReference --[Uses]--> Property: Symbol
+      Method: ContextHasStateReference --[Calls]--> Method: GetElementType
+      Method: ContextHasStateReference --[Uses]--> Property: Symbol
+      Method: ContextHasStateReference --[Uses]--> Property: Symbol
+      Method: ContextHasStateReference --[ReferencesField]--> Field: StateContextCandidate
+  Class: StateChecks --[HasMethod]--> Method: ContextDelegatesToState
+    Method: ContextDelegatesToState (Returns RuleStep, Abstract=False)
+      Method: ContextDelegatesToState --[Returns]--> Class: RuleStep
+      Method: ContextDelegatesToState --[Uses]--> Class: GraphBuilder
+      Method: ContextDelegatesToState --[Creates]--> Class: RuleStep
+      Method: ContextDelegatesToState --[Uses]--> Property: Description
+      Method: ContextDelegatesToState --[Uses]--> Property: MustPass
+      Method: ContextDelegatesToState --[Uses]--> Property: Check
+      Method: ContextDelegatesToState --[Calls]--> Method: IsStateContract
+      Method: ContextDelegatesToState --[ReferencesField]--> Field: StateInterface
+      Method: ContextDelegatesToState --[Uses]--> Property: Registry
+      Method: ContextDelegatesToState --[Uses]--> Property: OutgoingEdges
+      Method: ContextDelegatesToState --[Uses]--> Property: Type
+      Method: ContextDelegatesToState --[Uses]--> Property: Target
+      Method: ContextDelegatesToState --[Uses]--> Property: OutgoingEdges
+      Method: ContextDelegatesToState --[Uses]--> Property: Symbol
+      Method: ContextDelegatesToState --[Uses]--> Property: Symbol
+      Method: ContextDelegatesToState --[Calls]--> Method: GetElementType
+      Method: ContextDelegatesToState --[ReferencesField]--> Field: StateContext
+  Class: StateChecks --[HasMethod]--> Method: StateMutatesContext
+    Method: StateMutatesContext (Returns RuleStep, Abstract=False)
+      Method: StateMutatesContext --[Returns]--> Class: RuleStep
+      Method: StateMutatesContext --[Uses]--> Class: GraphBuilder
+      Method: StateMutatesContext --[Creates]--> Class: RuleStep
+      Method: StateMutatesContext --[Uses]--> Property: Description
+      Method: StateMutatesContext --[Uses]--> Property: MustPass
+      Method: StateMutatesContext --[Uses]--> Property: Check
+      Method: StateMutatesContext --[Calls]--> Method: IsStateContract
+      Method: StateMutatesContext --[ReferencesField]--> Field: StateInterface
+      Method: StateMutatesContext --[Uses]--> Property: Registry
+      Method: StateMutatesContext --[Uses]--> Property: Symbol
+      Method: StateMutatesContext --[Uses]--> Property: Symbol
+      Method: StateMutatesContext --[Uses]--> Property: OutgoingEdges
+      Method: StateMutatesContext --[Uses]--> Property: Type
+      Method: StateMutatesContext --[Uses]--> Property: Target
+      Method: StateMutatesContext --[Uses]--> Property: OutgoingEdges
+      Method: StateMutatesContext --[Uses]--> Property: Symbol
+      Method: StateMutatesContext --[Uses]--> Property: Symbol
+      Method: StateMutatesContext --[ReferencesField]--> Field: ConcreteState
+      Method: StateMutatesContext --[ReferencesField]--> Field: StateContext
+  Class: StateChecks --[HasMethod]--> Method: StateHasContextReference
+    Method: StateHasContextReference (Returns RuleStep, Abstract=False)
+      Method: StateHasContextReference --[Returns]--> Class: RuleStep
+      Method: StateHasContextReference --[Uses]--> Class: GraphBuilder
+      Method: StateHasContextReference --[Creates]--> Class: RuleStep
+      Method: StateHasContextReference --[Uses]--> Property: Description
+      Method: StateHasContextReference --[Uses]--> Property: MustPass
+      Method: StateHasContextReference --[Uses]--> Property: Check
+      Method: StateHasContextReference --[Uses]--> Property: Symbol
+      Method: StateHasContextReference --[Uses]--> Property: Registry
+      Method: StateHasContextReference --[Uses]--> Property: Symbol
+      Method: StateHasContextReference --[Uses]--> Property: OutgoingEdges
+      Method: StateHasContextReference --[Uses]--> Property: Type
+      Method: StateHasContextReference --[Uses]--> Property: Target
+      Method: StateHasContextReference --[Uses]--> Property: Symbol
+      Method: StateHasContextReference --[Uses]--> Property: Symbol
+      Method: StateHasContextReference --[Uses]--> Property: Symbol
+      Method: StateHasContextReference --[ReferencesField]--> Field: ConcreteState
+  Class: StateChecks --[HasMethod]--> Method: StateMethodNameHint
+    Method: StateMethodNameHint (Returns RuleStep, Abstract=False)
+      Method: StateMethodNameHint --[Returns]--> Class: RuleStep
+      Method: StateMethodNameHint --[Creates]--> Class: RuleStep
+      Method: StateMethodNameHint --[Uses]--> Property: Description
+      Method: StateMethodNameHint --[Uses]--> Property: MustPass
+      Method: StateMethodNameHint --[Uses]--> Property: Check
+      Method: StateMethodNameHint --[Uses]--> Property: Symbol
+      Method: StateMethodNameHint --[Uses]--> Property: IsAbstract
+      Method: StateMethodNameHint --[ReferencesField]--> Field: StateNameHint
+  Class: StateChecks --[HasMethod]--> Method: IsStateContract
+Class: Roles (Abstract=False)
+  Class: Roles --[HasField]--> Field: Singleton
+    Field: Roles.Singleton (public const String)
+Class: SingletonChecks (Abstract=False)
+  Class: SingletonChecks --[HasMethod]--> Method: HasPrivateConstructor
+    Method: HasPrivateConstructor (Returns RuleStep, Abstract=False)
+      Method: HasPrivateConstructor --[Returns]--> Class: RuleStep
+      Method: HasPrivateConstructor --[Creates]--> Class: RuleStep
+      Method: HasPrivateConstructor --[Uses]--> Property: Description
+      Method: HasPrivateConstructor --[Uses]--> Property: MustPass
+      Method: HasPrivateConstructor --[Uses]--> Property: Check
+      Method: HasPrivateConstructor --[Uses]--> Property: OutgoingEdges
+      Method: HasPrivateConstructor --[Uses]--> Property: Type
+      Method: HasPrivateConstructor --[Uses]--> Property: Target
+      Method: HasPrivateConstructor --[Uses]--> Property: Symbol
+      Method: HasPrivateConstructor --[ReferencesField]--> Field: Singleton
+  Class: SingletonChecks --[HasMethod]--> Method: HasStaticInstanceField
+    Method: HasStaticInstanceField (Returns RuleStep, Abstract=False)
+      Method: HasStaticInstanceField --[Returns]--> Class: RuleStep
+      Method: HasStaticInstanceField --[Creates]--> Class: RuleStep
+      Method: HasStaticInstanceField --[Uses]--> Property: Description
+      Method: HasStaticInstanceField --[Uses]--> Property: MustPass
+      Method: HasStaticInstanceField --[Uses]--> Property: Check
+      Method: HasStaticInstanceField --[Calls]--> Method: GetStaticFields
+        Method: GetStaticFields (Returns IEnumerable, Abstract=False)
+          Method: GetStaticFields --[Uses]--> Property: OutgoingEdges
+          Method: GetStaticFields --[Uses]--> Property: Type
+          Method: GetStaticFields --[Uses]--> Property: Target
+      Method: HasStaticInstanceField --[Uses]--> Property: Symbol
+      Method: HasStaticInstanceField --[Uses]--> Property: Symbol
+      Method: HasStaticInstanceField --[ReferencesField]--> Field: Singleton
+  Class: SingletonChecks --[HasMethod]--> Method: HasStaticAccessor
+    Method: HasStaticAccessor (Returns RuleStep, Abstract=False)
+      Method: HasStaticAccessor --[Returns]--> Class: RuleStep
+      Method: HasStaticAccessor --[Creates]--> Class: RuleStep
+      Method: HasStaticAccessor --[Uses]--> Property: Description
+      Method: HasStaticAccessor --[Uses]--> Property: MustPass
+      Method: HasStaticAccessor --[Uses]--> Property: Check
+      Method: HasStaticAccessor --[Uses]--> Property: Symbol
+      Method: HasStaticAccessor --[Uses]--> Property: OutgoingEdges
+      Method: HasStaticAccessor --[Uses]--> Property: Type
+      Method: HasStaticAccessor --[Uses]--> Property: Target
+      Method: HasStaticAccessor --[Uses]--> Property: Symbol
+      Method: HasStaticAccessor --[Uses]--> Property: Symbol
+      Method: HasStaticAccessor --[Calls]--> Method: GetStaticFields
+      Method: HasStaticAccessor --[Uses]--> Property: Symbol
+      Method: HasStaticAccessor --[ReferencesField]--> Field: Singleton
+  Class: SingletonChecks --[HasMethod]--> Method: GetStaticFields
+Class: Roles (Abstract=False)
+  Class: Roles --[HasField]--> Field: AbstractFactory
+    Field: Roles.AbstractFactory (public const String)
+  Class: Roles --[HasField]--> Field: ConcreteFactory
+    Field: Roles.ConcreteFactory (public const String)
+  Class: Roles --[HasField]--> Field: Product
+    Field: Roles.Product (public const String)
+  Class: Roles --[HasField]--> Field: InvalidProduct
+    Field: Roles.InvalidProduct (public const String)
+  Class: Roles --[HasField]--> Field: UnfulfilledReturn
+    Field: Roles.UnfulfilledReturn (public const String)
+Class: FactoryMethodChecks (Abstract=False)
+  Class: FactoryMethodChecks --[HasMethod]--> Method: HasAbstractFactoryMethod
+    Method: HasAbstractFactoryMethod (Returns RuleStep, Abstract=False)
+      Method: HasAbstractFactoryMethod --[Returns]--> Class: RuleStep
+      Method: HasAbstractFactoryMethod --[Creates]--> Class: RuleStep
+      Method: HasAbstractFactoryMethod --[Uses]--> Property: Description
+      Method: HasAbstractFactoryMethod --[Uses]--> Property: MustPass
+      Method: HasAbstractFactoryMethod --[Uses]--> Property: Check
+      Method: HasAbstractFactoryMethod --[Uses]--> Property: IsAbstract
+      Method: HasAbstractFactoryMethod --[Uses]--> Property: OutgoingEdges
+      Method: HasAbstractFactoryMethod --[Uses]--> Property: Type
+      Method: HasAbstractFactoryMethod --[Uses]--> Property: Target
+      Method: HasAbstractFactoryMethod --[Uses]--> Property: IsAbstract
+      Method: HasAbstractFactoryMethod --[Uses]--> Property: Symbol
+      Method: HasAbstractFactoryMethod --[ReferencesField]--> Field: AbstractFactory
+  Class: FactoryMethodChecks --[HasMethod]--> Method: SubclassesOverrideFactoryMethod
+    Method: SubclassesOverrideFactoryMethod (Returns RuleStep, Abstract=False)
+      Method: SubclassesOverrideFactoryMethod --[Returns]--> Class: RuleStep
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Class: GraphBuilder
+      Method: SubclassesOverrideFactoryMethod --[Creates]--> Class: RuleStep
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: Description
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: MustPass
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: Check
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: IsAbstract
+      Method: SubclassesOverrideFactoryMethod --[ReferencesField]--> Field: AbstractFactory
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: Registry
+      Method: SubclassesOverrideFactoryMethod --[Calls]--> Method: InheritsFrom
+        Method: InheritsFrom (Returns Boolean, Abstract=False)
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: Symbol
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: OutgoingEdges
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: Type
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: Target
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: Symbol
+      Method: SubclassesOverrideFactoryMethod --[Uses]--> Property: OutgoingEdges
+      Method: SubclassesOverrideFactoryMethod --[ReferencesField]--> Field: ConcreteFactory
+  Class: FactoryMethodChecks --[HasMethod]--> Method: CreatedProductImplementsReturnType
+    Method: CreatedProductImplementsReturnType (Returns RuleStep, Abstract=False)
+      Method: CreatedProductImplementsReturnType --[Returns]--> Class: RuleStep
+      Method: CreatedProductImplementsReturnType --[Uses]--> Class: GraphBuilder
+      Method: CreatedProductImplementsReturnType --[Creates]--> Class: RuleStep
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: Description
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: MustPass
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: Check
+      Method: CreatedProductImplementsReturnType --[ReferencesField]--> Field: AbstractFactory
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: Registry
+      Method: CreatedProductImplementsReturnType --[Calls]--> Method: InheritsFrom
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: Symbol
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: OutgoingEdges
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: Type
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: Target
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: Symbol
+      Method: CreatedProductImplementsReturnType --[Uses]--> Property: OutgoingEdges
+      Method: CreatedProductImplementsReturnType --[ReferencesField]--> Field: Product
+      Method: CreatedProductImplementsReturnType --[ReferencesField]--> Field: UnfulfilledReturn
+      Method: CreatedProductImplementsReturnType --[ReferencesField]--> Field: InvalidProduct
+  Class: FactoryMethodChecks --[HasMethod]--> Method: InheritsFrom
+Class: CollectionChecks (Abstract=False)
+  Class: CollectionChecks --[HasMethod]--> Method: HasObserverCollection
+    Method: HasObserverCollection (Returns RuleStep, Abstract=False)
+      Method: HasObserverCollection --[Returns]--> Class: RuleStep
+      Method: HasObserverCollection --[Creates]--> Class: RuleStep
+      Method: HasObserverCollection --[Uses]--> Property: Description
+      Method: HasObserverCollection --[Uses]--> Property: MustPass
+      Method: HasObserverCollection --[Uses]--> Property: Check
+      Method: HasObserverCollection --[Calls]--> Method: GetElementType
+      Method: HasObserverCollection --[Uses]--> Property: OutgoingEdges
+      Method: HasObserverCollection --[Uses]--> Property: Type
+      Method: HasObserverCollection --[Uses]--> Property: Target
+      Method: HasObserverCollection --[Uses]--> Property: Symbol
+      Method: HasObserverCollection --[Uses]--> Property: Symbol
+Class: PatternAnalyserManager (Abstract=False)
+  Class: PatternAnalyserManager --[HasField]--> Field: _graph
+    Field: PatternAnalyserManager._graph (private readonly GraphBuilder)
+      Field: _graph --[Uses]--> Class: GraphBuilder
+  Class: PatternAnalyserManager --[HasField]--> Field: _printers
+    Field: PatternAnalyserManager._printers (private readonly Dictionary)
+  Class: PatternAnalyserManager --[HasField]--> Field: _analyserFactories
+    Field: PatternAnalyserManager._analyserFactories (private readonly List)
+  Class: PatternAnalyserManager --[HasConstructor]--> Constructor: PatternAnalyserManager..ctor
+    Constructor: PatternAnalyserManager..ctor
+      Constructor: PatternAnalyserManager..ctor --[HasConstructor]--> Constructor: PatternAnalyserManager..ctor
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: ObserverPatternPrinter
+        Class: ObserverPatternPrinter (Abstract=False)
+          Class: ObserverPatternPrinter --[Inherits]--> Class: BasePatternPrinter
+            Class: BasePatternPrinter (Abstract=True)
+              Class: BasePatternPrinter --[Implements]--> Interface: IPatternPrinter
+                Interface: IPatternPrinter
+              Class: BasePatternPrinter --[HasProperty]--> Property: PatternName
+                Property: PatternName
+              Class: BasePatternPrinter --[HasMethod]--> Method: Print
+                Method: Print (Returns Void, Abstract=False)
+                  Method: Print --[Uses]--> Class: PatternResult
+                    Class: PatternResult (Abstract=False)
+                      Class: PatternResult --[HasProperty]--> Property: Rule
+                        Property: Rule
+                          Property: Rule --[Uses]--> Class: PatternRule
+                            Class: PatternRule (Abstract=False)
+                              Class: PatternRule --[HasProperty]--> Property: Name
+                                Property: Name
+                              Class: PatternRule --[HasProperty]--> Property: Steps
+                                Property: Steps
+                                  Property: Steps --[Uses]--> Class: RuleStep
+                              Class: PatternRule --[HasPropertyElement]--> Class: RuleStep
+                              Class: PatternRule --[HasProperty]--> Property: expectedTotalScore
+                                Property: expectedTotalScore
+                              Class: PatternRule --[HasMethod]--> Method: Run
+                                Method: Run (Returns PatternResult, Abstract=False)
+                                  Method: Run --[Returns]--> Class: PatternResult
+                                  Method: Run --[Uses]--> Property: Steps
+                                  Method: Run --[Uses]--> Property: Check
+                                  Method: Run --[Uses]--> Property: MustPass
+                                  Method: Run --[Creates]--> Class: PatternResult
+                                  Method: Run --[Uses]--> Property: Rule
+                                  Method: Run --[Uses]--> Property: Score
+                                    Property: Score
+                                  Method: Run --[Uses]--> Property: PassedMustPass
+                                    Property: PassedMustPass
+                                  Method: Run --[Uses]--> Property: Subject
+                                    Property: Subject
+                                  Method: Run --[Uses]--> Property: InvolvedClasses
+                                    Property: InvolvedClasses
+                      Class: PatternResult --[HasProperty]--> Property: Score
+                      Class: PatternResult --[HasProperty]--> Property: PassedMustPass
+                      Class: PatternResult --[HasProperty]--> Property: MatchesPattern
+                        Property: MatchesPattern
+                      Class: PatternResult --[HasProperty]--> Property: Subject
+                      Class: PatternResult --[HasProperty]--> Property: InvolvedClasses
+                  Method: Print --[Calls]--> Method: PrintHeader
+                    Method: PrintHeader (Returns Void, Abstract=False)
+                      Method: PrintHeader --[Uses]--> Class: PatternResult
+                      Method: PrintHeader --[Uses]--> Property: Rule
+                      Method: PrintHeader --[Uses]--> Property: Name
+                      Method: PrintHeader --[Uses]--> Property: Score
+                      Method: PrintHeader --[Uses]--> Property: expectedTotalScore
+                      Method: PrintHeader --[Uses]--> Property: PassedMustPass
+                  Method: Print --[Calls]--> Method: PrintRoles
+                    Method: PrintRoles (Returns Void, Abstract=True)
+                      Method: PrintRoles --[Uses]--> Class: PatternResult
+                  Method: Print --[Calls]--> Method: PrintFooter
+                    Method: PrintFooter (Returns Void, Abstract=False)
+              Class: BasePatternPrinter --[HasMethod]--> Method: PrintRoles
+              Class: BasePatternPrinter --[HasMethod]--> Method: PrintHeader
+              Class: BasePatternPrinter --[HasMethod]--> Method: PrintFooter
+              Class: BasePatternPrinter --[HasMethod]--> Method: PrintRoleGroup
+                Method: PrintRoleGroup (Returns Void, Abstract=False)
+                  Method: PrintRoleGroup --[Uses]--> Property: Symbol
+          Class: ObserverPatternPrinter --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+                Class: PatternNames (Abstract=False)
+                  Class: PatternNames --[HasField]--> Field: Observer
+                    Field: PatternNames.Observer (public const String)
+                  Class: PatternNames --[HasField]--> Field: Singleton
+                    Field: PatternNames.Singleton (public const String)
+                  Class: PatternNames --[HasField]--> Field: FactoryMethod
+                    Field: PatternNames.FactoryMethod (public const String)
+                  Class: PatternNames --[HasField]--> Field: Strategy
+                    Field: PatternNames.Strategy (public const String)
+                  Class: PatternNames --[HasField]--> Field: Adapter
+                    Field: PatternNames.Adapter (public const String)
+                  Class: PatternNames --[HasField]--> Field: State
+                    Field: PatternNames.State (public const String)
+              Property: PatternName --[ReferencesField]--> Field: Observer
+          Class: ObserverPatternPrinter --[HasMethod]--> Method: PrintRoles
+            Method: PrintRoles (Returns Void, Abstract=False)
+              Method: PrintRoles --[Uses]--> Class: PatternResult
+              Method: PrintRoles --[Calls]--> Method: PrintRoleGroup
+              Method: PrintRoles --[Uses]--> Property: InvolvedClasses
+              Method: PrintRoles --[Overrides]--> Method: PrintRoles
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: SingletonPatternPrinter
+        Class: SingletonPatternPrinter (Abstract=False)
+          Class: SingletonPatternPrinter --[Inherits]--> Class: BasePatternPrinter
+          Class: SingletonPatternPrinter --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: Singleton
+          Class: SingletonPatternPrinter --[HasMethod]--> Method: PrintRoles
+            Method: PrintRoles (Returns Void, Abstract=False)
+              Method: PrintRoles --[Uses]--> Class: PatternResult
+              Method: PrintRoles --[Calls]--> Method: PrintRoleGroup
+              Method: PrintRoles --[Uses]--> Property: InvolvedClasses
+              Method: PrintRoles --[Overrides]--> Method: PrintRoles
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: FactoryMethodPatternPrinter
+        Class: FactoryMethodPatternPrinter (Abstract=False)
+          Class: FactoryMethodPatternPrinter --[Inherits]--> Class: BasePatternPrinter
+          Class: FactoryMethodPatternPrinter --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: FactoryMethod
+          Class: FactoryMethodPatternPrinter --[HasMethod]--> Method: PrintRoles
+            Method: PrintRoles (Returns Void, Abstract=False)
+              Method: PrintRoles --[Uses]--> Class: PatternResult
+              Method: PrintRoles --[Calls]--> Method: PrintRoleGroup
+              Method: PrintRoles --[Uses]--> Property: InvolvedClasses
+              Method: PrintRoles --[Overrides]--> Method: PrintRoles
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: StrategyPatternPrinter
+        Class: StrategyPatternPrinter (Abstract=False)
+          Class: StrategyPatternPrinter --[Inherits]--> Class: BasePatternPrinter
+          Class: StrategyPatternPrinter --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: Strategy
+          Class: StrategyPatternPrinter --[HasMethod]--> Method: PrintRoles
+            Method: PrintRoles (Returns Void, Abstract=False)
+              Method: PrintRoles --[Uses]--> Class: PatternResult
+              Method: PrintRoles --[Calls]--> Method: PrintRoleGroup
+              Method: PrintRoles --[Uses]--> Property: InvolvedClasses
+              Method: PrintRoles --[Overrides]--> Method: PrintRoles
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: AdapterPatternPrinter
+        Class: AdapterPatternPrinter (Abstract=False)
+          Class: AdapterPatternPrinter --[Inherits]--> Class: BasePatternPrinter
+          Class: AdapterPatternPrinter --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: Adapter
+          Class: AdapterPatternPrinter --[HasMethod]--> Method: PrintRoles
+            Method: PrintRoles (Returns Void, Abstract=False)
+              Method: PrintRoles --[Uses]--> Class: PatternResult
+              Method: PrintRoles --[Calls]--> Method: PrintRoleGroup
+              Method: PrintRoles --[Uses]--> Property: InvolvedClasses
+              Method: PrintRoles --[Overrides]--> Method: PrintRoles
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: StatePatternPrinter
+        Class: StatePatternPrinter (Abstract=False)
+          Class: StatePatternPrinter --[Inherits]--> Class: BasePatternPrinter
+          Class: StatePatternPrinter --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: State
+          Class: StatePatternPrinter --[HasMethod]--> Method: PrintRoles
+            Method: PrintRoles (Returns Void, Abstract=False)
+              Method: PrintRoles --[Uses]--> Class: PatternResult
+              Method: PrintRoles --[Calls]--> Method: PrintRoleGroup
+              Method: PrintRoles --[Uses]--> Property: InvolvedClasses
+              Method: PrintRoles --[Overrides]--> Method: PrintRoles
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: ObserverAnalyser
+        Class: ObserverAnalyser (Abstract=False)
+          Class: ObserverAnalyser --[Inherits]--> Class: BaseAnalyser
+            Class: BaseAnalyser (Abstract=True)
+              Class: BaseAnalyser --[Implements]--> Interface: IAnalyser
+                Interface: IAnalyser
+              Class: BaseAnalyser --[HasField]--> Field: Node
+                Field: BaseAnalyser.Node (protected readonly IAnalyzerNode)
+              Class: BaseAnalyser --[HasField]--> Field: Graph
+                Field: BaseAnalyser.Graph (protected readonly GraphBuilder)
+                  Field: Graph --[Uses]--> Class: GraphBuilder
+              Class: BaseAnalyser --[HasConstructor]--> Constructor: BaseAnalyser..ctor
+                Constructor: BaseAnalyser..ctor
+                  Constructor: BaseAnalyser..ctor --[HasConstructor]--> Constructor: BaseAnalyser..ctor
+              Class: BaseAnalyser --[HasProperty]--> Property: PatternName
+                Property: PatternName
+              Class: BaseAnalyser --[HasMethod]--> Method: BuildSteps
+                Method: BuildSteps (Returns List, Abstract=True)
+              Class: BaseAnalyser --[HasMethod]--> Method: BuildRule
+                Method: BuildRule (Returns PatternRule, Abstract=False)
+                  Method: BuildRule --[Returns]--> Class: PatternRule
+                  Method: BuildRule --[Creates]--> Class: PatternRule
+                  Method: BuildRule --[Uses]--> Property: Name
+                  Method: BuildRule --[Uses]--> Property: PatternName
+                  Method: BuildRule --[Uses]--> Property: Steps
+                  Method: BuildRule --[Uses]--> Property: expectedTotalScore
+              Class: BaseAnalyser --[HasMethod]--> Method: Analyse
+                Method: Analyse (Returns PatternResult, Abstract=False)
+                  Method: Analyse --[Returns]--> Class: PatternResult
+                  Method: Analyse --[Calls]--> Method: BuildSteps
+                  Method: Analyse --[Calls]--> Method: BuildRule
+                  Method: Analyse --[Calls]--> Method: Run
+                  Method: Analyse --[ReferencesField]--> Field: Node
+          Class: ObserverAnalyser --[HasConstructor]--> Constructor: ObserverAnalyser..ctor
+            Constructor: ObserverAnalyser..ctor
+              Constructor: ObserverAnalyser..ctor --[HasConstructor]--> Constructor: ObserverAnalyser..ctor
+          Class: ObserverAnalyser --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: Observer
+          Class: ObserverAnalyser --[HasMethod]--> Method: BuildSteps
+            Method: BuildSteps (Returns List, Abstract=False)
+              Method: BuildSteps --[Calls]--> Method: HasObserverCollection
+                Method: HasObserverCollection (Returns RuleStep, Abstract=False)
+                  Method: HasObserverCollection --[Returns]--> Class: RuleStep
+                  Method: HasObserverCollection --[Creates]--> Class: RuleStep
+                  Method: HasObserverCollection --[Uses]--> Property: Description
+                  Method: HasObserverCollection --[Uses]--> Property: MustPass
+                  Method: HasObserverCollection --[Uses]--> Property: Check
+                  Method: HasObserverCollection --[Calls]--> Method: GetObserverCollectionTypes
+                    Method: GetObserverCollectionTypes (Returns List, Abstract=False)
+                      Method: GetObserverCollectionTypes --[Uses]--> Property: OutgoingEdges
+                      Method: GetObserverCollectionTypes --[Uses]--> Property: Type
+                      Method: GetObserverCollectionTypes --[Uses]--> Property: Target
+                      Method: GetObserverCollectionTypes --[Uses]--> Property: Symbol
+                      Method: GetObserverCollectionTypes --[Uses]--> Property: Symbol
+                      Method: GetObserverCollectionTypes --[Calls]--> Method: GetElementType
+                      Method: GetObserverCollectionTypes --[Calls]--> Method: GetInnermostElementType
+                        Method: GetInnermostElementType (Returns ITypeSymbol, Abstract=False)
+                          Method: GetInnermostElementType --[Calls]--> Method: GetElementType
+                  Method: HasObserverCollection --[ReferencesField]--> Field: Subject
+                    Field: Roles.Subject (public const String)
+              Method: BuildSteps --[Calls]--> Method: HasNotifyMethod
+                Method: HasNotifyMethod (Returns RuleStep, Abstract=False)
+                  Method: HasNotifyMethod --[Returns]--> Class: RuleStep
+                  Method: HasNotifyMethod --[Uses]--> Class: GraphBuilder
+                  Method: HasNotifyMethod --[Creates]--> Class: RuleStep
+                  Method: HasNotifyMethod --[Uses]--> Property: Description
+                  Method: HasNotifyMethod --[Uses]--> Property: MustPass
+                  Method: HasNotifyMethod --[Uses]--> Property: Check
+                  Method: HasNotifyMethod --[Calls]--> Method: GetObserverCollectionTypes
+                  Method: HasNotifyMethod --[ReferencesField]--> Field: Subject
+                  Method: HasNotifyMethod --[Uses]--> Property: OutgoingEdges
+                  Method: HasNotifyMethod --[Uses]--> Property: Type
+                  Method: HasNotifyMethod --[Uses]--> Property: Target
+                  Method: HasNotifyMethod --[Calls]--> Method: GetCalledMethods
+                    Method: GetCalledMethods (Returns IEnumerable, Abstract=False)
+                      Method: GetCalledMethods --[Uses]--> Class: MethodNode
+                      Method: GetCalledMethods --[Uses]--> Property: OutgoingEdges
+                      Method: GetCalledMethods --[Uses]--> Property: Type
+                      Method: GetCalledMethods --[Uses]--> Property: Target
+                  Method: HasNotifyMethod --[Calls]--> Method: IsObserverType
+                    Method: IsObserverType (Returns Boolean, Abstract=False)
+                  Method: HasNotifyMethod --[Uses]--> Property: Symbol
+                  Method: HasNotifyMethod --[Uses]--> Property: Registry
+                  Method: HasNotifyMethod --[Uses]--> Property: OutgoingEdges
+                  Method: HasNotifyMethod --[ReferencesField]--> Field: Observer
+                    Field: Roles.Observer (public const String)
+              Method: BuildSteps --[ReferencesField]--> Field: Graph
+              Method: BuildSteps --[Calls]--> Method: HasAttachDetachMethods
+                Method: HasAttachDetachMethods (Returns RuleStep, Abstract=False)
+                  Method: HasAttachDetachMethods --[Returns]--> Class: RuleStep
+                  Method: HasAttachDetachMethods --[Creates]--> Class: RuleStep
+                  Method: HasAttachDetachMethods --[Uses]--> Property: Description
+                  Method: HasAttachDetachMethods --[Uses]--> Property: MustPass
+                  Method: HasAttachDetachMethods --[Uses]--> Property: Check
+                  Method: HasAttachDetachMethods --[Calls]--> Method: GetObserverCollectionTypes
+                  Method: HasAttachDetachMethods --[Uses]--> Property: OutgoingEdges
+                  Method: HasAttachDetachMethods --[Uses]--> Property: Type
+                  Method: HasAttachDetachMethods --[Uses]--> Property: Target
+                  Method: HasAttachDetachMethods --[Uses]--> Property: Symbol
+                  Method: HasAttachDetachMethods --[Calls]--> Method: IsObserverType
+                  Method: HasAttachDetachMethods --[ReferencesField]--> Field: Subject
+              Method: BuildSteps --[Overrides]--> Method: BuildSteps
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: SingletonAnalyser
+        Class: SingletonAnalyser (Abstract=False)
+          Class: SingletonAnalyser --[Inherits]--> Class: BaseAnalyser
+          Class: SingletonAnalyser --[HasConstructor]--> Constructor: SingletonAnalyser..ctor
+            Constructor: SingletonAnalyser..ctor
+              Constructor: SingletonAnalyser..ctor --[HasConstructor]--> Constructor: SingletonAnalyser..ctor
+          Class: SingletonAnalyser --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: Singleton
+          Class: SingletonAnalyser --[HasMethod]--> Method: BuildSteps
+            Method: BuildSteps (Returns List, Abstract=False)
+              Method: BuildSteps --[Calls]--> Method: HasPrivateConstructor
+              Method: BuildSteps --[Calls]--> Method: HasStaticInstanceField
+              Method: BuildSteps --[Calls]--> Method: HasStaticAccessor
+              Method: BuildSteps --[Overrides]--> Method: BuildSteps
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: FactoryMethodAnalyser
+        Class: FactoryMethodAnalyser (Abstract=False)
+          Class: FactoryMethodAnalyser --[Inherits]--> Class: BaseAnalyser
+          Class: FactoryMethodAnalyser --[HasConstructor]--> Constructor: FactoryMethodAnalyser..ctor
+            Constructor: FactoryMethodAnalyser..ctor
+              Constructor: FactoryMethodAnalyser..ctor --[HasConstructor]--> Constructor: FactoryMethodAnalyser..ctor
+          Class: FactoryMethodAnalyser --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: FactoryMethod
+          Class: FactoryMethodAnalyser --[HasMethod]--> Method: BuildSteps
+            Method: BuildSteps (Returns List, Abstract=False)
+              Method: BuildSteps --[Calls]--> Method: HasAbstractFactoryMethod
+              Method: BuildSteps --[Calls]--> Method: SubclassesOverrideFactoryMethod
+              Method: BuildSteps --[ReferencesField]--> Field: Graph
+              Method: BuildSteps --[Calls]--> Method: CreatedProductImplementsReturnType
+              Method: BuildSteps --[Overrides]--> Method: BuildSteps
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: StrategyAnalyser
+        Class: StrategyAnalyser (Abstract=False)
+          Class: StrategyAnalyser --[Inherits]--> Class: BaseAnalyser
+          Class: StrategyAnalyser --[HasConstructor]--> Constructor: StrategyAnalyser..ctor
+            Constructor: StrategyAnalyser..ctor
+              Constructor: StrategyAnalyser..ctor --[HasConstructor]--> Constructor: StrategyAnalyser..ctor
+          Class: StrategyAnalyser --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: Strategy
+          Class: StrategyAnalyser --[HasMethod]--> Method: BuildSteps
+            Method: BuildSteps (Returns List, Abstract=False)
+              Method: BuildSteps --[Calls]--> Method: HasStrategyInterface
+                Method: HasStrategyInterface (Returns RuleStep, Abstract=False)
+                  Method: HasStrategyInterface --[Returns]--> Class: RuleStep
+                  Method: HasStrategyInterface --[Creates]--> Class: RuleStep
+                  Method: HasStrategyInterface --[Uses]--> Property: Description
+                  Method: HasStrategyInterface --[Uses]--> Property: MustPass
+                  Method: HasStrategyInterface --[Uses]--> Property: Check
+                  Method: HasStrategyInterface --[Calls]--> Method: IsStrategyContract
+                    Method: IsStrategyContract (Returns Boolean, Abstract=False)
+                      Method: IsStrategyContract --[Uses]--> Property: Symbol
+                      Method: IsStrategyContract --[Uses]--> Property: IsAbstract
+                  Method: HasStrategyInterface --[ReferencesField]--> Field: Strategy
+                    Field: Roles.Strategy (public const String)
+              Method: BuildSteps --[Calls]--> Method: HasConcreteStrategies
+                Method: HasConcreteStrategies (Returns RuleStep, Abstract=False)
+                  Method: HasConcreteStrategies --[Returns]--> Class: RuleStep
+                  Method: HasConcreteStrategies --[Uses]--> Class: GraphBuilder
+                  Method: HasConcreteStrategies --[Creates]--> Class: RuleStep
+                  Method: HasConcreteStrategies --[Uses]--> Property: Description
+                  Method: HasConcreteStrategies --[Uses]--> Property: MustPass
+                  Method: HasConcreteStrategies --[Uses]--> Property: Check
+                  Method: HasConcreteStrategies --[Calls]--> Method: IsStrategyContract
+                  Method: HasConcreteStrategies --[ReferencesField]--> Field: Strategy
+                  Method: HasConcreteStrategies --[Uses]--> Property: Registry
+                  Method: HasConcreteStrategies --[Uses]--> Property: Symbol
+                  Method: HasConcreteStrategies --[ReferencesField]--> Field: ConcreteStrategy
+                    Field: Roles.ConcreteStrategy (public const String)
+              Method: BuildSteps --[ReferencesField]--> Field: Graph
+              Method: BuildSteps --[Calls]--> Method: ContextHasStrategyReference
+                Method: ContextHasStrategyReference (Returns RuleStep, Abstract=False)
+                  Method: ContextHasStrategyReference --[Returns]--> Class: RuleStep
+                  Method: ContextHasStrategyReference --[Uses]--> Class: GraphBuilder
+                  Method: ContextHasStrategyReference --[Creates]--> Class: RuleStep
+                  Method: ContextHasStrategyReference --[Uses]--> Property: Description
+                  Method: ContextHasStrategyReference --[Uses]--> Property: MustPass
+                  Method: ContextHasStrategyReference --[Uses]--> Property: Check
+                  Method: ContextHasStrategyReference --[Calls]--> Method: IsStrategyContract
+                  Method: ContextHasStrategyReference --[ReferencesField]--> Field: Strategy
+                  Method: ContextHasStrategyReference --[Uses]--> Property: Registry
+                  Method: ContextHasStrategyReference --[Uses]--> Property: OutgoingEdges
+                  Method: ContextHasStrategyReference --[Uses]--> Property: Type
+                  Method: ContextHasStrategyReference --[Uses]--> Property: Target
+                  Method: ContextHasStrategyReference --[Uses]--> Property: Symbol
+                  Method: ContextHasStrategyReference --[Uses]--> Property: Symbol
+                  Method: ContextHasStrategyReference --[Calls]--> Method: GetElementType
+                  Method: ContextHasStrategyReference --[Uses]--> Property: Symbol
+                  Method: ContextHasStrategyReference --[Uses]--> Property: Symbol
+                  Method: ContextHasStrategyReference --[ReferencesField]--> Field: ContextCandidate
+                    Field: Roles.ContextCandidate (public const String)
+              Method: BuildSteps --[Calls]--> Method: ContextDelegatesToStrategy
+                Method: ContextDelegatesToStrategy (Returns RuleStep, Abstract=False)
+                  Method: ContextDelegatesToStrategy --[Returns]--> Class: RuleStep
+                  Method: ContextDelegatesToStrategy --[Uses]--> Class: GraphBuilder
+                  Method: ContextDelegatesToStrategy --[Creates]--> Class: RuleStep
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: Description
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: MustPass
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: Check
+                  Method: ContextDelegatesToStrategy --[Calls]--> Method: IsStrategyContract
+                  Method: ContextDelegatesToStrategy --[ReferencesField]--> Field: Strategy
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: Registry
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: OutgoingEdges
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: Type
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: Target
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: OutgoingEdges
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: Symbol
+                  Method: ContextDelegatesToStrategy --[Uses]--> Property: Symbol
+                  Method: ContextDelegatesToStrategy --[Calls]--> Method: GetElementType
+                  Method: ContextDelegatesToStrategy --[ReferencesField]--> Field: Context
+                    Field: Roles.Context (public const String)
+              Method: BuildSteps --[Overrides]--> Method: BuildSteps
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: AdapterAnalyser
+        Class: AdapterAnalyser (Abstract=False)
+          Class: AdapterAnalyser --[Inherits]--> Class: BaseAnalyser
+          Class: AdapterAnalyser --[HasConstructor]--> Constructor: AdapterAnalyser..ctor
+            Constructor: AdapterAnalyser..ctor
+              Constructor: AdapterAnalyser..ctor --[HasConstructor]--> Constructor: AdapterAnalyser..ctor
+          Class: AdapterAnalyser --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: Adapter
+          Class: AdapterAnalyser --[HasMethod]--> Method: BuildSteps
+            Method: BuildSteps (Returns List, Abstract=False)
+              Method: BuildSteps --[Calls]--> Method: HasTarget
+                Method: HasTarget (Returns RuleStep, Abstract=False)
+                  Method: HasTarget --[Returns]--> Class: RuleStep
+                  Method: HasTarget --[Creates]--> Class: RuleStep
+                  Method: HasTarget --[Uses]--> Property: Description
+                  Method: HasTarget --[Uses]--> Property: MustPass
+                  Method: HasTarget --[Uses]--> Property: Check
+                  Method: HasTarget --[Uses]--> Property: Symbol
+                  Method: HasTarget --[Uses]--> Property: IsAbstract
+                  Method: HasTarget --[ReferencesField]--> Field: Target
+                    Field: Roles.Target (public const String)
+              Method: BuildSteps --[Calls]--> Method: HasAdapterCandidates
+                Method: HasAdapterCandidates (Returns RuleStep, Abstract=False)
+                  Method: HasAdapterCandidates --[Returns]--> Class: RuleStep
+                  Method: HasAdapterCandidates --[Uses]--> Class: GraphBuilder
+                  Method: HasAdapterCandidates --[Creates]--> Class: RuleStep
+                  Method: HasAdapterCandidates --[Uses]--> Property: Description
+                  Method: HasAdapterCandidates --[Uses]--> Property: MustPass
+                  Method: HasAdapterCandidates --[Uses]--> Property: Check
+                  Method: HasAdapterCandidates --[Uses]--> Property: Symbol
+                  Method: HasAdapterCandidates --[Uses]--> Property: IsAbstract
+                  Method: HasAdapterCandidates --[ReferencesField]--> Field: Target
+                  Method: HasAdapterCandidates --[Uses]--> Property: Registry
+                  Method: HasAdapterCandidates --[Uses]--> Property: Symbol
+                  Method: HasAdapterCandidates --[ReferencesField]--> Field: AdapterCandidate
+                    Field: Roles.AdapterCandidate (public const String)
+              Method: BuildSteps --[ReferencesField]--> Field: Graph
+              Method: BuildSteps --[Calls]--> Method: AdapterDelegatesToAdaptee
+                Method: AdapterDelegatesToAdaptee (Returns RuleStep, Abstract=False)
+                  Method: AdapterDelegatesToAdaptee --[Returns]--> Class: RuleStep
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Class: GraphBuilder
+                  Method: AdapterDelegatesToAdaptee --[Creates]--> Class: RuleStep
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Description
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: MustPass
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Check
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Symbol
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: IsAbstract
+                  Method: AdapterDelegatesToAdaptee --[ReferencesField]--> Field: Target
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Registry
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Symbol
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: OutgoingEdges
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Type
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Target
+                  Method: AdapterDelegatesToAdaptee --[Calls]--> Method: ResolveMemberType
+                    Method: ResolveMemberType (Returns INamedTypeSymbol, Abstract=False)
+                      Method: ResolveMemberType --[Uses]--> Property: Symbol
+                      Method: ResolveMemberType --[Uses]--> Property: Symbol
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Symbol
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Symbol
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: OutgoingEdges
+                  Method: AdapterDelegatesToAdaptee --[Uses]--> Property: Symbol
+                  Method: AdapterDelegatesToAdaptee --[ReferencesField]--> Field: Adapter
+                    Field: Roles.Adapter (public const String)
+                  Method: AdapterDelegatesToAdaptee --[ReferencesField]--> Field: Adaptee
+                    Field: Roles.Adaptee (public const String)
+              Method: BuildSteps --[Overrides]--> Method: BuildSteps
+      Constructor: PatternAnalyserManager..ctor --[Creates]--> Class: StateAnalyser
+        Class: StateAnalyser (Abstract=False)
+          Class: StateAnalyser --[Inherits]--> Class: BaseAnalyser
+          Class: StateAnalyser --[HasConstructor]--> Constructor: StateAnalyser..ctor
+            Constructor: StateAnalyser..ctor
+              Constructor: StateAnalyser..ctor --[HasConstructor]--> Constructor: StateAnalyser..ctor
+          Class: StateAnalyser --[HasProperty]--> Property: PatternName
+            Property: PatternName
+              Property: PatternName --[Uses]--> Class: PatternNames
+              Property: PatternName --[ReferencesField]--> Field: State
+          Class: StateAnalyser --[HasMethod]--> Method: BuildSteps
+            Method: BuildSteps (Returns List, Abstract=False)
+              Method: BuildSteps --[Calls]--> Method: HasStateInterface
+              Method: BuildSteps --[Calls]--> Method: HasConcreteStates
+              Method: BuildSteps --[ReferencesField]--> Field: Graph
+              Method: BuildSteps --[Calls]--> Method: ContextHasStateReference
+              Method: BuildSteps --[Calls]--> Method: ContextDelegatesToState
+              Method: BuildSteps --[Calls]--> Method: StateMutatesContext
+              Method: BuildSteps --[Calls]--> Method: StateHasContextReference
+              Method: BuildSteps --[Calls]--> Method: StateMethodNameHint
+              Method: BuildSteps --[Overrides]--> Method: BuildSteps
+  Class: PatternAnalyserManager --[HasMethod]--> Method: AnalyseAll
+    Method: AnalyseAll (Returns List, Abstract=False)
+      Method: AnalyseAll --[ReferencesField]--> Field: _graph
+      Method: AnalyseAll --[Uses]--> Property: Registry
+      Method: AnalyseAll --[ReferencesField]--> Field: _analyserFactories
+      Method: AnalyseAll --[Calls]--> Method: Analyse
+  Class: PatternAnalyserManager --[HasMethod]--> Method: PrintResults
+    Method: PrintResults (Returns Void, Abstract=False)
+      Method: PrintResults --[Uses]--> Property: MatchesPattern
+      Method: PrintResults --[ReferencesField]--> Field: _printers
+      Method: PrintResults --[Uses]--> Property: Rule
+      Method: PrintResults --[Uses]--> Property: Name
+      Method: PrintResults --[Calls]--> Method: Print
+        Method: Print (Returns Void, Abstract=True)
+          Method: Print --[Uses]--> Class: PatternResult
+          Method: Print --[ImplementedBy]--> Method: Print
+Class: DocumentContext (Abstract=False)
+  Class: DocumentContext --[HasField]--> Field: _state
+    Field: DocumentContext._state (private IDocumentState)
+  Class: DocumentContext --[HasMethod]--> Method: SetState
+    Method: SetState (Returns Void, Abstract=False)
+      Method: SetState --[ReferencesField]--> Field: _state
+  Class: DocumentContext --[HasMethod]--> Method: Publish
+    Method: Publish (Returns Void, Abstract=False)
+      Method: Publish --[Calls]--> Method: Publish
+        Method: Publish (Returns Void, Abstract=True)
+          Method: Publish --[Uses]--> Class: DocumentContext
+          Method: Publish --[ImplementedBy]--> Method: Publish
+            Method: Publish (Returns Void, Abstract=False)
+              Method: Publish --[Uses]--> Class: DocumentContext
+          Method: Publish --[ImplementedBy]--> Method: Publish
+            Method: Publish (Returns Void, Abstract=False)
+              Method: Publish --[Uses]--> Class: DocumentContext
+              Method: Publish --[Calls]--> Method: SetState
+              Method: Publish --[Creates]--> Class: PublishedState
+                Class: PublishedState (Abstract=False)
+                  Class: PublishedState --[Implements]--> Interface: IDocumentState
+                    Interface: IDocumentState
+                  Class: PublishedState --[HasMethod]--> Method: Publish
+                  Class: PublishedState --[HasMethod]--> Method: Reject
+                    Method: Reject (Returns Void, Abstract=False)
+                      Method: Reject --[Uses]--> Class: DocumentContext
+          Method: Publish --[ImplementedBy]--> Method: Publish
+            Method: Publish (Returns Void, Abstract=False)
+              Method: Publish --[Uses]--> Class: DocumentContext
+              Method: Publish --[Calls]--> Method: SetState
+              Method: Publish --[Creates]--> Class: ReviewState
+                Class: ReviewState (Abstract=False)
+                  Class: ReviewState --[Implements]--> Interface: IDocumentState
+                  Class: ReviewState --[HasMethod]--> Method: Publish
+                  Class: ReviewState --[HasMethod]--> Method: Reject
+                    Method: Reject (Returns Void, Abstract=False)
+                      Method: Reject --[Uses]--> Class: DocumentContext
+                      Method: Reject --[Calls]--> Method: SetState
+                      Method: Reject --[Creates]--> Class: DraftState
+                        Class: DraftState (Abstract=False)
+                          Class: DraftState --[Implements]--> Interface: IDocumentState
+                          Class: DraftState --[HasMethod]--> Method: Publish
+                          Class: DraftState --[HasMethod]--> Method: Reject
+                            Method: Reject (Returns Void, Abstract=False)
+                              Method: Reject --[Uses]--> Class: DocumentContext
+      Method: Publish --[ReferencesField]--> Field: _state
+  Class: DocumentContext --[HasMethod]--> Method: Reject
+    Method: Reject (Returns Void, Abstract=False)
+      Method: Reject --[Calls]--> Method: Reject
+        Method: Reject (Returns Void, Abstract=True)
+          Method: Reject --[Uses]--> Class: DocumentContext
+          Method: Reject --[ImplementedBy]--> Method: Reject
+          Method: Reject --[ImplementedBy]--> Method: Reject
+          Method: Reject --[ImplementedBy]--> Method: Reject
+      Method: Reject --[ReferencesField]--> Field: _state
+Class: MediaPlayerContext (Abstract=False)
+  Class: MediaPlayerContext --[HasField]--> Field: _state
+    Field: MediaPlayerContext._state (private IPlayerState)
+  Class: MediaPlayerContext --[HasMethod]--> Method: SetState
+    Method: SetState (Returns Void, Abstract=False)
+      Method: SetState --[ReferencesField]--> Field: _state
+  Class: MediaPlayerContext --[HasMethod]--> Method: Play
+    Method: Play (Returns Void, Abstract=False)
+      Method: Play --[Calls]--> Method: Play
+        Method: Play (Returns Void, Abstract=True)
+          Method: Play --[Uses]--> Class: MediaPlayerContext
+          Method: Play --[ImplementedBy]--> Method: Play
+            Method: Play (Returns Void, Abstract=False)
+              Method: Play --[Uses]--> Class: MediaPlayerContext
+              Method: Play --[Calls]--> Method: SetState
+              Method: Play --[Creates]--> Class: PlayingState
+                Class: PlayingState (Abstract=False)
+                  Class: PlayingState --[Implements]--> Interface: IPlayerState
+                    Interface: IPlayerState
+                  Class: PlayingState --[HasMethod]--> Method: Play
+                    Method: Play (Returns Void, Abstract=False)
+                      Method: Play --[Uses]--> Class: MediaPlayerContext
+                  Class: PlayingState --[HasMethod]--> Method: Pause
+                    Method: Pause (Returns Void, Abstract=False)
+                      Method: Pause --[Uses]--> Class: MediaPlayerContext
+                      Method: Pause --[Calls]--> Method: SetState
+                      Method: Pause --[Creates]--> Class: PausedState
+                        Class: PausedState (Abstract=False)
+                          Class: PausedState --[Implements]--> Interface: IPlayerState
+                          Class: PausedState --[HasMethod]--> Method: Play
+                          Class: PausedState --[HasMethod]--> Method: Pause
+                            Method: Pause (Returns Void, Abstract=False)
+                              Method: Pause --[Uses]--> Class: MediaPlayerContext
+          Method: Play --[ImplementedBy]--> Method: Play
+      Method: Play --[ReferencesField]--> Field: _state
+  Class: MediaPlayerContext --[HasMethod]--> Method: Pause
+    Method: Pause (Returns Void, Abstract=False)
+      Method: Pause --[Calls]--> Method: Pause
+        Method: Pause (Returns Void, Abstract=True)
+          Method: Pause --[Uses]--> Class: MediaPlayerContext
+          Method: Pause --[ImplementedBy]--> Method: Pause
+          Method: Pause --[ImplementedBy]--> Method: Pause
+      Method: Pause --[ReferencesField]--> Field: _state
+Class: TrafficLightContext (Abstract=False)
+  Class: TrafficLightContext --[HasField]--> Field: _state
+    Field: TrafficLightContext._state (private ILightState)
+  Class: TrafficLightContext --[HasConstructor]--> Constructor: TrafficLightContext..ctor
+    Constructor: TrafficLightContext..ctor
+      Constructor: TrafficLightContext..ctor --[HasConstructor]--> Constructor: TrafficLightContext..ctor
+  Class: TrafficLightContext --[HasMethod]--> Method: SetState
+    Method: SetState (Returns Void, Abstract=False)
+      Method: SetState --[ReferencesField]--> Field: _state
+  Class: TrafficLightContext --[HasMethod]--> Method: Request
+    Method: Request (Returns Void, Abstract=False)
+      Method: Request --[Calls]--> Method: Handle
+        Method: Handle (Returns Void, Abstract=True)
+          Method: Handle --[Uses]--> Class: TrafficLightContext
+          Method: Handle --[ImplementedBy]--> Method: Handle
+            Method: Handle (Returns Void, Abstract=False)
+              Method: Handle --[Uses]--> Class: TrafficLightContext
+              Method: Handle --[Calls]--> Method: SetState
+              Method: Handle --[Creates]--> Class: RedState
+                Class: RedState (Abstract=False)
+                  Class: RedState --[Implements]--> Interface: ILightState
+                    Interface: ILightState
+                  Class: RedState --[HasMethod]--> Method: Handle
+                    Method: Handle (Returns Void, Abstract=False)
+                      Method: Handle --[Uses]--> Class: TrafficLightContext
+                      Method: Handle --[Calls]--> Method: SetState
+                      Method: Handle --[Creates]--> Class: GreenState
+                        Class: GreenState (Abstract=False)
+                          Class: GreenState --[Implements]--> Interface: ILightState
+                          Class: GreenState --[HasMethod]--> Method: Handle
+                            Method: Handle (Returns Void, Abstract=False)
+                              Method: Handle --[Uses]--> Class: TrafficLightContext
+                              Method: Handle --[Calls]--> Method: SetState
+                              Method: Handle --[Creates]--> Class: YellowState
+                                Class: YellowState (Abstract=False)
+                                  Class: YellowState --[Implements]--> Interface: ILightState
+                                  Class: YellowState --[HasMethod]--> Method: Handle
+          Method: Handle --[ImplementedBy]--> Method: Handle
+          Method: Handle --[ImplementedBy]--> Method: Handle
+      Method: Request --[ReferencesField]--> Field: _state
+Class: Logger (Abstract=False)
+  Class: Logger --[HasField]--> Field: logFile
+    Field: Logger.logFile (private static readonly String)
+  Class: Logger --[HasMethod]--> Method: Log
+    Method: Log (Returns Void, Abstract=False)
+      Method: Log --[ReferencesField]--> Field: logFile
+Class: CodeAnalysisServiceRunner (Abstract=False)
+  Class: CodeAnalysisServiceRunner --[HasField]--> Field: _syntaxTrees
+    Field: CodeAnalysisServiceRunner._syntaxTrees (private readonly List)
+  Class: CodeAnalysisServiceRunner --[HasField]--> Field: _compilation
+    Field: CodeAnalysisServiceRunner._compilation (private readonly Compilation)
+  Class: CodeAnalysisServiceRunner --[HasField]--> Field: _semanticModels
+    Field: CodeAnalysisServiceRunner._semanticModels (private readonly Dictionary)
+  Class: CodeAnalysisServiceRunner --[HasProperty]--> Property: Graph
+    Property: Graph
+      Property: Graph --[Uses]--> Class: GraphBuilder
+  Class: CodeAnalysisServiceRunner --[HasProperty]--> Property: FailedFiles
+    Property: FailedFiles
+  Class: CodeAnalysisServiceRunner --[HasConstructor]--> Constructor: CodeAnalysisServiceRunner..ctor
+    Constructor: CodeAnalysisServiceRunner..ctor
+      Constructor: CodeAnalysisServiceRunner..ctor --[HasConstructor]--> Constructor: CodeAnalysisServiceRunner..ctor
+  Class: CodeAnalysisServiceRunner --[HasMethod]--> Method: GetSemanticModel
+    Method: GetSemanticModel (Returns SemanticModel, Abstract=False)
+      Method: GetSemanticModel --[ReferencesField]--> Field: _semanticModels
+  Class: CodeAnalysisServiceRunner --[HasMethod]--> Method: BuildGraph
+    Method: BuildGraph (Returns Void, Abstract=False)
+      Method: BuildGraph --[Uses]--> Property: Graph
+      Method: BuildGraph --[Creates]--> Class: GraphBuilder
+      Method: BuildGraph --[ReferencesField]--> Field: _compilation
+      Method: BuildGraph --[ReferencesField]--> Field: _semanticModels
+      Method: BuildGraph --[Calls]--> Method: BuildGraph
+      Method: BuildGraph --[Uses]--> Property: FailedFiles
+  Class: CodeAnalysisServiceRunner --[HasMethod]--> Method: PrintGraph
+    Method: PrintGraph (Returns Void, Abstract=False)
+      Method: PrintGraph --[Creates]--> Class: GraphPrinter
+        Class: GraphPrinter (Abstract=False)
+          Class: GraphPrinter --[HasField]--> Field: _outputPath
+            Field: GraphPrinter._outputPath (private readonly String)
+          Class: GraphPrinter --[HasField]--> Field: _lines
+            Field: GraphPrinter._lines (private readonly List)
+          Class: GraphPrinter --[HasConstructor]--> Constructor: GraphPrinter..ctor
+            Constructor: GraphPrinter..ctor
+              Constructor: GraphPrinter..ctor --[HasConstructor]--> Constructor: GraphPrinter..ctor
+          Class: GraphPrinter --[HasMethod]--> Method: PrintGraph
+            Method: PrintGraph (Returns Void, Abstract=False)
+              Method: PrintGraph --[Uses]--> Class: NodeRegistry
+              Method: PrintGraph --[ReferencesField]--> Field: _lines
+              Method: PrintGraph --[Calls]--> Method: PrintNode
+                Method: PrintNode (Returns Void, Abstract=False)
+                  Method: PrintNode --[ReferencesField]--> Field: _lines
+                  Method: PrintNode --[Calls]--> Method: FormatNodeHeader
+                    Method: FormatNodeHeader (Returns String, Abstract=False)
+                      Method: FormatNodeHeader --[Uses]--> Property: Symbol
+                      Method: FormatNodeHeader --[Uses]--> Property: Symbol
+                      Method: FormatNodeHeader --[Uses]--> Property: Symbol
+                      Method: FormatNodeHeader --[Uses]--> Property: Symbol
+                      Method: FormatNodeHeader --[Uses]--> Property: Symbol
+                      Method: FormatNodeHeader --[Calls]--> Method: FormatFieldHeader
+                        Method: FormatFieldHeader (Returns String, Abstract=False)
+                          Method: FormatFieldHeader --[Uses]--> Class: FieldNode
+                          Method: FormatFieldHeader --[Uses]--> Property: Symbol
+                          Method: FormatFieldHeader --[Calls]--> Method: AccessibilityToString
+                            Method: AccessibilityToString (Returns String, Abstract=False)
+                      Method: FormatNodeHeader --[Uses]--> Property: Symbol
+                  Method: PrintNode --[Uses]--> Property: OutgoingEdges
+                  Method: PrintNode --[Calls]--> Method: PrintEdge
+                    Method: PrintEdge (Returns Void, Abstract=False)
+                      Method: PrintEdge --[Uses]--> Class: EdgeNode
+                      Method: PrintEdge --[Calls]--> Method: FormatNodeShort
+                        Method: FormatNodeShort (Returns String, Abstract=False)
+                          Method: FormatNodeShort --[Uses]--> Property: Symbol
+                          Method: FormatNodeShort --[Uses]--> Property: Symbol
+                          Method: FormatNodeShort --[Uses]--> Property: Symbol
+                          Method: FormatNodeShort --[Uses]--> Property: Symbol
+                          Method: FormatNodeShort --[Uses]--> Property: Symbol
+                          Method: FormatNodeShort --[Uses]--> Property: Symbol
+                          Method: FormatNodeShort --[Uses]--> Property: Symbol
+                      Method: PrintEdge --[Uses]--> Property: Target
+                      Method: PrintEdge --[ReferencesField]--> Field: _lines
+                      Method: PrintEdge --[Uses]--> Property: Type
+                      Method: PrintEdge --[Calls]--> Method: PrintNode
+              Method: PrintGraph --[ReferencesField]--> Field: _outputPath
+          Class: GraphPrinter --[HasMethod]--> Method: FormatNodeHeader
+          Class: GraphPrinter --[HasMethod]--> Method: FormatFieldHeader
+          Class: GraphPrinter --[HasMethod]--> Method: AccessibilityToString
+          Class: GraphPrinter --[HasMethod]--> Method: FormatNodeShort
+          Class: GraphPrinter --[HasMethod]--> Method: PrintNode
+          Class: GraphPrinter --[HasMethod]--> Method: PrintEdge
+      Method: PrintGraph --[Uses]--> Property: Graph
+      Method: PrintGraph --[Calls]--> Method: PrintGraph
+      Method: PrintGraph --[Uses]--> Property: Registry
+      Method: PrintGraph --[ReferencesField]--> Field: _syntaxTrees
+  Class: CodeAnalysisServiceRunner --[HasMethod]--> Method: CreateGraphView
+    Method: CreateGraphView (Returns Void, Abstract=False)
+      Method: CreateGraphView --[Uses]--> Property: Graph
+      Method: CreateGraphView --[Calls]--> Method: Export
+        Method: Export (Returns Void, Abstract=False)
+          Method: Export --[Uses]--> Class: NodeRegistry
+          Method: Export --[Uses]--> Property: Symbol
+            Property: Symbol
+          Method: Export --[Uses]--> Property: Symbol
+          Method: Export --[Uses]--> Property: Symbol
+          Method: Export --[Uses]--> Property: Symbol
+          Method: Export --[Uses]--> Property: Symbol
+          Method: Export --[Uses]--> Property: Symbol
+          Method: Export --[Uses]--> Property: Symbol
+          Method: Export --[Uses]--> Property: OutgoingEdges
+          Method: Export --[Uses]--> Property: Target
+          Method: Export --[Uses]--> Property: Type
+      Method: CreateGraphView --[Uses]--> Property: Registry
+Class: UniqueEdgeAdder (Abstract=False)
+  Class: UniqueEdgeAdder --[HasMethod]--> Method: AddUniqueEdge
+    Method: AddUniqueEdge (Returns Void, Abstract=False)
+      Method: AddUniqueEdge --[Uses]--> Class: EdgeNode
+      Method: AddUniqueEdge --[Uses]--> Property: OutgoingEdges
+      Method: AddUniqueEdge --[Uses]--> Property: Type
+      Method: AddUniqueEdge --[Uses]--> Property: Target
+Class: TypeHelper (Abstract=False)
+  Class: TypeHelper --[HasMethod]--> Method: GetElementType
+  Class: TypeHelper --[HasMethod]--> Method: GetInnermostElementType
+Class: GraphJsonExporter (Abstract=False)
+  Class: GraphJsonExporter --[HasMethod]--> Method: Export
+Class: Nested (Abstract=False)
+  Class: Nested --[HasField]--> Field: Instance
+    Field: Nested.Instance (internal static readonly HolderSingleton)
+      Field: Instance --[Uses]--> Class: HolderSingleton
+        Class: HolderSingleton (Abstract=False)
+          Class: HolderSingleton --[HasConstructor]--> Constructor: HolderSingleton..ctor
+            Constructor: HolderSingleton..ctor
+              Constructor: HolderSingleton..ctor --[HasConstructor]--> Constructor: HolderSingleton..ctor
+          Class: HolderSingleton --[HasProperty]--> Property: Instance
+            Property: Instance
+              Property: Instance --[Uses]--> Class: HolderSingleton
+              Property: Instance --[Uses]--> Class: Nested
+              Property: Instance --[ReferencesField]--> Field: Instance
+Class: Program (Abstract=False)
+  Class: Program --[HasMethod]--> Method: Main
+    Method: Main (Returns Void, Abstract=False)
+      Method: Main --[Creates]--> Class: CodeAnalysisServiceRunner
+      Method: Main --[Calls]--> Method: BuildGraph
+      Method: Main --[Uses]--> Property: Graph
+      Method: Main --[Calls]--> Method: PrintGraph
+      Method: Main --[Calls]--> Method: CreateGraphView
+      Method: Main --[Creates]--> Class: PatternAnalyserManager
+      Method: Main --[Calls]--> Method: AnalyseAll
+      Method: Main --[Calls]--> Method: PrintResults
+Class: GenericSingleton (Abstract=False)
+  Class: GenericSingleton --[HasField]--> Field: _instance
+    Field: GenericSingleton._instance (private static readonly T)
+  Class: GenericSingleton --[HasConstructor]--> Constructor: GenericSingleton..ctor
+    Constructor: GenericSingleton..ctor
+      Constructor: GenericSingleton..ctor --[HasConstructor]--> Constructor: GenericSingleton..ctor
+  Class: GenericSingleton --[HasProperty]--> Property: Instance
+    Property: Instance
+      Property: Instance --[ReferencesField]--> Field: _instance
+Class: WindowsDialogFactory (Abstract=False)
+  Class: WindowsDialogFactory --[Inherits]--> Class: WindowsGuiFactory
+    Class: WindowsGuiFactory (Abstract=True)
+      Class: WindowsGuiFactory --[Inherits]--> Class: GuiFactory
+        Class: GuiFactory (Abstract=True)
+          Class: GuiFactory --[HasMethod]--> Method: CreateButton
+            Method: CreateButton (Returns Button, Abstract=True)
+  Class: WindowsDialogFactory --[HasMethod]--> Method: CreateButton
+    Method: CreateButton (Returns Button, Abstract=False)
+      Method: CreateButton --[Creates]--> Class: WindowsButton
+        Class: WindowsButton (Abstract=False)
+          Class: WindowsButton --[Implements]--> Interface: Button
+            Interface: Button
+      Method: CreateButton --[Overrides]--> Method: CreateButton
+Class: Roles (Abstract=False)
+  Class: Roles --[HasField]--> Field: Subject
+  Class: Roles --[HasField]--> Field: Observer
+Class: ObserverChecks (Abstract=False)
+  Class: ObserverChecks --[HasMethod]--> Method: HasObserverCollection
+  Class: ObserverChecks --[HasMethod]--> Method: HasNotifyMethod
+  Class: ObserverChecks --[HasMethod]--> Method: HasAttachDetachMethods
+  Class: ObserverChecks --[HasMethod]--> Method: GetCalledMethods
+  Class: ObserverChecks --[HasMethod]--> Method: GetObserverCollectionTypes
+  Class: ObserverChecks --[HasMethod]--> Method: IsObserverType
+Class: Roles (Abstract=False)
+  Class: Roles --[HasField]--> Field: Observer
+    Field: Roles.Observer (public const String)
+Class: MethodCallChecks (Abstract=False)
+  Class: MethodCallChecks --[HasMethod]--> Method: CallsObserverElements
+    Method: CallsObserverElements (Returns RuleStep, Abstract=False)
+      Method: CallsObserverElements --[Returns]--> Class: RuleStep
+      Method: CallsObserverElements --[Uses]--> Class: GraphBuilder
+      Method: CallsObserverElements --[Creates]--> Class: RuleStep
+      Method: CallsObserverElements --[Uses]--> Property: Description
+      Method: CallsObserverElements --[Uses]--> Property: MustPass
+      Method: CallsObserverElements --[Uses]--> Property: Check
+      Method: CallsObserverElements --[Calls]--> Method: GetObserverCollectionTypes
+        Method: GetObserverCollectionTypes (Returns List, Abstract=False)
+          Method: GetObserverCollectionTypes --[Uses]--> Property: OutgoingEdges
+          Method: GetObserverCollectionTypes --[Uses]--> Property: Type
+          Method: GetObserverCollectionTypes --[Uses]--> Property: Target
+          Method: GetObserverCollectionTypes --[Uses]--> Property: Symbol
+          Method: GetObserverCollectionTypes --[Uses]--> Property: Symbol
+          Method: GetObserverCollectionTypes --[Calls]--> Method: GetElementType
+      Method: CallsObserverElements --[Uses]--> Property: OutgoingEdges
+      Method: CallsObserverElements --[Uses]--> Property: Type
+      Method: CallsObserverElements --[Uses]--> Property: Target
+      Method: CallsObserverElements --[Calls]--> Method: GetCalledMethods
+        Method: GetCalledMethods (Returns IEnumerable, Abstract=False)
+          Method: GetCalledMethods --[Uses]--> Class: MethodNode
+          Method: GetCalledMethods --[Uses]--> Property: OutgoingEdges
+          Method: GetCalledMethods --[Uses]--> Property: Type
+          Method: GetCalledMethods --[Uses]--> Property: Target
+      Method: CallsObserverElements --[Calls]--> Method: IsObserverType
+        Method: IsObserverType (Returns Boolean, Abstract=False)
+      Method: CallsObserverElements --[Uses]--> Property: Symbol
+      Method: CallsObserverElements --[Uses]--> Property: Registry
+      Method: CallsObserverElements --[Uses]--> Property: Symbol
+      Method: CallsObserverElements --[ReferencesField]--> Field: Observer
+  Class: MethodCallChecks --[HasMethod]--> Method: GetCalledMethods
+  Class: MethodCallChecks --[HasMethod]--> Method: GetObserverCollectionTypes
+  Class: MethodCallChecks --[HasMethod]--> Method: IsObserverType
+Class: Program1 (Abstract=False)
+  Class: Program1 --[HasMethod]--> Method: Main1
+    Method: Main1 (Returns Void, Abstract=False)
+      Method: Main1 --[Creates]--> Class: Publisher
+        Class: Publisher (Abstract=False)
+          Class: Publisher --[HasEvent]--> Event: SomethingHappened
+            Event: SomethingHappened (Type=EventHandler)
+              Event: SomethingHappened --[HasEvent]--> Class: Publisher
+          Class: Publisher --[HasMethod]--> Method: Trigger
+            Method: Trigger (Returns Void, Abstract=False)
+      Method: Main1 --[Creates]--> Class: Subscriber
+        Class: Subscriber (Abstract=False)
+          Class: Subscriber --[HasMethod]--> Method: OnSomething
+            Method: OnSomething (Returns Void, Abstract=False)
+      Method: Main1 --[Calls]--> Method: Trigger
+Class: Cat (Abstract=False)
+  Class: Cat --[Implements]--> Interface: Animal
+    Interface: Animal
+Class: Dog (Abstract=False)
+  Class: Dog --[Implements]--> Interface: Animal
+Class: AnimalFactory (Abstract=False)
+  Class: AnimalFactory --[HasMethod]--> Method: CreateDog
+    Method: CreateDog (Returns Animal, Abstract=False)
+      Method: CreateDog --[Creates]--> Class: Dog
+  Class: AnimalFactory --[HasMethod]--> Method: CreateCat
+    Method: CreateCat (Returns Animal, Abstract=False)
+      Method: CreateCat --[Creates]--> Class: Cat
+Class: Bike (Abstract=False)
+  Class: Bike --[Implements]--> Interface: Vehicle
+    Interface: Vehicle
+Class: Car (Abstract=False)
+  Class: Car --[Implements]--> Interface: Vehicle
+Class: BikeFactory (Abstract=False)
+  Class: BikeFactory --[Inherits]--> Class: VehicleFactory
+    Class: VehicleFactory (Abstract=True)
+      Class: VehicleFactory --[HasMethod]--> Method: CreateVehicle
+        Method: CreateVehicle (Returns Vehicle, Abstract=True)
+  Class: BikeFactory --[HasMethod]--> Method: CreateVehicle
+    Method: CreateVehicle (Returns Vehicle, Abstract=False)
+      Method: CreateVehicle --[Creates]--> Class: Bike
+      Method: CreateVehicle --[Overrides]--> Method: CreateVehicle
+Class: CarFactory (Abstract=False)
+  Class: CarFactory --[Inherits]--> Class: VehicleFactory
+  Class: CarFactory --[HasMethod]--> Method: CreateVehicle
+    Method: CreateVehicle (Returns Vehicle, Abstract=False)
+      Method: CreateVehicle --[Creates]--> Class: Car
+      Method: CreateVehicle --[Overrides]--> Method: CreateVehicle
+Class: HtmlButton (Abstract=False)
+  Class: HtmlButton --[Implements]--> Interface: Button
+Class: WebDialog (Abstract=False)
+  Class: WebDialog --[Inherits]--> Class: Dialog
+    Class: Dialog (Abstract=True)
+      Class: Dialog --[HasMethod]--> Method: CreateButton
+        Method: CreateButton (Returns Button, Abstract=True)
+  Class: WebDialog --[HasMethod]--> Method: CreateButton
+    Method: CreateButton (Returns Button, Abstract=False)
+      Method: CreateButton --[Creates]--> Class: HtmlButton
+      Method: CreateButton --[Overrides]--> Method: CreateButton
+Class: WindowsDialog (Abstract=False)
+  Class: WindowsDialog --[Inherits]--> Class: Dialog
+  Class: WindowsDialog --[HasMethod]--> Method: CreateButton
+    Method: CreateButton (Returns Button, Abstract=False)
+      Method: CreateButton --[Creates]--> Class: WindowsButton
+      Method: CreateButton --[Overrides]--> Method: CreateButton
+Class: WindowDisplay (Abstract=False)
+  Class: WindowDisplay --[Implements]--> Interface: IObserver
+    Interface: IObserver
+  Class: WindowDisplay --[HasMethod]--> Method: Update
+    Method: Update (Returns Void, Abstract=False)
+Class: WeatherStation (Abstract=False)
+  Class: WeatherStation --[HasField]--> Field: _observers
+    Field: WeatherStation._observers (private readonly List)
+  Class: WeatherStation --[HasMethod]--> Method: AddObserver
+    Method: AddObserver (Returns Void, Abstract=False)
+      Method: AddObserver --[ReferencesField]--> Field: _observers
+  Class: WeatherStation --[HasMethod]--> Method: RemoveObserver
+    Method: RemoveObserver (Returns Void, Abstract=False)
+      Method: RemoveObserver --[ReferencesField]--> Field: _observers
+  Class: WeatherStation --[HasMethod]--> Method: NotifyObservers
+    Method: NotifyObservers (Returns Void, Abstract=False)
+      Method: NotifyObservers --[ReferencesField]--> Field: _observers
+      Method: NotifyObservers --[Calls]--> Method: Update
+        Method: Update (Returns Void, Abstract=True)
+          Method: Update --[ImplementedBy]--> Method: Update
+          Method: Update --[ImplementedBy]--> Method: Update
+            Method: Update (Returns Void, Abstract=False)
+Class: PhoneDisplay (Abstract=False)
+  Class: PhoneDisplay --[Implements]--> Interface: IObserver
+  Class: PhoneDisplay --[HasMethod]--> Method: Update
+Class: Roles (Abstract=False)
+  Class: Roles --[HasField]--> Field: AdapterCandidate
+  Class: Roles --[HasField]--> Field: Adapter
+  Class: Roles --[HasField]--> Field: Adaptee
+  Class: Roles --[HasField]--> Field: Target
+Class: AdapterChecks (Abstract=False)
+  Class: AdapterChecks --[HasMethod]--> Method: HasTarget
+  Class: AdapterChecks --[HasMethod]--> Method: HasAdapterCandidates
+  Class: AdapterChecks --[HasMethod]--> Method: AdapterDelegatesToAdaptee
+  Class: AdapterChecks --[HasMethod]--> Method: ResolveMemberType
+Class: PatternCandidate (Abstract=False)
+  Class: PatternCandidate --[HasProperty]--> Property: Kind
+    Property: Kind
+  Class: PatternCandidate --[HasProperty]--> Property: Result
+    Property: Result
+  Class: PatternCandidate --[HasConstructor]--> Constructor: PatternCandidate..ctor
+    Constructor: PatternCandidate..ctor
+      Constructor: PatternCandidate..ctor --[HasConstructor]--> Constructor: PatternCandidate..ctor
+Class: Context (Abstract=False)
+  Class: Context --[HasField]--> Field: _strategy
+    Field: Context._strategy (private IStrategy)
+  Class: Context --[HasConstructor]--> Constructor: Context..ctor
+    Constructor: Context..ctor
+      Constructor: Context..ctor --[HasConstructor]--> Constructor: Context..ctor
+  Class: Context --[HasMethod]--> Method: Run
+    Method: Run (Returns Void, Abstract=False)
+      Method: Run --[Calls]--> Method: Execute
+        Method: Execute (Returns Void, Abstract=True)
+          Method: Execute --[ImplementedBy]--> Method: Execute
+            Method: Execute (Returns Void, Abstract=False)
+          Method: Execute --[ImplementedBy]--> Method: Execute
+            Method: Execute (Returns Void, Abstract=False)
+      Method: Run --[ReferencesField]--> Field: _strategy
+Class: StrategyB (Abstract=False)
+  Class: StrategyB --[Implements]--> Interface: IStrategy
+    Interface: IStrategy
+  Class: StrategyB --[HasMethod]--> Method: Execute
+Class: StrategyA (Abstract=False)
+  Class: StrategyA --[Implements]--> Interface: IStrategy
+  Class: StrategyA --[HasMethod]--> Method: Execute
+Class: CashPayment (Abstract=False)
+  Class: CashPayment --[Inherits]--> Class: PaymentBase
+    Class: PaymentBase (Abstract=True)
+      Class: PaymentBase --[HasMethod]--> Method: Pay
+        Method: Pay (Returns Void, Abstract=True)
+  Class: CashPayment --[HasMethod]--> Method: Pay
+    Method: Pay (Returns Void, Abstract=False)
+      Method: Pay --[Overrides]--> Method: Pay
+Class: CardPayment (Abstract=False)
+  Class: CardPayment --[Inherits]--> Class: PaymentBase
+  Class: CardPayment --[HasMethod]--> Method: Pay
+    Method: Pay (Returns Void, Abstract=False)
+      Method: Pay --[Overrides]--> Method: Pay
+Class: DataProcessor (Abstract=False)
+  Class: DataProcessor --[HasField]--> Field: _store
+    Field: DataProcessor._store (private readonly IDataStore)
+  Class: DataProcessor --[HasConstructor]--> Constructor: DataProcessor..ctor
+    Constructor: DataProcessor..ctor
+      Constructor: DataProcessor..ctor --[HasConstructor]--> Constructor: DataProcessor..ctor
+  Class: DataProcessor --[HasMethod]--> Method: Process
+    Method: Process (Returns Void, Abstract=False)
+Class: FileDataStore (Abstract=False)
+  Class: FileDataStore --[Implements]--> Interface: IDataStore
+    Interface: IDataStore
+  Class: FileDataStore --[HasMethod]--> Method: Save
+    Method: Save (Returns Void, Abstract=False)
+Class: SquareShape (Abstract=False)
+  Class: SquareShape --[Implements]--> Interface: IGeoShape
+    Interface: IGeoShape
+  Class: SquareShape --[HasMethod]--> Method: Draw
+    Method: Draw (Returns Void, Abstract=False)
+Class: CircleShape (Abstract=False)
+  Class: CircleShape --[Implements]--> Interface: IGeoShape
+  Class: CircleShape --[HasMethod]--> Method: Draw
+    Method: Draw (Returns Void, Abstract=False)
+Class: NotificationManager (Abstract=False)
+  Class: NotificationManager --[HasField]--> Field: _notification
+    Field: NotificationManager._notification (private readonly INotification)
+  Class: NotificationManager --[HasConstructor]--> Constructor: NotificationManager..ctor
+    Constructor: NotificationManager..ctor
+      Constructor: NotificationManager..ctor --[HasConstructor]--> Constructor: NotificationManager..ctor
+  Class: NotificationManager --[HasMethod]--> Method: NotifyAll
+    Method: NotifyAll (Returns Void, Abstract=False)
+Class: SmsNotification (Abstract=False)
+  Class: SmsNotification --[Implements]--> Interface: INotification
+    Interface: INotification
+  Class: SmsNotification --[HasMethod]--> Method: Send
+    Method: Send (Returns Void, Abstract=False)
+Class: EmailNotification (Abstract=False)
+  Class: EmailNotification --[Implements]--> Interface: INotification
+  Class: EmailNotification --[HasMethod]--> Method: Send
+    Method: Send (Returns Void, Abstract=False)
+Class: Navigator (Abstract=False)
+  Class: Navigator --[HasField]--> Field: _pathfinder
+    Field: Navigator._pathfinder (private readonly IPathfinding)
+  Class: Navigator --[HasConstructor]--> Constructor: Navigator..ctor
+    Constructor: Navigator..ctor
+      Constructor: Navigator..ctor --[HasConstructor]--> Constructor: Navigator..ctor
+  Class: Navigator --[HasMethod]--> Method: Navigate
+    Method: Navigate (Returns Void, Abstract=False)
+      Method: Navigate --[Calls]--> Method: FindPath
+        Method: FindPath (Returns Void, Abstract=True)
+          Method: FindPath --[ImplementedBy]--> Method: FindPath
+            Method: FindPath (Returns Void, Abstract=False)
+          Method: FindPath --[ImplementedBy]--> Method: FindPath
+            Method: FindPath (Returns Void, Abstract=False)
+      Method: Navigate --[ReferencesField]--> Field: _pathfinder
+Class: AStarPathfinding (Abstract=False)
+  Class: AStarPathfinding --[Implements]--> Interface: IPathfinding
+    Interface: IPathfinding
+  Class: AStarPathfinding --[HasMethod]--> Method: FindPath
+Class: DijkstraPathfinding (Abstract=False)
+  Class: DijkstraPathfinding --[Implements]--> Interface: IPathfinding
+  Class: DijkstraPathfinding --[HasMethod]--> Method: FindPath
+Class: CompressionTool (Abstract=False)
+  Class: CompressionTool --[HasField]--> Field: _algo
+    Field: CompressionTool._algo (private readonly ICompressionAlgo)
+  Class: CompressionTool --[HasConstructor]--> Constructor: CompressionTool..ctor
+    Constructor: CompressionTool..ctor
+      Constructor: CompressionTool..ctor --[HasConstructor]--> Constructor: CompressionTool..ctor
+  Class: CompressionTool --[HasMethod]--> Method: Run
+    Method: Run (Returns Void, Abstract=False)
+      Method: Run --[Calls]--> Method: Compress
+        Method: Compress (Returns Void, Abstract=True)
+          Method: Compress --[ImplementedBy]--> Method: Compress
+            Method: Compress (Returns Void, Abstract=False)
+          Method: Compress --[ImplementedBy]--> Method: Compress
+            Method: Compress (Returns Void, Abstract=False)
+      Method: Run --[ReferencesField]--> Field: _algo
+Class: RarAlgo (Abstract=False)
+  Class: RarAlgo --[Implements]--> Interface: ICompressionAlgo
+    Interface: ICompressionAlgo
+  Class: RarAlgo --[HasMethod]--> Method: Compress
+Class: ZipAlgo (Abstract=False)
+  Class: ZipAlgo --[Implements]--> Interface: ICompressionAlgo
+  Class: ZipAlgo --[HasMethod]--> Method: Compress
+Class: StaticCtorSingleton (Abstract=False)
+  Class: StaticCtorSingleton --[HasField]--> Field: Instance
+    Field: StaticCtorSingleton.Instance (public static readonly StaticCtorSingleton)
+      Field: Instance --[Uses]--> Class: StaticCtorSingleton
+  Class: StaticCtorSingleton --[HasConstructor]--> Constructor: StaticCtorSingleton..ctor
+    Constructor: StaticCtorSingleton..ctor
+      Constructor: StaticCtorSingleton..ctor --[HasConstructor]--> Constructor: StaticCtorSingleton..ctor
+      Constructor: StaticCtorSingleton..ctor --[Creates]--> Class: StaticCtorSingleton
+  Class: StaticCtorSingleton --[HasConstructor]--> Constructor: StaticCtorSingleton..ctor
+    Constructor: StaticCtorSingleton..ctor
+      Constructor: StaticCtorSingleton..ctor --[HasConstructor]--> Constructor: StaticCtorSingleton..ctor
+Class: Square (Abstract=False)
+  Class: Square --[Implements]--> Interface: Shape
+    Interface: Shape
+Class: Circle (Abstract=False)
+  Class: Circle --[Implements]--> Interface: Shape
+Class: SquareFactory (Abstract=False)
+  Class: SquareFactory --[Inherits]--> Class: ShapeFactory
+    Class: ShapeFactory (Abstract=True)
+      Class: ShapeFactory --[HasMethod]--> Method: CreateShape
+        Method: CreateShape (Returns Shape, Abstract=True)
+  Class: SquareFactory --[HasMethod]--> Method: CreateShape
+    Method: CreateShape (Returns Shape, Abstract=False)
+      Method: CreateShape --[Creates]--> Class: Square
+      Method: CreateShape --[Overrides]--> Method: CreateShape
+Class: CircleFactory (Abstract=False)
+  Class: CircleFactory --[Inherits]--> Class: ShapeFactory
+  Class: CircleFactory --[HasMethod]--> Method: CreateShape
+    Method: CreateShape (Returns Shape, Abstract=False)
+      Method: CreateShape --[Creates]--> Class: Circle
+      Method: CreateShape --[Overrides]--> Method: CreateShape
+Class: WrongCollection (Abstract=False)
+  Class: WrongCollection --[HasField]--> Field: Observers
+    Field: WrongCollection.Observers (public List)
+  Class: WrongCollection --[HasMethod]--> Method: NotifyAll
+    Method: NotifyAll (Returns Void, Abstract=False)
+Class: SingleObserver (Abstract=False)
+  Class: SingleObserver --[HasField]--> Field: _obs
+    Field: SingleObserver._obs (private IObserverN3)
+  Class: SingleObserver --[HasMethod]--> Method: Register
+    Method: Register (Returns Void, Abstract=False)
+      Method: Register --[ReferencesField]--> Field: _obs
+  Class: SingleObserver --[HasMethod]--> Method: Trigger
+    Method: Trigger (Returns Void, Abstract=False)
+      Method: Trigger --[Calls]--> Method: Update
+        Method: Update (Returns Void, Abstract=True)
+      Method: Trigger --[ReferencesField]--> Field: _obs
+Class: WrongNotify (Abstract=False)
+  Class: WrongNotify --[HasField]--> Field: Observers
+    Field: WrongNotify.Observers (public List)
+  Class: WrongNotify --[HasMethod]--> Method: Notify
+    Method: Notify (Returns Void, Abstract=False)
+Class: FakePublisher (Abstract=False)
+  Class: FakePublisher --[HasField]--> Field: Observers
+    Field: FakePublisher.Observers (public List)
+Class: Bus (Abstract=False)
+  Class: Bus --[Implements]--> Interface: TransportMode
+    Interface: TransportMode
+Class: Plane (Abstract=False)
+  Class: Plane --[Implements]--> Interface: TransportMode
+Class: HybridTransportFactory (Abstract=False)
+  Class: HybridTransportFactory --[Inherits]--> Class: TransportFactory
+    Class: TransportFactory (Abstract=True)
+      Class: TransportFactory --[HasMethod]--> Method: CreatePlane
+        Method: CreatePlane (Returns TransportMode, Abstract=True)
+      Class: TransportFactory --[HasMethod]--> Method: CreateBus
+        Method: CreateBus (Returns TransportMode, Abstract=True)
+  Class: HybridTransportFactory --[HasMethod]--> Method: CreatePlane
+    Method: CreatePlane (Returns TransportMode, Abstract=False)
+      Method: CreatePlane --[Creates]--> Class: Plane
+      Method: CreatePlane --[Overrides]--> Method: CreatePlane
+  Class: HybridTransportFactory --[HasMethod]--> Method: CreateBus
+    Method: CreateBus (Returns TransportMode, Abstract=False)
+      Method: CreateBus --[Overrides]--> Method: CreateBus
+Class: Car1 (Abstract=False)
+Class: SedanFactory1 (Abstract=False)
+  Class: SedanFactory1 --[Inherits]--> Class: CarFactory1
+    Class: CarFactory1 (Abstract=True)
+      Class: CarFactory1 --[HasMethod]--> Method: CreateCar
+        Method: CreateCar (Returns Car1, Abstract=True)
+          Method: CreateCar --[Returns]--> Class: Car1
+  Class: SedanFactory1 --[HasMethod]--> Method: CreateCar
+    Method: CreateCar (Returns Car1, Abstract=False)
+      Method: CreateCar --[Returns]--> Class: Car1
+      Method: CreateCar --[Creates]--> Class: Car1
+      Method: CreateCar --[Overrides]--> Method: CreateCar
+Class: Logger (Abstract=False)
+  Class: Logger --[HasMethod]--> Method: Log
+    Method: Log (Returns Void, Abstract=False)
+Class: Roles (Abstract=False)
+  Class: Roles --[HasField]--> Field: Strategy
+  Class: Roles --[HasField]--> Field: ConcreteStrategy
+  Class: Roles --[HasField]--> Field: ContextCandidate
+  Class: Roles --[HasField]--> Field: Context
+Class: StrategyChecks (Abstract=False)
+  Class: StrategyChecks --[HasMethod]--> Method: HasStrategyInterface
+  Class: StrategyChecks --[HasMethod]--> Method: HasConcreteStrategies
+  Class: StrategyChecks --[HasMethod]--> Method: ContextHasStrategyReference
+  Class: StrategyChecks --[HasMethod]--> Method: ContextDelegatesToStrategy
+  Class: StrategyChecks --[HasMethod]--> Method: IsStrategyContract
+Class: LazySingleton (Abstract=False)
+  Class: LazySingleton --[HasField]--> Field: _instance
+    Field: LazySingleton._instance (private static readonly Lazy)
+  Class: LazySingleton --[HasConstructor]--> Constructor: LazySingleton..ctor
+    Constructor: LazySingleton..ctor
+      Constructor: LazySingleton..ctor --[HasConstructor]--> Constructor: LazySingleton..ctor
+  Class: LazySingleton --[HasProperty]--> Property: Instance
+    Property: Instance
+      Property: Instance --[Uses]--> Class: LazySingleton
+      Property: Instance --[ReferencesField]--> Field: _instance
+Class: CalcSheet (Abstract=False)
+  Class: CalcSheet --[Implements]--> Interface: Spreadsheet
+    Interface: Spreadsheet
+Class: ExcelSheet (Abstract=False)
+  Class: ExcelSheet --[Implements]--> Interface: Spreadsheet
+Class: WriterDoc (Abstract=False)
+  Class: WriterDoc --[Implements]--> Interface: TextDocument
+    Interface: TextDocument
+Class: WordDoc (Abstract=False)
+  Class: WordDoc --[Implements]--> Interface: TextDocument
+Class: LibreApp (Abstract=False)
+  Class: LibreApp --[Inherits]--> Class: DocumentApp
+    Class: DocumentApp (Abstract=True)
+      Class: DocumentApp --[HasMethod]--> Method: CreateTextDoc
+        Method: CreateTextDoc (Returns TextDocument, Abstract=True)
+      Class: DocumentApp --[HasMethod]--> Method: CreateSpreadsheet
+        Method: CreateSpreadsheet (Returns Spreadsheet, Abstract=True)
+  Class: LibreApp --[HasMethod]--> Method: CreateTextDoc
+    Method: CreateTextDoc (Returns TextDocument, Abstract=False)
+      Method: CreateTextDoc --[Creates]--> Class: WriterDoc
+      Method: CreateTextDoc --[Overrides]--> Method: CreateTextDoc
+  Class: LibreApp --[HasMethod]--> Method: CreateSpreadsheet
+    Method: CreateSpreadsheet (Returns Spreadsheet, Abstract=False)
+      Method: CreateSpreadsheet --[Creates]--> Class: CalcSheet
+      Method: CreateSpreadsheet --[Overrides]--> Method: CreateSpreadsheet
+Class: WordApp (Abstract=False)
+  Class: WordApp --[Inherits]--> Class: DocumentApp
+  Class: WordApp --[HasMethod]--> Method: CreateTextDoc
+    Method: CreateTextDoc (Returns TextDocument, Abstract=False)
+      Method: CreateTextDoc --[Creates]--> Class: WordDoc
+      Method: CreateTextDoc --[Overrides]--> Method: CreateTextDoc
+  Class: WordApp --[HasMethod]--> Method: CreateSpreadsheet
+    Method: CreateSpreadsheet (Returns Spreadsheet, Abstract=False)
+      Method: CreateSpreadsheet --[Creates]--> Class: ExcelSheet
+      Method: CreateSpreadsheet --[Overrides]--> Method: CreateSpreadsheet
+Class: MySingleton (Abstract=False)
+  Class: MySingleton --[HasField]--> Field: _instance
+    Field: MySingleton._instance (private static MySingleton)
+      Field: _instance --[Uses]--> Class: MySingleton
+  Class: MySingleton --[HasConstructor]--> Constructor: MySingleton..ctor
+    Constructor: MySingleton..ctor
+      Constructor: MySingleton..ctor --[HasConstructor]--> Constructor: MySingleton..ctor
+  Class: MySingleton --[HasProperty]--> Property: Instance
+    Property: Instance
+      Property: Instance --[Uses]--> Class: MySingleton
+      Property: Instance --[ReferencesField]--> Field: _instance
+Class: FancyButton1 (Abstract=False)
+  Class: FancyButton1 --[Inherits]--> Class: Button1
+    Class: Button1 (Abstract=True)
+Class: FancyGUIFactory1 (Abstract=False)
+  Class: FancyGUIFactory1 --[Inherits]--> Class: GUIFactory1
+    Class: GUIFactory1 (Abstract=True)
+      Class: GUIFactory1 --[HasMethod]--> Method: CreateButton
+        Method: CreateButton (Returns Button1, Abstract=True)
+          Method: CreateButton --[Returns]--> Class: Button1
+  Class: FancyGUIFactory1 --[HasMethod]--> Method: CreateButton
+    Method: CreateButton (Returns Button1, Abstract=False)
+      Method: CreateButton --[Returns]--> Class: Button1
+      Method: CreateButton --[Creates]--> Class: FancyButton1
+      Method: CreateButton --[Overrides]--> Method: CreateButton
+Class: SimpleWorker (Abstract=False)
+  Class: SimpleWorker --[Implements]--> Interface: IWorker
+    Interface: IWorker
+  Class: SimpleWorker --[HasMethod]--> Method: Work
+    Method: Work (Returns Void, Abstract=False)
+Class: MathUtils (Abstract=False)
+  Class: MathUtils --[HasMethod]--> Method: Add
+    Method: Add (Returns Int32, Abstract=False)
+Class: ConcreteWorker (Abstract=False)
+  Class: ConcreteWorker --[Inherits]--> Class: AbstractWorker
+    Class: AbstractWorker (Abstract=True)
+      Class: AbstractWorker --[HasMethod]--> Method: DoJob
+        Method: DoJob (Returns Void, Abstract=True)
+  Class: ConcreteWorker --[HasMethod]--> Method: DoJob
+    Method: DoJob (Returns Void, Abstract=False)
+      Method: DoJob --[Overrides]--> Method: DoJob
+Class: PlainWorker (Abstract=False)
+  Class: PlainWorker --[HasMethod]--> Method: DoWork
+    Method: DoWork (Returns Void, Abstract=False)
+Class: EmailNotifierAdapter (Abstract=False)
+  Class: EmailNotifierAdapter --[Implements]--> Interface: IAdapterNotifier
+    Interface: IAdapterNotifier
+  Class: EmailNotifierAdapter --[HasField]--> Field: _email
+    Field: EmailNotifierAdapter._email (private readonly AdapteeEmailService)
+      Field: _email --[Uses]--> Class: AdapteeEmailService
+        Class: AdapteeEmailService (Abstract=False)
+          Class: AdapteeEmailService --[HasMethod]--> Method: SendEmail
+            Method: SendEmail (Returns Void, Abstract=False)
+  Class: EmailNotifierAdapter --[HasConstructor]--> Constructor: EmailNotifierAdapter..ctor
+    Constructor: EmailNotifierAdapter..ctor
+      Constructor: EmailNotifierAdapter..ctor --[HasConstructor]--> Constructor: EmailNotifierAdapter..ctor
+  Class: EmailNotifierAdapter --[HasMethod]--> Method: Notify
+    Method: Notify (Returns Void, Abstract=False)
+      Method: Notify --[Calls]--> Method: SendEmail
+      Method: Notify --[ReferencesField]--> Field: _email
+Class: MediaPlayerAdapter (Abstract=False)
+  Class: MediaPlayerAdapter --[Implements]--> Interface: IAdapterMediaPlayer
+    Interface: IAdapterMediaPlayer
+  Class: MediaPlayerAdapter --[HasField]--> Field: _library
+    Field: MediaPlayerAdapter._library (private readonly AdapteeMediaLibrary)
+      Field: _library --[Uses]--> Class: AdapteeMediaLibrary
+        Class: AdapteeMediaLibrary (Abstract=False)
+          Class: AdapteeMediaLibrary --[HasMethod]--> Method: PlayFile
+            Method: PlayFile (Returns Void, Abstract=False)
+  Class: MediaPlayerAdapter --[HasConstructor]--> Constructor: MediaPlayerAdapter..ctor
+    Constructor: MediaPlayerAdapter..ctor
+      Constructor: MediaPlayerAdapter..ctor --[HasConstructor]--> Constructor: MediaPlayerAdapter..ctor
+  Class: MediaPlayerAdapter --[HasMethod]--> Method: Play
+    Method: Play (Returns Void, Abstract=False)
+      Method: Play --[Calls]--> Method: PlayFile
+      Method: Play --[ReferencesField]--> Field: _library
+Class: ConcreteAdapter1 (Abstract=False)
+  Class: ConcreteAdapter1 --[Implements]--> Interface: IAdapterTarget1
+    Interface: IAdapterTarget1
+  Class: ConcreteAdapter1 --[HasField]--> Field: _adaptee
+    Field: ConcreteAdapter1._adaptee (private readonly Adaptee1)
+      Field: _adaptee --[Uses]--> Class: Adaptee1
+        Class: Adaptee1 (Abstract=False)
+          Class: Adaptee1 --[HasMethod]--> Method: SpecificRequest
+            Method: SpecificRequest (Returns Void, Abstract=False)
+  Class: ConcreteAdapter1 --[HasConstructor]--> Constructor: ConcreteAdapter1..ctor
+    Constructor: ConcreteAdapter1..ctor
+      Constructor: ConcreteAdapter1..ctor --[HasConstructor]--> Constructor: ConcreteAdapter1..ctor
+  Class: ConcreteAdapter1 --[HasMethod]--> Method: Request
+    Method: Request (Returns Void, Abstract=False)
+      Method: Request --[Calls]--> Method: SpecificRequest
+      Method: Request --[ReferencesField]--> Field: _adaptee
+Class: Adapter (Abstract=False)
+  Class: Adapter --[Implements]--> Interface: ITarget
+    Interface: ITarget
+  Class: Adapter --[HasField]--> Field: _adaptee
+    Field: Adapter._adaptee (private readonly Adaptee)
+      Field: _adaptee --[Uses]--> Class: Adaptee
+        Class: Adaptee (Abstract=False)
+          Class: Adaptee --[HasMethod]--> Method: SpecificRequest
+            Method: SpecificRequest (Returns Void, Abstract=False)
+  Class: Adapter --[HasConstructor]--> Constructor: Adapter..ctor
+    Constructor: Adapter..ctor
+      Constructor: Adapter..ctor --[HasConstructor]--> Constructor: Adapter..ctor
+  Class: Adapter --[HasMethod]--> Method: Request
+    Method: Request (Returns Void, Abstract=False)
+      Method: Request --[Calls]--> Method: SpecificRequest
+      Method: Request --[ReferencesField]--> Field: _adaptee
+Class: DCLSingleton (Abstract=False)
+  Class: DCLSingleton --[HasField]--> Field: _instance
+    Field: DCLSingleton._instance (private static DCLSingleton)
+      Field: _instance --[Uses]--> Class: DCLSingleton
+  Class: DCLSingleton --[HasField]--> Field: _lock
+    Field: DCLSingleton._lock (private static readonly Object)
+  Class: DCLSingleton --[HasConstructor]--> Constructor: DCLSingleton..ctor
+    Constructor: DCLSingleton..ctor
+      Constructor: DCLSingleton..ctor --[HasConstructor]--> Constructor: DCLSingleton..ctor
+  Class: DCLSingleton --[HasProperty]--> Property: Instance
+    Property: Instance
+      Property: Instance --[Uses]--> Class: DCLSingleton
+      Property: Instance --[ReferencesField]--> Field: _instance
+      Property: Instance --[ReferencesField]--> Field: _lock
+Class: Dog2 (Abstract=False)
+  Class: Dog2 --[Implements]--> Interface: Animal2
+    Interface: Animal2
+Class: DogFactory (Abstract=False)
+  Class: DogFactory --[Inherits]--> Class: MammalFactory
+    Class: MammalFactory (Abstract=True)
+      Class: MammalFactory --[Inherits]--> Class: BaseFactory
+        Class: BaseFactory (Abstract=True)
+          Class: BaseFactory --[HasMethod]--> Method: CreateAnimal
+            Method: CreateAnimal (Returns Animal2, Abstract=True)
+  Class: DogFactory --[HasMethod]--> Method: CreateAnimal
+    Method: CreateAnimal (Returns Animal2, Abstract=False)
+      Method: CreateAnimal --[Creates]--> Class: Dog2
+      Method: CreateAnimal --[Overrides]--> Method: CreateAnimal
+Interface: IObserverN3
+Interface: IObserverN2
+Interface: IObserverN1
+Method: GetName (Returns String, Abstract=True)
+  Method: GetName --[ImplementedBy]--> Method: GetName
+  Method: GetName --[ImplementedBy]--> Method: GetName
+Method: BuildEdges (Returns IEnumerable, Abstract=True)
+  Method: BuildEdges --[Uses]--> Class: NodeRegistry
+  Method: BuildEdges --[ImplementedBy]--> Method: BuildEdges
+  Method: BuildEdges --[ImplementedBy]--> Method: BuildEdges
+  Method: BuildEdges --[ImplementedBy]--> Method: BuildEdges
+  Method: BuildEdges --[ImplementedBy]--> Method: BuildEdges
+  Method: BuildEdges --[ImplementedBy]--> Method: BuildEdges
+  Method: BuildEdges --[ImplementedBy]--> Method: BuildEdges
+  Method: BuildEdges --[ImplementedBy]--> Method: BuildEdges
+Method: Save (Returns Void, Abstract=True)
+  Method: Save --[ImplementedBy]--> Method: Save
+Method: Draw (Returns Void, Abstract=True)
+  Method: Draw --[ImplementedBy]--> Method: Draw
+  Method: Draw --[ImplementedBy]--> Method: Draw
+Method: Send (Returns Void, Abstract=True)
+  Method: Send --[ImplementedBy]--> Method: Send
+  Method: Send --[ImplementedBy]--> Method: Send
+Method: Analyse (Returns PatternResult, Abstract=True)
+  Method: Analyse --[Returns]--> Class: PatternResult
+  Method: Analyse --[ImplementedBy]--> Method: Analyse
+Method: Work (Returns Void, Abstract=True)
+  Method: Work --[ImplementedBy]--> Method: Work
+Method: Notify (Returns Void, Abstract=True)
+  Method: Notify --[ImplementedBy]--> Method: Notify
+Method: Play (Returns Void, Abstract=True)
+  Method: Play --[ImplementedBy]--> Method: Play
+Method: Request (Returns Void, Abstract=True)
+  Method: Request --[ImplementedBy]--> Method: Request
+Method: Request (Returns Void, Abstract=True)
+  Method: Request --[ImplementedBy]--> Method: Request

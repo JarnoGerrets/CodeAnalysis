@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.PatternAnalyser.Rules
+  commentId: N:CodeAnalysisService.PatternAnalyser.Rules
+  id: CodeAnalysisService.PatternAnalyser.Rules
+  children:
+  - CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.PatternAnalyser.Rules
+  nameWithType: CodeAnalysisService.PatternAnalyser.Rules
+  fullName: CodeAnalysisService.PatternAnalyser.Rules
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  commentId: T:CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+  parent: CodeAnalysisService.PatternAnalyser.Rules
+  href: CodeAnalysisService.PatternAnalyser.Rules.PatternRule.html
+  name: PatternRule
+  nameWithType: PatternRule
+  fullName: CodeAnalysisService.PatternAnalyser.Rules.PatternRule
+- uid: CodeAnalysisService.PatternAnalyser.Rules
+  commentId: N:CodeAnalysisService.PatternAnalyser.Rules
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.PatternAnalyser.Rules
+  nameWithType: CodeAnalysisService.PatternAnalyser.Rules
+  fullName: CodeAnalysisService.PatternAnalyser.Rules
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.Rules
+    name: Rules
+    href: CodeAnalysisService.PatternAnalyser.Rules.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.Rules
+    name: Rules
+    href: CodeAnalysisService.PatternAnalyser.Rules.html

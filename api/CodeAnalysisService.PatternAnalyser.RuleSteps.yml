@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.PatternAnalyser.RuleSteps
+  commentId: N:CodeAnalysisService.PatternAnalyser.RuleSteps
+  id: CodeAnalysisService.PatternAnalyser.RuleSteps
+  children:
+  - CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+  - CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.PatternAnalyser.RuleSteps
+  nameWithType: CodeAnalysisService.PatternAnalyser.RuleSteps
+  fullName: CodeAnalysisService.PatternAnalyser.RuleSteps
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+  commentId: T:CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+  parent: CodeAnalysisService.PatternAnalyser.RuleSteps
+  href: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep.html
+  name: RuleStep
+  nameWithType: RuleStep
+  fullName: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+- uid: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult
+  commentId: T:CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult
+  href: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult.html
+  name: RuleStepResult
+  nameWithType: RuleStepResult
+  fullName: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStepResult
+- uid: CodeAnalysisService.PatternAnalyser.RuleSteps
+  commentId: N:CodeAnalysisService.PatternAnalyser.RuleSteps
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.PatternAnalyser.RuleSteps
+  nameWithType: CodeAnalysisService.PatternAnalyser.RuleSteps
+  fullName: CodeAnalysisService.PatternAnalyser.RuleSteps
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.RuleSteps
+    name: RuleSteps
+    href: CodeAnalysisService.PatternAnalyser.RuleSteps.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.RuleSteps
+    name: RuleSteps
+    href: CodeAnalysisService.PatternAnalyser.RuleSteps.html

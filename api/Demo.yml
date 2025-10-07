@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Demo
+  commentId: N:Demo
+  id: Demo
+  children:
+  - Demo.Program1
+  - Demo.Publisher
+  - Demo.Subscriber
+  langs:
+  - csharp
+  - vb
+  name: Demo
+  nameWithType: Demo
+  fullName: Demo
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: Demo.Publisher
+  commentId: T:Demo.Publisher
+  href: Demo.Publisher.html
+  name: Publisher
+  nameWithType: Publisher
+  fullName: Demo.Publisher
+- uid: Demo.Subscriber
+  commentId: T:Demo.Subscriber
+  href: Demo.Subscriber.html
+  name: Subscriber
+  nameWithType: Subscriber
+  fullName: Demo.Subscriber
+- uid: Demo.Program1
+  commentId: T:Demo.Program1
+  href: Demo.Program1.html
+  name: Program1
+  nameWithType: Program1
+  fullName: Demo.Program1

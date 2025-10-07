@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.EdgeBuilder
+  commentId: N:CodeAnalysisService.GraphService.EdgeBuilder
+  id: CodeAnalysisService.GraphService.EdgeBuilder
+  children:
+  - CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder
+  - CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder
+  - CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder
+  - CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder
+  - CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  - CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder
+  - CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder
+  - CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.GraphService.EdgeBuilder
+  nameWithType: CodeAnalysisService.GraphService.EdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder.html
+  name: ClassEdgeBuilder
+  nameWithType: ClassEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.ClassEdgeBuilder
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder.html
+  name: ConstructorEdgeBuilder
+  nameWithType: ConstructorEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.ConstructorEdgeBuilder
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder.html
+  name: EventEdgeBuilder
+  nameWithType: EventEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.EventEdgeBuilder
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder.html
+  name: FieldEdgeBuilder
+  nameWithType: FieldEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.FieldEdgeBuilder
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+  parent: CodeAnalysisService.GraphService.EdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder.html
+  name: IEdgeBuilder
+  nameWithType: IEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.IEdgeBuilder
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder.html
+  name: InterfaceEdgeBuilder
+  nameWithType: InterfaceEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.InterfaceEdgeBuilder
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder.html
+  name: MethodEdgeBuilder
+  nameWithType: MethodEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.MethodEdgeBuilder
+- uid: CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder
+  commentId: T:CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder
+  href: CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder.html
+  name: PropertyEdgeBuilder
+  nameWithType: PropertyEdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder.PropertyEdgeBuilder
+- uid: CodeAnalysisService.GraphService.EdgeBuilder
+  commentId: N:CodeAnalysisService.GraphService.EdgeBuilder
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.EdgeBuilder
+  nameWithType: CodeAnalysisService.GraphService.EdgeBuilder
+  fullName: CodeAnalysisService.GraphService.EdgeBuilder
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder
+    name: EdgeBuilder
+    href: CodeAnalysisService.GraphService.EdgeBuilder.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.EdgeBuilder
+    name: EdgeBuilder
+    href: CodeAnalysisService.GraphService.EdgeBuilder.html

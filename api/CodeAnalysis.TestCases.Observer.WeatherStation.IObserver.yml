@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver
+  commentId: T:CodeAnalysis.TestCases.Observer.WeatherStation.IObserver
+  id: IObserver
+  parent: CodeAnalysis.TestCases.Observer.WeatherStation
+  children:
+  - CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.Update(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IObserver
+  nameWithType: IObserver
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver
+  type: Interface
+  source:
+    id: IObserver
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\TestCases\Observer\WeatherStation\IObserver.cs
+    startLine: 4
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysis.TestCases.Observer.WeatherStation
+  syntax:
+    content: public interface IObserver
+    content.vb: Public Interface IObserver
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.Update(System.String)
+  commentId: M:CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.Update(System.String)
+  id: Update(System.String)
+  parent: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver
+  langs:
+  - csharp
+  - vb
+  name: Update(string)
+  nameWithType: IObserver.Update(string)
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.Update(string)
+  type: Method
+  source:
+    id: Update
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\TestCases\Observer\WeatherStation\IObserver.cs
+    startLine: 6
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysis.TestCases.Observer.WeatherStation
+  syntax:
+    content: void Update(string data)
+    parameters:
+    - id: data
+      type: System.String
+    content.vb: Sub Update(data As String)
+  overload: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.Update*
+  nameWithType.vb: IObserver.Update(String)
+  fullName.vb: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.Update(String)
+  name.vb: Update(String)
+references:
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation
+  commentId: N:CodeAnalysis.TestCases.Observer.WeatherStation
+  href: CodeAnalysis.html
+  name: CodeAnalysis.TestCases.Observer.WeatherStation
+  nameWithType: CodeAnalysis.TestCases.Observer.WeatherStation
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation
+  spec.csharp:
+  - uid: CodeAnalysis
+    name: CodeAnalysis
+    href: CodeAnalysis.html
+  - name: .
+  - uid: CodeAnalysis.TestCases
+    name: TestCases
+    href: CodeAnalysis.TestCases.html
+  - name: .
+  - uid: CodeAnalysis.TestCases.Observer
+    name: Observer
+    href: CodeAnalysis.TestCases.Observer.html
+  - name: .
+  - uid: CodeAnalysis.TestCases.Observer.WeatherStation
+    name: WeatherStation
+    href: CodeAnalysis.TestCases.Observer.WeatherStation.html
+  spec.vb:
+  - uid: CodeAnalysis
+    name: CodeAnalysis
+    href: CodeAnalysis.html
+  - name: .
+  - uid: CodeAnalysis.TestCases
+    name: TestCases
+    href: CodeAnalysis.TestCases.html
+  - name: .
+  - uid: CodeAnalysis.TestCases.Observer
+    name: Observer
+    href: CodeAnalysis.TestCases.Observer.html
+  - name: .
+  - uid: CodeAnalysis.TestCases.Observer.WeatherStation
+    name: WeatherStation
+    href: CodeAnalysis.TestCases.Observer.WeatherStation.html
+- uid: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.Update*
+  commentId: Overload:CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.Update
+  href: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.html#CodeAnalysis_TestCases_Observer_WeatherStation_IObserver_Update_System_String_
+  name: Update
+  nameWithType: IObserver.Update
+  fullName: CodeAnalysis.TestCases.Observer.WeatherStation.IObserver.Update
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

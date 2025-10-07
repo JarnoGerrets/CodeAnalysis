@@ -1,0 +1,501 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  commentId: T:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  id: StrategyChecks
+  parent: CodeAnalysisService.PatternAnalyser.Checks
+  children:
+  - CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextDelegatesToStrategy(CodeAnalysisService.GraphService.GraphBuilder)
+  - CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextHasStrategyReference(CodeAnalysisService.GraphService.GraphBuilder)
+  - CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasConcreteStrategies(CodeAnalysisService.GraphService.GraphBuilder)
+  - CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasStrategyInterface
+  langs:
+  - csharp
+  - vb
+  name: StrategyChecks
+  nameWithType: StrategyChecks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  type: Class
+  source:
+    id: StrategyChecks
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Checks\StrategyChecks.cs
+    startLine: 12
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Checks
+  syntax:
+    content: public static class StrategyChecks
+    content.vb: Public Module StrategyChecks
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasStrategyInterface
+  commentId: M:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasStrategyInterface
+  id: HasStrategyInterface
+  parent: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  langs:
+  - csharp
+  - vb
+  name: HasStrategyInterface()
+  nameWithType: StrategyChecks.HasStrategyInterface()
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasStrategyInterface()
+  type: Method
+  source:
+    id: HasStrategyInterface
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Checks\StrategyChecks.cs
+    startLine: 14
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Checks
+  syntax:
+    content: public static RuleStep HasStrategyInterface()
+    return:
+      type: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+    content.vb: Public Shared Function HasStrategyInterface() As RuleStep
+  overload: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasStrategyInterface*
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasConcreteStrategies(CodeAnalysisService.GraphService.GraphBuilder)
+  commentId: M:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasConcreteStrategies(CodeAnalysisService.GraphService.GraphBuilder)
+  id: HasConcreteStrategies(CodeAnalysisService.GraphService.GraphBuilder)
+  parent: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  langs:
+  - csharp
+  - vb
+  name: HasConcreteStrategies(GraphBuilder)
+  nameWithType: StrategyChecks.HasConcreteStrategies(GraphBuilder)
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasConcreteStrategies(CodeAnalysisService.GraphService.GraphBuilder)
+  type: Method
+  source:
+    id: HasConcreteStrategies
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Checks\StrategyChecks.cs
+    startLine: 40
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Checks
+  syntax:
+    content: public static RuleStep HasConcreteStrategies(GraphBuilder graph)
+    parameters:
+    - id: graph
+      type: CodeAnalysisService.GraphService.GraphBuilder
+    return:
+      type: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+    content.vb: Public Shared Function HasConcreteStrategies(graph As GraphBuilder) As RuleStep
+  overload: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasConcreteStrategies*
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextHasStrategyReference(CodeAnalysisService.GraphService.GraphBuilder)
+  commentId: M:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextHasStrategyReference(CodeAnalysisService.GraphService.GraphBuilder)
+  id: ContextHasStrategyReference(CodeAnalysisService.GraphService.GraphBuilder)
+  parent: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  langs:
+  - csharp
+  - vb
+  name: ContextHasStrategyReference(GraphBuilder)
+  nameWithType: StrategyChecks.ContextHasStrategyReference(GraphBuilder)
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextHasStrategyReference(CodeAnalysisService.GraphService.GraphBuilder)
+  type: Method
+  source:
+    id: ContextHasStrategyReference
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Checks\StrategyChecks.cs
+    startLine: 75
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Checks
+  syntax:
+    content: public static RuleStep ContextHasStrategyReference(GraphBuilder graph)
+    parameters:
+    - id: graph
+      type: CodeAnalysisService.GraphService.GraphBuilder
+    return:
+      type: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+    content.vb: Public Shared Function ContextHasStrategyReference(graph As GraphBuilder) As RuleStep
+  overload: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextHasStrategyReference*
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextDelegatesToStrategy(CodeAnalysisService.GraphService.GraphBuilder)
+  commentId: M:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextDelegatesToStrategy(CodeAnalysisService.GraphService.GraphBuilder)
+  id: ContextDelegatesToStrategy(CodeAnalysisService.GraphService.GraphBuilder)
+  parent: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks
+  langs:
+  - csharp
+  - vb
+  name: ContextDelegatesToStrategy(GraphBuilder)
+  nameWithType: StrategyChecks.ContextDelegatesToStrategy(GraphBuilder)
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextDelegatesToStrategy(CodeAnalysisService.GraphService.GraphBuilder)
+  type: Method
+  source:
+    id: ContextDelegatesToStrategy
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\PatternAnalyser\Checks\StrategyChecks.cs
+    startLine: 123
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.PatternAnalyser.Checks
+  syntax:
+    content: public static RuleStep ContextDelegatesToStrategy(GraphBuilder graph)
+    parameters:
+    - id: graph
+      type: CodeAnalysisService.GraphService.GraphBuilder
+    return:
+      type: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+    content.vb: Public Shared Function ContextDelegatesToStrategy(graph As GraphBuilder) As RuleStep
+  overload: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextDelegatesToStrategy*
+references:
+- uid: CodeAnalysisService.PatternAnalyser.Checks
+  commentId: N:CodeAnalysisService.PatternAnalyser.Checks
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.PatternAnalyser.Checks
+  nameWithType: CodeAnalysisService.PatternAnalyser.Checks
+  fullName: CodeAnalysisService.PatternAnalyser.Checks
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.Checks
+    name: Checks
+    href: CodeAnalysisService.PatternAnalyser.Checks.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.Checks
+    name: Checks
+    href: CodeAnalysisService.PatternAnalyser.Checks.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasStrategyInterface*
+  commentId: Overload:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasStrategyInterface
+  href: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.html#CodeAnalysisService_PatternAnalyser_Checks_StrategyChecks_HasStrategyInterface
+  name: HasStrategyInterface
+  nameWithType: StrategyChecks.HasStrategyInterface
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasStrategyInterface
+- uid: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+  commentId: T:CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+  parent: CodeAnalysisService.PatternAnalyser.RuleSteps
+  href: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep.html
+  name: RuleStep
+  nameWithType: RuleStep
+  fullName: CodeAnalysisService.PatternAnalyser.RuleSteps.RuleStep
+- uid: CodeAnalysisService.PatternAnalyser.RuleSteps
+  commentId: N:CodeAnalysisService.PatternAnalyser.RuleSteps
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.PatternAnalyser.RuleSteps
+  nameWithType: CodeAnalysisService.PatternAnalyser.RuleSteps
+  fullName: CodeAnalysisService.PatternAnalyser.RuleSteps
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.RuleSteps
+    name: RuleSteps
+    href: CodeAnalysisService.PatternAnalyser.RuleSteps.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser
+    name: PatternAnalyser
+    href: CodeAnalysisService.PatternAnalyser.html
+  - name: .
+  - uid: CodeAnalysisService.PatternAnalyser.RuleSteps
+    name: RuleSteps
+    href: CodeAnalysisService.PatternAnalyser.RuleSteps.html
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasConcreteStrategies*
+  commentId: Overload:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasConcreteStrategies
+  href: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.html#CodeAnalysisService_PatternAnalyser_Checks_StrategyChecks_HasConcreteStrategies_CodeAnalysisService_GraphService_GraphBuilder_
+  name: HasConcreteStrategies
+  nameWithType: StrategyChecks.HasConcreteStrategies
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.HasConcreteStrategies
+- uid: CodeAnalysisService.GraphService.GraphBuilder
+  commentId: T:CodeAnalysisService.GraphService.GraphBuilder
+  parent: CodeAnalysisService.GraphService
+  href: CodeAnalysisService.GraphService.GraphBuilder.html
+  name: GraphBuilder
+  nameWithType: GraphBuilder
+  fullName: CodeAnalysisService.GraphService.GraphBuilder
+- uid: CodeAnalysisService.GraphService
+  commentId: N:CodeAnalysisService.GraphService
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService
+  nameWithType: CodeAnalysisService.GraphService
+  fullName: CodeAnalysisService.GraphService
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextHasStrategyReference*
+  commentId: Overload:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextHasStrategyReference
+  href: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.html#CodeAnalysisService_PatternAnalyser_Checks_StrategyChecks_ContextHasStrategyReference_CodeAnalysisService_GraphService_GraphBuilder_
+  name: ContextHasStrategyReference
+  nameWithType: StrategyChecks.ContextHasStrategyReference
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextHasStrategyReference
+- uid: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextDelegatesToStrategy*
+  commentId: Overload:CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextDelegatesToStrategy
+  href: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.html#CodeAnalysisService_PatternAnalyser_Checks_StrategyChecks_ContextDelegatesToStrategy_CodeAnalysisService_GraphService_GraphBuilder_
+  name: ContextDelegatesToStrategy
+  nameWithType: StrategyChecks.ContextDelegatesToStrategy
+  fullName: CodeAnalysisService.PatternAnalyser.Checks.StrategyChecks.ContextDelegatesToStrategy

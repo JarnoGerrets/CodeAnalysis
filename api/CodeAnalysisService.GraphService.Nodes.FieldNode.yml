@@ -1,0 +1,723 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.FieldNode
+  id: FieldNode
+  parent: CodeAnalysisService.GraphService.Nodes
+  children:
+  - CodeAnalysisService.GraphService.Nodes.FieldNode.DeclarationSyntax
+  - CodeAnalysisService.GraphService.Nodes.FieldNode.NodeType
+  - CodeAnalysisService.GraphService.Nodes.FieldNode.OutgoingEdges
+  - CodeAnalysisService.GraphService.Nodes.FieldNode.Symbol
+  - CodeAnalysisService.GraphService.Nodes.FieldNode.VariableSyntax
+  langs:
+  - csharp
+  - vb
+  name: FieldNode
+  nameWithType: FieldNode
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode
+  type: Class
+  source:
+    id: FieldNode
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\FieldNode.cs
+    startLine: 14
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  summary: >-
+    Represents a field in the code graph.
+
+    Captures its Roslyn declaration and variable syntax, symbol,
+
+    and outgoing edges to related nodes.
+  example: []
+  syntax:
+    content: 'public class FieldNode : INode'
+    content.vb: Public Class FieldNode Implements INode
+  inheritance:
+  - System.Object
+  implements:
+  - CodeAnalysisService.GraphService.Nodes.INode
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.DeclarationSyntax
+  commentId: P:CodeAnalysisService.GraphService.Nodes.FieldNode.DeclarationSyntax
+  id: DeclarationSyntax
+  parent: CodeAnalysisService.GraphService.Nodes.FieldNode
+  langs:
+  - csharp
+  - vb
+  name: DeclarationSyntax
+  nameWithType: FieldNode.DeclarationSyntax
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.DeclarationSyntax
+  type: Property
+  source:
+    id: DeclarationSyntax
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\FieldNode.cs
+    startLine: 16
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  syntax:
+    content: public FieldDeclarationSyntax DeclarationSyntax { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.FieldDeclarationSyntax
+    content.vb: Public Property DeclarationSyntax As FieldDeclarationSyntax
+  overload: CodeAnalysisService.GraphService.Nodes.FieldNode.DeclarationSyntax*
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.VariableSyntax
+  commentId: P:CodeAnalysisService.GraphService.Nodes.FieldNode.VariableSyntax
+  id: VariableSyntax
+  parent: CodeAnalysisService.GraphService.Nodes.FieldNode
+  langs:
+  - csharp
+  - vb
+  name: VariableSyntax
+  nameWithType: FieldNode.VariableSyntax
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.VariableSyntax
+  type: Property
+  source:
+    id: VariableSyntax
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\FieldNode.cs
+    startLine: 17
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  syntax:
+    content: public VariableDeclaratorSyntax VariableSyntax { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax
+    content.vb: Public Property VariableSyntax As VariableDeclaratorSyntax
+  overload: CodeAnalysisService.GraphService.Nodes.FieldNode.VariableSyntax*
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.NodeType
+  commentId: P:CodeAnalysisService.GraphService.Nodes.FieldNode.NodeType
+  id: NodeType
+  parent: CodeAnalysisService.GraphService.Nodes.FieldNode
+  langs:
+  - csharp
+  - vb
+  name: NodeType
+  nameWithType: FieldNode.NodeType
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.NodeType
+  type: Property
+  source:
+    id: NodeType
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\FieldNode.cs
+    startLine: 18
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  example: []
+  syntax:
+    content: public NodeType NodeType { get; }
+    parameters: []
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+    content.vb: Public ReadOnly Property NodeType As NodeType
+  overload: CodeAnalysisService.GraphService.Nodes.FieldNode.NodeType*
+  implements:
+  - CodeAnalysisService.GraphService.Nodes.INode.NodeType
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.Symbol
+  commentId: P:CodeAnalysisService.GraphService.Nodes.FieldNode.Symbol
+  id: Symbol
+  parent: CodeAnalysisService.GraphService.Nodes.FieldNode
+  langs:
+  - csharp
+  - vb
+  name: Symbol
+  nameWithType: FieldNode.Symbol
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.Symbol
+  type: Property
+  source:
+    id: Symbol
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\FieldNode.cs
+    startLine: 19
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  syntax:
+    content: public IFieldSymbol Symbol { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.IFieldSymbol
+    content.vb: Public Property Symbol As IFieldSymbol
+  overload: CodeAnalysisService.GraphService.Nodes.FieldNode.Symbol*
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.OutgoingEdges
+  commentId: P:CodeAnalysisService.GraphService.Nodes.FieldNode.OutgoingEdges
+  id: OutgoingEdges
+  parent: CodeAnalysisService.GraphService.Nodes.FieldNode
+  langs:
+  - csharp
+  - vb
+  name: OutgoingEdges
+  nameWithType: FieldNode.OutgoingEdges
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.OutgoingEdges
+  type: Property
+  source:
+    id: OutgoingEdges
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\FieldNode.cs
+    startLine: 21
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  example: []
+  syntax:
+    content: public List<EdgeNode> OutgoingEdges { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{CodeAnalysisService.GraphService.Nodes.EdgeNode}
+    content.vb: Public Property OutgoingEdges As List(Of EdgeNode)
+  overload: CodeAnalysisService.GraphService.Nodes.FieldNode.OutgoingEdges*
+  implements:
+  - CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+references:
+- uid: CodeAnalysisService.GraphService.Nodes
+  commentId: N:CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.Nodes
+  nameWithType: CodeAnalysisService.GraphService.Nodes
+  fullName: CodeAnalysisService.GraphService.Nodes
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: CodeAnalysisService.GraphService.Nodes.INode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.INode
+  parent: CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.GraphService.Nodes.INode.html
+  name: INode
+  nameWithType: INode
+  fullName: CodeAnalysisService.GraphService.Nodes.INode
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.DeclarationSyntax*
+  commentId: Overload:CodeAnalysisService.GraphService.Nodes.FieldNode.DeclarationSyntax
+  href: CodeAnalysisService.GraphService.Nodes.FieldNode.html#CodeAnalysisService_GraphService_Nodes_FieldNode_DeclarationSyntax
+  name: DeclarationSyntax
+  nameWithType: FieldNode.DeclarationSyntax
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.DeclarationSyntax
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.FieldDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.FieldDeclarationSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.fielddeclarationsyntax
+  name: FieldDeclarationSyntax
+  nameWithType: FieldDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.FieldDeclarationSyntax
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax
+  commentId: N:Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.CSharp.Syntax
+  nameWithType: Microsoft.CodeAnalysis.CSharp.Syntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax
+    name: Syntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax
+    name: Syntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.VariableSyntax*
+  commentId: Overload:CodeAnalysisService.GraphService.Nodes.FieldNode.VariableSyntax
+  href: CodeAnalysisService.GraphService.Nodes.FieldNode.html#CodeAnalysisService_GraphService_Nodes_FieldNode_VariableSyntax
+  name: VariableSyntax
+  nameWithType: FieldNode.VariableSyntax
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.VariableSyntax
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.variabledeclaratorsyntax
+  name: VariableDeclaratorSyntax
+  nameWithType: VariableDeclaratorSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.NodeType*
+  commentId: Overload:CodeAnalysisService.GraphService.Nodes.FieldNode.NodeType
+  href: CodeAnalysisService.GraphService.Nodes.FieldNode.html#CodeAnalysisService_GraphService_Nodes_FieldNode_NodeType
+  name: NodeType
+  nameWithType: FieldNode.NodeType
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.NodeType
+- uid: CodeAnalysisService.GraphService.Nodes.INode.NodeType
+  commentId: P:CodeAnalysisService.GraphService.Nodes.INode.NodeType
+  parent: CodeAnalysisService.GraphService.Nodes.INode
+  href: CodeAnalysisService.GraphService.Nodes.INode.html#CodeAnalysisService_GraphService_Nodes_INode_NodeType
+  name: NodeType
+  nameWithType: INode.NodeType
+  fullName: CodeAnalysisService.GraphService.Nodes.INode.NodeType
+- uid: CodeAnalysisService.Enums.NodeType
+  commentId: T:CodeAnalysisService.Enums.NodeType
+  parent: CodeAnalysisService.Enums
+  href: CodeAnalysisService.Enums.NodeType.html
+  name: NodeType
+  nameWithType: NodeType
+  fullName: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums
+  commentId: N:CodeAnalysisService.Enums
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.Enums
+  nameWithType: CodeAnalysisService.Enums
+  fullName: CodeAnalysisService.Enums
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.Symbol*
+  commentId: Overload:CodeAnalysisService.GraphService.Nodes.FieldNode.Symbol
+  href: CodeAnalysisService.GraphService.Nodes.FieldNode.html#CodeAnalysisService_GraphService_Nodes_FieldNode_Symbol
+  name: Symbol
+  nameWithType: FieldNode.Symbol
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.Symbol
+- uid: Microsoft.CodeAnalysis.IFieldSymbol
+  commentId: T:Microsoft.CodeAnalysis.IFieldSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ifieldsymbol
+  name: IFieldSymbol
+  nameWithType: IFieldSymbol
+  fullName: Microsoft.CodeAnalysis.IFieldSymbol
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: CodeAnalysisService.GraphService.Nodes.FieldNode.OutgoingEdges*
+  commentId: Overload:CodeAnalysisService.GraphService.Nodes.FieldNode.OutgoingEdges
+  href: CodeAnalysisService.GraphService.Nodes.FieldNode.html#CodeAnalysisService_GraphService_Nodes_FieldNode_OutgoingEdges
+  name: OutgoingEdges
+  nameWithType: FieldNode.OutgoingEdges
+  fullName: CodeAnalysisService.GraphService.Nodes.FieldNode.OutgoingEdges
+- uid: CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+  commentId: P:CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+  parent: CodeAnalysisService.GraphService.Nodes.INode
+  href: CodeAnalysisService.GraphService.Nodes.INode.html#CodeAnalysisService_GraphService_Nodes_INode_OutgoingEdges
+  name: OutgoingEdges
+  nameWithType: INode.OutgoingEdges
+  fullName: CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+- uid: System.Collections.Generic.List{CodeAnalysisService.GraphService.Nodes.EdgeNode}
+  commentId: T:System.Collections.Generic.List{CodeAnalysisService.GraphService.Nodes.EdgeNode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EdgeNode>
+  nameWithType: List<EdgeNode>
+  fullName: System.Collections.Generic.List<CodeAnalysisService.GraphService.Nodes.EdgeNode>
+  nameWithType.vb: List(Of EdgeNode)
+  fullName.vb: System.Collections.Generic.List(Of CodeAnalysisService.GraphService.Nodes.EdgeNode)
+  name.vb: List(Of EdgeNode)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: CodeAnalysisService.GraphService.Nodes.EdgeNode
+    name: EdgeNode
+    href: CodeAnalysisService.GraphService.Nodes.EdgeNode.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CodeAnalysisService.GraphService.Nodes.EdgeNode
+    name: EdgeNode
+    href: CodeAnalysisService.GraphService.Nodes.EdgeNode.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

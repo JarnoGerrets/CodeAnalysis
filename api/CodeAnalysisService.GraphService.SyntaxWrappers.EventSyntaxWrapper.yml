@@ -1,0 +1,615 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  commentId: T:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  id: EventSyntaxWrapper
+  parent: CodeAnalysisService.GraphService.SyntaxWrappers
+  children:
+  - CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor(Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax)
+  - CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor(Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax)
+  - CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventDecl
+  - CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventFieldDecl
+  - CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsDeclarationStyle
+  - CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsFieldStyle
+  - CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.Syntax
+  langs:
+  - csharp
+  - vb
+  name: EventSyntaxWrapper
+  nameWithType: EventSyntaxWrapper
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  type: Struct
+  source:
+    id: EventSyntaxWrapper
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\SyntaxWrappers\EventSyntaxWrapper.cs
+    startLine: 6
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.SyntaxWrappers
+  syntax:
+    content: public readonly struct EventSyntaxWrapper
+    content.vb: Public Structure EventSyntaxWrapper
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventDecl
+  commentId: P:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventDecl
+  id: EventDecl
+  parent: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  langs:
+  - csharp
+  - vb
+  name: EventDecl
+  nameWithType: EventSyntaxWrapper.EventDecl
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventDecl
+  type: Property
+  source:
+    id: EventDecl
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\SyntaxWrappers\EventSyntaxWrapper.cs
+    startLine: 8
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.SyntaxWrappers
+  syntax:
+    content: public EventDeclarationSyntax? EventDecl { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax
+    content.vb: Public ReadOnly Property EventDecl As EventDeclarationSyntax
+  overload: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventDecl*
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventFieldDecl
+  commentId: P:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventFieldDecl
+  id: EventFieldDecl
+  parent: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  langs:
+  - csharp
+  - vb
+  name: EventFieldDecl
+  nameWithType: EventSyntaxWrapper.EventFieldDecl
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventFieldDecl
+  type: Property
+  source:
+    id: EventFieldDecl
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\SyntaxWrappers\EventSyntaxWrapper.cs
+    startLine: 9
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.SyntaxWrappers
+  syntax:
+    content: public EventFieldDeclarationSyntax? EventFieldDecl { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax
+    content.vb: Public ReadOnly Property EventFieldDecl As EventFieldDeclarationSyntax
+  overload: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventFieldDecl*
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.Syntax
+  commentId: P:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.Syntax
+  id: Syntax
+  parent: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  langs:
+  - csharp
+  - vb
+  name: Syntax
+  nameWithType: EventSyntaxWrapper.Syntax
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.Syntax
+  type: Property
+  source:
+    id: Syntax
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\SyntaxWrappers\EventSyntaxWrapper.cs
+    startLine: 11
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.SyntaxWrappers
+  syntax:
+    content: public SyntaxNode Syntax { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.SyntaxNode
+    content.vb: Public ReadOnly Property Syntax As SyntaxNode
+  overload: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.Syntax*
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor(Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax)
+  commentId: M:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor(Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax)
+  id: '#ctor(Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax)'
+  parent: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  langs:
+  - csharp
+  - vb
+  name: EventSyntaxWrapper(EventDeclarationSyntax)
+  nameWithType: EventSyntaxWrapper.EventSyntaxWrapper(EventDeclarationSyntax)
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventSyntaxWrapper(Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\SyntaxWrappers\EventSyntaxWrapper.cs
+    startLine: 13
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.SyntaxWrappers
+  syntax:
+    content: public EventSyntaxWrapper(EventDeclarationSyntax decl)
+    parameters:
+    - id: decl
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax
+    content.vb: Public Sub New(decl As EventDeclarationSyntax)
+  overload: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor*
+  nameWithType.vb: EventSyntaxWrapper.New(EventDeclarationSyntax)
+  fullName.vb: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.New(Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax)
+  name.vb: New(EventDeclarationSyntax)
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor(Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax)
+  commentId: M:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor(Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax)
+  id: '#ctor(Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax)'
+  parent: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  langs:
+  - csharp
+  - vb
+  name: EventSyntaxWrapper(EventFieldDeclarationSyntax)
+  nameWithType: EventSyntaxWrapper.EventSyntaxWrapper(EventFieldDeclarationSyntax)
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventSyntaxWrapper(Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\SyntaxWrappers\EventSyntaxWrapper.cs
+    startLine: 19
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.SyntaxWrappers
+  syntax:
+    content: public EventSyntaxWrapper(EventFieldDeclarationSyntax decl)
+    parameters:
+    - id: decl
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax
+    content.vb: Public Sub New(decl As EventFieldDeclarationSyntax)
+  overload: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor*
+  nameWithType.vb: EventSyntaxWrapper.New(EventFieldDeclarationSyntax)
+  fullName.vb: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.New(Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax)
+  name.vb: New(EventFieldDeclarationSyntax)
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsFieldStyle
+  commentId: P:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsFieldStyle
+  id: IsFieldStyle
+  parent: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  langs:
+  - csharp
+  - vb
+  name: IsFieldStyle
+  nameWithType: EventSyntaxWrapper.IsFieldStyle
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsFieldStyle
+  type: Property
+  source:
+    id: IsFieldStyle
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\SyntaxWrappers\EventSyntaxWrapper.cs
+    startLine: 25
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.SyntaxWrappers
+  syntax:
+    content: public bool IsFieldStyle { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFieldStyle As Boolean
+  overload: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsFieldStyle*
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsDeclarationStyle
+  commentId: P:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsDeclarationStyle
+  id: IsDeclarationStyle
+  parent: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  langs:
+  - csharp
+  - vb
+  name: IsDeclarationStyle
+  nameWithType: EventSyntaxWrapper.IsDeclarationStyle
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsDeclarationStyle
+  type: Property
+  source:
+    id: IsDeclarationStyle
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\SyntaxWrappers\EventSyntaxWrapper.cs
+    startLine: 26
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.SyntaxWrappers
+  syntax:
+    content: public bool IsDeclarationStyle { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDeclarationStyle As Boolean
+  overload: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsDeclarationStyle*
+references:
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers
+  commentId: N:CodeAnalysisService.GraphService.SyntaxWrappers
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.SyntaxWrappers
+  nameWithType: CodeAnalysisService.GraphService.SyntaxWrappers
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.SyntaxWrappers
+    name: SyntaxWrappers
+    href: CodeAnalysisService.GraphService.SyntaxWrappers.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.SyntaxWrappers
+    name: SyntaxWrappers
+    href: CodeAnalysisService.GraphService.SyntaxWrappers.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventDecl*
+  commentId: Overload:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventDecl
+  href: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html#CodeAnalysisService_GraphService_SyntaxWrappers_EventSyntaxWrapper_EventDecl
+  name: EventDecl
+  nameWithType: EventSyntaxWrapper.EventDecl
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventDecl
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.eventdeclarationsyntax
+  name: EventDeclarationSyntax
+  nameWithType: EventDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.EventDeclarationSyntax
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax
+  commentId: N:Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.CSharp.Syntax
+  nameWithType: Microsoft.CodeAnalysis.CSharp.Syntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax
+    name: Syntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax
+    name: Syntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventFieldDecl*
+  commentId: Overload:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventFieldDecl
+  href: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html#CodeAnalysisService_GraphService_SyntaxWrappers_EventSyntaxWrapper_EventFieldDecl
+  name: EventFieldDecl
+  nameWithType: EventSyntaxWrapper.EventFieldDecl
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventFieldDecl
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.eventfielddeclarationsyntax
+  name: EventFieldDeclarationSyntax
+  nameWithType: EventFieldDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.EventFieldDeclarationSyntax
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.Syntax*
+  commentId: Overload:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.Syntax
+  href: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html#CodeAnalysisService_GraphService_SyntaxWrappers_EventSyntaxWrapper_Syntax
+  name: Syntax
+  nameWithType: EventSyntaxWrapper.Syntax
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.Syntax
+- uid: Microsoft.CodeAnalysis.SyntaxNode
+  commentId: T:Microsoft.CodeAnalysis.SyntaxNode
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxnode
+  name: SyntaxNode
+  nameWithType: SyntaxNode
+  fullName: Microsoft.CodeAnalysis.SyntaxNode
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor*
+  commentId: Overload:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.#ctor
+  href: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html#CodeAnalysisService_GraphService_SyntaxWrappers_EventSyntaxWrapper__ctor_Microsoft_CodeAnalysis_CSharp_Syntax_EventDeclarationSyntax_
+  name: EventSyntaxWrapper
+  nameWithType: EventSyntaxWrapper.EventSyntaxWrapper
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.EventSyntaxWrapper
+  nameWithType.vb: EventSyntaxWrapper.New
+  fullName.vb: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.New
+  name.vb: New
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsFieldStyle*
+  commentId: Overload:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsFieldStyle
+  href: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html#CodeAnalysisService_GraphService_SyntaxWrappers_EventSyntaxWrapper_IsFieldStyle
+  name: IsFieldStyle
+  nameWithType: EventSyntaxWrapper.IsFieldStyle
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsFieldStyle
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsDeclarationStyle*
+  commentId: Overload:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsDeclarationStyle
+  href: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html#CodeAnalysisService_GraphService_SyntaxWrappers_EventSyntaxWrapper_IsDeclarationStyle
+  name: IsDeclarationStyle
+  nameWithType: EventSyntaxWrapper.IsDeclarationStyle
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.IsDeclarationStyle

@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers
+  commentId: N:CodeAnalysisService.GraphService.SyntaxWrappers
+  id: CodeAnalysisService.GraphService.SyntaxWrappers
+  children:
+  - CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  langs:
+  - csharp
+  - vb
+  name: CodeAnalysisService.GraphService.SyntaxWrappers
+  nameWithType: CodeAnalysisService.GraphService.SyntaxWrappers
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers
+  type: Namespace
+  assemblies:
+  - CodeAnalysis
+references:
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  commentId: T:CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+  parent: CodeAnalysisService.GraphService.SyntaxWrappers
+  href: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper.html
+  name: EventSyntaxWrapper
+  nameWithType: EventSyntaxWrapper
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers.EventSyntaxWrapper
+- uid: CodeAnalysisService.GraphService.SyntaxWrappers
+  commentId: N:CodeAnalysisService.GraphService.SyntaxWrappers
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.SyntaxWrappers
+  nameWithType: CodeAnalysisService.GraphService.SyntaxWrappers
+  fullName: CodeAnalysisService.GraphService.SyntaxWrappers
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.SyntaxWrappers
+    name: SyntaxWrappers
+    href: CodeAnalysisService.GraphService.SyntaxWrappers.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.SyntaxWrappers
+    name: SyntaxWrappers
+    href: CodeAnalysisService.GraphService.SyntaxWrappers.html

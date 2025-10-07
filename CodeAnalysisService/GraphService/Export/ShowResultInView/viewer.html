@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Code Graph Viewer with Filter + Search + History</title>
+  <script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
+  <style>
+    body { margin: 0; padding: 0; font-family: sans-serif; }
+    #toolbar {
+      position: absolute; top: 8px; left: 8px; z-index: 10;
+      background: rgba(255,255,255,0.95); border: 1px solid #ccc;
+      padding: 6px 8px; border-radius: 6px;
+      width: 280px;
+    }
+    #searchBox {
+      width: 100%;
+      padding: 4px;
+      margin-top: 6px;
+      box-sizing: border-box;
+    }
+    #suggestions {
+      margin: 0; padding: 0;
+      list-style: none;
+      max-height: 200px; overflow-y: auto;
+      border: 1px solid #ccc; border-top: none;
+      background: #fff;
+      display: none;
+      position: relative;
+      box-sizing: border-box;
+    }
+    #suggestions li {
+      padding: 4px 6px;
+      cursor: pointer;
+    }
+    #suggestions li:hover, #suggestions li.active {
+      background: #eee;
+    }
+    #historyControls {
+      margin-top: 6px;
+      display: flex;
+      justify-content: space-between;
+    }
+    #legend {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    #legend div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    #legend span.color-box {
+      display: inline-block;
+      width: 16px; height: 16px;
+      margin-right: 6px;
+      border: 1px solid #333;
+      border-radius: 3px;
+    }
+    #cy { width: 100vw; height: 100vh; display: block; }
+
+    /* Tooltip */
+    #tooltip {
+      position: absolute;
+      padding: 4px 6px;
+      font-size: 12px;
+      background: rgba(50,50,50,0.9);
+      color: #fff;
+      border-radius: 4px;
+      pointer-events: none;
+      display: none;
+      z-index: 20;
+    }
+  </style>
+</head>
+<body>
+  <div id="toolbar">
+    <label for="classFilter">Select Class/Interface:</label>
+    <select id="classFilter"><option>Loading...</option></select>
+
+    <input id="searchBox" type="text" placeholder="Search class/interface..." autocomplete="off" />
+    <ul id="suggestions"></ul>
+
+    <div id="historyControls">
+      <button id="backBtn" disabled>&larr; Back</button>
+      <button id="forwardBtn" disabled>Forward &rarr;</button>
+    </div>
+
+    <!-- Legend -->
+    <div id="legend">
+      <div><span class="color-box" style="background:#0074D9"></span> Class</div>
+      <div><span class="color-box" style="background:#2ECC40"></span> Interface</div>
+      <div><span class="color-box" style="background:#FF851B"></span> Method / Constructor / Other</div>
+      <div><span class="color-box" style="background:#87CEFA"></span> Property</div> <!-- light blue -->
+      <div><span class="color-box" style="background:#FF4136"></span> Field</div>
+      <div><span class="color-box" style="background:#39CCCC"></span> Event</div>
+    </div>
+
+    <!-- Add inside #toolbar, below legend -->
+<div id="layoutControls" style="margin-top:10px; font-size:12px;">
+  <strong>Layout Controls</strong>
+  <div>
+    <label>Node Repulsion</label>
+    <input type="range" id="repulsion" min="1000" max="200000" step="1000" value="80000">
+    <span id="repulsionVal">80000</span>
+  </div>
+  <div>
+    <label>Edge Length</label>
+    <input type="range" id="edgeLength" min="10" max="300" step="5" value="80">
+    <span id="edgeLengthVal">80</span>
+  </div>
+  <div>
+    <label>Gravity</label>
+    <input type="range" id="gravity" min="0" max="1" step="0.01" value="0.2">
+    <span id="gravityVal">0.20</span>
+  </div>
+  <div>
+    <label>Padding</label>
+    <input type="range" id="padding" min="10" max="300" step="5" value="100">
+    <span id="paddingVal">100</span>
+  </div>
+  <div style="margin-top:6px; display:flex; justify-content:space-between;">
+    <button id="applyLayout">Apply Layout</button>
+    <button id="resetLayout">Reset Defaults</button>
+  </div>
+</div>
+
+  </div>
+
+  <div id="cy"></div>
+  <div id="tooltip"></div> <!-- Tooltip container -->
+
+  <script>
+    let allNodes, allEdges, cy;
+    let classInterfaceList = [];
+    let activeSuggestionIndex = -1;
+
+    const historyStack = [];
+    let historyIndex = -1;
+
+    fetch("graph.json")
+      .then(res => res.json())
+      .then(data => {
+        allNodes = data.nodes;
+        allEdges = data.edges;
+
+        classInterfaceList = allNodes
+          .filter(n => n.type === "Class" || n.type === "Interface")
+          .sort((a, b) => a.label.localeCompare(b.label));
+
+        const filter = document.getElementById("classFilter");
+        filter.innerHTML = "";
+        classInterfaceList.forEach(n => {
+          const opt = document.createElement("option");
+          opt.value = n.id;
+          opt.textContent = `${n.label} (${n.type})`;
+          filter.appendChild(opt);
+        });
+
+        cy = cytoscape({
+          container: document.getElementById("cy"),
+          style: [
+            {
+              selector: "node",
+              style: {
+                "shape": "ellipse",
+                "label": "data(label)",
+                "font-size": 10,
+                "color": "#fff",
+                "text-valign": "center",
+                "text-halign": "center",
+                "text-outline-width": 1,
+                "text-outline-color": "#333",
+                "width": 20,
+                "height": 20
+              }
+            },
+            { selector: 'node[type = "Class"]',     style: { "background-color": "#0074D9", "width": 28, "height": 28, "font-size": 4 } },
+            { selector: 'node[type = "Interface"]', style: { "background-color": "#2ECC40", "width": 28, "height": 28, "font-size": 4  } },
+            { selector: 'node[type = "Method"]',    style: { "background-color": "#FF851B", "font-size": 3  } },
+            { selector: 'node[type = "Other"]',     style: { "background-color": "#FF851B", "font-size": 3  } },
+            { selector: 'node[type = "Property"]',  style: { "background-color": "#87CEFA", "font-size": 3 } }, <!-- changed -->
+            { selector: 'node[type = "Field"]',     style: { "background-color": "#FF4136", "font-size": 3 } },
+            { selector: 'node[type = "Event"]',     style: { "background-color": "#39CCCC", "color": "#003f3f", "font-size": 3 } },
+            {
+              selector: "edge",
+              style: {
+                "width": 1,
+                "line-color": "#aaa",
+                "target-arrow-color": "#aaa",
+                "target-arrow-shape": "triangle",
+                "curve-style": "bezier",
+                "label": "data(label)",
+                "font-size": 5,
+                "color": "#444"
+              }
+            }
+          ],
+          layout: { name: "cose", animate: false, padding: 80, nodeRepulsion: 100000, edgeElasticity: 0.05, idealEdgeLength: 60, gravity: 0.05, numIter: 1000 },
+          wheelSensitivity: 0.1
+        });
+
+        showNeighborhood(filter.value, true);
+
+        filter.addEventListener("change", () => showNeighborhood(filter.value, true));
+
+        const searchBox = document.getElementById("searchBox");
+        const suggestions = document.getElementById("suggestions");
+
+        function renderSuggestions(items) {
+          suggestions.innerHTML = "";
+          activeSuggestionIndex = -1;
+          if (!items.length) { suggestions.style.display = "none"; return; }
+          items.forEach(n => {
+            const li = document.createElement("li");
+            li.textContent = `${n.label} (${n.type})`;
+            li.dataset.id = n.id;
+            li.addEventListener("click", () => selectNodeFromUI(n));
+            suggestions.appendChild(li);
+          });
+          suggestions.style.display = "block";
+        }
+
+        function selectNodeFromUI(node) {
+          searchBox.value = node.label;
+          suggestions.style.display = "none";
+          filter.value = node.id;
+          showNeighborhood(node.id, true);
+        }
+
+        searchBox.addEventListener("input", () => {
+          const term = searchBox.value.trim().toLowerCase();
+          if (!term) { suggestions.style.display = "none"; return; }
+          const matches = classInterfaceList.filter(n => n.label.toLowerCase().includes(term)).slice(0, 200);
+          renderSuggestions(matches);
+        });
+
+        searchBox.addEventListener("keydown", (e) => {
+          const items = Array.from(suggestions.querySelectorAll("li"));
+          if (!items.length) return;
+          if (e.key === "ArrowDown") {
+            e.preventDefault();
+            activeSuggestionIndex = (activeSuggestionIndex + 1) % items.length;
+            items.forEach(li => li.classList.remove("active"));
+            items[activeSuggestionIndex].classList.add("active");
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            activeSuggestionIndex = (activeSuggestionIndex - 1 + items.length) % items.length;
+            items.forEach(li => li.classList.remove("active"));
+            items[activeSuggestionIndex].classList.add("active");
+          } else if (e.key === "Enter") {
+            e.preventDefault();
+            if (activeSuggestionIndex >= 0) {
+              const li = items[activeSuggestionIndex];
+              const node = classInterfaceList.find(n => n.id === li.dataset.id);
+              if (node) selectNodeFromUI(node);
+            }
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!document.getElementById("toolbar").contains(e.target)) {
+            suggestions.style.display = "none";
+          }
+        });
+
+        cy.on("tap", "node", evt => {
+          const node = evt.target.data();
+          filter.value = node.id;
+          searchBox.value = node.label;
+          showNeighborhood(node.id, true);
+        });
+
+        const tooltip = document.getElementById("tooltip");
+        cy.on("mouseover", "node", evt => {
+          const node = evt.target.data();
+          tooltip.textContent = node.type;
+          tooltip.style.display = "block";
+        });
+        cy.on("mouseout", "node", () => {
+          tooltip.style.display = "none";
+        });
+        cy.on("mousemove", "node", evt => {
+          tooltip.style.left = (evt.renderedPosition.x + 20) + "px";
+          tooltip.style.top  = (evt.renderedPosition.y + 20) + "px";
+        });
+
+        cy.on("add", "edge", evt => {
+          const edge = evt.target;
+          const sourceNode = edge.source();
+          if (sourceNode) {
+            const color = sourceNode.style("background-color");
+            edge.style({
+              "line-color": color,
+              "target-arrow-color": color
+            });
+          }
+        });
+
+        document.getElementById("backBtn").addEventListener("click", () => {
+          if (historyIndex > 0) {
+            historyIndex--;
+            showNeighborhood(historyStack[historyIndex], false);
+          }
+        });
+        document.getElementById("forwardBtn").addEventListener("click", () => {
+          if (historyIndex < historyStack.length - 1) {
+            historyIndex++;
+            showNeighborhood(historyStack[historyIndex], false);
+          }
+        });
+      });
+
+    function updateHistory(id) {
+      historyStack.splice(historyIndex + 1);
+      historyStack.push(id);
+      historyIndex = historyStack.length - 1;
+      updateHistoryButtons();
+    }
+
+    function updateHistoryButtons() {
+      const backBtn = document.getElementById("backBtn");
+      const forwardBtn = document.getElementById("forwardBtn");
+
+      if (historyIndex > 0) {
+        const prevNode = allNodes.find(n => n.id === historyStack[historyIndex - 1]);
+        backBtn.disabled = false;
+        backBtn.textContent = `← ${prevNode ? prevNode.label : "Back"}`;
+      } else {
+        backBtn.disabled = true;
+        backBtn.textContent = "← Back";
+      }
+
+      if (historyIndex < historyStack.length - 1) {
+        const nextNode = allNodes.find(n => n.id === historyStack[historyIndex + 1]);
+        forwardBtn.disabled = false;
+        forwardBtn.textContent = `${nextNode ? nextNode.label : "Forward"} →`;
+      } else {
+        forwardBtn.disabled = true;
+        forwardBtn.textContent = "Forward →";
+      }
+    }
+
+    function showNeighborhood(centerId, pushToHistory = false) {
+      const centerNode = allNodes.find(n => n.id === centerId);
+      if (!centerNode) return;
+
+      const relevantEdges = allEdges.filter(e => e.source === centerId || e.target === centerId);
+      const neighborIds = new Set([centerId]);
+      relevantEdges.forEach(e => { neighborIds.add(e.source); neighborIds.add(e.target); });
+      const relevantNodes = allNodes.filter(n => neighborIds.has(n.id));
+
+      cy.elements().remove();
+      cy.add([
+        ...relevantNodes.map(n => ({ group: "nodes", data: n })),
+        ...relevantEdges.map(e => ({ group: "edges", data: e }))
+      ]);
+
+      cy.layout({ name: "cose", animate: true, padding: 100, nodeRepulsion: 80000, idealEdgeLength: 80, gravity: 0.20, numIter: 1500 }).run();
+      cy.fit(cy.nodes(), 110);
+
+      if (pushToHistory) {
+        updateHistory(centerId);
+      } else {
+        updateHistoryButtons();
+      }
+    }
+
+    const repulsionInput = document.getElementById("repulsion");
+    const edgeLengthInput = document.getElementById("edgeLength");
+    const gravityInput = document.getElementById("gravity");
+    const paddingInput = document.getElementById("padding");
+
+    repulsionInput.addEventListener("input", () => {
+      document.getElementById("repulsionVal").textContent = repulsionInput.value;
+    });
+    edgeLengthInput.addEventListener("input", () => {
+      document.getElementById("edgeLengthVal").textContent = edgeLengthInput.value;
+    });
+    gravityInput.addEventListener("input", () => {
+      document.getElementById("gravityVal").textContent = gravityInput.value;
+    });
+    paddingInput.addEventListener("input", () => {
+      document.getElementById("paddingVal").textContent = paddingInput.value;
+    });
+
+    document.getElementById("applyLayout").addEventListener("click", () => {
+      cy.layout({
+        name: "cose",
+        animate: true,
+        padding: parseInt(paddingInput.value),
+        nodeRepulsion: parseInt(repulsionInput.value),
+        idealEdgeLength: parseInt(edgeLengthInput.value),
+        gravity: parseFloat(gravityInput.value),
+        numIter: 1500
+      }).run();
+    });
+
+    const defaultLayout = {
+      repulsion: 80000,
+      edgeLength: 80,
+      gravity: 0.2,
+      padding: 100
+    };
+
+    document.getElementById("resetLayout").addEventListener("click", () => {
+      repulsionInput.value = defaultLayout.repulsion;
+      edgeLengthInput.value = defaultLayout.edgeLength;
+      gravityInput.value = defaultLayout.gravity;
+      paddingInput.value = defaultLayout.padding;
+
+      document.getElementById("repulsionVal").textContent = defaultLayout.repulsion;
+      document.getElementById("edgeLengthVal").textContent = defaultLayout.edgeLength;
+      document.getElementById("gravityVal").textContent = defaultLayout.gravity;
+      document.getElementById("paddingVal").textContent = defaultLayout.padding;
+
+      cy.layout({
+        name: "cose",
+        animate: true,
+        padding: defaultLayout.padding,
+        nodeRepulsion: defaultLayout.repulsion,
+        idealEdgeLength: defaultLayout.edgeLength,
+        gravity: defaultLayout.gravity,
+        numIter: 1500
+      }).run();
+    });
+
+  </script>
+</body>
+</html>

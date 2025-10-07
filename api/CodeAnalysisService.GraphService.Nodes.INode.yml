@@ -1,0 +1,320 @@
+### YamlMime:ManagedReference
+items:
+- uid: CodeAnalysisService.GraphService.Nodes.INode
+  commentId: T:CodeAnalysisService.GraphService.Nodes.INode
+  id: INode
+  parent: CodeAnalysisService.GraphService.Nodes
+  children:
+  - CodeAnalysisService.GraphService.Nodes.INode.NodeType
+  - CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+  - CodeAnalysisService.GraphService.Nodes.INode.Symbol
+  langs:
+  - csharp
+  - vb
+  name: INode
+  nameWithType: INode
+  fullName: CodeAnalysisService.GraphService.Nodes.INode
+  type: Interface
+  source:
+    id: INode
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\INode.cs
+    startLine: 10
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  summary: >-
+    Base interface for all nodes in the code graph.
+
+    Defines common properties for node type, Roslyn symbol,
+
+    and outgoing edges to related nodes.
+  example: []
+  syntax:
+    content: public interface INode
+    content.vb: Public Interface INode
+- uid: CodeAnalysisService.GraphService.Nodes.INode.NodeType
+  commentId: P:CodeAnalysisService.GraphService.Nodes.INode.NodeType
+  id: NodeType
+  parent: CodeAnalysisService.GraphService.Nodes.INode
+  langs:
+  - csharp
+  - vb
+  name: NodeType
+  nameWithType: INode.NodeType
+  fullName: CodeAnalysisService.GraphService.Nodes.INode.NodeType
+  type: Property
+  source:
+    id: NodeType
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\INode.cs
+    startLine: 12
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  syntax:
+    content: NodeType NodeType { get; }
+    parameters: []
+    return:
+      type: CodeAnalysisService.Enums.NodeType
+    content.vb: ReadOnly Property NodeType As NodeType
+  overload: CodeAnalysisService.GraphService.Nodes.INode.NodeType*
+- uid: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+  commentId: P:CodeAnalysisService.GraphService.Nodes.INode.Symbol
+  id: Symbol
+  parent: CodeAnalysisService.GraphService.Nodes.INode
+  langs:
+  - csharp
+  - vb
+  name: Symbol
+  nameWithType: INode.Symbol
+  fullName: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+  type: Property
+  source:
+    id: Symbol
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\INode.cs
+    startLine: 13
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  syntax:
+    content: ISymbol Symbol { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.ISymbol
+    content.vb: ReadOnly Property Symbol As ISymbol
+  overload: CodeAnalysisService.GraphService.Nodes.INode.Symbol*
+- uid: CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+  commentId: P:CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+  id: OutgoingEdges
+  parent: CodeAnalysisService.GraphService.Nodes.INode
+  langs:
+  - csharp
+  - vb
+  name: OutgoingEdges
+  nameWithType: INode.OutgoingEdges
+  fullName: CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+  type: Property
+  source:
+    id: OutgoingEdges
+    path: C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\CodeAnalysisService\GraphService\Nodes\INode.cs
+    startLine: 14
+  assemblies:
+  - CodeAnalysis
+  namespace: CodeAnalysisService.GraphService.Nodes
+  syntax:
+    content: List<EdgeNode> OutgoingEdges { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{CodeAnalysisService.GraphService.Nodes.EdgeNode}
+    content.vb: Property OutgoingEdges As List(Of EdgeNode)
+  overload: CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges*
+references:
+- uid: CodeAnalysisService.GraphService.Nodes
+  commentId: N:CodeAnalysisService.GraphService.Nodes
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.GraphService.Nodes
+  nameWithType: CodeAnalysisService.GraphService.Nodes
+  fullName: CodeAnalysisService.GraphService.Nodes
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService
+    name: GraphService
+    href: CodeAnalysisService.GraphService.html
+  - name: .
+  - uid: CodeAnalysisService.GraphService.Nodes
+    name: Nodes
+    href: CodeAnalysisService.GraphService.Nodes.html
+- uid: CodeAnalysisService.GraphService.Nodes.INode.NodeType*
+  commentId: Overload:CodeAnalysisService.GraphService.Nodes.INode.NodeType
+  href: CodeAnalysisService.GraphService.Nodes.INode.html#CodeAnalysisService_GraphService_Nodes_INode_NodeType
+  name: NodeType
+  nameWithType: INode.NodeType
+  fullName: CodeAnalysisService.GraphService.Nodes.INode.NodeType
+- uid: CodeAnalysisService.Enums.NodeType
+  commentId: T:CodeAnalysisService.Enums.NodeType
+  parent: CodeAnalysisService.Enums
+  href: CodeAnalysisService.Enums.NodeType.html
+  name: NodeType
+  nameWithType: NodeType
+  fullName: CodeAnalysisService.Enums.NodeType
+- uid: CodeAnalysisService.Enums
+  commentId: N:CodeAnalysisService.Enums
+  href: CodeAnalysisService.html
+  name: CodeAnalysisService.Enums
+  nameWithType: CodeAnalysisService.Enums
+  fullName: CodeAnalysisService.Enums
+  spec.csharp:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+  spec.vb:
+  - uid: CodeAnalysisService
+    name: CodeAnalysisService
+    href: CodeAnalysisService.html
+  - name: .
+  - uid: CodeAnalysisService.Enums
+    name: Enums
+    href: CodeAnalysisService.Enums.html
+- uid: CodeAnalysisService.GraphService.Nodes.INode.Symbol*
+  commentId: Overload:CodeAnalysisService.GraphService.Nodes.INode.Symbol
+  href: CodeAnalysisService.GraphService.Nodes.INode.html#CodeAnalysisService_GraphService_Nodes_INode_Symbol
+  name: Symbol
+  nameWithType: INode.Symbol
+  fullName: CodeAnalysisService.GraphService.Nodes.INode.Symbol
+- uid: Microsoft.CodeAnalysis.ISymbol
+  commentId: T:Microsoft.CodeAnalysis.ISymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  name: ISymbol
+  nameWithType: ISymbol
+  fullName: Microsoft.CodeAnalysis.ISymbol
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges*
+  commentId: Overload:CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+  href: CodeAnalysisService.GraphService.Nodes.INode.html#CodeAnalysisService_GraphService_Nodes_INode_OutgoingEdges
+  name: OutgoingEdges
+  nameWithType: INode.OutgoingEdges
+  fullName: CodeAnalysisService.GraphService.Nodes.INode.OutgoingEdges
+- uid: System.Collections.Generic.List{CodeAnalysisService.GraphService.Nodes.EdgeNode}
+  commentId: T:System.Collections.Generic.List{CodeAnalysisService.GraphService.Nodes.EdgeNode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EdgeNode>
+  nameWithType: List<EdgeNode>
+  fullName: System.Collections.Generic.List<CodeAnalysisService.GraphService.Nodes.EdgeNode>
+  nameWithType.vb: List(Of EdgeNode)
+  fullName.vb: System.Collections.Generic.List(Of CodeAnalysisService.GraphService.Nodes.EdgeNode)
+  name.vb: List(Of EdgeNode)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: CodeAnalysisService.GraphService.Nodes.EdgeNode
+    name: EdgeNode
+    href: CodeAnalysisService.GraphService.Nodes.EdgeNode.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CodeAnalysisService.GraphService.Nodes.EdgeNode
+    name: EdgeNode
+    href: CodeAnalysisService.GraphService.Nodes.EdgeNode.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
