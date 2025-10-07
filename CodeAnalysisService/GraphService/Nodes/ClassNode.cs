@@ -15,6 +15,7 @@ namespace CodeAnalysisService.GraphService.Nodes
     /// </summary>
     public class ClassNode : IAnalyzerNode
     {
+        public object SyncRoot { get; } = new object();
         public required ClassDeclarationSyntax ClassSyntax { get; set; }
         public NodeType NodeType => NodeType.Class;
         public required INamedTypeSymbol Symbol { get; set; }

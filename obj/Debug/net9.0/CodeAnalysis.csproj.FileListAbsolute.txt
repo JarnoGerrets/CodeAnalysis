@@ -60,3 +60,4 @@ C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\bin\Debug\net9.
 C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\bin\Debug\net9.0\_site\index.json
 C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\bin\Debug\net9.0\_site\manifest.json
 C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\bin\Debug\net9.0\_site\toc.json
+C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis\obj\Debug\net9.0\CodeAnalysis.sourcelink.json

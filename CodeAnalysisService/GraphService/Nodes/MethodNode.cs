@@ -15,6 +15,7 @@ namespace CodeAnalysisService.GraphService.Nodes
     /// </summary>
     public class MethodNode: INode
     {
+        public object SyncRoot { get; } = new object();
         public required MethodDeclarationSyntax MethodSyntax { get; set; }
         public NodeType NodeType => NodeType.Method;
         public required IMethodSymbol Symbol { get; set; }

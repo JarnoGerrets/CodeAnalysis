@@ -10,6 +10,7 @@ namespace CodeAnalysisService.GraphService.Nodes
     /// </summary>
     public interface INode
     {
+        object SyncRoot { get; }
         NodeType NodeType { get; }
         ISymbol Symbol { get; }
         List<EdgeNode> OutgoingEdges { get; set; }

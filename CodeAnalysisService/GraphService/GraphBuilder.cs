@@ -91,24 +91,30 @@ namespace CodeAnalysisService.GraphService
                 Registry.GetAll<MethodNode>()
             );
 
+            foreach (var builder in _edgeBuilders)
+            {
+                builder.WithCallResolver(_callResolver);
+            }
+
             Parallel.ForEach(Registry.GetAll<INode>(), node =>
             {
                 var builder = _edgeBuilders.FirstOrDefault(b => b.NodeType == node.NodeType);
-                if (builder is MethodEdgeBuilder methodBuilder) methodBuilder.SetCallResolver(_callResolver);
+                if (builder == null) return;
+                
+                var edges = builder.BuildEdges(node, Registry, _compilation, _semanticModels);
+                if (edges == null) return;
 
-                var edges = builder?.BuildEdges(node, Registry, _compilation, _semanticModels);
-                if (edges != null)
+                // ⚠️ Replace locking on list with stable lock object (safer)
+                lock (node.SyncRoot) // add SyncRoot property to nodes
                 {
-                    lock (node.OutgoingEdges)
+                    var set = new HashSet<EdgeNode>(node.OutgoingEdges, new EdgeComparer());
+                    foreach (var e in edges)
                     {
-                        var set = new HashSet<EdgeNode>(node.OutgoingEdges, new EdgeComparer());
-                        foreach (var e in edges)
-                        {
-                            set.Add(e);
-                        }
-
-                        node.OutgoingEdges = set.ToList();
+                        set.Add(e);
                     }
+
+                    node.OutgoingEdges.Clear();
+                    node.OutgoingEdges.AddRange(set);
                 }
             });
         }
@@ -119,22 +125,6 @@ namespace CodeAnalysisService.GraphService
             foreach (var (symbol, node) in entries)
             {
                 Registry.AddNode(symbol, node);
-            }
-        }
-
-        private void AddEdgesSafe(IEnumerable<(INode Source, EdgeNode Edge)> edges)
-        {
-            foreach (var group in edges.GroupBy(e => e.Source))
-            {
-                lock (group.Key.OutgoingEdges)
-                {
-                    group.Key.OutgoingEdges.AddRange(group.Select(g => g.Edge));
-                }
-            }
-
-            foreach (var n in Registry.GetAll<INode>())
-            {
-                n.OutgoingEdges = n.OutgoingEdges.Distinct(new EdgeComparer()).ToList();
             }
         }
     }

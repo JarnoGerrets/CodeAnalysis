@@ -15,7 +15,8 @@ namespace CodeAnalysisService.GraphService.Nodes
     /// </summary>
     public class EventNode : INode
     {
-        public required EventSyntaxWrapper  EventSyntax { get; set; }
+        public object SyncRoot { get; } = new object();
+        public required EventSyntaxWrapper EventSyntax { get; set; }
         public NodeType NodeType => NodeType.Event;
         public required IEventSymbol Symbol { get; set; }
         ISymbol INode.Symbol => Symbol;

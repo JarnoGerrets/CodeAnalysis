@@ -13,6 +13,7 @@ namespace CodeAnalysisService.GraphService.Nodes
     /// </summary>
     public class ConstructorNode : INode
     {
+        public object SyncRoot { get; } = new object();
         public required ConstructorDeclarationSyntax ConstructorSyntax { get; set; }
         public NodeType NodeType => NodeType.Constructor;
         public required IMethodSymbol Symbol { get; set; }

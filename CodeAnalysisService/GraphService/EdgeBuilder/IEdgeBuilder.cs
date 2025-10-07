@@ -4,6 +4,7 @@ using CodeAnalysisService.Enums;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using CodeAnalysisService.GraphService.Helpers;
 
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
@@ -16,7 +17,7 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
     public interface IEdgeBuilder
     {
         NodeType NodeType { get; }
-
         IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels);
+        void WithCallResolver(CallResolver resolver) { }
     }
 }

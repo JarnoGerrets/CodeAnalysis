@@ -21,11 +21,10 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
 
         public NodeType NodeType => NodeType.Method;
 
-        public void SetCallResolver(CallResolver resolver) => _callResolver = resolver;
-
-        public IEnumerable<EdgeNode> BuildEdges( INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
+        public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
         {
             if (node is not MethodNode methodNode) return Enumerable.Empty<EdgeNode>();
+            if (_callResolver == null) throw new InvalidOperationException("CallResolver not set. Ensure GraphBuilder injects it before building edges.");
 
             var edges = new List<EdgeNode>();
             var model = semanticModels[methodNode.MethodSyntax.SyntaxTree];
@@ -51,7 +50,7 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
                     });
                 }
             }
-            
+
             var collectionVariables = new Dictionary<string, ITypeSymbol>();
             foreach (var foreachStmt in methodNode.MethodSyntax.DescendantNodes().OfType<ForEachStatementSyntax>())
             {
@@ -130,7 +129,7 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
 
         // ---------- Helpers ----------
 
-        private void HandleInvocation( InvocationExpressionSyntax invocation, SemanticModel model, NodeRegistry registry,
+        private void HandleInvocation(InvocationExpressionSyntax invocation, SemanticModel model, NodeRegistry registry,
             Dictionary<string, ITypeSymbol> collectionVariables, List<EdgeNode> edges)
         {
             IMethodSymbol? calledSymbol = model.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
@@ -163,5 +162,9 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
                 }
             }
         }
+    public void WithCallResolver(CallResolver resolver)
+    {
+        _callResolver = resolver;
+    }
     }
 }

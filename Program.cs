@@ -5,11 +5,13 @@ using CodeAnalysisService.GraphService.Export;
 using CodeAnalysisService.PatternAnalyser;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.Enums;
+using CodeAnalysis;
 
 class Program
 {
     static void Main(string[] args)
-    {      
+    {   
+        RepoPrinter.PrintRepo();   
         var stopwatch = Stopwatch.StartNew();
         var service = new CodeAnalysisServiceRunner(@"C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis");
         service.BuildGraph();

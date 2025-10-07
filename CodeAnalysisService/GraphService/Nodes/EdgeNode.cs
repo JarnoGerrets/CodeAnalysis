@@ -12,6 +12,7 @@ namespace CodeAnalysisService.GraphService.Nodes
     /// </summary>
     public class EdgeNode
     {
+        public object SyncRoot { get; } = new object();
         public required INode Target { get; set; }
         public NodeType NodeType => Target.NodeType; 
         public required EdgeType Type { get; set; }

@@ -13,6 +13,7 @@ namespace CodeAnalysisService.GraphService.Nodes
     /// </summary>
     public class InterfaceNode : IAnalyzerNode
     {
+        public object SyncRoot { get; } = new object();
         public required InterfaceDeclarationSyntax InterfaceSyntax { get; set; }
         public NodeType NodeType => NodeType.Interface;
         public required INamedTypeSymbol Symbol { get; set;}

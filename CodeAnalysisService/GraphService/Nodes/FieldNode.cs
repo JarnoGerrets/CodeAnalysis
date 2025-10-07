@@ -14,6 +14,7 @@ namespace CodeAnalysisService.GraphService.Nodes
     /// </summary>
     public class FieldNode : INode
     {
+        public object SyncRoot { get; } = new object();
         public FieldDeclarationSyntax DeclarationSyntax { get; set; } = default!;
         public VariableDeclaratorSyntax VariableSyntax { get; set; } = default!;
         public NodeType NodeType => NodeType.Field;
