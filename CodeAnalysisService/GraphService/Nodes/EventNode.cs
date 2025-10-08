@@ -10,8 +10,6 @@ namespace CodeAnalysisService.GraphService.Nodes
 {
     /// <summary>
     /// Represents an event in the code graph.
-    /// Stores its Roslyn syntax wrapper, symbol, and outgoing edges
-    /// to related nodes (e.g. handlers or containing types).
     /// </summary>
     public class EventNode : INode
     {

@@ -7,40 +7,38 @@ using CodeAnalysisService.GraphService.Context;
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
     //// <summary>
-/// Builds edges for <see cref="FieldNode"/>s, linking their declared type
-/// and any element type (e.g., array or generic element) to the corresponding <see cref="ClassNode"/>.
-/// Produces <see cref="EdgeType.Uses"/> and <see cref="EdgeType.HasFieldElement"/> edges.
-/// </summary>
-public class FieldEdgeBuilder : IEdgeBuilder
-{
-    public NodeType NodeType => NodeType.Field;
-
-    public IEnumerable<EdgeNode> BuildEdges( INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
+    /// Builds edges for <see cref="FieldNode"/>
+    /// </summary>
+    public class FieldEdgeBuilder : IEdgeBuilder
     {
-        if (node is not FieldNode fieldNode) return Enumerable.Empty<EdgeNode>();
+        public NodeType NodeType => NodeType.Field;
 
-        var edges = new List<EdgeNode>();
-        var fieldType = fieldNode.Symbol.Type as INamedTypeSymbol;
-        if (fieldType == null) return edges;
-
-        // Uses
-        if (registry.GetNode<ClassNode>(fieldType) is ClassNode classNode)
+        public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
         {
-            edges.Add(new EdgeNode { Target = classNode, Type = EdgeType.Uses });
-        }
+            if (node is not FieldNode fieldNode) return Enumerable.Empty<EdgeNode>();
 
-        // Has Field Element
-        if (TypeHelper.GetElementType(fieldType) is INamedTypeSymbol elemNamed)
-        {
-            var elemNode = registry.GetNode<ClassNode>(elemNamed);
-            if (elemNode != null)
+            var edges = new List<EdgeNode>();
+            var fieldType = fieldNode.Symbol.Type as INamedTypeSymbol;
+            if (fieldType == null) return edges;
+
+            // Uses
+            if (registry.GetNode<ClassNode>(fieldType) is ClassNode classNode)
             {
-                edges.Add(new EdgeNode { Target = elemNode, Type = EdgeType.HasFieldElement });
+                edges.Add(new EdgeNode { Target = classNode, Type = EdgeType.Uses });
             }
-        }
 
-        return edges;
+            // Has Field Element
+            if (TypeHelper.GetElementType(fieldType) is INamedTypeSymbol elemNamed)
+            {
+                var elemNode = registry.GetNode<ClassNode>(elemNamed);
+                if (elemNode != null)
+                {
+                    edges.Add(new EdgeNode { Target = elemNode, Type = EdgeType.HasFieldElement });
+                }
+            }
+
+            return edges;
+        }
     }
-}
 
 }

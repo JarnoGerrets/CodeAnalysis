@@ -8,10 +8,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 namespace CodeAnalysisService.GraphService.Nodes
 {
     /// <summary>
-    /// Base interface for analyzer nodes that represent types
-    /// (classes, interfaces, etc.) in the code graph.
-    /// Provides access to the Roslyn type symbol, abstractness,
-    /// and outgoing edges. This interface bunches the Class and Interface nodes together to handle them.
+    /// Base interface for analyzer nodes that represent types to be analyzed for pattern detection
     /// </summary>
     public interface IAnalyzerNode : INode
     {

@@ -5,10 +5,13 @@ using System.Collections.Concurrent;
 
 namespace CodeAnalysisService.GraphService.Helpers
 {
+    /// <summary>
+    /// Gets the type of a caller if it implements an interface
+    /// </summary>
     public class CallResolver
     {
-        private readonly Dictionary<IMethodSymbol, List<MethodNode>> _interfaceToImplementations  = new(SymbolEqualityComparer.Default);
-        private readonly ConcurrentDictionary<IMethodSymbol, IEnumerable<MethodNode>> _lookupCache  = new(SymbolEqualityComparer.Default);
+        private readonly Dictionary<IMethodSymbol, List<MethodNode>> _interfaceToImplementations = new(SymbolEqualityComparer.Default);
+        private readonly ConcurrentDictionary<IMethodSymbol, IEnumerable<MethodNode>> _lookupCache = new(SymbolEqualityComparer.Default);
 
         public CallResolver(IEnumerable<ClassNode> classNodes, IEnumerable<MethodNode> methodNodes)
         {
@@ -52,11 +55,11 @@ namespace CodeAnalysisService.GraphService.Helpers
 
         public IEnumerable<MethodNode> GetImplementations(IMethodSymbol ifaceMethod)
         {
-        return _lookupCache.GetOrAdd(ifaceMethod, _ =>
-        {
-            if (_interfaceToImplementations.TryGetValue(ifaceMethod, out var impls)) return impls;
-            return Array.Empty<MethodNode>();
-        });
+            return _lookupCache.GetOrAdd(ifaceMethod, _ =>
+            {
+                if (_interfaceToImplementations.TryGetValue(ifaceMethod, out var impls)) return impls;
+                return Array.Empty<MethodNode>();
+            });
         }
     }
 }

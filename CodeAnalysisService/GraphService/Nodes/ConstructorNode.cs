@@ -8,8 +8,6 @@ namespace CodeAnalysisService.GraphService.Nodes
 {
     /// <summary>
     /// Represents a constructor in the code graph.
-    /// Holds its Roslyn syntax, symbol, and outgoing edges to related nodes
-    /// (e.g. created types, calls, or usage relationships).
     /// </summary>
     public class ConstructorNode : INode
     {

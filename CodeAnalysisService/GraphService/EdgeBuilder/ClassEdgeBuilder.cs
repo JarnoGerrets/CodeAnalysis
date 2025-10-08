@@ -9,8 +9,7 @@ using CodeAnalysisService.GraphService.Context;
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
     /// <summary>
-    /// Builds edges for <see cref="ClassNode"/>s, including inheritance,
-    /// implemented interfaces, fields, properties, methods, and constructors.
+    /// Builds edges for <see cref="ClassNode"/>
     /// </summary>
     public class ClassEdgeBuilder : IEdgeBuilder
     {

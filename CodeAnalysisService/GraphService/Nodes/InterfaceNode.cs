@@ -8,8 +8,6 @@ namespace CodeAnalysisService.GraphService.Nodes
 {
     /// <summary>
     /// Represents an interface in the code graph.
-    /// Stores its Roslyn syntax, symbol, and outgoing edges
-    /// to related nodes (e.g. implemented classes).
     /// </summary>
     public class InterfaceNode : IAnalyzerNode
     {

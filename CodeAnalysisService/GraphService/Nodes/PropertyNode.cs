@@ -9,8 +9,6 @@ namespace CodeAnalysisService.GraphService.Nodes
 {
     /// <summary>
     /// Represents a property in the code graph.
-    /// Captures its Roslyn syntax, symbol, referenced symbols
-    /// (e.g. backing fields or accessed members), and outgoing edges.
     /// </summary>
     public class PropertyNode : INode
     {

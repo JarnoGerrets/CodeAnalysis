@@ -8,7 +8,6 @@ namespace CodeAnalysisService.GraphService.Nodes
 {
     /// <summary>
     /// Represents a directed edge in the code graph.
-    /// Connects a source node to a target node with a specific relationship type.
     /// </summary>
     public class EdgeNode
     {

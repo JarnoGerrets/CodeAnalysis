@@ -13,9 +13,6 @@ namespace CodeAnalysisService.GraphService
 {
     /// <summary>
     /// Builds a graph from Roslyn models.
-    /// Uses node builders to create class/interface/method/etc. nodes
-    /// and edge builders to connect them (HasMethod, Calls, Uses, etc.).
-    /// Stores results in <see cref="NodeRegistry"/> for later analysis.
     /// </summary>
     public class GraphBuilder
     {
@@ -104,8 +101,7 @@ namespace CodeAnalysisService.GraphService
                 var edges = builder.BuildEdges(node, Registry, _compilation, _semanticModels);
                 if (edges == null) return;
 
-                // ⚠️ Replace locking on list with stable lock object (safer)
-                lock (node.SyncRoot) // add SyncRoot property to nodes
+                lock (node.SyncRoot)
                 {
                     var set = new HashSet<EdgeNode>(node.OutgoingEdges, new EdgeComparer());
                     foreach (var e in edges)

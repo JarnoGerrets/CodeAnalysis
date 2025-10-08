@@ -9,9 +9,6 @@ namespace CodeAnalysisService.GraphService.Nodes
 {
     /// <summary>
     /// Represents a class in the code graph.
-    /// Stores its Roslyn syntax, symbol, whether it is abstract,
-    /// and its outgoing edges to related nodes (e.g. inheritance,
-    /// implemented interfaces, members, etc.).
     /// </summary>
     public class ClassNode : IAnalyzerNode
     {

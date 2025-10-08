@@ -10,10 +10,7 @@ using System.Collections.Generic;
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
     /// <summary>
-    /// Builds edges for <see cref="PropertyNode"/>s, including references to fields,
-    /// usage of class types, and element-type relationships (e.g., arrays, generics).
-    /// Produces <see cref="EdgeType.ReferencesField"/>, <see cref="EdgeType.Uses"/>, 
-    /// and <see cref="EdgeType.HasPropertyElement"/> edges.
+    /// Builds edges for <see cref="PropertyNode"/>
     /// </summary>
 
     public class PropertyEdgeBuilder : IEdgeBuilder

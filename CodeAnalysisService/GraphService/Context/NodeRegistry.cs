@@ -6,9 +6,7 @@ using System.Linq;
 namespace CodeAnalysisService.GraphService.Context
 {
     /// <summary>
-    /// Central registry that maps Roslyn <see cref="ISymbol"/>s to graph <see cref="INode"/>s.
-    /// Provides lookup by symbol or by node type, and maintains reverse mappings
-    /// so builders and analyzers can efficiently query the graph.
+    /// Central registry that maps Roslyn ISymbol to graph <see cref="INode"/>.
     /// </summary>
     public class NodeRegistry
     {

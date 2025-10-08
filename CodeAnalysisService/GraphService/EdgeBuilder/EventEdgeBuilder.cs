@@ -9,10 +9,7 @@ using System.Collections.Generic;
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
     /// <summary>
-    /// Builds edges for <see cref="EventNode"/>s, linking them to their
-    /// declaring class and to any delegate type they reference.
-    /// Produces <see cref="EdgeType.HasEvent"/>, <see cref="EdgeType.RaisesEvent"/>,
-    /// and <see cref="EdgeType.Uses"/> edges where applicable.
+    /// Builds edges for <see cref="EventNode"/>
     /// </summary>
     public class EventEdgeBuilder : IEdgeBuilder
     {

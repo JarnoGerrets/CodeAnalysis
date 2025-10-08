@@ -9,8 +9,6 @@ namespace CodeAnalysisService.GraphService.Nodes
 {
     /// <summary>
     /// Represents a field in the code graph.
-    /// Captures its Roslyn declaration and variable syntax, symbol,
-    /// and outgoing edges to related nodes.
     /// </summary>
     public class FieldNode : INode
     {

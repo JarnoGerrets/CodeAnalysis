@@ -6,8 +6,7 @@ using CodeAnalysisService.GraphService.Context;
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
     /// <summary>
-    /// Builds edges for <see cref="InterfaceNode"/>s, capturing inheritance relationships
-    /// between interfaces (i.e., when an interface extends one or more base interfaces).
+    /// Builds edges for <see cref="InterfaceNode"/>
     /// </summary>
     public class InterfaceEdgeBuilder : IEdgeBuilder
     {

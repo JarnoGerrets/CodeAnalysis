@@ -11,9 +11,7 @@ using System.Linq;
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
     /// <summary>
-    /// Builds edges for <see cref="MethodNode"/>s, including return type,
-    /// parameter usage, calls, overrides, object creation, field/property
-    /// references, and interface implementations.
+    /// Builds edges for <see cref="MethodNode"/>
     /// </summary>
     public class MethodEdgeBuilder : IEdgeBuilder
     {

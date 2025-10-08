@@ -8,8 +8,7 @@ using CodeAnalysisService.GraphService.Nodes;
 namespace CodeAnalysisService.GraphService.Context
 {
     /// <summary>
-    /// Provides controlled access to Roslyn models and the node registry
-    /// for node/edge builders. 
+    /// Provides controlled access to the node registry
     /// Caches syntax roots and hides raw compilation internals.
     /// </summary>
     public class GraphContext

@@ -8,10 +8,7 @@ using CodeAnalysisService.GraphService.Context;
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
     /// <summary>
-    /// Builds edges for <see cref="ConstructorNode"/>s:
-    /// - Structural: adds a <c>HasConstructor</c> edge from the declaring class to the constructor.
-    /// - Behavioral: analyzes object creation expressions inside the constructor body and
-    ///   adds <c>Creates</c> edges to the constructed <see cref="ClassNode"/>s.
+    /// Builds edges for <see cref="ConstructorNode"/>
     /// </summary>
     public class ConstructorEdgeBuilder : IEdgeBuilder
     {

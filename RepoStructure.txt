@@ -99,6 +99,7 @@
       NodeType.cs
     [GraphService]
       GraphBuilder.cs
+      README.md
       [Context]
         GraphContext.cs
         NodeRegistry.cs

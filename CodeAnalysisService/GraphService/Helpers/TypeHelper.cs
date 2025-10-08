@@ -7,7 +7,6 @@ namespace CodeAnalysisService.GraphService.Helpers
     {
         /// <summary>
         /// Try to unwrap to an element type. 
-        /// Returns null if the type is not a known collection/wrapper.
         /// </summary>
         public static ITypeSymbol? GetElementType(ITypeSymbol type)
         {
@@ -39,10 +38,6 @@ namespace CodeAnalysisService.GraphService.Helpers
             return null;
         }
 
-        /// <summary>
-        /// Fully unwraps nested collection/wrapper types until no more found.
-        /// Always returns a type (falls back to the original).
-        /// </summary>
         public static ITypeSymbol GetInnermostElementType(ITypeSymbol type)
         {
             var current = type;
