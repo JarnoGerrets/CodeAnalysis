@@ -74,21 +74,24 @@ foreach (var method in registry.GetAll<MethodNode>())
 This shows how easy it is to ask architectural questions once the graph exists.
 You don’t have to traverse syntax trees manually; you just query nodes and edges.
 
-Why a graph?
+---
+
+## Why a graph?
 
 The reason we build a graph instead of working directly on Roslyn data is because patterns and architecture are relational.
 
 For example:
 
-To detect an Observer, you need to know that one class has an event,
+- To detect an Observer, you need to know that one class has an event,
 another class implements an interface, and certain methods call into the event.
-
-To detect a Singleton, you need to know that a class has a private constructor,
+- To detect a Singleton, you need to know that a class has a private constructor,
 holds a static reference, and a property returns that reference.
 
 All of these checks are much easier on a graph than by inspecting raw syntax.
 
-Example: Observer pattern in the graph
+---
+
+## Example: Observer pattern in the graph
 
 Take this code:
 ```csharp
@@ -105,29 +108,28 @@ public class PhoneDisplay : IObserver {
 ```
 The GraphService produces:
 
-A ClassNode for WeatherStation with a HasEvent edge to an EventNode (OnChange)
-
-A MethodNode for Notify with a Calls edge to the event invocation
-
-A ClassNode for PhoneDisplay with an Implements edge to the IObserver interface
-
-A MethodNode for Update with an Overrides edge to the interface method
+- A ClassNode for WeatherStation with a HasEvent edge to an EventNode (OnChange)
+- A MethodNode for Notify with a Calls edge to the event invocation
+- A ClassNode for PhoneDisplay with an Implements edge to the IObserver interface
+- A MethodNode for Update with an Overrides edge to the interface method
 
 The PatternAnalyser can then recognize the Observer structure because all necessary relationships are already in the graph.
 
-Extending the service
+---
+
+## Extending the service
 
 The GraphService is meant to be extensible. If you need to capture new concepts, you can:
 
-Add a new node builder to introduce new node types (e.g. delegate nodes).
-
-Add a new edge builder to track new relationships (e.g. async/await edges, LINQ usage).
-
-Register your builder in GraphBuilder.
+- Add a new node builder to introduce new node types (e.g. delegate nodes).
+- Add a new edge builder to track new relationships (e.g. async/await edges, LINQ usage).
+- Register your builder in GraphBuilder.
 
 Once registered, your builders will automatically participate when BuildGraph() runs.
 
-Summary
+---
+
+## Summary
 
 The GraphService is the translation layer between Roslyn and higher-level analysis.
 It gives you a semantic graph of your code that is easy to query, print, or export.
