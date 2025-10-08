@@ -108,12 +108,12 @@ public class PhoneDisplay : IObserver {
 ```
 The GraphService produces:
 
-- A ClassNode for WeatherStation with a HasEvent edge to an EventNode (OnChange)
-- A MethodNode for Notify with a Calls edge to the event invocation
-- A ClassNode for PhoneDisplay with an Implements edge to the IObserver interface
-- A MethodNode for Update with an Overrides edge to the interface method
+- A `ClassNode` for `WeatherStation` with a `HasEvent` edge to an `EventNode` (OnChange)
+- A `MethodNode` for `Notify` with a `Calls` edge to the event invocation
+- A `ClassNode` for `PhoneDisplay` with an `Implements` edge to the `IObserver` interface
+- A `MethodNode` for `Update` with an `Overrides` edge to the interface method
 
-The PatternAnalyser can then recognize the Observer structure because all necessary relationships are already in the graph.
+The `PatternAnalyser` can then recognize the Observer structure because all necessary relationships are already in the graph.
 
 ---
 
@@ -123,9 +123,9 @@ The GraphService is meant to be extensible. If you need to capture new concepts,
 
 - Add a new node builder to introduce new node types (e.g. delegate nodes).
 - Add a new edge builder to track new relationships (e.g. async/await edges, LINQ usage).
-- Register your builder in GraphBuilder.
+- Register your builder in `GraphBuilder`.
 
-Once registered, your builders will automatically participate when BuildGraph() runs.
+Once registered, your builders will automatically participate when `BuildGraph()` runs.
 
 ---
 
