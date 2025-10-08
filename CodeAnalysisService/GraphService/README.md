@@ -19,6 +19,17 @@ layer, which can detect common design patterns in a project.
 
 ---
 
+## Design goal
+
+The main goal of the GraphService is to minimize direct Roslyn queries. 
+Roslyn provides powerful syntax and semantic analysis, but repeated queries are expensive and slow.
+Instead, the graph is built once and contains all relevant relationships, making it much faster to traverse. 
+To avoid losing detail, each node still keeps references to its Roslyn syntax and symbol. 
+This way, the analyzer can always dive down into full Roslyn data when needed, without re-running heavy queries.
+The result is a graph that is fast to build, easy to understand, and complete: you can query high-level relationships directly from the graph, and still access every Roslyn detail if deeper inspection is required.
+
+---
+
 ## How the graph is built
 
 The process of building the graph always follows the same steps:
@@ -27,19 +38,86 @@ The process of building the graph always follows the same steps:
 The `GraphBuilder` is given a Roslyn `Compilation` and a set of `SemanticModel`s.  
 These give us both the structure of the code (syntax trees) and its meaning (symbols, types, references).
 
+---
+
 ### Step 2: Create nodes
 Specialized node builders run over the syntax trees and create nodes for all relevant program elements.  
 A `ClassNode` represents a class declaration, a `MethodNode` represents a method, and so on.  
 Each node carries its Roslyn `ISymbol` for identity, and has a place to store outgoing edges.
+
+`ClassNodeBuilder` as example:
+
+```csharp
+public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model)
+{
+    var root = context.GetRoot(tree);
+    foreach (var classDecl in root.DescendantNodes().OfType<ClassDeclarationSyntax>())
+    {
+        if (model.GetDeclaredSymbol(classDecl) is INamedTypeSymbol symbol)
+        {
+            yield return (symbol, new ClassNode 
+            { 
+                ClassSyntax = classDecl, 
+                Symbol = symbol, 
+                IsAbstract = symbol.IsAbstract  
+            });
+        }
+    }
+}
+```
+The above shown `ClassNodeBuilder` scans the current SyntaxTree for every `ClassDeclarationSyntax`.
+For each class, it retrieves the semantic `INamedTypeSymbol` using Roslyn’s `SemanticModel`.
+If the symbol exists, it creates a `ClassNode` that records the syntax, symbol, and whether the class is abstract.
+The (symbol, node) pair is then yielded back so the `GraphBuilder` can register it in the graph.
+
+---
 
 ### Step 3: Connect edges
 Once all nodes exist, edge builders run. Each edge builder knows how to connect a particular kind of node to others.  
 For example, the `ClassEdgeBuilder` adds inheritance edges and “has-method” edges, while the `MethodEdgeBuilder`  
 adds “calls” and “uses” edges. This step is parallelized for speed but uses locking to keep node edge lists consistent.
 
+`FieldEdgeBuilder` as example:
+
+```csharp
+public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
+{
+    if (node is not FieldNode fieldNode) return Enumerable.Empty<EdgeNode>();
+
+    var edges = new List<EdgeNode>();
+    var fieldType = fieldNode.Symbol.Type as INamedTypeSymbol;
+    if (fieldType == null) return edges;
+
+    // Uses
+    if (registry.GetNode<ClassNode>(fieldType) is ClassNode classNode)
+    {
+        edges.Add(new EdgeNode { Target = classNode, Type = EdgeType.Uses });
+    }
+
+    // Has Field Element
+    if (TypeHelper.GetElementType(fieldType) is INamedTypeSymbol elemNamed)
+    {
+        var elemNode = registry.GetNode<ClassNode>(elemNamed);
+        if (elemNode != null)
+        {
+            edges.Add(new EdgeNode { Target = elemNode, Type = EdgeType.HasFieldElement });
+        }
+    }
+
+    return edges;
+}
+```
+The above shown `FieldEdgeBuilder` inspects `FieldNodes` to connect them to their types.
+It adds a `Uses` edge when the field’s type matches a known class, and a `HasFieldElement` edge when the field is a collection or array type.
+This allows the graph to capture both direct dependencies and element-type dependencies of fields.
+
+---
+
 ### Step 4: Store results
 All nodes are stored in a central `NodeRegistry`. The registry allows analyzers and tools to quickly find  
 “all methods,” “all classes,” or “all nodes of a certain type.” It also maps Roslyn symbols to their corresponding graph nodes.
+
+---
 
 ### Step 5: Use or export
 Once the graph is complete, it can be used in different ways:
@@ -87,7 +165,7 @@ another class implements an interface, and certain methods call into the event.
 - To detect a Singleton, you need to know that a class has a private constructor,
 holds a static reference, and a property returns that reference.
 
-All of these checks are much easier on a graph than by inspecting raw syntax.
+All of these checks are much easier on a graph than by inspecting raw syntax and also much faster to perform.
 
 ---
 
@@ -95,25 +173,44 @@ All of these checks are much easier on a graph than by inspecting raw syntax.
 
 Take this code:
 ```csharp
-public interface IObserver { void Update(); }
+//Subject
+public class TrafficLight
+{
+    private List<IObserver1> _observers = new List<IObserver1>();
 
-public class WeatherStation {
-    public event Action OnChange;
-    public void Notify() => OnChange?.Invoke();
+    public IEnumerable<IObserver1> Observers => _observers;
+
+    public void Attach(IObserver1 observer) => _observers.Add(observer);
+
+    public void NotifyChange(string signal)
+    {
+        foreach (var obs in Observers)
+            obs.Update(signal);
+    }
 }
 
-public class PhoneDisplay : IObserver {
-    public void Update() => Console.WriteLine("Phone updated");
+// Observer interface
+public interface IObserver1
+{
+    void Update(string signal);
+}
+// Observer
+public class CarDisplay : IObserver1
+{
+    public void Update(string signal) => Console.WriteLine($"CarDisplay: {signal}");
 }
 ```
 The GraphService produces:
 
-- A `ClassNode` for `WeatherStation` with a `HasEvent` edge to an `EventNode` (OnChange)
-- A `MethodNode` for `Notify` with a `Calls` edge to the event invocation
-- A `ClassNode` for `PhoneDisplay` with an `Implements` edge to the `IObserver` interface
-- A `MethodNode` for `Update` with an `Overrides` edge to the interface method
+- A `ClassNode` for `TrafficLight` with a `HasField` edge to its _observers list
+- A `MethodNode` for `Attach()` with a `Calls`/`Uses` edge to add observers
+- A `MethodNode` for `NotifyChange()` with `Calls` edges to the Update method on each observer
+- An `InterfaceNode` for `IObserver1`
+- A `ClassNode` for `CarDisplay` with an `Implements` edge to IObserver1
+- A `MethodNode` for `Update()` with an `Overrides` edge to the interface method
 
-The `PatternAnalyser` can then recognize the Observer structure because all necessary relationships are already in the graph.
+From these relationships, the `PatternAnalyser` can recognize the Observer pattern:
+a subject (`TrafficLight`) maintains references to observers, notifies them on change, and observer (`CarDisplay`) implement a common interface.
 
 ---
 

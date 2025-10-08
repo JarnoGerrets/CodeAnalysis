@@ -177,6 +177,8 @@
         BasePatternPrinter.cs
         IPatternPrinter.cs
         PatternPrinters.cs
+      [Queries]
+        GraphQueries.cs
       [RuleResult]
         PatternResult.cs
       [Rules]
