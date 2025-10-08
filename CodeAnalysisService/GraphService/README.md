@@ -70,7 +70,7 @@ foreach (var method in registry.GetAll<MethodNode>())
         Console.WriteLine($"{method.Symbol.Name} calls {edge.Target.Symbol.Name}");
     }
 }
-
+```
 This shows how easy it is to ask architectural questions once the graph exists.
 You don’t have to traverse syntax trees manually; you just query nodes and edges.
 
@@ -91,7 +91,7 @@ All of these checks are much easier on a graph than by inspecting raw syntax.
 Example: Observer pattern in the graph
 
 Take this code:
-
+```csharp
 public interface IObserver { void Update(); }
 
 public class WeatherStation {
@@ -102,7 +102,7 @@ public class WeatherStation {
 public class PhoneDisplay : IObserver {
     public void Update() => Console.WriteLine("Phone updated");
 }
-
+```
 The GraphService produces:
 
 A ClassNode for WeatherStation with a HasEvent edge to an EventNode (OnChange)
