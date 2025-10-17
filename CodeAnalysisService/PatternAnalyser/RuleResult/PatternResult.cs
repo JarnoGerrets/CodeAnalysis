@@ -1,20 +1,36 @@
 using CodeAnalysisService.PatternAnalyser.Rules;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
+using System.Collections.Generic;
 
 namespace CodeAnalysisService.PatternAnalyser.RuleResult
 {
     /// <summary>
-    /// Represents the result of running a pattern detection rule.
-    /// Contains the overall score, pass/fail status, subject class, and involved roles.
+    /// Outcome of a complete pattern check
     /// </summary>
     public class PatternResult
     {
-        public required PatternRule Rule { get; set; }
-        public int Score { get; set; }
-        public bool PassedMustPass { get; set; }
-        public bool MatchesPattern => PassedMustPass && Score >= Rule.expectedTotalScore / 1.4;
-        public required IAnalyzerNode Subject { get; set; }
-        public List<PatternRole> InvolvedClasses { get; set; } = new();
+        public string PatternName { get; }
+        public int Score { get; }
+        public string Classification { get; }
+        public IReadOnlyList<CheckResult> Checks { get; }
+        public IReadOnlyList<PatternRole> Roles { get; }
+
+        public bool MatchesPattern => Score >= 50;
+
+        public PatternResult(string name, int score, string classification,
+            IReadOnlyList<CheckResult> checks, IReadOnlyList<PatternRole> roles)
+        {
+            PatternName = name;
+            Score = score;
+            Classification = classification;
+            Checks = checks;
+            Roles = roles;
+        }
+
+        public static PatternResult None(string name) =>
+            new PatternResult(name, 0, "No match", new List<CheckResult>(), new List<PatternRole>());
     }
 }
+
+

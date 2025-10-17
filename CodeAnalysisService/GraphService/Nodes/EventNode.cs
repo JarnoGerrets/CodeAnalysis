@@ -18,7 +18,7 @@ namespace CodeAnalysisService.GraphService.Nodes
         public NodeType NodeType => NodeType.Event;
         public required IEventSymbol Symbol { get; set; }
         ISymbol INode.Symbol => Symbol;
-        public List<EdgeNode> OutgoingEdges { get; set; } = new List<EdgeNode>();
+        public List<EdgeNode> Edges { get; set; } = new List<EdgeNode>();
     }
 
 }

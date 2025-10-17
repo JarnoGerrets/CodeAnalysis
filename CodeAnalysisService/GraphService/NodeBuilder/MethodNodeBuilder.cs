@@ -26,7 +26,8 @@ namespace CodeAnalysisService.GraphService.NodeBuilder
                     {
                         MethodSyntax = method,
                         Symbol = symbol,
-                        IsAbstract = symbol.IsAbstract
+                        IsAbstract = symbol.IsAbstract,
+                        IsVirtual = symbol.IsVirtual
                     });
                 }
             }

@@ -1,73 +1,59 @@
 using CodeAnalysisService.GraphService;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.PatternAnalyser.RuleResult;
-using CodeAnalysisService.PatternAnalyser.PatternAnalysers;
 using CodeAnalysisService.PatternAnalyser.Printing;
+using CodeAnalysisService.PatternAnalyser.RuleFactories;
+using CodeAnalysisService.PatternAnalyser.Rules;
+using CodeAnalysisService.PatternAnalyser.Names;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Collections.Concurrent;
 
 namespace CodeAnalysisService.PatternAnalyser
 {
-    /// <summary>
-    /// Orchestrates execution of all pattern analysers against a graph of code elements.
-    /// - Runs each registered analyser (Observer, Singleton, Factory Method, Strategy, Adapter)
-    ///   on every node in the <see cref="GraphBuilder"/> registry.
-    /// - Collects <see cref="PatternResult"/> instances for detected patterns.
-    /// - Uses registered <see cref="IPatternPrinter"/>s to print results for each pattern.
-    /// Ensures parallel analysis across nodes and centralized result printing.
-    /// </summary>
     public class PatternAnalyserManager
     {
         private readonly GraphBuilder _graph;
+        private readonly List<PatternRule> _rules;
         private readonly Dictionary<string, IPatternPrinter> _printers;
-        private readonly List<Func<IAnalyzerNode, GraphBuilder, BaseAnalyser>> _analyserFactories;
 
-        public PatternAnalyserManager(GraphBuilder graph, IEnumerable<IPatternPrinter>? customPrinters = null)
+        public PatternAnalyserManager(GraphBuilder graph)
         {
             _graph = graph;
 
-            _printers = new List<IPatternPrinter>
+            _rules = new List<PatternRule>
             {
-                new ObserverPatternPrinter(),
-                new SingletonPatternPrinter(),
-                new FactoryMethodPatternPrinter(),
-                new StrategyPatternPrinter(),
-                new AdapterPatternPrinter(),
-                new StatePatternPrinter()
-            }.ToDictionary(p => p.PatternName, p => p);
+                ObserverRuleFactory.Create(),
+                SingletonRuleFactory.Create(),
+                FactoryMethodRuleFactory.Create(),
+                StrategyOrStateRuleFactory.Create(),
+                AdapterRuleFactory.Create(),
+            };
 
-            if (customPrinters != null)
+            _printers = new Dictionary<string, IPatternPrinter>
             {
-                foreach (var printer in customPrinters)
-                {
-                    _printers[printer.PatternName] = printer;
-                }
-            }
-
-            _analyserFactories = new()
-            {
-                (node, graph) => new ObserverAnalyser(node, graph),
-                (node, graph) => new SingletonAnalyser(node, graph),
-                (node, graph) => new FactoryMethodAnalyser(node, graph),
-                (node, graph) => new StrategyAnalyser(node, graph),
-                (node, graph) => new AdapterAnalyser(node, graph),
-                (node, graph) => new StateAnalyser(node, graph) 
+                { PatternNames.Observer , new ObserverPatternPrinter() },
+                { PatternNames.Singleton , new SingletonPatternPrinter() },
+                { PatternNames.FactoryMethod , new FactoryMethodPatternPrinter() },
+                { PatternNames.Strategy, new StrategyPatternPrinter() },
+                { PatternNames.Adapter , new AdapterPatternPrinter() },
+                { PatternNames.State, new StatePatternPrinter() }
             };
         }
 
         public List<PatternResult> AnalyseAll()
         {
             var results = new ConcurrentBag<PatternResult>();
+            var nodes = _graph.Registry.GetAll<IAnalyzerNode>().ToList();
 
-            Parallel.ForEach(_graph.Registry.GetAll<IAnalyzerNode>(), node =>
+            Parallel.ForEach(nodes, node =>
             {
-                foreach (var factory in _analyserFactories)
+                foreach (var rule in _rules)
                 {
-                    var analyser = factory(node, _graph);
-
-                    if (analyser is SingletonAnalyser && node.Symbol.TypeKind != Microsoft.CodeAnalysis.TypeKind.Class)
-                        continue;
-
-                    results.Add(analyser.Analyse());
+                    var result = rule.Evaluate(node, _graph);
+                    if (result.MatchesPattern)
+                        results.Add(result);
                 }
             });
 
@@ -80,15 +66,16 @@ namespace CodeAnalysisService.PatternAnalyser
 
             foreach (var result in results.Where(r => r.MatchesPattern))
             {
+                Console.WriteLine($"[{result.PatternName}] {string.Join(", ", result.Roles.Select(r => r.Class.Symbol.Name))}");
                 detectedPatterns++;
 
-                if (_printers.TryGetValue(result.Rule.Name, out var printer))
+                if (_printers.TryGetValue(result.PatternName, out var printer))
                 {
                     printer.Print(result);
                 }
                 else
                 {
-                    Console.WriteLine($"No printer registered for pattern {result.Rule.Name}");
+                    Console.WriteLine($"No printer registered for pattern {result.PatternName}");
                 }
             }
 

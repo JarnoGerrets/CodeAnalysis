@@ -11,6 +11,6 @@ namespace CodeAnalysisService.GraphService.Nodes
         object SyncRoot { get; }
         NodeType NodeType { get; }
         ISymbol Symbol { get; }
-        List<EdgeNode> OutgoingEdges { get; set; }
+        List<EdgeNode> Edges { get; set; }
     }
 }

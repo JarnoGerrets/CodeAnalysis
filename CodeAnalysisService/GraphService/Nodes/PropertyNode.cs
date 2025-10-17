@@ -17,7 +17,8 @@ namespace CodeAnalysisService.GraphService.Nodes
         public NodeType NodeType => NodeType.Property;
         public required IPropertySymbol Symbol { get; set; }
         ISymbol INode.Symbol => Symbol;
+        public bool IsVirtual = false;
         public List<ISymbol> ReferencedSymbols { get; set; } = new(); 
-        public List<EdgeNode> OutgoingEdges { get; set; } = new List<EdgeNode>();
+        public List<EdgeNode> Edges { get; set; } = new List<EdgeNode>();
     }
 }

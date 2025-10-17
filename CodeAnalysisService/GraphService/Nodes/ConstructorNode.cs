@@ -16,6 +16,6 @@ namespace CodeAnalysisService.GraphService.Nodes
         public NodeType NodeType => NodeType.Constructor;
         public required IMethodSymbol Symbol { get; set; }
         ISymbol INode.Symbol => Symbol;
-        public List<EdgeNode> OutgoingEdges { get; set; } = new();
+        public List<EdgeNode> Edges { get; set; } = new();
     }
 }

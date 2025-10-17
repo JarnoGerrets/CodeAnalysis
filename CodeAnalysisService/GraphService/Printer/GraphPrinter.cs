@@ -104,7 +104,7 @@ namespace CodeAnalysisService.GraphService.Printer
             // Print detailed header
             _lines.Add($"{indent}{FormatNodeHeader(node)}");
 
-            foreach (var edge in node.OutgoingEdges)
+            foreach (var edge in node.Edges)
                 PrintEdge(node, edge, indent + "  ", visited);
         }
 

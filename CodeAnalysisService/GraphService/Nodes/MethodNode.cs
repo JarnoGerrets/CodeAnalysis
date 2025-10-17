@@ -19,6 +19,7 @@ namespace CodeAnalysisService.GraphService.Nodes
         public ITypeSymbol ReturnType => Symbol.ReturnType;
         ISymbol INode.Symbol => Symbol;
         public bool IsAbstract { get; set; } = false;
-        public List<EdgeNode> OutgoingEdges { get; set; } = new List<EdgeNode>();
+        public bool IsVirtual { get; set; } = false;
+        public List<EdgeNode> Edges { get; set; } = new List<EdgeNode>();
     }
 }

@@ -1,47 +1,85 @@
-using System.Linq;
-using CodeAnalysisService.PatternAnalyser.RuleSteps;
-using CodeAnalysisService.PatternAnalyser.RuleResult;
+using CodeAnalysisService.GraphService.Helpers;
+using Microsoft.CodeAnalysis;
+using CodeAnalysisService.GraphService;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
+using CodeAnalysisService.PatternAnalyser.RuleResult;
 
 namespace CodeAnalysisService.PatternAnalyser.Rules
 {
     /// <summary>
-    /// Represents a rule for detecting a design pattern.
-    /// A rule is composed of multiple <see cref="RuleStep"/> checks,
-    /// and evaluates whether a node fulfills the pattern structure.
+    /// Represents a specific rule in the pattern detection. Any RuleFactory uses a multitude of Patternrules to validate a pattern.
     /// </summary>
     public class PatternRule
     {
-        public string Name { get; set; } = string.Empty;
-        public List<RuleStep> Steps { get; set; } = new();
-        public int expectedTotalScore { get; set; }
+        public string Name { get; }
+        private readonly List<PatternCheck> _checks = new();
 
-        public PatternResult Run(IAnalyzerNode node)
+        private Func<PatternResult, GraphBuilder, PatternResult>? _postProcessor;
+
+        public PatternRule(string name) => Name = name;
+
+        public PatternRule AddCheck(
+            string description,
+            int weight,
+            Func<IAnalyzerNode, GraphBuilder, PatternRuleResult> predicate)
         {
-            var evals = Steps.Select(step => (step, res: step.Check(node))).ToList();
-
-            int totalScore = evals.Sum(e => e.res.Score);
-
-            bool passedMustPass = evals
-                .Where(e => e.step.MustPass)
-                .All(e => e.res.PassedMustPass);
-
-            var involvedRoles = evals
-                .SelectMany(e => e.res.RelatedRoles ?? Enumerable.Empty<PatternRole>())
-                .Append(new PatternRole ( "Subject", node ))
-                .GroupBy(r => r.Class) 
-                .Select(g => g.First())
-                .ToList();
-
-            return new PatternResult
-            {
-                Rule = this,
-                Score = totalScore,
-                PassedMustPass = passedMustPass,
-                Subject = node,
-                InvolvedClasses = involvedRoles
-            };
+            _checks.Add(new PatternCheck(description, weight, predicate));
+            return this;
         }
+
+        public PatternRule WithPostProcessor(Func<PatternResult, GraphBuilder, PatternResult> postProcessor)
+        {
+            _postProcessor = postProcessor;
+            return this;
+        }
+
+        public PatternResult Evaluate(IAnalyzerNode node, GraphBuilder graph)
+        {
+            var checks = new List<CheckResult>();
+            var roles  = new List<PatternRole>();
+
+            int totalWeight  = _checks.Sum(c => c.Weight);
+            int gainedWeight = 0;
+
+            foreach (var check in _checks)
+            {
+                var result = check.Predicate(node, graph);
+
+                checks.Add(new CheckResult(check.Description, check.Weight, result.Passed));
+
+                if (result.Passed)
+                {
+                    gainedWeight += check.Weight;
+                    roles.AddRange(result.Roles);
+                }
+            }
+
+            int score = totalWeight > 0 ? (int)((double)gainedWeight / totalWeight * 100) : 0;
+            
+            // Anything below 51 is not too low to confidentially match a pattern, so it is discarded.
+            if (score < 51)
+                return PatternResult.None(Name);
+
+            string classification = score switch
+            {
+                >= 80 => "Strong match",
+                >= 71 => "Almost",
+                _     => "Attempted but weak"
+            };
+
+            var distinctRoles = roles.Distinct(Comparers.PatternRole).ToList();
+            var baseResult = new PatternResult(Name, score, classification, checks, distinctRoles);
+
+            return _postProcessor is null ? baseResult : _postProcessor(baseResult, graph);
+        }
+
+        private record PatternCheck(
+            string Description,
+            int Weight,
+            Func<IAnalyzerNode, GraphBuilder, PatternRuleResult> Predicate);
     }
+
+    public record CheckResult(string Description, int Weight, bool Passed);
+
 }

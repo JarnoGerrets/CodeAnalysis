@@ -103,14 +103,14 @@ namespace CodeAnalysisService.GraphService
 
                 lock (node.SyncRoot)
                 {
-                    var set = new HashSet<EdgeNode>(node.OutgoingEdges, new EdgeComparer());
+                    var set = new HashSet<EdgeNode>(node.Edges, Comparers.Edge);
                     foreach (var e in edges)
                     {
                         set.Add(e);
                     }
 
-                    node.OutgoingEdges.Clear();
-                    node.OutgoingEdges.AddRange(set);
+                    node.Edges.Clear();
+                    node.Edges.AddRange(set);
                 }
             });
         }

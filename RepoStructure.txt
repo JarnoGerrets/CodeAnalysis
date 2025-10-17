@@ -117,10 +117,6 @@
         [ShowResultInView]
           graph.json
           viewer.html
-      [Helpers]
-        CallResolver.cs
-        EdgeComparer.cs
-        TypeHelper.cs
       [NodeBuilder]
         ClassNodeBuilder.cs
         ConstructorNodeBuilder.cs
@@ -145,47 +141,34 @@
         GraphPrinter.cs
       [SyntaxWrappers]
         EventSyntaxWrapper.cs
+    [Helpers]
+      CallResolver.cs
+      Comparers.cs
+      EdgeComparer.cs
+      TypeHelper.cs
     [PatternAnalyser]
       PatternAnalyserManager.cs
-      [Candidates]
-        PatternCandidate.cs
-      [Checks]
-        AdapterCheck.cs
-        CollectionChecks.cs
-        FactoryMethodChecks.cs
-        MethodCallChecks.cs
-        ObserverChecks.cs
-        SingletonChecks.cs
-        StateChecks.cs
-        StrategyChecks.cs
-      [Enums]
-        PatternKind.cs
       [Names]
         PatternNames.cs
-      [PatternAnalysers]
-        AdapterAnalyser.cs
-        BaseAnalyser.cs
-        FactoryMethodAnalyser.cs
-        IAnalyser.cs
-        ObserverAnalyser.cs
-        SingletonAnalyser.cs
-        StateAnalyser.cs
-        StrategyAnalyser.cs
-      [PatternRoles]
-        PatternRole.cs
       [Printing]
         BasePatternPrinter.cs
         IPatternPrinter.cs
         PatternPrinters.cs
       [Queries]
         GraphQueries.cs
+      [Roles]
+        PatternRole.cs
+      [RuleFactories]
+        AdapterRuleFactory.cs
+        FactoryMethodRuleFactory.cs
+        ObserverRuleFactory.cs
+        SingletonRuleFactory.cs
+        StrategyOrStateRuleFactory.cs
       [RuleResult]
         PatternResult.cs
       [Rules]
         PatternRule.cs
-      [RuleSteps]
-        RuleStep.cs
-        RuleStepResult.cs
+        PatternRuleResult.cs
     [Utils]
       Logger.cs
   [docs]
@@ -201,6 +184,7 @@
       AnimalFac.cs
       ClassicDialog.cs
       DeepInheritance.cs
+      DocumentCreator.cs
       NestedVersion.cs
       ReturnTypeAbstractClass.cs
       ShapeCase.cs

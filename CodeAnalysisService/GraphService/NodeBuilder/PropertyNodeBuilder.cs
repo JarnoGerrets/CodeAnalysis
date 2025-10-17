@@ -25,7 +25,8 @@ namespace CodeAnalysisService.GraphService.NodeBuilder
                     var node = new PropertyNode
                     {
                         PropertySyntax = prop,
-                        Symbol = symbol
+                        Symbol = symbol,
+                        IsVirtual = symbol.IsVirtual
                     };
 
                     foreach (var id in prop.DescendantNodes().OfType<IdentifierNameSyntax>())

@@ -1,8 +1,13 @@
 using CodeAnalysisService.PatternAnalyser.RuleResult;
+using CodeAnalysisService.PatternAnalyser.PatternRoles;
 using System;
+using System.Linq;
 
 namespace CodeAnalysisService.PatternAnalyser.Printing
 {
+    /// <summary>
+    /// Printing the results of the analyser. purely for debug purposes.
+    /// </summary>
     public abstract class BasePatternPrinter : IPatternPrinter
     {
         public abstract string PatternName { get; }
@@ -10,8 +15,21 @@ namespace CodeAnalysisService.PatternAnalyser.Printing
         public void Print(PatternResult result)
         {
             PrintHeader(result);
-            PrintRoles(result);
+            PrintChecks(result);
+            PrintRoles(result); 
             PrintFooter();
+        }
+
+        private void PrintChecks(PatternResult result)
+        {
+            Console.WriteLine("Checks:");
+            foreach (var check in result.Checks)
+            {
+                var status = check.Passed ? "✔" : "✖";
+                var weight = check.Weight > 0 ? $"(+{check.Weight})" : string.Empty;
+                Console.WriteLine($" {status} {check.Description} {weight}");
+            }
+            Console.WriteLine();
         }
 
         protected abstract void PrintRoles(PatternResult result);
@@ -21,9 +39,8 @@ namespace CodeAnalysisService.PatternAnalyser.Printing
             Console.WriteLine(new string('-', 50));
             Console.WriteLine("Pattern Match Found:");
             Console.WriteLine(new string('-', 50));
-            Console.WriteLine($"Pattern: {result.Rule.Name}");
-            Console.WriteLine($"Score: {result.Score}/{result.Rule.expectedTotalScore}");
-            Console.WriteLine($"Passed Must-Pass Steps: {result.PassedMustPass}");
+            Console.WriteLine($"Pattern: {result.PatternName}");
+            Console.WriteLine($"Confidence: {result.Score}% ({GetConfidenceLabel(result.Score)})");
         }
 
         protected void PrintFooter()
@@ -32,12 +49,19 @@ namespace CodeAnalysisService.PatternAnalyser.Printing
             Console.WriteLine();
         }
 
-        protected void PrintRoleGroup(IEnumerable<PatternRoles.PatternRole> roles, string label)
+        protected void PrintRoleGroup(IEnumerable<PatternRole> roles, string label)
         {
             if (!roles.Any()) return;
             Console.WriteLine($"{label}:");
             foreach (var r in roles)
                 Console.WriteLine($" - {r.Class.Symbol.Name}");
+            Console.WriteLine();
         }
+
+        private string GetConfidenceLabel(int score) =>
+            score < 50 ? "Fail (not recognized)" :
+            score < 70 ? "Attempted but weak" :
+            score < 80 ? "Almost there" :
+            "Strong match";
     }
 }

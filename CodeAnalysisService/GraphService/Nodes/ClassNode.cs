@@ -18,6 +18,6 @@ namespace CodeAnalysisService.GraphService.Nodes
         public required INamedTypeSymbol Symbol { get; set; }
         ISymbol INode.Symbol => Symbol;
         public bool IsAbstract { get; set; } = false;
-        public List<EdgeNode> OutgoingEdges { get; set; } = new List<EdgeNode>();
+        public List<EdgeNode> Edges { get; set; } = new List<EdgeNode>();
     }
 }

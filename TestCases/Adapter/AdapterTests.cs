@@ -7,16 +7,16 @@ public interface ITarget
 }
 
 // Adaptee (incompatible interface)
-public class Adaptee
+public class AdapteeTest
 {
     public void SpecificRequest() => Console.WriteLine("Adaptee SpecificRequest");
 }
 
 // Adapter
-public class Adapter : ITarget
+public class AdapterTest : ITarget
 {
-    private readonly Adaptee _adaptee;
-    public Adapter(Adaptee adaptee) => _adaptee = adaptee;
+    private readonly AdapteeTest _adaptee;
+    public AdapterTest(AdapteeTest adaptee) => _adaptee = adaptee;
 
     public void Request()
     {

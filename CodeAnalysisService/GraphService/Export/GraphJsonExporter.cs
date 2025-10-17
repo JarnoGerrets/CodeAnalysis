@@ -66,7 +66,7 @@ namespace CodeAnalysisService.GraphService.Export
             }).ToList();
 
             var edgeRecords = registry.GetAll<INode>()
-                .SelectMany(n => n.OutgoingEdges.Select(e => new
+                .SelectMany(n => n.Edges.Select(e => new
                 {
                     source = MakeId(n),
                     target = MakeId(e.Target),

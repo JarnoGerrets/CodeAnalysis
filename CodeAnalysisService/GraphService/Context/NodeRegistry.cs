@@ -11,7 +11,7 @@ namespace CodeAnalysisService.GraphService.Context
     public class NodeRegistry
     {
         private readonly Dictionary<ISymbol, INode> _nodes = new(SymbolEqualityComparer.Default);
-            
+
         private readonly Dictionary<System.Type, List<INode>> _byType = new();
 
         public void AddNode(ISymbol symbol, INode node)
@@ -60,5 +60,6 @@ namespace CodeAnalysisService.GraphService.Context
                 yield break;
             }
         }
+
     }
 }
