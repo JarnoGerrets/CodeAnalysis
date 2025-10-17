@@ -1,6 +1,5 @@
 using Microsoft.CodeAnalysis;
 using CodeAnalysisService.GraphService.Nodes;
-using System.Collections.Generic;
 using System.Collections.Concurrent;
 
 namespace CodeAnalysisService.GraphService.Helpers

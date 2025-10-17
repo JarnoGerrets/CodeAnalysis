@@ -1,4 +1,3 @@
-using System.Linq;
 using System.Text.Json;
 using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.GraphService.Nodes;

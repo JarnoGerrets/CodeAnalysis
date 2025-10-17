@@ -1,23 +1,18 @@
-using System.Linq;
-using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
-using CodeAnalysisService.GraphService;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
 using CodeAnalysisService.PatternAnalyser.Rules;
 using CodeAnalysisService.PatternAnalyser.Queries;
+using CodeAnalysisService.Names;
 
 namespace CodeAnalysisService.PatternAnalyser.RuleFactories
 {
+
+    /// <summary>
+    /// Rulefactory to detect Adapter pattern.
+    /// </summary>
     public static class AdapterRuleFactory
     {
-        private static class Roles
-        {
-            public const string AdapterCandidate = "AdapterCandidate";
-            public const string Adapter = "Adapter";
-            public const string Adaptee = "Adaptee";
-            public const string Target = "Target";
-        }
 
         public static PatternRule Create()
         {

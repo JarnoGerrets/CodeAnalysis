@@ -2,8 +2,6 @@ using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.Enums;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using CodeAnalysisService.GraphService.Helpers;
 
 namespace CodeAnalysisService.GraphService.EdgeBuilder

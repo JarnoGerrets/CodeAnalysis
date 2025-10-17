@@ -7,28 +7,15 @@ using CodeAnalysisService.PatternAnalyser.RuleResult;
 using CodeAnalysisService.PatternAnalyser.Names;
 using CodeAnalysisService.PatternAnalyser.Queries;
 using CodeAnalysisService.Enums;
+using CodeAnalysisService.Names;
 
 namespace CodeAnalysisService.PatternAnalyser.RuleFactories
 {
+    /// <summary>
+    /// Rule factory to detect the strategy pattern and if possible promote it to State.
+    /// </summary>
     public static class StrategyOrStateRuleFactory
     {
-        private static class Roles
-        {
-            public const string Strategy = "Strategy";
-            public const string ConcreteStrategy = "ConcreteStrategy";
-            public const string ContextCandidate = "ContextCandidate";
-            public const string Context = "Context";
-        }
-
-        private static class StateRoles
-        {
-            public const string StateInterface = "StateInterface";
-            public const string ConcreteState = "ConcreteState";
-            public const string StateContextCandidate = "StateContextCandidate";
-            public const string StateContext = "StateContext";
-            public const string StateNameHint = "StateNameHint";
-        }
-
         public static PatternRule Create()
         {
             return new PatternRule(PatternNames.Strategy)
@@ -141,17 +128,17 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                     var remappedRoles = result.Roles.Select(r => new PatternRole(
                         r.Role switch
                         {
-                            Roles.Strategy => StateRoles.StateInterface,
-                            Roles.ConcreteStrategy => StateRoles.ConcreteState,
-                            Roles.Context => StateRoles.StateContext,
-                            Roles.ContextCandidate => StateRoles.StateContextCandidate,
+                            Roles.Strategy => Roles.StateInterface,
+                            Roles.ConcreteStrategy => Roles.ConcreteState,
+                            Roles.Context => Roles.StateContext,
+                            Roles.ContextCandidate => Roles.StateContextCandidate,
                             _ => r.Role
                         }, r.Class)).ToList();
 
                     if (hasNameHints)
                         remappedRoles.AddRange(concrete
                             .Where(s => s.Symbol.Name.EndsWith("State", StringComparison.OrdinalIgnoreCase))
-                            .Select(s => new PatternRole(StateRoles.StateNameHint, s)));
+                            .Select(s => new PatternRole(Roles.StateNameHint, s)));
 
                     var augmentedChecks = result.Checks.Concat(stateChecks).Concat(new[]
                     {

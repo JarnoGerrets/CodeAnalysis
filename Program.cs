@@ -1,6 +1,4 @@
-using System;
 using System.Diagnostics;
-using System.Threading.Tasks;
 using CodeAnalysis;
 using CodeAnalysisService;
 using CodeAnalysisService.PatternAnalyser;

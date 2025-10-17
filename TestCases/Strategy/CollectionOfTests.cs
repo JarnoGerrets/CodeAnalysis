@@ -1,5 +1,3 @@
-using System;
-
 //
 // ✅ Example 1 – Compression Strategy (perfect match)
 //

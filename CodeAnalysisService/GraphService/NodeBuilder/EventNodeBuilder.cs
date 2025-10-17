@@ -3,7 +3,6 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.Enums;
-using System.Collections.Generic;
 using CodeAnalysisService.GraphService.SyntaxWrappers;
 
 namespace CodeAnalysisService.GraphService.NodeBuilder

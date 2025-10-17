@@ -1,26 +1,18 @@
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using CodeAnalysisService.Enums;
-using CodeAnalysisService.GraphService;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
 using CodeAnalysisService.PatternAnalyser.Rules;
 using CodeAnalysisService.PatternAnalyser.Queries;
+using CodeAnalysisService.Names;
 
 namespace CodeAnalysisService.PatternAnalyser.RuleFactories
 {
+    /// <summary>
+    /// Rulefactory to detect FactoryMethod pattern.
+    /// </summary>
     public static class FactoryMethodRuleFactory
     {
-        private static class Roles
-        {
-            public const string AbstractFactory = "AbstractFactory";
-            public const string ConcreteFactory = "ConcreteFactory";
-            public const string Product = "Product";
-            public const string InvalidProduct = "InvalidProduct";
-            public const string UnfulfilledReturn = "UnfulfilledReturn";
-        }
-
         public static PatternRule Create()
         {
             return new PatternRule("FactoryMethod")

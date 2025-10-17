@@ -237,8 +237,6 @@
   debug.log
   docfx.json
   index.md
-  notes.txt
   package-lock.json
   package.json
-  test.txt
   toc.yml

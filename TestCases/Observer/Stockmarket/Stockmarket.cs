@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class StockMarket
 {
     public Dictionary<string, IObserver2> Observers { get; } = new();

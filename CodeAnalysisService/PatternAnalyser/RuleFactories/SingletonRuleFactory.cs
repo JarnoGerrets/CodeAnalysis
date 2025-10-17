@@ -1,5 +1,3 @@
-using System.Linq;
-using Microsoft.CodeAnalysis;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
 using CodeAnalysisService.PatternAnalyser.Queries;
@@ -9,6 +7,9 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
 {
     public static class SingletonRuleFactory
     {
+        /// <summary>
+        /// Rulefactory to detect singleton pattern.
+        /// </summary>
         public static PatternRule Create()
         {
             return new PatternRule("Singleton")

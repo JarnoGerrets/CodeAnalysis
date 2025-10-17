@@ -1,5 +1,3 @@
-using CodeAnalysis.TestCases.Observer.WeatherStation;
-
 namespace CodeAnalysis.TestCases.Observer.WeatherStation
 {
     // Concrete Observer

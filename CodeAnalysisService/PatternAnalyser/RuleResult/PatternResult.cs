@@ -1,7 +1,5 @@
 using CodeAnalysisService.PatternAnalyser.Rules;
-using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
-using System.Collections.Generic;
 
 namespace CodeAnalysisService.PatternAnalyser.RuleResult
 {

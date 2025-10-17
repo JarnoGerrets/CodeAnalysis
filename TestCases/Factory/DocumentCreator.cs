@@ -1,5 +1,3 @@
-using System;
-
 namespace FactoryMethodExample
 {
     // 1️⃣ Product interface

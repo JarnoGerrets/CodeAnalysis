@@ -4,7 +4,6 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.Enums;
-using CodeAnalysisService.GraphService.NodeBuilder;
 
 namespace CodeAnalysisService.GraphService.NodeBuilder
 {

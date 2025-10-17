@@ -1,7 +1,4 @@
-using System;
-using System.IO;
 using System.Text;
-using System.Collections.Generic;
 
 namespace CodeAnalysis
 {
@@ -17,7 +14,7 @@ namespace CodeAnalysis
             "RepoPrinter.cs", "Program.cs", "RepoStructure.txt"
         };
 
-        public static void PrintRepo(string rootPath = null)
+        public static void PrintRepo(string rootPath = "")
         {
             rootPath ??= Directory.GetCurrentDirectory();
 

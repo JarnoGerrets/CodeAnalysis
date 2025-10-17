@@ -1,5 +1,3 @@
-using System;
-
 #region Example 1: Traffic Light
 public interface ILightState
 {

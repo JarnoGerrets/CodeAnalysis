@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class NewsPublisher
 {
     public HashSet<IObserver3> Observers { get; } = new HashSet<IObserver3>();

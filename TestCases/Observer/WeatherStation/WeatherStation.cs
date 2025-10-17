@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using CodeAnalysis.TestCases.Observer.WeatherStation;
-
 namespace CodeAnalysis.TestCases.Observer.WeatherStation
 {
     // Subject

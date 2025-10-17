@@ -5,8 +5,6 @@ using CodeAnalysisService.Enums;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.GraphService.Helpers;
 using CodeAnalysisService.GraphService.Context;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {

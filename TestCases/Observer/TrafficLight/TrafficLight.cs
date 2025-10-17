@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class TrafficLight
 {
     private List<IObserver1> _observers = new List<IObserver1>();

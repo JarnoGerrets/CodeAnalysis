@@ -1,6 +1,4 @@
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.Enums;
 using CodeAnalysisService.GraphService.Nodes;

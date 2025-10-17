@@ -5,9 +5,6 @@ using CodeAnalysisService.PatternAnalyser.Printing;
 using CodeAnalysisService.PatternAnalyser.RuleFactories;
 using CodeAnalysisService.PatternAnalyser.Rules;
 using CodeAnalysisService.PatternAnalyser.Names;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Collections.Concurrent;
 
 namespace CodeAnalysisService.PatternAnalyser

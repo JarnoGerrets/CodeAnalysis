@@ -1,7 +1,5 @@
 using CodeAnalysisService.PatternAnalyser.RuleResult;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
-using System;
-using System.Linq;
 
 namespace CodeAnalysisService.PatternAnalyser.Printing
 {

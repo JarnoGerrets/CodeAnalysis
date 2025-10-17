@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using CodeAnalysisService.Enums;
 using CodeAnalysisService.GraphService.Nodes;
 using Microsoft.CodeAnalysis;
@@ -11,8 +8,6 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
 {
     /// <summary>
     /// Common reusable graph queries to simplify pattern checks.
-    /// Instead of repeating Roslyn/graph traversals in every Check class,
-    /// we centralize them here and compose them for different patterns.
     /// </summary>
     public static class GraphQueries
     {

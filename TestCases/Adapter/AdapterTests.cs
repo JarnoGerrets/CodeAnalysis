@@ -1,5 +1,3 @@
-using System;
-
 // Target
 public interface ITarget
 {

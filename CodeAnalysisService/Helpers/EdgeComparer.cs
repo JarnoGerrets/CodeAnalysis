@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using CodeAnalysisService.GraphService.Nodes;
-
 namespace CodeAnalysisService.GraphService.Helpers
 {
     /// <summary>

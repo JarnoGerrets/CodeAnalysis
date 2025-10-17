@@ -1,10 +1,7 @@
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using CodeAnalysisService.GraphService.NodeBuilder;
 using CodeAnalysisService.GraphService.EdgeBuilder;
 using CodeAnalysisService.GraphService.Nodes;
-using System.Collections.Generic;
-using System.Linq;
 using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.GraphService.Helpers;
 using System.Collections.Concurrent;
