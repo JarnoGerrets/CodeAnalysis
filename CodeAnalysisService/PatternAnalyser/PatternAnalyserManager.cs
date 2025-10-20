@@ -1,5 +1,5 @@
-using CodeAnalysisService.GraphService;
-using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphBuildingService;
+using CodeAnalysisService.GraphBuildingService.Nodes;
 using CodeAnalysisService.PatternAnalyser.RuleResult;
 using CodeAnalysisService.PatternAnalyser.Printing;
 using CodeAnalysisService.PatternAnalyser.RuleFactories;

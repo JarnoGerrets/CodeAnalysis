@@ -1,5 +1,5 @@
 using Microsoft.CodeAnalysis;
-using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphBuildingService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
 using CodeAnalysisService.PatternAnalyser.Queries;
 using CodeAnalysisService.PatternAnalyser.Rules;

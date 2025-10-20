@@ -1,6 +1,6 @@
 using Microsoft.CodeAnalysis;
 using CodeAnalysisService.Enums;
-using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphBuildingService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
 using CodeAnalysisService.PatternAnalyser.Rules;
 using CodeAnalysisService.PatternAnalyser.Queries;

@@ -1,8 +1,8 @@
 using Microsoft.CodeAnalysis;
-using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphBuildingService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
 
-namespace CodeAnalysisService.GraphService.Helpers
+namespace CodeAnalysisService.Helpers
 {
     /// <summary>
     /// Collection of specific comparers
@@ -11,9 +11,8 @@ namespace CodeAnalysisService.GraphService.Helpers
     {
         public static readonly IEqualityComparer<EdgeNode> Edge =
             new GeneralEqualityComparer<EdgeNode>(
-                (x, y) => x?.Type == y?.Type && Equals(x?.Target, y?.Target),
-                e => HashCode.Combine(e.Type, e.Target)
-            );
+                (x, y) => x?.Type == y?.Type && SymbolEqualityComparer.Default.Equals(x?.Target?.Symbol, y?.Target?.Symbol),
+                    e => HashCode.Combine( e.Type, e.Target?.Symbol != null ? SymbolEqualityComparer.Default.GetHashCode(e.Target.Symbol) : 0));
 
         public static readonly IEqualityComparer<PatternRole> PatternRole =
             new GeneralEqualityComparer<PatternRole>(

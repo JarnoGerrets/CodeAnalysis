@@ -1,4 +1,4 @@
-using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphBuildingService.Nodes;
 
 namespace CodeAnalysisService.PatternAnalyser.PatternRoles
 {

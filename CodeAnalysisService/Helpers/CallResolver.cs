@@ -1,8 +1,8 @@
 using Microsoft.CodeAnalysis;
-using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphBuildingService.Nodes;
 using System.Collections.Concurrent;
 
-namespace CodeAnalysisService.GraphService.Helpers
+namespace CodeAnalysisService.Helpers
 {
     /// <summary>
     /// Maps interface methods to their concrete class implementations.

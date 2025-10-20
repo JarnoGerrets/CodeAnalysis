@@ -1,6 +1,6 @@
-using CodeAnalysisService.GraphService.Helpers;
+using CodeAnalysisService.Helpers;
 using Microsoft.CodeAnalysis;
-using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphBuildingService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
 using CodeAnalysisService.PatternAnalyser.Rules;
 using CodeAnalysisService.PatternAnalyser.RuleResult;
@@ -8,7 +8,6 @@ using CodeAnalysisService.PatternAnalyser.Names;
 using CodeAnalysisService.PatternAnalyser.Queries;
 using CodeAnalysisService.Enums;
 using CodeAnalysisService.Names;
-using CodeAnalysisService.GraphService.Registry;
 
 namespace CodeAnalysisService.PatternAnalyser.RuleFactories
 {

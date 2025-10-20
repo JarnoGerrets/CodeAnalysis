@@ -1,7 +1,7 @@
-using CodeAnalysisService.GraphService.Helpers;
+using CodeAnalysisService.Helpers;
 using Microsoft.CodeAnalysis;
-using CodeAnalysisService.GraphService;
-using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphBuildingService;
+using CodeAnalysisService.GraphBuildingService.Nodes;
 using CodeAnalysisService.PatternAnalyser.PatternRoles;
 using CodeAnalysisService.PatternAnalyser.RuleResult;
 

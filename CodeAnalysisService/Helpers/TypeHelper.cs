@@ -1,6 +1,6 @@
 using Microsoft.CodeAnalysis;
 
-namespace CodeAnalysisService.GraphService.Helpers
+namespace CodeAnalysisService.Helpers
 {
     public static class TypeHelper
     {
@@ -9,6 +9,8 @@ namespace CodeAnalysisService.GraphService.Helpers
         /// </summary>
         public static ITypeSymbol? GetElementType(ITypeSymbol type)
         {
+            if (type.OriginalDefinition.SpecialType == SpecialType.System_Nullable_T) return ((INamedTypeSymbol)type).TypeArguments[0];
+            
             if (type is IArrayTypeSymbol arrayType) return arrayType.ElementType;
 
             if (type is INamedTypeSymbol namedType)
@@ -37,7 +39,7 @@ namespace CodeAnalysisService.GraphService.Helpers
             return null;
         }
 
-        public static ITypeSymbol GetInnermostElementType(ITypeSymbol type)
+        public static ITypeSymbol GetInnerMostElementType(ITypeSymbol type)
         {
             var current = type;
             ITypeSymbol? next;

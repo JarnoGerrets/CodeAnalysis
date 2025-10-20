@@ -1,8 +1,8 @@
 using CodeAnalysisService.Enums;
-using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphBuildingService.Nodes;
 using Microsoft.CodeAnalysis;
-using CodeAnalysisService.GraphService.Helpers;
-using CodeAnalysisService.GraphService.Registry;
+using CodeAnalysisService.Helpers;
+using CodeAnalysisService.GraphBuildingService.Registry;
 
 namespace CodeAnalysisService.PatternAnalyser.Queries
 {
@@ -146,7 +146,7 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
                 var element = type != null ? TypeHelper.GetElementType(type) : null;
                 if (element != null)
                 {
-                    element = TypeHelper.GetInnermostElementType(element);
+                    element = TypeHelper.GetInnerMostElementType(element);
                     if (element != null && (!requireInterface || element.TypeKind == TypeKind.Interface))
                         types.Add(element);
                 }
