@@ -2,7 +2,7 @@ using CodeAnalysisService.Enums;
 using CodeAnalysisService.GraphService.Nodes;
 using Microsoft.CodeAnalysis;
 using CodeAnalysisService.GraphService.Helpers;
-using CodeAnalysisService.GraphService.Context;
+using CodeAnalysisService.GraphService.Registry;
 
 namespace CodeAnalysisService.PatternAnalyser.Queries
 {

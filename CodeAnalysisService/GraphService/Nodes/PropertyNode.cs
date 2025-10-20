@@ -12,6 +12,7 @@ namespace CodeAnalysisService.GraphService.Nodes
     {
         public object SyncRoot { get; } = new object();
         public required PropertyDeclarationSyntax PropertySyntax { get; set; }
+        public SyntaxNode Syntax => PropertySyntax;
         public NodeType NodeType => NodeType.Property;
         public required IPropertySymbol Symbol { get; set; }
         ISymbol INode.Symbol => Symbol;

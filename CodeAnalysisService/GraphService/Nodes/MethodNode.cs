@@ -12,6 +12,7 @@ namespace CodeAnalysisService.GraphService.Nodes
     {
         public object SyncRoot { get; } = new object();
         public required MethodDeclarationSyntax MethodSyntax { get; set; }
+        public SyntaxNode Syntax => MethodSyntax;
         public NodeType NodeType => NodeType.Method;
         public required IMethodSymbol Symbol { get; set; }
         public ITypeSymbol ReturnType => Symbol.ReturnType;

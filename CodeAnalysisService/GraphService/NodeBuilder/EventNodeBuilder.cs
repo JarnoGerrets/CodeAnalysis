@@ -1,18 +1,21 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.GraphService.Nodes;
-using CodeAnalysisService.Enums;
+
+
 using CodeAnalysisService.GraphService.SyntaxWrappers;
 
 namespace CodeAnalysisService.GraphService.NodeBuilder
 {
     public class EventNodeBuilder : INodeBuilder
     {
-        public NodeType NodeType => NodeType.Event;
-        public Type SyntaxType => typeof(EventDeclarationSyntax);
+        public IReadOnlyList<Type> SyntaxTypes =>
+        [
+            typeof(EventDeclarationSyntax),
+            typeof(EventFieldDeclarationSyntax)
+        ];
 
-        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxNode node, SemanticModel model)
+        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNode(SyntaxNode node, SemanticModel model)
         {
             if (node is EventDeclarationSyntax evtDecl)
             {

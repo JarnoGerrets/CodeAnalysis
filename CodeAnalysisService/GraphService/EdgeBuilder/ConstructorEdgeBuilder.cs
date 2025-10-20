@@ -3,7 +3,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using CodeAnalysisService.Enums;
 using CodeAnalysisService.GraphService.Nodes;
-using CodeAnalysisService.GraphService.Context;
+using CodeAnalysisService.GraphService.Registry;
 
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
@@ -14,11 +14,7 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
     {
         public NodeType NodeType => NodeType.Constructor;
 
-        public IEnumerable<EdgeNode> BuildEdges(
-            INode node,
-            NodeRegistry registry,
-            Compilation compilation,
-            Dictionary<SyntaxTree, SemanticModel> semanticModels)
+        public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, SemanticModel model)
         {
             if (node is not ConstructorNode ctorNode) return Enumerable.Empty<EdgeNode>();
 
@@ -38,7 +34,6 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
                 }
             }
             // Creates
-            var model = semanticModels[ctorNode.ConstructorSyntax.SyntaxTree];
             var createdTypes = ctorNode.ConstructorSyntax.DescendantNodes().OfType<ObjectCreationExpressionSyntax>()
                 .Select(expr => model.GetTypeInfo(expr).Type as INamedTypeSymbol).Where(t => t != null);
 

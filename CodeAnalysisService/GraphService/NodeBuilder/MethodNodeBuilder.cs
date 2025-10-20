@@ -2,8 +2,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using CodeAnalysisService.GraphService.Nodes;
-using CodeAnalysisService.GraphService.Context;
-using CodeAnalysisService.Enums;
 
 namespace CodeAnalysisService.GraphService.NodeBuilder
 {
@@ -13,14 +11,16 @@ namespace CodeAnalysisService.GraphService.NodeBuilder
     /// </summary>
     public class MethodNodeBuilder : INodeBuilder
     {
-        public NodeType NodeType => NodeType.Method;
+        public IReadOnlyList<Type> SyntaxTypes =>
+        [
+            typeof(MethodDeclarationSyntax)
+        ];
 
-        public Type SyntaxType => typeof(MethodDeclarationSyntax);
-
-        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxNode node, SemanticModel model)
+        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNode(SyntaxNode node, SemanticModel model)
         {
             if (node is not MethodDeclarationSyntax method)
                 yield break;
+
 
             if (model.GetDeclaredSymbol(method) is IMethodSymbol symbol)
             {

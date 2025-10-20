@@ -1,7 +1,7 @@
 using Microsoft.CodeAnalysis;
 using CodeAnalysisService.GraphService.Nodes;
 
-namespace CodeAnalysisService.GraphService.Context
+namespace CodeAnalysisService.GraphService.Registry
 {
     /// <summary>
     /// Central registry that maps Roslyn ISymbol to graph <see cref="INode"/>.

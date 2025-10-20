@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jarno\\OneDrive\\Documenten\\POC CodeAnalysis\\CodeAnalysis\\CodeAnalysis.csproj": {}
+    "C:\\Users\\jarno\\Source\\CodeAnalysis\\CodeAnalysis.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jarno\\OneDrive\\Documenten\\POC CodeAnalysis\\CodeAnalysis\\CodeAnalysis.csproj": {
+    "C:\\Users\\jarno\\Source\\CodeAnalysis\\CodeAnalysis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jarno\\OneDrive\\Documenten\\POC CodeAnalysis\\CodeAnalysis\\CodeAnalysis.csproj",
+        "projectUniqueName": "C:\\Users\\jarno\\Source\\CodeAnalysis\\CodeAnalysis.csproj",
         "projectName": "CodeAnalysis",
-        "projectPath": "C:\\Users\\jarno\\OneDrive\\Documenten\\POC CodeAnalysis\\CodeAnalysis\\CodeAnalysis.csproj",
+        "projectPath": "C:\\Users\\jarno\\Source\\CodeAnalysis\\CodeAnalysis.csproj",
         "packagesPath": "C:\\Users\\jarno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jarno\\OneDrive\\Documenten\\POC CodeAnalysis\\CodeAnalysis\\obj\\",
+        "outputPath": "C:\\Users\\jarno\\Source\\CodeAnalysis\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -47,8 +47,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.Build.Locator": {
               "target": "Package",

@@ -7,7 +7,7 @@ class Program
 {
     static async Task Main(string[] args)
     {   
-        RepoPrinter.PrintRepo();   
+        RepoPrinter.PrintRepo(@"C:\Users\jarno\OneDrive\Documenten\POC CodeAnalysis\CodeAnalysis");   
         var stopwatch = Stopwatch.StartNew();
 
         var service = new CodeAnalysisServiceRunner();

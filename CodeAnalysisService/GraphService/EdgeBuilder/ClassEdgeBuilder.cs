@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using CodeAnalysisService.Enums;
 using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.GraphService.Helpers;
-using CodeAnalysisService.GraphService.Context;
+using CodeAnalysisService.GraphService.Registry;
 
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
@@ -15,12 +15,11 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
     {
         public NodeType NodeType => NodeType.Class;
 
-        public IEnumerable<EdgeNode> BuildEdges( INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
+        public IEnumerable<EdgeNode> BuildEdges(INode node, NodeRegistry registry, SemanticModel model)
         {
             if (node is not ClassNode classNode) return Enumerable.Empty<EdgeNode>();
 
             var edges = new List<EdgeNode>();
-            var model = semanticModels[classNode.ClassSyntax.SyntaxTree];
             var symbol = classNode.Symbol;
 
             // Inherits
@@ -127,27 +126,10 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
                                 });
                         }
                         break;
-                        // HasEvent
-                    case EventDeclarationSyntax eDecl:
-                    {
-                        if (model.GetDeclaredSymbol(eDecl) is IEventSymbol evtSymbol)
-                        {
-                            var eNode = registry.GetNode<EventNode>(evtSymbol);
-                            if (eNode != null)
-                                edges.Add(new EdgeNode
-                                {
-                                    Target = eNode,
-                                    Type = EdgeType.HasEvent
-                                });
-                        }
-                        break;
-                    }
                     // HasEvent
-                    case EventFieldDeclarationSyntax efDecl:
-                    {
-                        foreach (var variable in efDecl.Declaration.Variables)
+                    case EventDeclarationSyntax eDecl:
                         {
-                            if (model.GetDeclaredSymbol(variable) is IEventSymbol evtSymbol)
+                            if (model.GetDeclaredSymbol(eDecl) is IEventSymbol evtSymbol)
                             {
                                 var eNode = registry.GetNode<EventNode>(evtSymbol);
                                 if (eNode != null)
@@ -157,9 +139,26 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
                                         Type = EdgeType.HasEvent
                                     });
                             }
+                            break;
                         }
-                        break;
-                    }
+                    // HasEvent
+                    case EventFieldDeclarationSyntax efDecl:
+                        {
+                            foreach (var variable in efDecl.Declaration.Variables)
+                            {
+                                if (model.GetDeclaredSymbol(variable) is IEventSymbol evtSymbol)
+                                {
+                                    var eNode = registry.GetNode<EventNode>(evtSymbol);
+                                    if (eNode != null)
+                                        edges.Add(new EdgeNode
+                                        {
+                                            Target = eNode,
+                                            Type = EdgeType.HasEvent
+                                        });
+                                }
+                            }
+                            break;
+                        }
 
                 }
             }

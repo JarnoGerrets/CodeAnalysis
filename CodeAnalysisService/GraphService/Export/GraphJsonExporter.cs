@@ -1,6 +1,6 @@
 using System.Text.Json;
-using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.GraphService.Nodes;
+using CodeAnalysisService.GraphService.Registry;
 
 namespace CodeAnalysisService.GraphService.Export
 {

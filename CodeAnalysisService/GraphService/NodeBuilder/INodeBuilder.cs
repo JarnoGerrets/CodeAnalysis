@@ -1,5 +1,4 @@
 using Microsoft.CodeAnalysis;
-using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.Enums;
 using CodeAnalysisService.GraphService.Nodes;
 
@@ -11,8 +10,7 @@ namespace CodeAnalysisService.GraphService.NodeBuilder
     /// </summary>
     public interface INodeBuilder
     {
-        NodeType NodeType { get; }
-        Type SyntaxType { get; }
-        IEnumerable<(ISymbol Symbol, INode Node)>  BuildNodes(GraphContext context, SyntaxNode node, SemanticModel model);
+        IReadOnlyList<Type> SyntaxTypes { get; }
+        IEnumerable<(ISymbol Symbol, INode Node)>  BuildNode(SyntaxNode node, SemanticModel model);
     }
 }

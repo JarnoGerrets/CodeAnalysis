@@ -1,7 +1,7 @@
 using Microsoft.CodeAnalysis;
 using CodeAnalysisService.Enums;
 using CodeAnalysisService.GraphService.Nodes;
-using CodeAnalysisService.GraphService.Context;
+using CodeAnalysisService.GraphService.Registry;
 
 namespace CodeAnalysisService.GraphService.EdgeBuilder
 {
@@ -12,7 +12,7 @@ namespace CodeAnalysisService.GraphService.EdgeBuilder
     {
         public NodeType NodeType => NodeType.Interface;
 
-        public IEnumerable<EdgeNode> BuildEdges( INode node, NodeRegistry registry, Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
+        public IEnumerable<EdgeNode> BuildEdges( INode node, NodeRegistry registry, SemanticModel model)
         {
             if (node is not InterfaceNode interfaceNode) return Enumerable.Empty<EdgeNode>();
 

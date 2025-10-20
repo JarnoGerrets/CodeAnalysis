@@ -8,6 +8,7 @@ using CodeAnalysisService.PatternAnalyser.Names;
 using CodeAnalysisService.PatternAnalyser.Queries;
 using CodeAnalysisService.Enums;
 using CodeAnalysisService.Names;
+using CodeAnalysisService.GraphService.Registry;
 
 namespace CodeAnalysisService.PatternAnalyser.RuleFactories
 {

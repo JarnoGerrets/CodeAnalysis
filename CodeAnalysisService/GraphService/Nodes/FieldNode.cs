@@ -13,6 +13,7 @@ namespace CodeAnalysisService.GraphService.Nodes
         public object SyncRoot { get; } = new object();
         public FieldDeclarationSyntax DeclarationSyntax { get; set; } = default!;
         public VariableDeclaratorSyntax VariableSyntax { get; set; } = default!;
+        public SyntaxNode Syntax => DeclarationSyntax;
         public NodeType NodeType => NodeType.Field;
         public required IFieldSymbol Symbol { get; set; }
         ISymbol INode.Symbol => Symbol;
