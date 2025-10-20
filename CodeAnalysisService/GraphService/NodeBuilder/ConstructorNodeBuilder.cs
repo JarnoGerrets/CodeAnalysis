@@ -14,21 +14,22 @@ namespace CodeAnalysisService.GraphService.NodeBuilder
     public class ConstructorNodeBuilder : INodeBuilder
     {
         public NodeType NodeType => NodeType.Constructor;
+        public Type SyntaxType => typeof(ConstructorDeclarationSyntax);
 
-        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model)
+        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxNode node, SemanticModel model)
         {
-            var root = context.GetRoot(tree);
-            foreach (var ctorDecl in root.DescendantNodes().OfType<ConstructorDeclarationSyntax>())
+            if (node is not ConstructorDeclarationSyntax ctorDecl)
+                yield break;
+
+            if (model.GetDeclaredSymbol(ctorDecl) is IMethodSymbol symbol)
             {
-                if (model.GetDeclaredSymbol(ctorDecl) is IMethodSymbol symbol)
+                yield return (symbol, new ConstructorNode
                 {
-                    yield return (symbol, new ConstructorNode
-                    {
-                        ConstructorSyntax = ctorDecl,
-                        Symbol = symbol
-                    });
-                }
+                    ConstructorSyntax = ctorDecl,
+                    Symbol = symbol
+                });
             }
+
         }
     }
 }

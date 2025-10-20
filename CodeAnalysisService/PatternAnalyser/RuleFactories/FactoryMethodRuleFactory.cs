@@ -40,7 +40,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                 .AddCheck("Concrete subclass overrides factory method and creates product", 40,
                     (node, graph) =>
                     {
-                        if (!node.IsAbstract || node is not ClassNode cls)
+                        if (!node.Symbol.IsAbstract || node is not ClassNode cls)
                             return PatternRuleResult.Empty;
 
                         var roles = new List<PatternRole> { new(Roles.AbstractFactory, cls) };

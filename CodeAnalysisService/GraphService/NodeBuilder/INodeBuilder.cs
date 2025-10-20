@@ -12,6 +12,7 @@ namespace CodeAnalysisService.GraphService.NodeBuilder
     public interface INodeBuilder
     {
         NodeType NodeType { get; }
-        IEnumerable<(ISymbol Symbol, INode Node)>  BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model);
+        Type SyntaxType { get; }
+        IEnumerable<(ISymbol Symbol, INode Node)>  BuildNodes(GraphContext context, SyntaxNode node, SemanticModel model);
     }
 }

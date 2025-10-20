@@ -15,22 +15,22 @@ namespace CodeAnalysisService.GraphService.NodeBuilder
     {
         public NodeType NodeType => NodeType.Method;
 
-        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model)
+        public Type SyntaxType => typeof(MethodDeclarationSyntax);
+
+        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxNode node, SemanticModel model)
         {
-            var root = context.GetRoot(tree);
-            foreach (var method in root.DescendantNodes().OfType<MethodDeclarationSyntax>())
+            if (node is not MethodDeclarationSyntax method)
+                yield break;
+
+            if (model.GetDeclaredSymbol(method) is IMethodSymbol symbol)
             {
-                if (model.GetDeclaredSymbol(method) is IMethodSymbol symbol)
+                yield return (symbol, new MethodNode
                 {
-                    yield return (symbol, new MethodNode
-                    {
-                        MethodSyntax = method,
-                        Symbol = symbol,
-                        IsAbstract = symbol.IsAbstract,
-                        IsVirtual = symbol.IsVirtual
-                    });
-                }
+                    MethodSyntax = method,
+                    Symbol = symbol,
+                });
             }
+
         }
     }
 }

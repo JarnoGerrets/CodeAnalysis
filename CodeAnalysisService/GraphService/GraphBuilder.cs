@@ -5,6 +5,8 @@ using CodeAnalysisService.GraphService.Nodes;
 using CodeAnalysisService.GraphService.Context;
 using CodeAnalysisService.GraphService.Helpers;
 using System.Collections.Concurrent;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using CodeAnalysisService.Enums;
 
 namespace CodeAnalysisService.GraphService
 {
@@ -21,7 +23,7 @@ namespace CodeAnalysisService.GraphService
         private readonly List<IEdgeBuilder> _edgeBuilders;
 
         public NodeRegistry Registry { get; } = new();
-        
+
         public GraphBuilder(Compilation compilation, Dictionary<SyntaxTree, SemanticModel> semanticModels)
         {
             _compilation = compilation;
@@ -61,20 +63,29 @@ namespace CodeAnalysisService.GraphService
             var entries = new ConcurrentBag<(ISymbol Symbol, INode Node)>();
             var ctx = new GraphContext(_semanticModels, Registry);
 
-            Parallel.ForEach(_semanticModels, kvp =>
+            Parallel.ForEach(_semanticModels, semanticModel =>
             {
-                var (tree, model) = (kvp.Key, kvp.Value);
+                var root = semanticModel.Value.SyntaxTree.GetRoot();
 
-                foreach (var builder in _nodeBuilders)
+                foreach (var node in root.DescendantNodes())
                 {
-                    foreach (var entry in builder.BuildNodes(ctx, tree, model))
-                    {
+                    var builder = _nodeBuilders.FirstOrDefault(b =>
+                        b.SyntaxType.IsAssignableFrom(node.GetType()) ||
+                        (b.NodeType == NodeType.Event &&
+                            (node is EventDeclarationSyntax || node is EventFieldDeclarationSyntax)));  // Builder can have 2 different Syntaxes, easier and more clear 
+                                                                                                        // to use this small exception rather than redesign interface for 
+                                                                                                        // all builders.
+
+                    if (builder == null) continue;
+
+                    foreach (var entry in builder.BuildNodes(ctx, node, semanticModel.Value))
                         entries.Add(entry);
-                    }
                 }
             });
+
             AddNodesSafe(entries);
         }
+
 
 
 
@@ -94,7 +105,7 @@ namespace CodeAnalysisService.GraphService
             {
                 var builder = _edgeBuilders.FirstOrDefault(b => b.NodeType == node.NodeType);
                 if (builder == null) return;
-                
+
                 var edges = builder.BuildEdges(node, Registry, _compilation, _semanticModels);
                 if (edges == null) return;
 

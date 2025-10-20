@@ -10,6 +10,5 @@ namespace CodeAnalysisService.GraphService.Nodes
     {
         new INamedTypeSymbol Symbol { get; }
         ISymbol INode.Symbol => Symbol;
-        bool IsAbstract { get; }
     }
 }

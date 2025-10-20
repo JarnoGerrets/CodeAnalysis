@@ -21,7 +21,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                 .AddCheck("Detects Target interface/abstract", 15, (node, _) =>
                 {
                     if (node.Symbol is not INamedTypeSymbol t ||
-                        (t.TypeKind != TypeKind.Interface && !node.IsAbstract))
+                        (t.TypeKind != TypeKind.Interface && !node.Symbol.IsAbstract))
                         return PatternRuleResult.Empty;
 
                     return PatternRuleResult.Success(new[] { new PatternRole(Roles.Target, node) });

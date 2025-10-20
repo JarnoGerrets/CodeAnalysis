@@ -15,27 +15,26 @@ namespace CodeAnalysisService.GraphService.NodeBuilder
     {
         public NodeType NodeType => NodeType.Field;
 
-        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model)
+        public Type SyntaxType => typeof(FieldDeclarationSyntax);
+
+        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxNode node, SemanticModel model)
         {
-            var root = context.GetRoot(tree);
-            foreach (var classDecl in root.DescendantNodes().OfType<ClassDeclarationSyntax>())
+            if (node is not FieldDeclarationSyntax field)
+                yield break;
+
+            foreach (var variable in field.Declaration.Variables)
             {
-                foreach (var field in classDecl.Members.OfType<FieldDeclarationSyntax>())
+                if (model.GetDeclaredSymbol(variable) is IFieldSymbol fieldSymbol)
                 {
-                    foreach (var variable in field.Declaration.Variables)
+                    yield return (fieldSymbol, new FieldNode
                     {
-                        if (model.GetDeclaredSymbol(variable) is IFieldSymbol fieldSymbol)
-                        {
-                            yield return (fieldSymbol, new FieldNode
-                            {
-                                DeclarationSyntax = field,
-                                VariableSyntax = variable,
-                                Symbol = fieldSymbol
-                            });
-                        }
-                    }
+                        DeclarationSyntax = field,
+                        VariableSyntax = variable,
+                        Symbol = fieldSymbol
+                    });
                 }
             }
         }
     }
 }
+

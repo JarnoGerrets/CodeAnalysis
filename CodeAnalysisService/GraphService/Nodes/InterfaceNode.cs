@@ -14,7 +14,6 @@ namespace CodeAnalysisService.GraphService.Nodes
         public NodeType NodeType => NodeType.Interface;
         public required INamedTypeSymbol Symbol { get; set;}
         ISymbol INode.Symbol => Symbol;
-        public bool IsAbstract { get; } = false;
         public List<EdgeNode> Edges { get; set; } = new List<EdgeNode>();
     }
 }

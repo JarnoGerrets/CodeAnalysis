@@ -22,14 +22,14 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
 
                 .AddCheck("Detects interface/abstract defining strategy contract", 20,
                     (node, _) =>
-                        (node.Symbol.TypeKind == TypeKind.Interface || node.IsAbstract)
+                        (node.Symbol.TypeKind == TypeKind.Interface || node.Symbol.IsAbstract)
                             ? PatternRuleResult.Success(new[] { new PatternRole(Roles.Strategy, node) })
                             : PatternRuleResult.Empty)
 
                 .AddCheck("Finds classes implementing/deriving from strategy", 20,
                     (node, graph) =>
                     {
-                        if (node.Symbol.TypeKind != TypeKind.Interface && !node.IsAbstract)
+                        if (node.Symbol.TypeKind != TypeKind.Interface && !node.Symbol.IsAbstract)
                             return PatternRuleResult.Empty;
                         if (node.Symbol is not INamedTypeSymbol named) return PatternRuleResult.Empty;
 
@@ -45,7 +45,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                 .AddCheck("Detects context class with a reference to strategy", 10,
                     (node, graph) =>
                     {
-                        if (node.Symbol.TypeKind != TypeKind.Interface && !node.IsAbstract)
+                        if (node.Symbol.TypeKind != TypeKind.Interface && !node.Symbol.IsAbstract)
                             return PatternRuleResult.Empty;
                         if (node.Symbol is not INamedTypeSymbol named) return PatternRuleResult.Empty;
 
@@ -67,7 +67,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                 .AddCheck("Context delegates to strategy methods", 50,
                     (node, graph) =>
                     {
-                        if (node.Symbol.TypeKind != TypeKind.Interface && !node.IsAbstract)
+                        if (node.Symbol.TypeKind != TypeKind.Interface && !node.Symbol.IsAbstract)
                             return PatternRuleResult.Empty;
                         if (node.Symbol is not INamedTypeSymbol named) return PatternRuleResult.Empty;
 

@@ -14,21 +14,20 @@ namespace CodeAnalysisService.GraphService.NodeBuilder
     public class InterfaceNodeBuilder : INodeBuilder
     {
         public NodeType NodeType => NodeType.Interface;
-
-        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxTree tree, SemanticModel model)
+        public Type SyntaxType => typeof(InterfaceDeclarationSyntax);
+        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxNode node, SemanticModel model)
         {
-            var root = context.GetRoot(tree);
-            foreach (var iface in root.DescendantNodes().OfType<InterfaceDeclarationSyntax>())
-            {
-                var symbol = model.GetDeclaredSymbol(iface);
-                if (symbol == null) continue;
+            if (node is not InterfaceDeclarationSyntax iface)
+                yield break;
 
-                yield return (symbol, new InterfaceNode 
-                { 
-                    InterfaceSyntax = iface, 
-                    Symbol = symbol 
+            if (model.GetDeclaredSymbol(iface) is INamedTypeSymbol symbol)
+            {
+                yield return (symbol, new InterfaceNode
+                {
+                    InterfaceSyntax = iface,
+                    Symbol = symbol
                 });
-            }            
+            }
         }
     }
 }

@@ -7,44 +7,40 @@ using CodeAnalysisService.GraphService.SyntaxWrappers;
 
 namespace CodeAnalysisService.GraphService.NodeBuilder
 {
-   public class EventNodeBuilder : INodeBuilder
-{
-    public NodeType NodeType => NodeType.Event;
-
-    public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(
-        GraphContext context,
-        SyntaxTree tree,
-        SemanticModel model)
+    public class EventNodeBuilder : INodeBuilder
     {
-        var root = context.GetRoot(tree);
+        public NodeType NodeType => NodeType.Event;
+        public Type SyntaxType => typeof(EventDeclarationSyntax);
 
-        foreach (var evtDecl in root.DescendantNodes().OfType<EventDeclarationSyntax>())
+        public IEnumerable<(ISymbol Symbol, INode Node)> BuildNodes(GraphContext context, SyntaxNode node, SemanticModel model)
         {
-            if (model.GetDeclaredSymbol(evtDecl) is IEventSymbol symbol)
+            if (node is EventDeclarationSyntax evtDecl)
             {
-                yield return (symbol, new EventNode
-                {
-                    EventSyntax = new EventSyntaxWrapper(evtDecl),
-                    Symbol = symbol
-                });
-            }
-        }
-
-        foreach (var field in root.DescendantNodes().OfType<EventFieldDeclarationSyntax>())
-        {
-            foreach (var variable in field.Declaration.Variables)
-            {
-                if (model.GetDeclaredSymbol(variable) is IEventSymbol symbol)
+                if (model.GetDeclaredSymbol(evtDecl) is IEventSymbol symbol)
                 {
                     yield return (symbol, new EventNode
                     {
-                        EventSyntax = new EventSyntaxWrapper(field),
+                        EventSyntax = new EventSyntaxWrapper(evtDecl),
                         Symbol = symbol
                     });
+                }
+            }
+
+            if (node is EventFieldDeclarationSyntax evtFieldDecl)
+            {
+                foreach (var variable in evtFieldDecl.Declaration.Variables)
+                {
+                    if (model.GetDeclaredSymbol(variable) is IEventSymbol symbol)
+                    {
+                        yield return (symbol, new EventNode
+                        {
+                            EventSyntax = new EventSyntaxWrapper(evtFieldDecl),
+                            Symbol = symbol
+                        });
+                    }
                 }
             }
         }
     }
 }
 
-}
