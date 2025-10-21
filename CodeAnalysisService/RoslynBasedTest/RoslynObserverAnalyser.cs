@@ -35,7 +35,6 @@ namespace CodeAnalysisService.RoslynBasedTest
                         var symbol = model.GetDeclaredSymbol(classDecl) as INamedTypeSymbol;
                         if (symbol == null) continue;
 
-                        // Check syntactisch of er potentie is om een observer te zijn
                         var hasPotential = symbol.GetMembers()
                             .Where(m => m is IFieldSymbol or IPropertySymbol)
                             .Select(m => GetCollectionElementType(m))
