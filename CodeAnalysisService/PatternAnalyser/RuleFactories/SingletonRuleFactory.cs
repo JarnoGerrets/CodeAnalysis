@@ -19,7 +19,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                     if (node is not ClassNode c) return PatternRuleResult.Empty;
 
                     return c.HasPrivateConstructor()
-                        ? PatternRuleResult.Success(new[] { new PatternRole("Singleton", c) })
+                        ? PatternRuleResult.Success([new PatternRole("Singleton", c)])
                         : PatternRuleResult.Empty;
                 })
 
@@ -34,7 +34,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                         c.HasGenericStaticFieldOfOwnType();
 
                     return check
-                        ? PatternRuleResult.Success(new[] { new PatternRole("Singleton", c) })
+                        ? PatternRuleResult.Success([new PatternRole("Singleton", c)])
                         : PatternRuleResult.Empty;
                 })
 
@@ -48,7 +48,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                         c.HasStaticFieldAccessorOfOwnType();
 
                     return check
-                        ? PatternRuleResult.Success(new[] { new PatternRole("Singleton", c) })
+                        ? PatternRuleResult.Success([new PatternRole("Singleton", c)])
                         : PatternRuleResult.Empty;
                 });
         }

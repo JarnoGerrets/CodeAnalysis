@@ -23,7 +23,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                     var observerTypes = c.GetCollectionElementTypes(requireInterface: true).ToList();
                     if (!observerTypes.Any()) return PatternRuleResult.Empty;
 
-                    return PatternRuleResult.Success(new[] { new PatternRole(Roles.Subject, c) });
+                    return PatternRuleResult.Success([new PatternRole(Roles.Subject, c)]);
                 })
 
                 .AddCheck("Subject notifies observers", 40, (node, graph) =>
@@ -66,7 +66,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                     if (!observerTypes.Any()) return PatternRuleResult.Empty;
 
                     return c.HasMethodWithParameterAssignableTo(observerTypes)
-                        ? PatternRuleResult.Success(new[] { new PatternRole(Roles.Subject, c) })
+                        ? PatternRuleResult.Success([new PatternRole(Roles.Subject, c)])
                         : PatternRuleResult.Empty;
                 })
 
@@ -80,7 +80,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                         .Any(m => commonNames.Contains(m.Symbol.Name));
 
                     return found
-                        ? PatternRuleResult.Success(new[] { new PatternRole(Roles.Subject, c) })
+                        ? PatternRuleResult.Success([new PatternRole(Roles.Subject, c)])
                         : PatternRuleResult.Empty;
                 });
         }

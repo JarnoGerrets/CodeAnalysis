@@ -23,7 +23,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                 .AddCheck("Detects interface/abstract defining strategy contract", 20,
                     (node, _) =>
                         (node.Symbol.TypeKind == TypeKind.Interface || node.Symbol.IsAbstract)
-                            ? PatternRuleResult.Success(new[] { new PatternRole(Roles.Strategy, node) })
+                            ? PatternRuleResult.Success([new PatternRole(Roles.Strategy, node)])
                             : PatternRuleResult.Empty)
 
                 .AddCheck("Finds classes implementing/deriving from strategy", 20,
@@ -140,10 +140,10 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                             .Where(s => s.Symbol.Name.EndsWith("State", StringComparison.OrdinalIgnoreCase))
                             .Select(s => new PatternRole(Roles.StateNameHint, s)));
 
-                    var augmentedChecks = result.Checks.Concat(stateChecks).Concat(new[]
-                    {
+                    var augmentedChecks = result.Checks.Concat(stateChecks).Concat(
+                    [
                         new CheckResult("Promoted to State: context-state coupling verified", 0, true)
-                    }).ToList();
+                    ]).ToList();
 
                     return new PatternResult(
                         PatternNames.State,

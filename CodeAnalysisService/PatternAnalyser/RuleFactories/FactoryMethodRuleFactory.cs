@@ -33,7 +33,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                         });
 
                         return found
-                            ? PatternRuleResult.Success(new[] { new PatternRole(Roles.AbstractFactory, cls) })
+                            ? PatternRuleResult.Success([new PatternRole(Roles.AbstractFactory, cls)])
                             : PatternRuleResult.Empty;
                     })
 

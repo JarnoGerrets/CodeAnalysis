@@ -11,9 +11,7 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
     /// </summary>
     public static class GraphQueries
     {
-        // ---------------------------------------------------------------------------------------------------------------
         // Class Queries
-        // ---------------------------------------------------------------------------------------------------------------
 
         public static bool HasMethod(this ClassNode cls, string methodName) =>
             cls.Edges.Any(e =>
@@ -70,9 +68,8 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
         }
 
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Field Queries
-        // ---------------------------------------------------------------------------------------------------------------
 
         public static IEnumerable<FieldNode> GetFields(this ClassNode cls) =>
             cls.Edges
@@ -86,10 +83,9 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
         public static bool HasStaticFieldOfType(this ClassNode cls, string typeName) =>
             cls.GetFields().Any(f => f.Symbol.IsStatic && f.Symbol.Type.Name == typeName);
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Constructor Queries
-        // ---------------------------------------------------------------------------------------------------------------
-
+        
         public static IEnumerable<ConstructorNode> GetConstructors(this ClassNode cls) =>
             cls.Edges
                .Where(e => e.Type == EdgeType.HasConstructor)
@@ -99,10 +95,9 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
         public static bool HasPrivateConstructor(this ClassNode cls) =>
             cls.GetConstructors().Any(c => c.Symbol.DeclaredAccessibility == Accessibility.Private);
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Method CALL Queries
-        // ---------------------------------------------------------------------------------------------------------------
-
+        
         public static IEnumerable<MethodNode> CalledMethods(this MethodNode method) =>
             method.Edges
                   .Where(e => e.Type == EdgeType.Calls)
@@ -112,10 +107,9 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
         public static bool CallsMethod(this MethodNode method, string methodName) =>
             method.CalledMethods().Any(m => m.Symbol.Name == methodName);
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Event Queries
-        // ---------------------------------------------------------------------------------------------------------------
-
+        
         public static bool HasEvent(this ClassNode cls) =>
             cls.Edges.Any(e => e.Type == EdgeType.HasEvent);
 
@@ -125,10 +119,9 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
                .Select(e => e.Target)
                .OfType<EventNode>();
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Collection Queries
-        // ---------------------------------------------------------------------------------------------------------------
-
+        
         public static IEnumerable<ITypeSymbol> GetCollectionElementTypes(this ClassNode cls, bool requireInterface = false)
         {
             var types = new List<ITypeSymbol>();
@@ -155,10 +148,9 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
             return types.Distinct<ITypeSymbol>(SymbolEqualityComparer.Default);
         }
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Symbol Relation Queries
-        // ---------------------------------------------------------------------------------------------------------------
-
+        
         public static bool IsAssignableToAny(this ITypeSymbol type, IEnumerable<ITypeSymbol> targets)
         {
             foreach (var t in targets)
@@ -184,10 +176,9 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
                    SymbolEqualityComparer.Default.Equals(type.BaseType, target);
         }
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Singleton-Specific Queries
-        // ---------------------------------------------------------------------------------------------------------------
-
+        
         public static bool HasMethodWithParameterAssignableTo(this ClassNode cls, IEnumerable<ITypeSymbol> targetTypes) =>
             cls.GetMethods()
                .Any(m => m.Symbol.Parameters.Any(p => p.Type.IsAssignableToAny(targetTypes)));
@@ -245,10 +236,9 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
                  typeParams.Any(tp => SymbolEqualityComparer.Default.Equals(f.Symbol.Type, tp))));
         }
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Held Types / Injection Queries
-        // ---------------------------------------------------------------------------------------------------------------
-
+        
         public static INamedTypeSymbol? ResolveMemberType(this INode node) =>
             node switch
             {
@@ -267,10 +257,9 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
             || cls.GetProperties().Any(p =>
                 SymbolEqualityComparer.Default.Equals(p.Symbol.Type, type));
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Implementor Queries
-        // ---------------------------------------------------------------------------------------------------------------
-
+        
         public static IEnumerable<ClassNode> GetImplementorsOf(this INamedTypeSymbol target, NodeRegistry registry)
         {
             return registry.GetAll<ClassNode>()
@@ -281,10 +270,9 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
                 .Select(x => x.Node);
         }
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Adapter-Specific Queries
-        // ---------------------------------------------------------------------------------------------------------------
-
+        
         public static bool DelegatesToType(
             this ClassNode adapter,
             INamedTypeSymbol adapteeType,
@@ -303,9 +291,8 @@ namespace CodeAnalysisService.PatternAnalyser.Queries
             });
         }
 
-        // ---------------------------------------------------------------------------------------------------------------
+        
         // Strategy/State-Specific Queries
-        // ---------------------------------------------------------------------------------------------------------------
 
         private static bool MatchesTypeOrElement(ITypeSymbol candidate, INamedTypeSymbol target) =>
             SymbolEqualityComparer.Default.Equals(TypeHelper.GetElementType(candidate) ?? candidate, target);

@@ -14,7 +14,7 @@ namespace CodeAnalysisService
         private GraphBuilder? _graph;
         public GraphBuilder? Graph => _graph;
 
-        public async Task AnalyzeAsync(string rootPath)
+        public async Task Setup(string rootPath)
         {
             var sw = Stopwatch.StartNew();
             await _loader.LoadAsync(rootPath);

@@ -24,7 +24,7 @@ namespace CodeAnalysisService.PatternAnalyser.RuleFactories
                         (t.TypeKind != TypeKind.Interface && !node.Symbol.IsAbstract))
                         return PatternRuleResult.Empty;
 
-                    return PatternRuleResult.Success(new[] { new PatternRole(Roles.Target, node) });
+                    return PatternRuleResult.Success([new PatternRole(Roles.Target, node)]);
                 })
 
                 .AddCheck("Find Adapter candidates", 20, (target, graph) =>
