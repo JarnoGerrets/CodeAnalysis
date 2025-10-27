@@ -41,7 +41,9 @@ This give us both the structure of the code (syntax trees) and its meaning (symb
 ---
 
 ### Step 2: Create nodes
-Specialized node builders run over the syntax trees and create nodes for all relevant program elements.  
+Specialized node builders run over the syntax trees and create nodes for all relevant program elements.
+Each `NodeBuilder` has a `SyntaxType`, in the `GraphBuilder` the correct `NodeBuilder` is automatically chosen based
+on the corresponding `SyntaxDeclaration`.
 A `ClassNode` represents a class declaration, a `MethodNode` represents a method, and so on.  
 Each node carries its Roslyn `ISymbol` for identity, and has a place to store outgoing edges.
 
