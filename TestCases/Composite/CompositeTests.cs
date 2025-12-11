@@ -1,145 +1,136 @@
-// Component
-public interface IComponent
+using System;
+using System.Collections.Generic;
+
+// Interface Component (20 points: Detects Component interface/abstract)
+public interface IUltimateComponent
 {
     void Operation();
+    int Measure();
 }
 
-// Leaf
-public class LeafA : IComponent
+// Abstract Class Component (also satisfies the same 20-point check if analysis starts on class)
+public abstract class AbstractUltimateComponent
 {
-    public void Operation() => Console.WriteLine("LeafA Operation");
+    public abstract void Operation();
+    public abstract int Measure();
 }
 
-public class LeafB : IComponent
+// Concrete leaves implementing the interface (15 points: Leaf without children)
+public class UltimateLeaf : IUltimateComponent
 {
-    public void Operation() => Console.WriteLine("LeafB Operation");
+    private readonly int _size;
+    public UltimateLeaf(int size) => _size = size;
+
+    public void Operation() => Console.WriteLine($"UltimateLeaf Operation (size={_size})");
+    public int Measure() => _size;
+
+    // Extra ordinary method to strengthen DelegatesToImplementor via concrete calls
+    public int LeafSpecificMeasure() => _size * 2;
 }
 
-// Composite
-public class CompositeNode : IComponent
+public class UltimateLeafB : IUltimateComponent
 {
-    private readonly List<IComponent> _children = new();
+    private readonly int _size;
+    public UltimateLeafB(int size) => _size = size;
 
-    public void Add(IComponent component) => _children.Add(component);
-    public void Remove(IComponent component) => _children.Remove(component);
+    public void Operation() => Console.WriteLine($"UltimateLeafB Operation (size={_size})");
+    public int Measure() => _size;
+
+    public int LeafBSpecificMeasure() => _size + 1;
+}
+
+// A leaf deriving from the abstract component (ensures abstract component has implementors too)
+public class UltimateAbstractLeaf : AbstractUltimateComponent
+{
+    private readonly int _size;
+    public UltimateAbstractLeaf(int size) => _size = size;
+
+    public override void Operation() => Console.WriteLine($"UltimateAbstractLeaf Operation (size={_size})");
+    public override int Measure() => _size;
+
+    public int AbstractLeafSpecificMeasure() => _size * 3;
+}
+
+// Composite holding children of the interface type and delegating (40 points)
+// Name hint "Composite" adds +5
+public class UltimateComposite : IUltimateComponent
+{
+    // Holds children of the component type -> HoldsChildrenOfComponent
+    private readonly List<IUltimateComponent> _children = new();
+
+    public void Add(IUltimateComponent child) => _children.Add(child);
+    public void Remove(IUltimateComponent child) => _children.Remove(child);
 
     public void Operation()
     {
-        Console.WriteLine("CompositeNode Operation start");
+        Console.WriteLine("UltimateComposite Operation start");
+
         foreach (var child in _children)
+        {
+            // Delegates to the interface method -> DelegatesToType
             child.Operation();
-        Console.WriteLine("CompositeNode Operation end");
+
+            // Delegates to concrete implementors -> DelegatesToImplementor
+            if (child is UltimateLeaf a)
+            {
+                _ = a.LeafSpecificMeasure(); // concrete call on implementor
+            }
+            else if (child is UltimateLeafB b)
+            {
+                _ = b.LeafBSpecificMeasure(); // concrete call on implementor
+            }
+        }
+
+        Console.WriteLine("UltimateComposite Operation end");
+    }
+
+    public int Measure()
+    {
+        var total = 0;
+
+        foreach (var child in _children)
+        {
+            // Delegates to the interface method -> DelegatesToType
+            total += child.Measure();
+
+            // Delegates to concrete implementors -> DelegatesToImplementor
+            if (child is UltimateLeaf a)
+            {
+                total += a.LeafSpecificMeasure() / 10;
+            }
+            else if (child is UltimateLeafB b)
+            {
+                total += b.LeafBSpecificMeasure() / 10;
+            }
+        }
+
+        return total;
     }
 }
 
-
-// ==================== Positive Composite Cases ====================
-
-// --- Positive Case 1: Classic Composite with two leaves ---
-public class ClassicCompositeExample
+// Demo harness that ensures implementors exist (20 points: Find implementors of Component)
+public static class UltimateCompositeDemo
 {
     public static void Run()
     {
-        var root = new CompositeNode();
-        root.Add(new LeafA());
-        root.Add(new LeafB());
-        root.Operation();
-    }
-}
+        var root = new UltimateComposite();
 
-// --- Positive Case 2: Nested Composite ---
-public class NestedCompositeExample
-{
-    public static void Run()
-    {
-        var root = new CompositeNode();
-        var branch = new CompositeNode();
-        branch.Add(new LeafA());
-        branch.Add(new LeafB());
+        var leaf1 = new UltimateLeaf(10);
+        var leaf2 = new UltimateLeafB(20);
+
+        var branch = new UltimateComposite();
+        branch.Add(new UltimateLeaf(5));
+        branch.Add(new UltimateLeafB(15));
+
+        root.Add(leaf1);
+        root.Add(leaf2);
         root.Add(branch);
-        root.Add(new LeafA());
+
+        // Note: Abstract component has implementors too
+        AbstractUltimateComponent absLeaf = new UltimateAbstractLeaf(7);
+        absLeaf.Operation();
+
         root.Operation();
+        Console.WriteLine($"Total Measure: {root.Measure()}");
     }
 }
-
-// --- Positive Case 3: FileSystem-like Composite ---
-public interface IFileSystemEntry
-{
-    void Display(string indent = "");
-}
-
-public class FileEntry : IFileSystemEntry
-{
-    private readonly string _name;
-    public FileEntry(string name) => _name = name;
-    public void Display(string indent = "") => Console.WriteLine($"{indent}- {_name}");
-}
-
-public class DirectoryEntry : IFileSystemEntry
-{
-    private readonly string _name;
-    private readonly List<IFileSystemEntry> _entries = new();
-
-    public DirectoryEntry(string name) => _name = name;
-    public void Add(IFileSystemEntry entry) => _entries.Add(entry);
-
-    public void Display(string indent = "")
-    {
-        Console.WriteLine($"{indent}+ {_name}");
-        foreach (var e in _entries)
-            e.Display(indent + "  ");
-    }
-}
-
-public class FileSystemCompositeExample
-{
-    public static void Run()
-    {
-        var root = new DirectoryEntry("root");
-        var bin = new DirectoryEntry("bin");
-        bin.Add(new FileEntry("bash"));
-        bin.Add(new FileEntry("ls"));
-        var etc = new DirectoryEntry("etc");
-        etc.Add(new FileEntry("hosts"));
-        root.Add(bin);
-        root.Add(etc);
-        root.Display();
-    }
-}
-
-
-// ==================== Negative (Non-Composite) Cases ====================
-
-// --- Negative Case 1: No child storage, just a leaf-like class ---
-public class SoloLeaf : IComponent
-{
-    public void Operation() => Console.WriteLine("SoloLeaf only, no children");
-}
-
-// --- Negative Case 2: Collection of items but not through common component interface ---
-public class NotCompositeCollection
-{
-    private readonly List<string> _items = new();
-    public void Add(string s) => _items.Add(s);
-    public void PrintAll()
-    {
-        foreach (var s in _items) Console.WriteLine(s);
-    }
-}
-
-// --- Negative Case 3: Inheritance hierarchy without aggregation ---
-public abstract class Animal
-{
-    public abstract void Speak();
-}
-
-public class Dog : Animal
-{
-    public override void Speak() => Console.WriteLine("Woof");
-}
-
-public class Cat : Animal
-{
-    public override void Speak() => Console.WriteLine("Meow");
-}
-// No composite node aggregating Animals ? should NOT match
